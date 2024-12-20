@@ -1,0 +1,411 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{dirac1981}{book}{}
+      \name{author}{1}{}{%
+        {{hash=59342ede3a101402b34939644b51ad06}{%
+           family={Dirac},
+           familyi={D\bibinitperiod},
+           given={Paul\bibnamedelimb Adrien\bibnamedelima Maurice},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Clarendon Press}%
+      }
+      \strng{namehash}{59342ede3a101402b34939644b51ad06}
+      \strng{fullhash}{59342ede3a101402b34939644b51ad06}
+      \strng{bibnamehash}{59342ede3a101402b34939644b51ad06}
+      \strng{authorbibnamehash}{59342ede3a101402b34939644b51ad06}
+      \strng{authornamehash}{59342ede3a101402b34939644b51ad06}
+      \strng{authorfullhash}{59342ede3a101402b34939644b51ad06}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780198520115}
+      \field{series}{International Series of Monographs on Physics}
+      \field{title}{The Principles of Quantum Mechanics}
+      \field{year}{1981}
+    \endentry
+    \entry{drela1986a}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=8cc73a22e53e2130a5b6a2adda4df288}{%
+           family={Drela},
+           familyi={D\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1033980ff770f645812573a97040888c}{%
+           family={Giles},
+           familyi={G\bibinitperiod},
+           given={Michael\bibnamedelima B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{location}{1}{%
+        {San Diego, CA}%
+      }
+      \list{publisher}{1}{%
+        {American Institute of Aeronautics and Astronautics}%
+      }
+      \strng{namehash}{1668a31ef85308f9e82cf30b86aa602e}
+      \strng{fullhash}{1668a31ef85308f9e82cf30b86aa602e}
+      \strng{bibnamehash}{1668a31ef85308f9e82cf30b86aa602e}
+      \strng{authorbibnamehash}{1668a31ef85308f9e82cf30b86aa602e}
+      \strng{authornamehash}{1668a31ef85308f9e82cf30b86aa602e}
+      \strng{authorfullhash}{1668a31ef85308f9e82cf30b86aa602e}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{4{\textsuperscript{th}} {{Applied Aerodynamics Conference}}}
+      \field{month}{6}
+      \field{note}{AIAA 1986-1786}
+      \field{title}{Viscous-Inviscid Analysis of Transonic and Low {{Reynolds}} Number Airfoils}
+      \field{year}{1986}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.2514/6.1986-1786
+      \endverb
+    \endentry
+    \entry{dryden1943a}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=619316e7941f240862c3692e347331cb}{%
+           family={Dryden},
+           familyi={D\bibinitperiod},
+           given={Hugh\bibnamedelima L.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=5719f40de5289eb66d05a301da319daa}{%
+           family={Durand},
+           familyi={D\bibinitperiod},
+           given={William\bibnamedelima Frederick},
+           giveni={W\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{619316e7941f240862c3692e347331cb}
+      \strng{fullhash}{619316e7941f240862c3692e347331cb}
+      \strng{bibnamehash}{619316e7941f240862c3692e347331cb}
+      \strng{authorbibnamehash}{619316e7941f240862c3692e347331cb}
+      \strng{authornamehash}{619316e7941f240862c3692e347331cb}
+      \strng{authorfullhash}{619316e7941f240862c3692e347331cb}
+      \strng{editorbibnamehash}{5719f40de5289eb66d05a301da319daa}
+      \strng{editornamehash}{5719f40de5289eb66d05a301da319daa}
+      \strng{editorfullhash}{5719f40de5289eb66d05a301da319daa}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Aerodynamic Theory: A General Review of Progress}
+      \field{chapter}{T}
+      \field{title}{Aerodynamics of Cooling}
+      \field{volume}{6}
+      \field{year}{1943}
+      \field{dateera}{ce}
+    \endentry
+    \entry{einstein1905}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3ebf53e52a3ce84f0ffb8553200a6a63}{%
+           family={Einstein},
+           familyi={E\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {German}%
+      }
+      \strng{namehash}{3ebf53e52a3ce84f0ffb8553200a6a63}
+      \strng{fullhash}{3ebf53e52a3ce84f0ffb8553200a6a63}
+      \strng{bibnamehash}{3ebf53e52a3ce84f0ffb8553200a6a63}
+      \strng{authorbibnamehash}{3ebf53e52a3ce84f0ffb8553200a6a63}
+      \strng{authornamehash}{3ebf53e52a3ce84f0ffb8553200a6a63}
+      \strng{authorfullhash}{3ebf53e52a3ce84f0ffb8553200a6a63}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annalen der Physik}
+      \field{note}{Translation: ``{On} the Electrodynamics of Moving Bodies''}
+      \field{number}{10}
+      \field{title}{{Zur Elektrodynamik bewegter Körper}}
+      \field{volume}{322}
+      \field{year}{1905}
+      \field{pages}{891\bibrangedash 921}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1002/andp.19053221004
+      \endverb
+    \endentry
+    \entry{cpthesis_github}{online}{}
+      \name{author}{5}{}{%
+        {{hash=554be884b50ea4957fa68eaf3f08c1b4}{%
+           family={Guenther},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e685f5158c7153c4f3497c3701d3f922}{%
+           family={Marshall},
+           familyi={M\bibinitperiod},
+           given={David\bibnamedelima D.},
+           giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=f895df5de90878e2de545302174a66e7}{%
+           family={Ford},
+           familyi={F\bibinitperiod},
+           given={Cory},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3ac89ba34232c1b5a8633cf7a522fb87}{%
+           family={Kost},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=810ff97e41f5d43989625ef346d15077}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{da0d7dc315b8f24772e342e48737ac54}
+      \strng{fullhash}{8d0c81c7ca33f8c28d8f2c0abf202b2d}
+      \strng{bibnamehash}{da0d7dc315b8f24772e342e48737ac54}
+      \strng{authorbibnamehash}{da0d7dc315b8f24772e342e48737ac54}
+      \strng{authornamehash}{da0d7dc315b8f24772e342e48737ac54}
+      \strng{authorfullhash}{8d0c81c7ca33f8c28d8f2c0abf202b2d}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cal Poly Thesis Template}
+      \field{urlday}{16}
+      \field{urlmonth}{8}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/CalPolyCSC/thesis-template
+      \endverb
+      \verb{url}
+      \verb https://github.com/CalPolyCSC/thesis-template
+      \endverb
+    \endentry
+    \entry{head1958a}{report}{}
+      \name{author}{1}{}{%
+        {{hash=8478653bfe75583d74ab322c965b04a2}{%
+           family={Head},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Ministry of Aviation, Aeronautical Research Council}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{8478653bfe75583d74ab322c965b04a2}
+      \strng{fullhash}{8478653bfe75583d74ab322c965b04a2}
+      \strng{bibnamehash}{8478653bfe75583d74ab322c965b04a2}
+      \strng{authorbibnamehash}{8478653bfe75583d74ab322c965b04a2}
+      \strng{authornamehash}{8478653bfe75583d74ab322c965b04a2}
+      \strng{authorfullhash}{8478653bfe75583d74ab322c965b04a2}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{number}{3152}
+      \field{title}{Entrainment in the Turbulent Boundary Layer}
+      \field{type}{ARC Reports and Memoranda}
+      \field{year}{1958}
+    \endentry
+    \entry{kottwitz2015}{online}{}
+      \name{author}{1}{}{%
+        {{hash=f2aca6a6bffec8f78f1feff9cbc08caa}{%
+           family={Kottwitz},
+           familyi={K\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{f2aca6a6bffec8f78f1feff9cbc08caa}
+      \strng{fullhash}{f2aca6a6bffec8f78f1feff9cbc08caa}
+      \strng{bibnamehash}{f2aca6a6bffec8f78f1feff9cbc08caa}
+      \strng{authorbibnamehash}{f2aca6a6bffec8f78f1feff9cbc08caa}
+      \strng{authornamehash}{f2aca6a6bffec8f78f1feff9cbc08caa}
+      \strng{authorfullhash}{f2aca6a6bffec8f78f1feff9cbc08caa}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Example: a {Venn} diagram with {PDF} blending}
+      \field{urlday}{16}
+      \field{urlmonth}{8}
+      \field{urlyear}{2024}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://texample.net/tikz/examples/venn/
+      \endverb
+      \verb{url}
+      \verb https://texample.net/tikz/examples/venn/
+      \endverb
+    \endentry
+    \entry{Koutsovasilis2008}{article}{}
+      \name{author}{2}{}{%
+        {{hash=010ba58d5757d7257475ded308f4dbcf}{%
+           family={Koutsovasilis},
+           familyi={K\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=1144596551b4f3a0e3caf9fe1f7c20c7}{%
+           family={Beitelschmidt},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Springer Netherlands}%
+      }
+      \strng{namehash}{f1204f051f529d65d6f71d1deb65f3c3}
+      \strng{fullhash}{f1204f051f529d65d6f71d1deb65f3c3}
+      \strng{bibnamehash}{f1204f051f529d65d6f71d1deb65f3c3}
+      \strng{authorbibnamehash}{f1204f051f529d65d6f71d1deb65f3c3}
+      \strng{authornamehash}{f1204f051f529d65d6f71d1deb65f3c3}
+      \strng{authorfullhash}{f1204f051f529d65d6f71d1deb65f3c3}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1384-5640}
+      \field{journaltitle}{Multibody System Dynamics}
+      \field{number}{2}
+      \field{title}{Comparison of model reduction techniques for large mechanical systems}
+      \field{volume}{20}
+      \field{year}{2008}
+      \field{pages}{111\bibrangedash 128}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1007/s11044-008-9116-4
+      \endverb
+    \endentry
+    \entry{lopez2007a}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=a00b55ec8b22f2804b412ea09c505b6b}{%
+           family={Lopez},
+           familyi={L\bibinitperiod},
+           given={Guillermo\bibnamedelima A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=9b4b772c7c929bc2395b0271b15c9a16}{%
+           family={Taufer},
+           familyi={T\bibinitperiod},
+           given={Michela},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f04733e03104535303dc65e577dea9b9}{%
+           family={Teller},
+           familyi={T\bibinitperiod},
+           given={Patricia\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {ACM Press}%
+      }
+      \strng{namehash}{5b05032145db155ea8bf2c028726bb9c}
+      \strng{fullhash}{5b05032145db155ea8bf2c028726bb9c}
+      \strng{bibnamehash}{5b05032145db155ea8bf2c028726bb9c}
+      \strng{authorbibnamehash}{5b05032145db155ea8bf2c028726bb9c}
+      \strng{authornamehash}{5b05032145db155ea8bf2c028726bb9c}
+      \strng{authorfullhash}{5b05032145db155ea8bf2c028726bb9c}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2007 Conference on Diversity in Computing -- {{TAPIA}} '07}
+      \field{isbn}{978-1-59593-866-4}
+      \field{title}{Evaluation of {{IEEE}} 754 Floating-Point Arithmetic Compliance across a Wide Range of Heterogeneous Computers}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{pages}{1}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1145/1347787.1347793
+      \endverb
+    \endentry
+    \entry{wieghardt1951}{report}{}
+      \name{author}{2}{}{%
+        {{hash=2966615b65a031f3fadad0cdb63437b3}{%
+           family={Wieghardt},
+           familyi={W\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=c9f3db52eb55f5a9844ec0210c5f4cff}{%
+           family={Tillmann},
+           familyi={T\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {National Advisory Committee for Aeronautics}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{3725f36986666d0716040376c7a9afb6}
+      \strng{fullhash}{3725f36986666d0716040376c7a9afb6}
+      \strng{bibnamehash}{3725f36986666d0716040376c7a9afb6}
+      \strng{authorbibnamehash}{3725f36986666d0716040376c7a9afb6}
+      \strng{authornamehash}{3725f36986666d0716040376c7a9afb6}
+      \strng{authorfullhash}{3725f36986666d0716040376c7a9afb6}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{number}{1314}
+      \field{title}{On the Turbulent Friction Layer for Rising Pressure}
+      \field{type}{{NACA} Technical Memorandum}
+      \field{year}{1951}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
