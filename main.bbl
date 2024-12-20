@@ -47,6 +47,7 @@
       \field{series}{International Series of Monographs on Physics}
       \field{title}{The Principles of Quantum Mechanics}
       \field{year}{1981}
+      \true{nocite}
     \endentry
     \entry{drela1986a}{inproceedings}{}
       \name{author}{2}{}{%
@@ -86,6 +87,7 @@
       \field{title}{Viscous-Inviscid Analysis of Transonic and Low {{Reynolds}} Number Airfoils}
       \field{year}{1986}
       \field{dateera}{ce}
+      \true{nocite}
       \verb{doi}
       \verb 10.2514/6.1986-1786
       \endverb
@@ -130,6 +132,7 @@
       \field{volume}{6}
       \field{year}{1943}
       \field{dateera}{ce}
+      \true{nocite}
     \endentry
     \entry{einstein1905}{article}{}
       \name{author}{1}{}{%
@@ -158,6 +161,7 @@
       \field{title}{{Zur Elektrodynamik bewegter Körper}}
       \field{volume}{322}
       \field{year}{1905}
+      \true{nocite}
       \field{pages}{891\bibrangedash 921}
       \range{pages}{31}
       \verb{doi}
@@ -212,6 +216,7 @@
       \field{year}{2024}
       \field{dateera}{ce}
       \field{urldateera}{ce}
+      \true{nocite}
       \verb{urlraw}
       \verb https://github.com/CalPolyCSC/thesis-template
       \endverb
@@ -248,6 +253,7 @@
       \field{title}{Entrainment in the Turbulent Boundary Layer}
       \field{type}{ARC Reports and Memoranda}
       \field{year}{1958}
+      \true{nocite}
     \endentry
     \entry{kottwitz2015}{online}{}
       \name{author}{1}{}{%
@@ -276,6 +282,7 @@
       \field{urlyear}{2024}
       \field{year}{2015}
       \field{urldateera}{ce}
+      \true{nocite}
       \verb{urlraw}
       \verb https://texample.net/tikz/examples/venn/
       \endverb
@@ -318,6 +325,7 @@
       \field{title}{Comparison of model reduction techniques for large mechanical systems}
       \field{volume}{20}
       \field{year}{2008}
+      \true{nocite}
       \field{pages}{111\bibrangedash 128}
       \range{pages}{18}
       \verb{doi}
@@ -363,6 +371,7 @@
       \field{title}{Evaluation of {{IEEE}} 754 Floating-Point Arithmetic Compliance across a Wide Range of Heterogeneous Computers}
       \field{year}{2007}
       \field{dateera}{ce}
+      \true{nocite}
       \field{pages}{1}
       \range{pages}{1}
       \verb{doi}
