@@ -1,0 +1,27 @@
+\documentclass{cpthesis}
+
+\usepackage[
+    backend=biber,
+    style=numeric,
+    url=true,
+    giveninits=true,
+    maxnames=4,
+    minnames=3,
+]{biblatex}
+\addbibresource{bibliography/references.bib}
+
+\usepackage{lipsum}
+\usepackage{graphicx}
+
+\begin{document}
+
+% Include each chapter separately
+%\input{chapters/vsfb.tex}
+\input{chapters/pismo.tex}
+
+\printbibliography[
+    heading=bibintoc,
+    title={\MakeUppercase{\bibname}}
+]
+
+\end{document}
