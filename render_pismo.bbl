@@ -16,5 +16,30 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{westernmonarchcount2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=62994cf04bb7c43c1beb5de5a3037b5e}{%
+           family={{The Xerces Society for Invertebrate Conservation}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{62994cf04bb7c43c1beb5de5a3037b5e}
+      \strng{fullhash}{62994cf04bb7c43c1beb5de5a3037b5e}
+      \strng{bibnamehash}{62994cf04bb7c43c1beb5de5a3037b5e}
+      \strng{authorbibnamehash}{62994cf04bb7c43c1beb5de5a3037b5e}
+      \strng{authornamehash}{62994cf04bb7c43c1beb5de5a3037b5e}
+      \strng{authorfullhash}{62994cf04bb7c43c1beb5de5a3037b5e}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Available at WesternMonarchCount.com}
+      \field{title}{Western {{Monarch Thanksgiving Count}} and {{New Year}}'s {{Count Data}}, 1997-2023}
+      \field{year}{2024}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
