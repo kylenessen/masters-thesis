@@ -1,1 +1,8 @@
 .DS_Store
+
+# Common QGIS temporary files
+*.qgz~
+*.gpkg-shm
+*.gpkg-wal
+*.aux.xml
+*.qgs~
