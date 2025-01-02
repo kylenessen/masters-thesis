@@ -6,3 +6,4 @@
 *.gpkg-wal
 *.aux.xml
 *.qgs~
+qgis/large_data/
