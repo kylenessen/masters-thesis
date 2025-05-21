@@ -24,14 +24,25 @@ Additionally, Pismo's extensive history of monarch butterfly research and consis
 - wind meters were deployed for two monarch overwintering seasons, 2023-2024, and 2024-2025. 
 - % Include exact start and end dates here
 - For the 2023 season, sensor issues resulted in several meters having reading issues at various times throughout the sampling period. Data was cleaned and only periods of time that have complete, or near complete observations were used in the analysis. 
+- Each sensor had a unique identifer
+- In additional to installed wind meters, data was scraped from nearby personal stations through the website, weatherunderground
+- Data was scrapped every 15 seconds at a number of nearby stations (name stations). In addition, historical records were also downloaded for each station.
 - % Probably need to elaborate on this more. Will be easier once data clean up is done. 
 - % Include diagram of how sensors were mounted to tree?
 - % Need figure showing sensor locations within the grove. Consider a top down view as well as a cross sectional view showing the variation in heights. 
 
-\begin{figure}[htbp]
-    \centering
-    \textbf{Study Area}\\[1ex]
-    \includegraphics[width=\textwidth]{figures/test.pdf}
-    \caption{Clear, descriptive caption explaining what the figure shows and its significance.}
-    \label{fig:your-label}
-\end{figure}
+
+\subsection{Data Cleaning}
+- For each wind meter, a separate SQLite file was created to keep measuresments separate. database files followed the name of the sensor. 
+- Using Python, I combined all data into a single dataframe.
+% mention how data was excluded or included
+% show a timeline of how much complete data exists. Perhaps color coded by percent complete. 
+
+
+%\begin{figure}[htbp]
+%    \centering
+%    \textbf{Study Area}\\[1ex]
+%    \includegraphics[width=\textwidth]{figures/test.pdf}
+%    \caption{Clear, descriptive caption explaining what the figure shows and its significance.}
+%    \label{fig:your-label}
+%\end{figure}
