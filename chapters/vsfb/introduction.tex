@@ -10,7 +10,7 @@
 \textbf{Prediction:} We predict a significant negative correlation between wind speed measurements and changes in monarch abundance, where higher wind speeds correspond to decreases in butterfly counts at monitoring sites.
 
 \textbf{Proposed Analysis:}
-We will test this hypothesis using a mixed-effects linear model with temporal autocorrelation to account for the hierarchical structure of our data and time-series dependencies. The response variable will be the change in monarch abundance calculated between consecutive observation periods, allowing for both positive (recruitment/clustering) and negative (departure/dispersal) values. Primary fixed effects will include instantaneous wind speed and maximum wind gust measurements, as these represent the immediate wind conditions hypothesized to trigger dispersal behavior. 
+We will test this hypothesis using a mixed-effects linear model with temporal autocorrelation to account for the hierarchical structure of our data and time-series dependencies. The response variable will be the change in monarch abundance calculated between consecutive observation periods, allowing for both positive (recruitment/clustering) and negative (departure/dispersal) values. Primary fixed effects will include mean wind speed (averaged across the observation period), maximum wind speed, 95th percentile wind speed, and wind speed variance, which together capture the overall wind exposure, peak wind events, extreme conditions, and gustiness experienced during each observation interval. 
 
 To account for non-independence in our data structure, we will include random intercepts for camera view (to control for site-specific variation) and labeler identity (to control for observer effects in abundance estimation). Given the temporal nature of abundance measurements, we will incorporate an AR (1) autocorrelation structure to model the expected correlation between consecutive time points, which is critical for obtaining unbiased parameter estimates in time-series ecological data.
 
@@ -19,7 +19,8 @@ Model diagnostics will include examination of residual plots, normality assessme
 The statistical model will be implemented in R using the \texttt{nlme} package as follows:
 
 \begin{verbatim}
-model_h1 <- lme(abundance_change ~ wind_speed + wind_gust,
+model_h1 <- lme(abundance_change ~ mean_wind_speed + max_wind_speed + 
+                wind_speed_95th + wind_speed_variance,
                 random = ~ 1 | view/labeler,
                 correlation = corAR1(form = ~ time_index | view),
                 data = monarch_wind_data,
