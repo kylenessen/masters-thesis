@@ -78,8 +78,6 @@ The primary fixed effect will be \texttt{days\_since\_wind\_event}, representing
 
 This conservative analytical approach uses complete abandonment (zero abundance) as the response threshold, giving the conventional wisdom hypothesis the strongest possible test. If monarchs truly abandon sites after wind exposure, this effect should be easily detectable even with limited sample sizes. We will include random intercepts for camera view and labeler identity to control for site-specific and observer effects, following the same random effects structure used in H1 and H2.
 
-To establish appropriate comparison baselines, we will analyze equivalent 14-day periods from the same sites and season that did not follow wind threshold events. This matched control approach ensures we distinguish wind-induced abandonment from natural fluctuations in site occupancy.
-
 Model diagnostics will focus on examining residual patterns, assessing model convergence, and validating the binary response assumption. We will report odds ratios for the temporal predictor, 95\% confidence intervals, and visualization of predicted occupancy probability across the post-event time series. A significant negative coefficient for \texttt{days\_since\_wind\_event} would support the site abandonment hypothesis, while a non-significant result would challenge current conservation guidance regarding wind exposure and habitat suitability.
 
 The statistical model will be implemented in R using the \texttt{glmer} function from the \texttt{lme4} package as follows:
@@ -89,11 +87,6 @@ library(lme4)
 model_h3 <- glmer(site_occupied ~ days_since_wind_event + (1|view) + (1|labeler),
                   family = binomial,
                   data = post_event_data)
-
-# Compare to control periods without wind events
-model_h3_control <- glmer(site_occupied ~ days_in_period + (1|view) + (1|labeler),
-                         family = binomial,
-                         data = control_period_data)
 \end{verbatim}
 
 \subsection{Thermal Regulation Hypothesis (H4)}
