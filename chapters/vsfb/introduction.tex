@@ -16,6 +16,16 @@ To account for non-independence in our data structure, we will include random in
 
 Model diagnostics will include examination of residual plots, normality assessment, and validation of the autocorrelation structure. We anticipate reporting standardized effect sizes for wind variables, 95\% confidence intervals for all parameters, and visualization of the predicted relationship between wind speed and abundance change. A significant negative coefficient for wind speed variables would support our hypothesis that increased wind conditions drive monarch dispersal from overwintering sites.
 
+The statistical model will be implemented in R using the \texttt{nlme} package as follows:
+
+\begin{verbatim}
+model_h1 <- lme(abundance_change ~ wind_speed + wind_gust,
+                random = ~ 1 | view/labeler,
+                correlation = corAR1(form = ~ time_index | view),
+                data = monarch_wind_data,
+                method = "REML")
+\end{verbatim}
+
 \subsection{Critical Wind Threshold Hypothesis (H2)}
 
 \textbf{Hypothesis:} Monarch butterflies abandon overwintering sites when wind speeds exceed the critical threshold of 5~mph (2.2~m/s), with longer durations above this threshold resulting in greater site abandonment.
