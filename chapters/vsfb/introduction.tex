@@ -10,42 +10,49 @@
 \textbf{Prediction:} We predict a significant negative correlation between wind speed measurements and changes in monarch abundance, where higher wind speeds correspond to decreases in butterfly counts at monitoring sites.
 
 \textbf{Proposed Analysis:}
-We will test this hypothesis using a mixed-effects linear model with temporal autocorrelation to account for the hierarchical structure of our data and time-series dependencies. The response variable will be the change in monarch abundance calculated between consecutive observation periods, allowing for both positive (recruitment/clustering) and negative (departure/dispersal) values. Primary fixed effects will include mean wind speed (averaged across the observation period), maximum wind speed, 95th percentile wind speed, and wind speed variance, which together capture the overall wind exposure, peak wind events, extreme conditions, and gustiness experienced during each observation interval. 
+We will test this hypothesis using a mixed-effects linear model with temporal autocorrelation to account for the hierarchical structure of our data and time-series dependencies. The response variable will be the change in monarch abundance calculated between consecutive observation periods, allowing for both positive (recruitment/clustering) and negative (departure/dispersal) values. Primary fixed effects will include mean wind speed (averaged across the observation period), maximum wind speed, 95th percentile wind speed, and wind speed variance, which together capture the overall wind exposure, peak wind events, extreme conditions, and gustiness experienced during each observation interval.
 
-To account for non-independence in our data structure, we will include random intercepts for camera view (to control for site-specific variation) and labeler identity (to control for observer effects in abundance estimation). Given the temporal nature of abundance measurements, we will incorporate an AR (1) autocorrelation structure to model the expected correlation between consecutive time points, which is critical for obtaining unbiased parameter estimates in time-series ecological data.
+In addition to testing linear wind relationships, we will explore threshold effects through several complementary approaches. We may implement segmented regression to identify potential breakpoints in wind-abundance relationships, allowing the data to reveal critical wind speeds where monarch behavior changes. Alternatively, we could employ smoothing splines or piecewise regression to capture non-linear responses to wind exposure. These threshold discovery methods will help determine whether wind effects on monarch abundance are gradual and continuous or exhibit sharp transitions at specific wind speeds.
 
-Model diagnostics will include examination of residual plots, normality assessment, and validation of the autocorrelation structure. We anticipate reporting standardized effect sizes for wind variables, 95\% confidence intervals for all parameters, and visualization of the predicted relationship between wind speed and abundance change. A significant negative coefficient for wind speed variables would support our hypothesis that increased wind conditions drive monarch dispersal from overwintering sites.
+To account for non-independence in our data structure, we will include random intercepts for camera view (to control for site-specific variation) and labeler identity (to control for observer effects in abundance estimation). Given the temporal nature of abundance measurements, we will incorporate an AR(1) autocorrelation structure to model the expected correlation between consecutive time points, which is critical for obtaining unbiased parameter estimates in time-series ecological data.
+
+Model diagnostics will include examination of residual plots, normality assessment, and validation of the autocorrelation structure. We anticipate reporting standardized effect sizes for wind variables, 95\% confidence intervals for all parameters, and visualization of the predicted relationship between wind speed and abundance change. If threshold effects are detected, we will report the estimated breakpoint(s) with confidence intervals. A significant negative coefficient for wind speed variables would support our hypothesis that increased wind conditions drive monarch dispersal from overwintering sites.
 
 The statistical model will be implemented in R using the \texttt{nlme} package as follows:
 
 \begin{verbatim}
-model_h1 <- lme(abundance_change ~ mean_wind_speed + max_wind_speed + 
-                wind_speed_95th + wind_speed_variance,
-                random = ~ 1 | view/labeler,
-                correlation = corAR1(form = ~ time_index | view),
-                data = monarch_wind_data,
-                method = "REML")
+# Linear model
+model_h1_linear <- lme(abundance_change ~ mean_wind_speed + max_wind_speed + 
+                       wind_speed_95th + wind_speed_variance,
+                       random = ~ 1 | view/labeler,
+                       correlation = corAR1(form = ~ time_index | view),
+                       data = monarch_wind_data,
+                       method = "REML")
+
+# Threshold discovery using segmented regression
+library(segmented)
+model_h1_segmented <- segmented(model_h1_linear, 
+                               seg.Z = ~ mean_wind_speed,
+                               npsi = 1)  # test for 1 breakpoint
 \end{verbatim}
 
 \subsection{Critical Wind Threshold Hypothesis (H2)}
 
-\textbf{Hypothesis:} Monarch butterflies abandon overwintering sites when wind speeds exceed the critical threshold of 5~mph (2.2~m/s), with longer durations above this threshold resulting in greater site abandonment.
+\textbf{Hypothesis:} Monarch butterflies abandon overwintering sites when wind speeds exceed Kingston Leong's critical threshold of ~5 mph (2.2 m/s).
 
-\textbf{Prediction:} We predict that the duration of time wind speeds exceed 2.2~m/s will be significantly associated with negative changes in monarch abundance, with a dose-response relationship between exposure duration and abundance decrease.
+\textbf{Prediction:} We predict that exposure to wind speeds exceeding 2.2 m/s will be significantly associated with negative changes in monarch abundance.
 
 \textbf{Proposed Analysis:}
-We will test this hypothesis using a mixed-effects linear model with temporal autocorrelation, employing the same statistical framework as H1 but with a threshold-specific predictor variable. The response variable will be the change in monarch abundance calculated between consecutive observation periods. The primary fixed effect will be \texttt{minutes\_above\_threshold}, representing the total duration (in minutes) that wind speeds exceeded 2.2~m/s during each observation interval. This approach directly tests the Kingston Leong threshold hypothesis by quantifying cumulative exposure to critical wind conditions rather than average wind intensity.
+We will test the Kingston Leong threshold hypothesis using a simple mixed-effects model that directly examines the relationship between threshold exceedance and abundance change. The response variable will be change in monarch abundance between consecutive observation periods. The primary fixed effect will be \texttt{minutes\_above\_2.2ms}, representing the total duration (in minutes) that wind speeds exceeded the Kingston threshold during each observation interval.
 
-To account for the hierarchical data structure and temporal dependencies, we will include the same random effects structure as H1: random intercepts for camera view (controlling for site-specific variation) and labeler identity (controlling for observer effects). An AR(1) autocorrelation structure will model temporal correlation between consecutive abundance measurements.
+This focused approach tests the specific claim that 2.2~m/s represents a critical threshold for monarch site abandonment, independent of other wind characteristics. We will include the same random effects structure as H1 (random intercepts for camera view and labeler identity) and AR(1) temporal autocorrelation to account for data dependencies.
 
-We will explore multiple time frames for calculating abundance changes (30 minutes to full day intervals) to determine the most biologically relevant and statistically powerful approach. The threshold variable will be calculated by identifying all time periods where instantaneous wind speed measurements exceed 2.2~m/s and summing the total duration above this critical value for each observation period.
-
-Model diagnostics will follow the same protocol as H1, including residual examination, normality assessment, and autocorrelation structure validation. We anticipate reporting the effect size for minutes above threshold, 95\% confidence intervals, and dose-response visualizations showing the relationship between threshold exposure duration and abundance change. A significant negative coefficient for \texttt{minutes\_above\_threshold} would support the hypothesis that cumulative exposure to critical wind speeds drives monarch site abandonment, with longer exposure durations producing greater abundance decreases.
+A significant negative coefficient for \texttt{minutes\_above\_2.2ms} would support the Kingston Leong threshold hypothesis, while a non-significant result would suggest that this specific threshold may not be biologically meaningful for monarch site abandonment behavior.
 
 The statistical model will be implemented in R using the \texttt{nlme} package as follows:
 
 \begin{verbatim}
-model_h2 <- lme(abundance_change ~ minutes_above_threshold,
+model_h2 <- lme(abundance_change ~ minutes_above_2.2ms,
                 random = ~ 1 | view/labeler,
                 correlation = corAR1(form = ~ time_index | view),
                 data = monarch_wind_data,
