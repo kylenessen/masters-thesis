@@ -34,7 +34,23 @@ model_h1 <- lme(abundance_change ~ mean_wind_speed + max_wind_speed +
 \textbf{Prediction:} We predict that the duration of time wind speeds exceed 2.2~m/s will be significantly associated with negative changes in monarch abundance, with a dose-response relationship between exposure duration and abundance decrease.
 
 \textbf{Proposed Analysis:}
-% TODO: Add specific analytical approach for H2
+We will test this hypothesis using a mixed-effects linear model with temporal autocorrelation, employing the same statistical framework as H1 but with a threshold-specific predictor variable. The response variable will be the change in monarch abundance calculated between consecutive observation periods. The primary fixed effect will be \texttt{minutes\_above\_threshold}, representing the total duration (in minutes) that wind speeds exceeded 2.2~m/s during each observation interval. This approach directly tests the Kingston Leong threshold hypothesis by quantifying cumulative exposure to critical wind conditions rather than average wind intensity.
+
+To account for the hierarchical data structure and temporal dependencies, we will include the same random effects structure as H1: random intercepts for camera view (controlling for site-specific variation) and labeler identity (controlling for observer effects). An AR(1) autocorrelation structure will model temporal correlation between consecutive abundance measurements.
+
+We will explore multiple time frames for calculating abundance changes (30 minutes to full day intervals) to determine the most biologically relevant and statistically powerful approach. The threshold variable will be calculated by identifying all time periods where instantaneous wind speed measurements exceed 2.2~m/s and summing the total duration above this critical value for each observation period.
+
+Model diagnostics will follow the same protocol as H1, including residual examination, normality assessment, and autocorrelation structure validation. We anticipate reporting the effect size for minutes above threshold, 95\% confidence intervals, and dose-response visualizations showing the relationship between threshold exposure duration and abundance change. A significant negative coefficient for \texttt{minutes\_above\_threshold} would support the hypothesis that cumulative exposure to critical wind speeds drives monarch site abandonment, with longer exposure durations producing greater abundance decreases.
+
+The statistical model will be implemented in R using the \texttt{nlme} package as follows:
+
+\begin{verbatim}
+model_h2 <- lme(abundance_change ~ minutes_above_threshold,
+                random = ~ 1 | view/labeler,
+                correlation = corAR1(form = ~ time_index | view),
+                data = monarch_wind_data,
+                method = "REML")
+\end{verbatim}
 
 \subsection{Site Fidelity Loss Hypothesis (H3)}
 
