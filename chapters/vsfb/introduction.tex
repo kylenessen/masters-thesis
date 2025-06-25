@@ -68,7 +68,33 @@ model_h2 <- lme(abundance_change ~ minutes_above_2.2ms,
 \textbf{Prediction:} We predict that morning abundance counts will remain near zero at sites following days when both monarchs were present and wind speeds exceeded 5~mph, with the predictor variable ``days since last threshold exceeded'' showing no recovery in abundance for values greater than zero.
 
 \textbf{Proposed Analysis:}
-% TODO: Add specific analytical approach for H3
+We will test this hypothesis using a logistic mixed-effects model that examines site occupancy patterns following wind threshold events. This approach directly tests the conservation claim that monarchs permanently abandon sites after experiencing unsuitable wind conditions.
+
+We define a wind threshold event as any day when wind speeds exceed 2.2~m/s for ≥30 consecutive minutes while monarchs are present (abundance > 0). This operational definition ensures we capture sustained wind exposure during active site occupation, rather than brief gusts or events occurring at unoccupied sites. The 30-minute minimum duration aligns with our photographic sampling interval.
+
+The response variable will be binary site occupancy status (occupied = abundance > 0, unoccupied = abundance = 0) derived from morning abundance counts to avoid confounding with same-day wind effects. We focus exclusively on the 14-day period following each threshold event, which captures both immediate and sustained abandonment patterns predicted by conventional wisdom.
+
+The primary fixed effect will be \texttt{days\_since\_wind\_event}, representing the number of days elapsed since the threshold event occurred. According to the site abandonment hypothesis, we expect a strong negative relationship where the probability of site occupation remains near zero for all post-event time points, with no recovery pattern over the 14-day analysis window.
+
+This conservative analytical approach uses complete abandonment (zero abundance) as the response threshold, giving the conventional wisdom hypothesis the strongest possible test. If monarchs truly abandon sites after wind exposure, this effect should be easily detectable even with limited sample sizes. We will include random intercepts for camera view and labeler identity to control for site-specific and observer effects, following the same random effects structure used in H1 and H2.
+
+To establish appropriate comparison baselines, we will analyze equivalent 14-day periods from the same sites and season that did not follow wind threshold events. This matched control approach ensures we distinguish wind-induced abandonment from natural fluctuations in site occupancy.
+
+Model diagnostics will focus on examining residual patterns, assessing model convergence, and validating the binary response assumption. We will report odds ratios for the temporal predictor, 95\% confidence intervals, and visualization of predicted occupancy probability across the post-event time series. A significant negative coefficient for \texttt{days\_since\_wind\_event} would support the site abandonment hypothesis, while a non-significant result would challenge current conservation guidance regarding wind exposure and habitat suitability.
+
+The statistical model will be implemented in R using the \texttt{glmer} function from the \texttt{lme4} package as follows:
+
+\begin{verbatim}
+library(lme4)
+model_h3 <- glmer(site_occupied ~ days_since_wind_event + (1|view) + (1|labeler),
+                  family = binomial,
+                  data = post_event_data)
+
+# Compare to control periods without wind events
+model_h3_control <- glmer(site_occupied ~ days_in_period + (1|view) + (1|labeler),
+                         family = binomial,
+                         data = control_period_data)
+\end{verbatim}
 
 \subsection{Thermal Regulation Hypothesis (H4)}
 
