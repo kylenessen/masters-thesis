@@ -10,7 +10,11 @@
 \textbf{Prediction:} We predict a significant negative correlation between wind speed measurements and changes in monarch abundance, where higher wind speeds correspond to decreases in butterfly counts at monitoring sites.
 
 \textbf{Proposed Analysis:}
-% TODO: Add specific analytical approach for H1
+We will test this hypothesis using a mixed-effects linear model with temporal autocorrelation to account for the hierarchical structure of our data and time-series dependencies. The response variable will be the change in monarch abundance calculated between consecutive observation periods, allowing for both positive (recruitment/clustering) and negative (departure/dispersal) values. Primary fixed effects will include instantaneous wind speed and maximum wind gust measurements, as these represent the immediate wind conditions hypothesized to trigger dispersal behavior. 
+
+To account for non-independence in our data structure, we will include random intercepts for camera view (to control for site-specific variation) and labeler identity (to control for observer effects in abundance estimation). Given the temporal nature of abundance measurements, we will incorporate an AR (1) autocorrelation structure to model the expected correlation between consecutive time points, which is critical for obtaining unbiased parameter estimates in time-series ecological data.
+
+Model diagnostics will include examination of residual plots, normality assessment, and validation of the autocorrelation structure. We anticipate reporting standardized effect sizes for wind variables, 95\% confidence intervals for all parameters, and visualization of the predicted relationship between wind speed and abundance change. A significant negative coefficient for wind speed variables would support our hypothesis that increased wind conditions drive monarch dispersal from overwintering sites.
 
 \subsection{Critical Wind Threshold Hypothesis (H2)}
 
