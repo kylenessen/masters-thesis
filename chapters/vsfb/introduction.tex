@@ -4,7 +4,9 @@
 \chapter{Introduction}
 \label{ch:introduction}
 
-\section{Introduction}
+\section{Introduction Outline}
+
+\textit{Preamble: Below is roughly the narrative direction I'm thinking for the introduction. Of course, a lot of details need to be filled in, but I try to outline the flow as best I can.}
 
 The distribution and survival of invertebrate species are governed by a complex interplay of biotic and abiotic factors. For many insects, abiotic conditions such as temperature, humidity, and wind can be primary drivers of behavior, physiology, and habitat selection. Wind, in particular, can influence everything from dispersal and migration to foraging efficiency and predation risk.
 
@@ -12,9 +14,7 @@ The monarch butterfly (\textit{Danaus plexippus}) presents an excellent system f
 
 The overwintering stage, when monarchs form dense aggregations in coastal California and central Mexico, is a period of immense physiological stress where abiotic factors are paramount. During this time, the "microclimate hypothesis" suggests that monarchs select groves that provide a specific suite of conditions necessary for survival: protection from freezing temperatures, access to moisture, dappled sunlight for thermal regulation, and shelter from wind.
 
-\section{The Disruptive Wind Hypothesis}
-
-Foundational work by Kingston Leong has been central to our understanding of monarch overwintering needs, specifically identifying wind as a key determinant of habitat suitability. Leong (2016) posits that winds exceeding 2 m/s are "disruptive," causing butterflies to be either physically dislodged from their roosts or induced to flee. This assertion directly informs our choice of response variable: the change in monarch abundance at a roost.
+Foundational work by Kingston Leong has been central to our understanding of monarch overwintering needs, specifically identifying wind as a key determinant of habitat suitability. Leong (2016) posits that winds exceeding 2 m/s are "disruptive," causing butterflies to be either physically dislodged from their roosts or induced to flee. Such disruption is considered detrimental as it can force the butterflies to expend critical energy reserves needed to survive the winter and may increase their exposure to predation. This assertion directly informs our choice of response variable: the change in monarch abundance at a roost.
 
 Leong's understanding of wind's impact has been highly influential, forming the basis for management guidelines by organizations like the Xerces Society. However, his conclusions were largely inferred from comparing wind measurements at occupied roost trees versus unoccupied trees, rather than from direct observation of butterfly behavioral responses to wind. In contrast to Leong's methods, this study uses direct, continuous time-series observation of behavioral responses within a single, occupied roost. To our knowledge, this relationship has never been directly and empirically tested.
 
@@ -67,7 +67,7 @@ If either analysis reveals a significant negative relationship, it would provide
 
 If the specific 2 m/s threshold is not a strong predictor, we will broaden our inquiry to test whether wind, in a more general sense, influences monarch abundance. While I initially wanted to model the change in abundance directly, this approach creates a response variable with a complex and non-standard statistical distribution, making model interpretation unreliable. To overcome this, I propose we use a more robust method by modeling the abundance_index at each time step directly within a Generalized Linear Mixed-Effects Model (GLMM) framework, using a negative binomial distribution that is commonly used for count data.
 
-A key challenge in analyzing time-series data is that the number of butterflies at any given moment is highly dependent on the number present just before. To properly account for this, our model will include the abundance from the previous time step (abundance_index_t_minus_1) as a predictor variable. By doing so, the model effectively asks: "Given the starting number of butterflies, what is the additional influence of our environmental predictors (e.g., wind, sun, temperature) on the abundance in the current time step?" This method allows us to statistically isolate the factors driving change between observations without creating a problematic response variable. It serves as more robust alternative for accouting autocorrelation than AR1.
+A key challenge in analyzing time-series data is that the number of butterflies at any given moment is highly dependent on the number present just before. To properly account for this, our model will include the abundance from the previous time step (abundance_index_t_minus_1) as a predictor variable. By doing so, the model effectively asks: "Given the starting number of butterflies, what is the additional influence of our environmental predictors (e.g., wind, sun, temperature) on the abundance in the current time step?" This method allows us to statistically isolate the factors driving change between observations without creating a problematic response variable. It serves as more robust alternative for accounting autocorrelation than AR1.
 
 To identify the most relevant aspect of wind, we will test a suite of continuous wind metrics, mean wind speed (sustained wind), maximum wind speed (peak gusts), and wind speed variance (gustiness), in separate models to avoid issues with collinearity. We will then use a model selection criterion, such as the Akaike Information Criterion (AICc), to compare these models. This entire analytical process will be repeated across multiple temporal scales (e.g., 30-minute, 4-hour, and daily) to investigate whether the disruptive effects of wind are due to immediate behavioral responses to acute events or cumulative responses to sustained conditions over longer durations.
 
