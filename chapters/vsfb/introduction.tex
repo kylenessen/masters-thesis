@@ -3,13 +3,15 @@
 
 \section{Introduction}
 
-The persistence of monarch butterfly (\textit{Danaus plexippus}) overwintering aggregations in California depends on a delicate balance of microclimatic conditions within their chosen groves. For decades, the management and conservation of these sites have been guided by foundational research into the environmental factors that define suitable habitat. Among the most critical of these factors is protection from wind.
+The distribution and survival of invertebrate species are governed by a complex interplay of biotic and abiotic factors. For many insects, abiotic conditions such as temperature, humidity, and wind can be primary drivers of behavior, physiology, and habitat selection. Wind, in particular, can influence everything from dispersal and migration to foraging efficiency and predation risk.
 
-Kingston Leong's extensive work has been central to our understanding of these dynamics. He posits that grove characteristics must provide shelter from what he terms "disruptive winds," which he quantitatively defines as wind speeds of 2 m/s or greater. According to Leong (2016), winds at or above this threshold are "disruptive to the aggregating butterflies by blowing them from their roosting branches or dislodging them by shaking the branches." This mechanism suggests two outcomes: butterflies are either physically forced from the roost or are induced to flee. In either case, the result is a decrease in the local abundance of the cluster. This 2 m/s threshold has since become a widely accepted, albeit not rigorously tested, benchmark in the management of monarch overwintering habitat.
+The monarch butterfly (\textit{Danaus plexippus}) presents an excellent system for studying these dynamics. Its diverse life history, which includes distinct breeding and overwintering phases, exposes it to a unique suite of environmental challenges. As a charismatic and threatened species, understanding the factors that limit monarch populations is not only of scientific interest but also critical for effective conservation.
 
-While wind is a primary focus, it is not the only environmental factor that drives monarch dispersal. Monarchs are ectotherms, and their thermal biology makes them highly responsive to solar radiation. Prolonged exposure to direct sunlight can cause butterflies to warm beyond their optimal temperature range, leading them to disperse to seek cooler locations. Therefore, to accurately isolate the effect of wind, it is critical to statistically control for the confounding effects of sunlight exposure and ambient temperature, which are also known to influence monarch clustering behavior.
+The overwintering stage, when monarchs form dense aggregations in coastal California and central Mexico, is a period of immense physiological stress where abiotic factors are paramount. During this time, the "microclimate hypothesis" suggests that monarchs select groves that provide a specific suite of conditions necessary for survival: protection from freezing temperatures, access to moisture, and shelter from wind. Kingston Leong's foundational work has been central to this understanding, specifically identifying wind as a key determinant of habitat suitability.
 
-This study aims to provide a robust, quantitative test of the wind-disruption hypothesis using high-frequency environmental data. We will employ a sequential, three-step analysis to first test the validity of the specific 2 m/s threshold, then explore the general relationship between various wind metrics and monarch abundance, and finally, develop a predictive model of roost abandonment risk.
+Leong (2016) posits that winds exceeding 2 m/s are "disruptive," causing butterflies to be either physically dislodged from their roosts or induced to flee. This assertion directly informs our choice of response variable: the change in monarch abundance at a roost. To isolate this effect, we must also account for other environmental drivers. Monarchs are ectotherms, and their thermal biology makes them highly responsive to solar radiation. Prolonged exposure to direct sunlight can cause them to disperse to avoid overheating. Therefore, to accurately test the wind-disruption hypothesis, it is critical to statistically control for the confounding effects of sunlight exposure and ambient temperature.
+
+Leong's understanding of wind's impact has been highly influential, forming the basis for management guidelines by organizations like the Xerces Society. However, his conclusions were largely inferred from comparing wind measurements at occupied roost trees versus unoccupied trees, rather than from direct observation of butterfly behavioral responses to wind. To our knowledge, the relationship has never been directly and empirically tested. This study aims to fill that research gap. By using high-frequency environmental data paired with continuous abundance monitoring, we will provide the first empirical test of this foundational idea in monarch conservation.
 
 \section{Hypothesis and Proposed Analysis}
 
@@ -23,26 +25,80 @@ To test this hypothesis, we propose a three-step analytical framework designed t
 
 \subsubsection{Step 1: Direct Test of the 2 m/s Threshold}
 
-Our first step is a direct test of Leong's hypothesis. We will use a linear mixed-effects model to determine if the duration of exposure to winds exceeding 2 m/s is a significant predictor of change in monarch abundance, while controlling for the confounding effects of sunlight and temperature. We will create predictor variables representing the number of minutes that both sustained wind speeds and gust wind speeds exceed this threshold and test them in separate models.
+Our first step is a direct test of Leong's hypothesis. We will use linear mixed-effects models to determine if the duration of exposure to winds exceeding 2 m/s is a significant predictor of change in monarch abundance, while controlling for the confounding effects of sunlight and temperature. We will create two predictor variables representing the number of minutes that sustained and gust wind speeds exceed this threshold and test them in separate models to avoid issues with collinearity.
 
-If this analysis reveals a significant negative relationship, it would provide strong empirical support for the 2 m/s threshold as a key factor in monarch habitat suitability. If the result is not significant, as we suspect, it would suggest the relationship is more complex than a single threshold can describe, leading us to the next step.
+\begin{verbatim}
+% Load required library
+library(nlme)
+
+# Model 1: Test sustained wind threshold
+model_sustained_threshold <- lme(
+    abundance_change ~ sustained_minutes_above_2ms + 
+                       sunlight_exposure_prop * ambient_temp,
+    random = ~ 1 | view/labeler,
+    correlation = corAR1(form = ~ time_index | view),
+    data = monarch_data,
+    method = "REML"
+)
+
+# Model 2: Test gust wind threshold
+model_gust_threshold <- lme(
+    abundance_change ~ gust_minutes_above_2ms + 
+                       sunlight_exposure_prop * ambient_temp,
+    random = ~ 1 | view/labeler,
+    correlation = corAR1(form = ~ time_index | view),
+    data = monarch_data,
+    method = "REML"
+)
+\end{verbatim}
+
+If either analysis reveals a significant negative relationship, it would provide strong empirical support for the 2 m/s threshold. If not, as we suspect, it would suggest the relationship is more complex, leading us to the next step.
 
 \subsubsection{Step 2: General Wind-Abundance Relationship Model}
 
-If the specific 2 m/s threshold is not found to be a strong predictor, we will broaden the inquiry to test whether wind, in a more general sense, influences monarch abundance. We will employ a similar mixed-effects model, but instead of a threshold variable, we will use a suite of continuous wind metrics as predictors:
-\begin{itemize}
-    \item \textbf{Mean wind speed:} to capture the effect of sustained wind.
-    \item \textbf{Maximum wind speed:} to capture the effect of peak gusts.
-    \item \textbf{Wind speed variance:} to capture the effect of gustiness or erratic wind conditions.
-\end{itemize}
-This model will allow us to parse the relative importance of different aspects of wind. If this general model reveals that one or more wind metrics are significant predictors of abundance change, we will proceed to the final step. If not, we would conclude that, with our data, we cannot detect a significant effect of wind on monarch abundance when controlling for other environmental factors.
+If the specific 2 m/s threshold is not a strong predictor, we will broaden the inquiry to test whether wind, in a more general sense, influences monarch abundance. We will use a similar mixed-effects model, but with a suite of continuous wind metrics as predictors: mean wind speed (sustained wind), maximum wind speed (peak gusts), and wind speed variance (gustiness).
+
+\begin{verbatim}
+% Load required library
+library(nlme)
+
+# Model: General wind relationship
+model_general_wind <- lme(
+    abundance_change ~ mean_wind_speed + max_wind_speed + wind_speed_variance +
+                       sunlight_exposure_prop * ambient_temp,
+    random = ~ 1 | view/labeler,
+    correlation = corAR1(form = ~ time_index | view),
+    data = monarch_data,
+    method = "REML"
+)
+\end{verbatim}
+
+If this general model reveals that one or more wind metrics are significant predictors, we will proceed to the final step.
 
 \subsubsection{Step 3: Predictive Hazard Model}
 
-If we establish a significant relationship in Step 2, our final step will be to build a predictive hazard model. Using a mixed-effects logistic regression model, we will predict the probability of a roost abandonment event (e.g., a >90\% drop in abundance) as a function of the most influential wind metric identified in Step 2. The goal is to produce a probabilistic curve that quantifies the risk of roost abandonment across a range of wind speeds. This would provide a nuanced and highly useful tool for habitat managers, moving beyond a single threshold to a more dynamic understanding of wind risk.
+If we establish a significant relationship in Step 2, our final step will be to build a predictive hazard model. Using a mixed-effects logistic regression model, we will predict the probability of a roost abandonment event (e.g., a >90\% drop in abundance, coded as a binary variable `roost_abandoned`). This model will use the most influential wind metric from Step 2 as the primary predictor.
+
+\begin{verbatim}
+% Load required library
+library(lme4)
+
+# Model: Predictive Hazard Analysis
+hazard_model <- glmer(
+    roost_abandoned ~ max_wind_speed + 
+                      sunlight_exposure_prop * ambient_temp,
+    family = binomial, # Specifies logistic regression
+    data = monarch_data,
+    control = glmerControl(optimizer = "bobyqa")
+)
+\end{verbatim}
+
+The goal is to produce a probabilistic curve that quantifies the risk of roost abandonment across a range of wind speeds, providing a nuanced tool for habitat managers.
 
 \section{Dropping the Site Fidelity Hypothesis}
 
-An initial version of this project included a hypothesis regarding the long-term loss of site fidelity, predicting that monarchs would not return to a roost after a disruptive wind event. We have made the deliberate decision to drop this hypothesis for a critical reason: our data cannot provide a convincing answer to this question.
+An initial version of this project included a hypothesis regarding the long-term loss of site fidelity. We have made the deliberate decision to drop this hypothesis for a critical reason: our data cannot provide a convincing answer. Our methodology allows us to count butterflies, but not to track individuals. We cannot know if butterflies that appear after a dispersal event are the same individuals returning or new ones arriving. Answering the site fidelity question is better suited for a future project employing different methods.
 
-Our methodology allows us to count the number of butterflies present in a given frame at a given time. However, we have no way of knowing if the butterflies that appear in a roost after a dispersal event are the same individuals returning or new, naive butterflies arriving to the site. Answering the site fidelity question would require tracking individuals, which is beyond the scope of our current dataset. Including this hypothesis would force us to make unsubstantiated assumptions and ultimately weaken the conclusions of our core analysis. While the question of site fidelity is compelling, it is better suited for a future project employing different methods, such as a full-coverage camera system in a small, contained grove.
+\section{Potential Ancillary Analysis: Rocket Launches}
+
+As a brief note, our dataset contains a unique, opportunistic record of monarch roost behavior during several rocket launches from nearby Vandenberg Space Force Base. If time permits, we could conduct a simple analysis to see if monarchs respond to the acoustic and vibrational disturbances. The method would be to compare the change in monarch abundance in the 30 minutes before and after a launch to changes during randomly selected 30-minute intervals from the study period. A null finding would itself be noteworthy. This could be a candidate for a short note publication.
