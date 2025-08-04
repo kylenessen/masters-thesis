@@ -71,18 +71,18 @@ where $\rho_i$ represents the number of cells in category $i$, and $C_i$ represe
 
 To test our five hierarchical hypotheses, we developed a sequential analytical framework using Generalized Linear Mixed-Effects Models (GLMMs). Our primary response variable for abundance is the `abundance_index` at time $t$. To properly model this count-based data and account for overdispersion, we use a negative binomial distribution. A key challenge in analyzing time-series data is temporal autocorrelation. We address this by including the abundance from the previous time step (`abundance_index_t_minus_1`) as a predictor variable. This robustly controls for autocorrelation by modeling the influence of environmental predictors on the change in abundance from one step to the next. All models include random intercepts for `view` to account for site-specific variation.
 
-\subsubsection{Hypothesis 1 & 3: Wind as a Disruptive Force and Scaling Intensity}
+\subsubsection{Hypothesis 1: The 2 m/s Disruptive Threshold}
 
-First, we tested the hypotheses that wind acts as a disruptive force and that its effects scale with intensity. We fit a series of GLMMs to test a suite of continuous wind metrics: mean wind speed (sustained wind), maximum wind speed (peak gusts), and wind speed variance (gustiness). These were tested in separate models to avoid collinearity. The model revealing the most significant relationship, determined using Akaike’s Information Criterion (AICc), was carried forward. This approach allows us to identify which characteristic of wind is the most influential predictor of monarch abundance.
+First, we conducted a direct test of Leong's (2016) hypothesis that wind becomes disruptive above a 2 m/s threshold. We created predictor variables representing the number of minutes that sustained and gust wind speeds exceeded the 2 m/s threshold within a sampling interval. A significant negative relationship for these variables would provide direct empirical support for this specific threshold.
 
 \begin{verbatim}
-# Example model for one wind metric (run separately for each)
-# Load required library
+% Load required library
 library(lme4)
 
-model_wind_intensity <- glmer(
+# Model to test sustained wind threshold
+model_sustained_threshold <- glmer(
     abundance_index_t ~ abundance_index_t_minus_1 + 
-                        max_wind_speed + # or mean_wind_speed, etc.
+                        sustained_minutes_above_2ms + 
                         sunlight_exposure_prop * ambient_temp +
                         (1 | view),
     family = "nbinom2",
@@ -90,15 +90,15 @@ model_wind_intensity <- glmer(
 )
 \end{verbatim}
 
-\subsubsection{Hypothesis 2: The 2 m/s Disruptive Threshold}
+\subsubsection{Hypothesis 2 & 3: Wind as a Disruptive Force and Scaling Intensity}
 
-Second, we conducted a direct test of Leong's (2016) hypothesis that wind becomes disruptive above a 2 m/s threshold. We created predictor variables representing the number of minutes that sustained and gust wind speeds exceeded the 2 m/s threshold within a sampling interval. A significant negative relationship for these variables would provide direct empirical support for this specific threshold.
+Second, we tested the hypotheses that wind acts as a disruptive force and that its effects scale with intensity. We fit a series of GLMMs to test a suite of continuous wind metrics: mean wind speed (sustained wind), maximum wind speed (peak gusts), and wind speed variance (gustiness). These were tested in separate models to avoid collinearity. The model revealing the most significant relationship, determined using Akaike’s Information Criterion (AICc), was carried forward. This approach allows us to identify which characteristic of wind is the most influential predictor of monarch abundance.
 
 \begin{verbatim}
-# Model to test sustained wind threshold
-model_sustained_threshold <- glmer(
+# Example model for one wind metric (run separately for each)
+model_wind_intensity <- glmer(
     abundance_index_t ~ abundance_index_t_minus_1 + 
-                        sustained_minutes_above_2ms + 
+                        max_wind_speed + # or mean_wind_speed, etc.
                         sunlight_exposure_prop * ambient_temp +
                         (1 | view),
     family = "nbinom2",
@@ -134,5 +134,3 @@ site_fidelity_model <- glmer(
     data = post_event_data
 )
 \end{verbatim}
-
-This comprehensive framework allows us to systematically test each hypothesis, from the immediate behavioral response to wind to its potential long-term consequences on habitat use.
