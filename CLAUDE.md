@@ -8,6 +8,10 @@ This is a Master's thesis LaTeX project studying monarch butterfly ecology and w
 
 ## Build Commands
 
+**IMPORTANT: NEVER attempt to build LaTeX documents. The user will handle all LaTeX compilation themselves.**
+
+Build commands are provided for reference only:
+
 **Primary build:**
 ```bash
 latexmk -pdf main.tex
