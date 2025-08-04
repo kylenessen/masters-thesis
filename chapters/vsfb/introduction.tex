@@ -104,37 +104,3 @@ hazard_model <- glmer(
 \end{verbatim}
 
 The goal is to produce a probabilistic curve that quantifies the risk of roost abandonment across a range of wind speeds, providing a nuanced tool for habitat managers.
-
-\section{Dropping the Site Fidelity and Light Hypothesis}
-
-An initial version of this introduction included a hypothesis regarding the long-term loss of site fidelity. I propose to drop this hypothesis for a critical reason: our data cannot provide a convincing answer. Our methodology allows us to count butterflies, but not to track individuals. We cannot know if butterflies that appear after a dispersal event are the same individuals returning or new ones arriving. Answering the site fidelity question is probably better suited for a future project employing different methods. I prefer keeping this project clean and focused on answering the question of whether monarchs respond to strong winds.
-
-Additionally, I also propose that we drop an explicit test of light mediated dispersal. The more I thought and read about potentially hypotheses, the more mired I became in thermal behavior, which this study is not well suited to address. I do think, however, that treating exposure to prolonged, direct light is a confounding variable that we need to address, and makes our analysis much stronger for incorporating it. If the data is compelling, perhaps we can include some graphs that describe the pattern of movement based on sunlight, but as of now, I can't think of a defensible hypotheses we can answer with our data. 
-
-\section{Potential Ancillary Analysis: Rocket Launches}
-
-As a brief note, our dataset contains a unique, opportunistic record of monarch roost behavior during several rocket launches from nearby Vandenberg Space Force Base. If time permits, we could conduct a simple analysis to see if monarchs respond to the acoustic and vibrational disturbances. The method would be to compare the change in monarch abundance in the 30 minutes before and after a launch to changes during randomly selected 30-minute intervals from the study period. A null finding would itself be noteworthy. This could be a candidate for a short note publication.
-
-Here is the summary table I presented for Jessica Griffiths regarding monarchs response to rocket launches:
-
-\begin{longtable}{|c|c|c|c|c|c|p{2.5cm}|p{5cm}|}
-\hline
-\textbf{Flight \#} & \textbf{Date} & \textbf{Time} & \textbf{Boostback} & \textbf{Temp (F)} & \textbf{Monarch Change} & \textbf{Deployment(s)} & \textbf{Video(s)} \\
-\hline
-275 & 11/20/23 & 2:30:00 & No & 50 & No & SC3 & \href{https://youtu.be/EjNyWgDMnaA?si=tF78Lck0BBfF1kzb\&t=21}{SC3 video 1} \\
-\hline
-278 & 12/1/23 & 10:19:00 & Yes & 66 & No & SC3 & \href{https://youtu.be/EjNyWgDMnaA?si=sDoxxwUsjJZVCXST\&t=561}{SC3 video 2} \\
-\hline
-281 & 12/8/23 & 0:03:00 & No & 51 & No & SC4 & \href{https://youtu.be/RW91J3HMm_4?si=LM_TRjQAb_pA5lFN\&t=104}{SC4 video} \\
-\hline
-284 & 12/24/23 & 5:11:00 & Yes & 46 & No & SC6 & \href{https://youtu.be/MqmH5L3lXbk?si=6g8voV1f43D4lI5Y\&t=207}{SC6 video 1} \\
-\hline
-286 & 1/2/24 & 19:44:00 & No & 53 & No & SC6 & \href{https://youtu.be/MqmH5L3lXbk?si=aT3sviJN7YJ9i5bv\&t=437}{SC6 video 2} \\
-\hline
-289 & 1/14/24 & 0:59:00 & No & 50 & No & SC8, SC10 & \href{https://youtu.be/AOWrySdh1z8?si=Pak3IK64mY7OlAMI\&t=200}{SC8 video} \newline \href{https://youtu.be/0zLjm9PA6YM?si=Bokwr4KQj_jWIxWe\&t=224}{SC10 video} \\
-\hline
-292 & 1/23/24 & 16:35:00 & No & 55 & No & SC10, SC8 (behind year) & \href{https://youtu.be/0zLjm9PA6YM?si=Ve9XAPoi9p32KaN0\&t=431}{SC10 video} \newline \href{https://youtu.be/AOWrySdh1z8?si=744XzLu4L5U3Pjx7\&t=431}{SC8 video (BY)} \\
-\hline
-294 & 1/28/24 & 21:57:00 & No & 59 & No & SC12, SC10 & \href{https://youtu.be/4uLZIZqlgPE?si=jwAqUIh4ifB_exz-\&t=32}{SC12 video} \newline \href{https://youtu.be/0zLjm9PA6YM?si=JJND2CcZOMcbKwkF\&t=552}{SC10 video} \\
-\hline
-\end{longtable}
