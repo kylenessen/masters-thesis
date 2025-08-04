@@ -65,3 +65,81 @@ We calculated an abundance index for each frame by summing the products of cell 
 \end{equation}
 
 where $\rho_i$ represents the number of cells in category $i$, and $C_i$ represents the conservative estimate for that category. We used minimum category values ($C_1 = 1$ for category 1–9, $C_2 = 10$ for category 10–99, and $C_3 = 100$ for category 100–999) rather than midpoint or maximum values to ensure temporal analyses reflected genuine population shifts rather than estimation uncertainty.
+
+\subsection{Statistical Analysis}
+\label{sec:statistical-analysis}
+
+To test our hypotheses, we developed a sequential, three-step analytical framework. This approach was designed to first assess the specific, established 2 m/s wind speed threshold for disruptive wind (Leong 2016) and then, if the data did not support this specific threshold, to explore the relationship between wind and monarch abundance more broadly.
+
+\subsubsection{Step 1: Direct Test of the 2 m/s Threshold}
+
+Our first step is a direct test of Leong's hypothesis using Generalized Linear Mixed-Effects Models (GLMMs). To properly model our count-based abundance index and account for likely overdispersion, we will use a negative binomial distribution. The response variable will be the `abundance_index` at time t, a metric representing the sum of conservative butterfly estimates within the sampled image. To account for temporal dependency, we will include the `abundance_index` from the previous time step (t-1) as a covariate. We will create two predictor variables representing the number of minutes that sustained and gust wind speeds exceed the 2 m/s threshold and test them in separate models to avoid issues with collinearity.
+
+\begin{verbatim}
+% Load required library
+library(lme4)
+
+# Model 1: Test sustained wind threshold with Negative Binomial GLMM
+model_sustained_threshold <- glmer(
+    abundance_index_t ~ abundance_index_t_minus_1 + 
+                        sustained_minutes_above_2ms + 
+                        sunlight_exposure_prop * ambient_temp +
+                        (1 | view/labeler),
+    family = "nbinom2",
+    data = monarch_data
+)
+
+# Model 2: Test gust wind threshold with Negative Binomial GLMM
+model_gust_threshold <- glmer(
+    abundance_index_t ~ abundance_index_t_minus_1 + 
+                        gust_minutes_above_2ms + 
+                        sunlight_exposure_prop * ambient_temp +
+                        (1 | view/labeler),
+    family = "nbinom2",
+    data = monarch_data
+)
+\end{verbatim}
+
+If either analysis reveals a significant negative relationship, it would provide strong empirical support for the 2 m/s threshold. If not, as we suspect, it would suggest the relationship is more complex, leading us to the next step.
+
+\subsubsection{Step 2: General Wind-Abundance Relationship Model}
+
+If the specific 2 m/s threshold is not a strong predictor, we will broaden our inquiry to test whether wind, in a more general sense, influences monarch abundance. While I initially wanted to model the change in abundance directly, this approach creates a response variable with a complex and non-standard statistical distribution, making model interpretation unreliable. To overcome this, I propose we use a more robust method by modeling the abundance_index at each time step directly within a Generalized Linear Mixed-Effects Model (GLMM) framework, using a negative binomial distribution that is commonly used for count data.
+
+A key challenge in analyzing time-series data is that the number of butterflies at any given moment is highly dependent on the number present just before. To properly account for this, our model will include the abundance from the previous time step (abundance_index_t_minus_1) as a predictor variable. By doing so, the model effectively asks: "Given the starting number of butterflies, what is the additional influence of our environmental predictors (e.g., wind, sun, temperature) on the abundance in the current time step?" This method allows us to statistically isolate the factors driving change between observations without creating a problematic response variable. It serves as more robust alternative for accounting autocorrelation than AR1.
+
+To identify the most relevant aspect of wind, we will test a suite of continuous wind metrics, mean wind speed (sustained wind), maximum wind speed (peak gusts), and wind speed variance (gustiness), in separate models to avoid issues with collinearity. We will then use a model selection criterion, such as the Akaike Information Criterion (AICc), to compare these models. To ensure valid comparisons, the random effects structure will be held constant across all models. This entire analytical process will be repeated across multiple temporal scales (e.g., 30-minute, 4-hour, and daily) to investigate whether the disruptive effects of wind are due to immediate behavioral responses to acute events or cumulative responses to sustained conditions over longer durations. These scales were chosen to capture a range of potential biological responses, from short-term behavioral adjustments (30-minute) to responses to prolonged weather patterns (4-hour and daily), though the final scales may be adjusted based on data exploration.
+
+\begin{verbatim}
+# Example model for one wind metric (run separately for each)
+model_max_wind <- glmer(
+    abundance_index_t ~ abundance_index_t_minus_1 + 
+                        max_wind_speed + 
+                        sunlight_exposure_prop * ambient_temp +
+                        (1 | view/labeler),
+    family = "nbinom2",
+    data = monarch_data
+)
+\end{verbatim}
+
+If this general model reveals that one or more wind metrics are significant predictors, we will proceed to the final step.
+
+\subsubsection{Step 3: Predictive Roost Abandonment Model}
+
+If we establish a significant relationship in Step 2, our final step will be to build a predictive roost abandonment model. Using a mixed-effects logistic regression model, we will predict the probability of a roost abandonment event (e.g., a drop in abundance exceeding a high threshold, such as >90\%, to be finalized after data exploration), coded as a binary variable `roost_abandoned`. This model will use the most influential wind metric from Step 2 as the primary predictor.
+
+\begin{verbatim}
+% Load required library
+library(lme4)
+
+# Model: Predictive Hazard Analysis
+hazard_model <- glmer(
+    roost_abandoned ~ max_wind_speed + 
+                      sunlight_exposure_prop * ambient_temp,
+    family = binomial, # Specifies logistic regression
+    data = monarch_data,
+    control = glmerControl(optimizer = "bobyqa")
+)
+\end{verbatim}
+
+The goal is to produce a probabilistic curve that quantifies the risk of roost abandonment across a range of wind speeds, providing a nuanced tool for habitat managers.
