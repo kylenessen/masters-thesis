@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+
+% Essential packages from main.tex
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[breaklinks=true,hidelinks]{hyperref}
+\usepackage{longtable}
+
+% Bibliography setup
+\usepackage[
+    backend=biber,
+    style=numeric,
+    url=true,
+    giveninits=true,
+    maxnames=4,
+    minnames=3,
+]{biblatex}
+\addbibresource{bibliography/references.bib}
+
+% Add figures folder to the graphics path
+\graphicspath{{figures/}}
+
+% Page setup
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\doublespacing
+
+\title{Introduction and Methods}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+% Include introduction content
+\input{chapters/vsfb/introduction}
+
+% Include methods content  
+\input{chapters/vsfb/methods}
+
+% Bibliography
+\printbibliography
+
+\end{document}
