@@ -66,6 +66,12 @@ We calculated an abundance index for each frame by summing the products of cell 
 
 where $\rho_i$ represents the number of cells in category $i$, and $C_i$ represents the conservative estimate for that category. We used minimum category values ($C_1 = 1$ for category 1–9, $C_2 = 10$ for category 10–99, and $C_3 = 100$ for category 100–999) rather than midpoint or maximum values to ensure temporal analyses reflected genuine population shifts rather than estimation uncertainty.
 
+\subsection{Temperature Data Extraction}
+
+Ambient temperature data were extracted from trail camera images using optical character recognition (OCR). Each camera displayed temperature readings on the image overlay, but these values were not accessible through EXIF metadata, necessitating visual extraction methods. We developed an automated Python script utilizing OCR technology to extract temperature values from approximately 56,000 images across all deployments. The extraction process employed multiple preprocessing strategies and pattern matching algorithms to accommodate variations in image quality and display characteristics.
+
+Following initial automated extraction, we manually reviewed and corrected edge cases where OCR failed or produced anomalous values. All temperature data underwent systematic quality control through visualization of deployment-specific time series, enabling identification and correction of erroneous values. This process ensured complete temperature coverage for all analyzed images, providing the ambient temperature covariate required for our statistical models.
+
 \subsection{Statistical Analysis}
 \label{sec:statistical-analysis}
 
