@@ -75,68 +75,19 @@ Following initial automated extraction, we manually reviewed and corrected edge 
 \subsection{Statistical Analysis}
 \label{sec:statistical-analysis}
 
-To test our five hierarchical hypotheses, we developed a sequential analytical framework using Generalized Linear Mixed-Effects Models (GLMMs). Our primary response variable for abundance is the `abundance_index` at time $t$. To properly model this count-based data and account for overdispersion, we use a negative binomial distribution. A key challenge in analyzing time-series data is temporal autocorrelation. We address this by including the abundance from the previous time step (`abundance_index_t_minus_1`) as a predictor variable. This robustly controls for autocorrelation by modeling the influence of environmental predictors on the change in abundance from one step to the next. All models include random intercepts for `view` to account for site-specific variation.
+\subsubsection{Data Preparation}
 
-\subsubsection{Hypothesis 1: The 2 m/s Disruptive Threshold}
+Statistical analysis employed a lag-based framework comparing butterfly counts between consecutive 30-minute intervals. Observation pairs were constructed by matching counts at time $t$ with counts at time $t-30$ minutes, applying a ±5 minute tolerance window to accommodate minor temporal variations in image capture. The response variable—change in butterfly abundance between time points—underwent cube root transformation to achieve approximate normality while preserving directional information: $y = \text{sign}(\Delta) \times |\Delta|^{1/3}$, where $\Delta$ represents the difference in butterfly counts. Observation pairs where both time points recorded zero butterflies were excluded as uninformative, reducing the dataset from approximately 2,500 potential pairs to 1,894 analyzable observations across 115 unique deployment-day combinations.
 
-First, we conducted a direct test of Leong's (2016) hypothesis that wind becomes disruptive above a 2 m/s threshold. We created predictor variables representing the number of minutes that sustained and gust wind speeds exceeded the 2 m/s threshold within a sampling interval. A significant negative relationship for these variables would provide direct empirical support for this specific threshold.
+\subsubsection{Variable Selection}
 
-\begin{verbatim}
-% Load required library
-library(lme4)
+Predictor variables were selected to test specific hypotheses while avoiding multicollinearity. Maximum wind gust speed during each 30-minute interval served as the primary wind metric, with alternative wind measurements (average sustained speed, modal gust, gust standard deviation) excluded due to high correlation ($r > 0.75$). Environmental predictors included average temperature between observation pairs, number of butterflies in direct sunlight at the previous time point, and minutes elapsed since the first observation of each day to capture diurnal patterns. Total butterfly count at the previous time point was included as a control variable, enabling distinction between proportional and absolute changes in abundance. When included, this variable tests effects on proportional change; when excluded, models test effects on absolute change.
 
-# Model to test sustained wind threshold
-model_sustained_threshold <- glmer(
-    abundance_index_t ~ abundance_index_t_minus_1 + 
-                        sustained_minutes_above_2ms + 
-                        sunlight_exposure_prop * ambient_temp +
-                        (1 | view),
-    family = "nbinom2",
-    data = monarch_data
-)
-\end{verbatim}
+\subsubsection{Model Framework}
 
-\subsubsection{Hypothesis 2 & 3: Wind as a Disruptive Force and Scaling Intensity}
+Analysis employed generalized additive mixed models (GAMMs) implemented through the mgcv package in R. Model selection followed an information-theoretic approach, comparing 47 candidate models using Akaike Information Criterion (AIC). The candidate set comprised two fundamental frameworks—models including the lag abundance term (24 models) and models excluding it (23 models)—with each framework containing null models, single predictor models, additive combinations, two- and three-way interactions, and models incorporating smooth terms for non-linear relationships. Random effects structure accounted for variation at three hierarchical levels: deployment location, observer, and deployment-day. Temporal autocorrelation within days was addressed using a first-order autoregressive (AR1) correlation structure grouped by deployment-day. All models were fitted using restricted maximum likelihood (REML) estimation.
 
-Second, we tested the hypotheses that wind acts as a disruptive force and that its effects scale with intensity. We fit a series of GLMMs to test a suite of continuous wind metrics: mean wind speed (sustained wind), maximum wind speed (peak gusts), and wind speed variance (gustiness). These were tested in separate models to avoid collinearity. The model revealing the most significant relationship, determined using Akaike’s Information Criterion (AICc), was carried forward. This approach allows us to identify which characteristic of wind is the most influential predictor of monarch abundance.
+\subsubsection{Model Validation}
 
-\begin{verbatim}
-# Example model for one wind metric (run separately for each)
-model_wind_intensity <- glmer(
-    abundance_index_t ~ abundance_index_t_minus_1 + 
-                        max_wind_speed + # or mean_wind_speed, etc.
-                        sunlight_exposure_prop * ambient_temp +
-                        (1 | view),
-    family = "nbinom2",
-    data = monarch_data
-)
-\end{verbatim}
+Model assumptions were verified through standard residual diagnostics including examination of residual distributions, fitted versus residual plots, and quantile-quantile plots. Convergence was confirmed for all 47 candidate models. Model performance and predictor significance were evaluated through AIC comparison, with models differing by less than 2 AIC units considered equivalent.
 
-\subsubsection{Hypothesis 4: Wind and Roost Abandonment Probability}
-
-Third, to test if wind magnitude influences the probability of roost abandonment, we built a predictive model using a mixed-effects logistic regression. The response variable, `roost_abandoned`, was a binary indicator triggered when abundance dropped by more than 90\% between observations. This model uses the most influential continuous wind metric identified in the first step to predict the likelihood of an abandonment event.
-
-\begin{verbatim}
-# Model: Predictive Roost Abandonment
-abandonment_model <- glmer(
-    roost_abandoned ~ max_wind_speed + # or other best wind metric
-                      sunlight_exposure_prop * ambient_temp +
-                      (1 | view),
-    family = binomial, # Specifies logistic regression
-    data = monarch_data,
-    control = glmerControl(optimizer = "bobyqa")
-)
-\end{verbatim}
-
-\subsubsection{Hypothesis 5: Site Fidelity After Disturbance}
-
-Finally, we tested the hypothesis that disruptive wind events affect long-term site fidelity. We defined a "disruptive wind event" as any day where wind speeds exceeded 2.2 m/s for at least 30 consecutive minutes while monarchs were present. We then used a mixed-effects logistic regression to model the probability of site occupancy (`site_occupied`, a binary variable based on morning abundance counts) as a function of the number of days that had passed since the last disruptive event (`days_since_wind_event`). A sustained low probability of occupancy after an event would indicate a loss of site fidelity.
-
-\begin{verbatim}
-# Model: Site Fidelity Analysis
-site_fidelity_model <- glmer(
-    site_occupied ~ days_since_wind_event + (1 | view),
-    family = binomial,
-    data = post_event_data
-)
-\end{verbatim}
