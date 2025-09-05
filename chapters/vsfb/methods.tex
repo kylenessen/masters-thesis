@@ -4,7 +4,7 @@
 
 Site selection followed a systematic filtering process driven by project requirements and practical constraints. The study was supported by a federal grant that mandated research be conducted on federal lands. We selected Vandenberg Space Force Base (VSFB, 34.7398°N, 120.5725°W) in Santa Barbara County, California, based on several key advantages: mild winters with infrequent frost events, extensive historical plantings of blue gum eucalyptus (\textit{Eucalyptus globulus}) that have created suitable overwintering habitat throughout the installation, and restricted access that provided security for long-term equipment deployment. The base contains thirty documented monarch overwintering groves, with several sites consistently ranking within the top 10\% of population counts statewide over the past decade \autocite{xercesGuideWesternMonarch2025}. 
 
-Working with the base's monarch conservation coordinator, we initially screened twelve locations from the thirty sites based on their documented capacity to support monarch aggregations and provide year-round access. This collaboration leveraged local expertise from managing Western Monarch Thanksgiving Count activities for multiple years \autocite{xercesGuideWesternMonarch2025}. During the study period, ten of these sites were actively monitored. However, due to low monarch populations during the 2023-2024 season and no observed overwintering behavior in the 2024-2025 season, only two sites—Spring Canyon and UDMH—produced measurable butterfly clusters suitable for our analysis.
+Working with the base's monarch conservation coordinator, we initially screened twelve locations from the thirty sites based on their documented capacity to support monarch aggregations and provide year-round access. This collaboration leveraged local expertise from managing Western Monarch Thanksgiving Count activities for multiple years \autocite{xercesGuideWesternMonarch2025}. During the study period, ten of these sites were actively monitored. However, due to low monarch populations during the 2023-2024 season and no observed overwintering behavior in the 2024-2025 season, only two sites (Spring Canyon and UDMH) produced measurable butterfly clusters suitable for our analysis.
 
 Spring Canyon (34.6315°N, 120.6182°W) represents the most productive and historically reliable overwintering site on VSFB. Located in South Base within 300 meters of Space Launch Complex 4, this approximately 2.0-hectare site consists entirely of mature blue gum eucalyptus trees reaching heights of approximately 40 meters. An unnamed perennial creek runs through the center of the grove, creating a riparian corridor that supports heterogeneous canopy structure with variable tree spacing and diverse understory vegetation. Surf Road, an infrequently used paved access road, bisects both the perennial creek and forest canopy. 
 
@@ -14,9 +14,9 @@ The UDMH site (34.6719°N, 120.5950°W), also located in South Base, comprises a
 
 \subsection{Monitoring Strategy}
 
-Equipment deployment strategies differed between monitoring seasons to accommodate research objectives and field experience. During the 2023-2024 season, we employed two strategies: targeted deployments at sites with confirmed monarch presence, and anticipatory deployments at locations where monarchs were expected based on historical data but not currently observed. Targeted deployments concentrated at Spring Canyon and UDMH where active aggregations were documented throughout the season. Anticipatory deployments occurred at four overwintering sites—additional locations within Spring Canyon and UDMH, plus SLC-6 and Tangair. No monarchs were recorded at anticipatory deployment sites; consequently, these data are excluded from analysis.
+Equipment deployment strategies differed between monitoring seasons to accommodate research objectives and field experience. During the 2023-2024 season, we employed two strategies: targeted deployments at sites with confirmed monarch presence, and anticipatory deployments at locations where monarchs were expected based on historical data but not currently observed. Targeted deployments concentrated at Spring Canyon and UDMH where active aggregations were documented throughout the season. Anticipatory deployments occurred at four overwintering sites: additional locations within Spring Canyon and UDMH, plus SLC-6 and Tangair. No monarchs were recorded at anticipatory deployment sites; consequently, these data are excluded from analysis.
 
-For the 2024-2025 season, we modified our approach to establish monitoring stations at ten sites before monarch arrival, based on historical occurrence records compiled by the base conservation coordinator. This expanded spatial coverage aimed to capture greater environmental variation across potential overwintering sites. However, the 2024-2025 season coincided with historically low monarch abundance throughout California \autocite{xerces_society_western_2025}, resulting in no observed clustering behavior at any monitored location on base. Consequently, our final dataset comprises two sites—Spring Canyon and UDMH—from the 2023-2024 season only.
+Building on insights from the initial season, for the 2024-2025 season we modified our approach to establish monitoring stations at ten sites before monarch arrival, based on historical occurrence records compiled by the base conservation coordinator. This expanded spatial coverage aimed to capture greater environmental variation across potential overwintering sites. However, the 2024-2025 season coincided with historically low monarch abundance throughout California \autocite{xerces_society_western_2025}, resulting in no observed clustering behavior at any monitored location on base. Consequently, our final dataset comprises two sites (Spring Canyon and UDMH) from the 2023-2024 season only.
 
 \subsection{Field Equipment}
 
@@ -30,9 +30,9 @@ Hardware modifications exploited the camera's internal filter-switching mechanis
 
 Cameras were mounted atop poles using lightweight tie-down straps and positioned horizontally toward butterfly clusters at roosting height. The wireless live view feature enabled real-time preview and precise camera aiming during deployment. Cameras operated in time-lapse mode with motion detection disabled. 
 
-Sampling interval selection balanced temporal resolution, battery life, and data processing feasibility through empirical optimization and rigorous statistical validation. Initial deployments used 10-minute intervals to capture significant changes in butterfly abundance, which preliminary observations indicated occurred on hourly rather than minute scales, while maintaining approximately 6-week continuous operation. Post-deployment statistical analysis using mixed-effects models and information-theoretic approaches systematically compared multiple sampling intervals across deployments. We conducted sequential subsample analyses starting with full temporal resolution and progressively testing reduced frequencies. Information-theoretic model comparison using Akaike Information Criterion (AIC) demonstrated that 30-minute intervals provided optimal balance—losing less than 5\% of information compared to full temporal resolution (measured by root mean square error) while reducing image classification workload by 67\%. Variance comparison analysis and visual assessment of fitted trend lines confirmed that this interval preserved essential time-series patterns including diurnal activity cycles, weather-response dynamics, and multi-day population trends. Battery life constraints and field deployment logistics further supported this interval choice, enabling extended autonomous operation essential for capturing complete behavioral sequences during variable weather conditions.
+Sampling interval selection balanced temporal resolution, battery life, and data processing feasibility through empirical optimization and rigorous statistical validation. Initial deployments used 10-minute intervals to capture significant changes in butterfly abundance, which preliminary observations indicated occurred on hourly rather than minute scales, while maintaining approximately 6-week continuous operation. Post-deployment statistical analysis using mixed-effects models and information-theoretic approaches systematically compared multiple sampling intervals across deployments. We conducted sequential subsample analyses starting with full temporal resolution and progressively testing reduced frequencies. Information-theoretic model comparison using Akaike Information Criterion (AIC) demonstrated that 30-minute intervals provided optimal balance, losing less than 5\% of information compared to full temporal resolution (measured by root mean square error) while reducing image classification workload by 67\%. Variance comparison analysis and visual assessment of fitted trend lines confirmed that this interval preserved essential time-series patterns including diurnal activity cycles, weather-response dynamics, and multi-day population trends. Battery life constraints and field deployment logistics further supported this interval choice, enabling extended autonomous operation essential for capturing complete behavioral sequences during variable weather conditions.
 
-Wind monitoring equipment consisted of Rain Wise WindLog Wind Data Loggers (Rain Wise Inc., Trenton, Maine) installed at pole apices to measure wind at heights approximating butterfly roosting locations. These instruments recorded average wind speed and maximum wind gust at one-minute intervals—the highest frequency supported by the sensors. This recording interval enabled calculation of wind speed variance within each photographic sampling period, capturing gustiness lost with longer averaging periods. 
+To quantify the wind conditions hypothesized to influence butterfly behavior, wind monitoring equipment consisted of Rain Wise WindLog Wind Data Loggers (Rain Wise Inc., Trenton, Maine) installed at pole apices to measure wind at heights approximating butterfly roosting locations. These instruments recorded average wind speed and maximum wind gust at one-minute intervals, the highest frequency supported by the sensors. This recording interval enabled calculation of wind speed variance within each photographic sampling period, capturing gustiness lost with longer averaging periods. 
 
 To systematically organize our heterogeneous monitoring efforts, we defined discrete monitoring periods as deployment units. Each deployment represented a unique combination of monitoring location, camera configuration (including camera ID, mounting height, and viewing angle), associated wind measurements, and temporal coverage period. Since equipment was frequently reused across locations and time periods, this deployment-based structure provided standardized sampling units that accounted for variation in environmental conditions and equipment configurations while treating each deployment as independent for statistical analyses. This approach produced time-series images from each deployment for estimating monarch cluster abundance through systematic grid-based counting methods, enabling analysis of abundance patterns in relation to wind speed and other environmental variables.
 
@@ -66,71 +66,28 @@ We calculated an abundance index for each frame by summing the products of cell 
 
 where $\rho_i$ represents the number of cells in category $i$, and $C_i$ represents the conservative estimate for that category. We used minimum category values ($C_1 = 1$ for category 1–9, $C_2 = 10$ for category 10–99, and $C_3 = 100$ for category 100–999) rather than midpoint or maximum values to ensure temporal analyses reflected genuine population shifts rather than estimation uncertainty.
 
+\subsection{Temperature Data Extraction}
+
+Temperature represents a critical environmental variable influencing monarch activity patterns and potentially confounding wind effects. Ambient temperature data were extracted from trail camera images using optical character recognition (OCR). Each camera displayed temperature readings on the image overlay, but these values were not accessible through EXIF metadata, necessitating visual extraction methods. We developed an automated Python script utilizing OCR technology to extract temperature values from approximately 56,000 images across all deployments. The extraction process employed multiple preprocessing strategies and pattern matching algorithms to accommodate variations in image quality and display characteristics.
+
+Following initial automated extraction, we manually reviewed and corrected edge cases where OCR failed or produced anomalous values. All temperature data underwent systematic quality control through visualization of deployment-specific time series, enabling identification and correction of erroneous values. This process ensured complete temperature coverage for all analyzed images, providing the ambient temperature covariate required for our statistical models.
+
 \subsection{Statistical Analysis}
 \label{sec:statistical-analysis}
 
-To test our five hierarchical hypotheses, we developed a sequential analytical framework using Generalized Linear Mixed-Effects Models (GLMMs). Our primary response variable for abundance is the `abundance_index` at time $t$. To properly model this count-based data and account for overdispersion, we use a negative binomial distribution. A key challenge in analyzing time-series data is temporal autocorrelation. We address this by including the abundance from the previous time step (`abundance_index_t_minus_1`) as a predictor variable. This robustly controls for autocorrelation by modeling the influence of environmental predictors on the change in abundance from one step to the next. All models include random intercepts for `view` to account for site-specific variation.
+\subsubsection{Data Preparation}
 
-\subsubsection{Hypothesis 1: The 2 m/s Disruptive Threshold}
+Statistical analysis employed a lag-based framework to capture the temporal dynamics of butterfly responses to environmental changes, comparing butterfly counts between consecutive 30-minute intervals. Observation pairs were constructed by matching counts at time $t$ with counts at time $t-30$ minutes, applying a ±5 minute tolerance window to accommodate minor temporal variations in image capture. The response variable (change in butterfly abundance between time points) underwent cube root transformation to achieve approximate normality while preserving directional information: $y = \text{sign}(\Delta) \times |\Delta|^{1/3}$, where $\Delta$ represents the difference in butterfly counts. While exploratory data analysis revealed generally well-behaved distributions, we observed bimodality in the raw butterfly abundance data driven primarily by a single anomalous event at deployment SC8. At this deployment, a large butterfly aggregation abruptly declined to near zero without corresponding changes in the measured environmental variables (wind speed, temperature, or solar exposure). This singular event was unlike any other observation in the dataset. We retained this deployment in the final analysis for two reasons: first, to maximize sample size and avoid arbitrary data exclusion, and second, sensitivity analysis showed that the cube root transformation of abundance differences adequately addressed the distributional concerns, with model selection and parameter estimates remaining consistent whether SC8 was included or excluded. The transformation approach made the anomaly's inclusion or exclusion immaterial to the final results. Observation pairs where both time points recorded zero butterflies were excluded as uninformative, reducing the dataset from approximately 2,500 potential pairs to 1,894 analyzable observations across 115 unique deployment-day combinations.
 
-First, we conducted a direct test of Leong's (2016) hypothesis that wind becomes disruptive above a 2 m/s threshold. We created predictor variables representing the number of minutes that sustained and gust wind speeds exceeded the 2 m/s threshold within a sampling interval. A significant negative relationship for these variables would provide direct empirical support for this specific threshold.
+\subsubsection{Variable Selection}
 
-\begin{verbatim}
-% Load required library
-library(lme4)
+Predictor variables were selected to test specific hypotheses while avoiding multicollinearity. Maximum wind gust speed during each 30-minute interval served as the primary wind metric, with alternative wind measurements (average sustained speed, modal gust, gust standard deviation) excluded due to high correlation ($r > 0.75$). Environmental predictors included average temperature between observation pairs, number of butterflies in direct sunlight at the previous time point, and minutes elapsed since the first observation of each day to capture diurnal patterns. Total butterfly count at the previous time point was included as a control variable, enabling distinction between proportional and absolute changes in abundance. When included, this variable tests effects on proportional change; when excluded, models test effects on absolute change.
 
-# Model to test sustained wind threshold
-model_sustained_threshold <- glmer(
-    abundance_index_t ~ abundance_index_t_minus_1 + 
-                        sustained_minutes_above_2ms + 
-                        sunlight_exposure_prop * ambient_temp +
-                        (1 | view),
-    family = "nbinom2",
-    data = monarch_data
-)
-\end{verbatim}
+\subsubsection{Model Framework}
 
-\subsubsection{Hypothesis 2 & 3: Wind as a Disruptive Force and Scaling Intensity}
+Analysis employed generalized additive mixed models (GAMMs) implemented through the mgcv package in R. Model selection followed an information-theoretic approach, comparing 47 candidate models using Akaike Information Criterion (AIC). The candidate set comprised two fundamental frameworks: models including the lag abundance term (24 models) and models excluding it (23 models), with each framework containing null models, single predictor models, additive combinations, two- and three-way interactions, and models incorporating smooth terms for non-linear relationships. Random effects structure accounted for variation at three hierarchical levels: deployment location, observer, and deployment-day. Temporal autocorrelation within days was addressed using a first-order autoregressive (AR1) correlation structure grouped by deployment-day. All models were fitted using restricted maximum likelihood (REML) estimation.
 
-Second, we tested the hypotheses that wind acts as a disruptive force and that its effects scale with intensity. We fit a series of GLMMs to test a suite of continuous wind metrics: mean wind speed (sustained wind), maximum wind speed (peak gusts), and wind speed variance (gustiness). These were tested in separate models to avoid collinearity. The model revealing the most significant relationship, determined using Akaike’s Information Criterion (AICc), was carried forward. This approach allows us to identify which characteristic of wind is the most influential predictor of monarch abundance.
+\subsubsection{Model Validation}
 
-\begin{verbatim}
-# Example model for one wind metric (run separately for each)
-model_wind_intensity <- glmer(
-    abundance_index_t ~ abundance_index_t_minus_1 + 
-                        max_wind_speed + # or mean_wind_speed, etc.
-                        sunlight_exposure_prop * ambient_temp +
-                        (1 | view),
-    family = "nbinom2",
-    data = monarch_data
-)
-\end{verbatim}
+Model assumptions were verified through standard residual diagnostics including examination of residual distributions, fitted versus residual plots, and quantile-quantile plots. Convergence was confirmed for all 47 candidate models. Model performance and predictor significance were evaluated through AIC comparison, with models differing by less than 2 AIC units considered equivalent.
 
-\subsubsection{Hypothesis 4: Wind and Roost Abandonment Probability}
-
-Third, to test if wind magnitude influences the probability of roost abandonment, we built a predictive model using a mixed-effects logistic regression. The response variable, `roost_abandoned`, was a binary indicator triggered when abundance dropped by more than 90\% between observations. This model uses the most influential continuous wind metric identified in the first step to predict the likelihood of an abandonment event.
-
-\begin{verbatim}
-# Model: Predictive Roost Abandonment
-abandonment_model <- glmer(
-    roost_abandoned ~ max_wind_speed + # or other best wind metric
-                      sunlight_exposure_prop * ambient_temp +
-                      (1 | view),
-    family = binomial, # Specifies logistic regression
-    data = monarch_data,
-    control = glmerControl(optimizer = "bobyqa")
-)
-\end{verbatim}
-
-\subsubsection{Hypothesis 5: Site Fidelity After Disturbance}
-
-Finally, we tested the hypothesis that disruptive wind events affect long-term site fidelity. We defined a "disruptive wind event" as any day where wind speeds exceeded 2.2 m/s for at least 30 consecutive minutes while monarchs were present. We then used a mixed-effects logistic regression to model the probability of site occupancy (`site_occupied`, a binary variable based on morning abundance counts) as a function of the number of days that had passed since the last disruptive event (`days_since_wind_event`). A sustained low probability of occupancy after an event would indicate a loss of site fidelity.
-
-\begin{verbatim}
-# Model: Site Fidelity Analysis
-site_fidelity_model <- glmer(
-    site_occupied ~ days_since_wind_event + (1 | view),
-    family = binomial,
-    data = post_event_data
-)
-\end{verbatim}
