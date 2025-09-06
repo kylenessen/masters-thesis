@@ -57,7 +57,7 @@ The previous butterfly count showed a significant non-linear negative relationsh
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/effect_lagged_roost_size.png}
+\includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/effect_previous_butterfly_count.png}
 \caption{Partial effect of previous butterfly count on abundance change, showing greater departures from larger roosts. Shaded area: 95\% confidence interval.}\label{fig:effect_roost_size}
 \end{figure}
 
@@ -71,13 +71,13 @@ Butterflies in direct sun showed a strong negative effect on roost abundance (ED
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/effect_sun_exposure.png}
+\includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/effect_butterflies_direct_sun.png}
 \caption{Partial effect of butterflies in direct sun on abundance change. Greater numbers in direct sun drive departures from the roost. Shaded area: 95\% confidence interval.}\label{fig:effect_sun}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/effect_diurnal_pattern.png}
+\includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/diurnal_patterns.png}
 \caption{Diurnal pattern of monarch abundance changes relative to time since sunrise. Shaded area: 95\% confidence interval.}\label{fig:effect_diurnal}
 \end{figure}
 
@@ -94,7 +94,7 @@ Third, wind's effects did not scale with intensity. The relationship remained fl
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/wind_hypothesis_scatter.png}
-\caption{Relationship between maximum wind speed (m/s) and monarch abundance change. Flat trend line indicates no effect of wind on butterfly departures. Points represent 30-minute observation periods.}\label{fig:wind_scatter}
+\caption{Relationship between maximum wind speed (m/s) and monarch abundance change. The red dashed line shows the proposed 2 m/s disruptive wind threshold, while the flat trend line indicates no effect of wind on butterfly departures. Points represent 30-minute observation periods.}\label{fig:wind_scatter}
 \end{figure}
 
 \subsection{Model Diagnostics}
@@ -114,3 +114,5 @@ The Q-Q plot indicated approximately normal residual distribution with minor tai
 \includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/qq_plot.png}
 \caption{Q-Q plot of model residuals showing reasonable normality with minor tail deviations.}\label{fig:qqplot}
 \end{figure}
+
+% To update figures, rerun the quarto doc masters-analysis/analysis/monarch_gam_analysis.qmd (separate repo) and copy the thesis-exports folder to this one.
