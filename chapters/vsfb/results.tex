@@ -2,9 +2,9 @@
 
 \subsection{Summary of Data and Model Selection}
 
-The final analysis comprised 1,894 analyzable observation pairs collected across 115 unique deployment-day combinations from two overwintering sites during the 2023-2024 season. These observations captured monarch abundance changes at 30-minute intervals under varying environmental conditions. We employed a Generalized Additive Mixed Model (GAMM) framework to test 47 candidate models, with model selection performed using an information-theoretic approach based on the Akaike Information Criterion (AIC).
+Analysis of 1,894 paired observations from 115 monitoring periods at two overwintering sites during the 2023-2024 season revealed that environmental factors, but not wind, drove monarch abundance changes. Testing of 47 candidate models identified M23 as the best-fit model.
 
-The best-fit model (M23) included smooth terms for previous butterfly count, average temperature, butterflies in direct sunlight, and time within day, achieving an AIC value of 8081.848 (Table \ref{tab:model_selection}). This model carried 88\% of the support among all candidate models (AIC weight = 0.88), with the next-best model (M22) showing substantially less support (ΔAIC = 4.796). Notably, model M24, which included maximum wind gust as an additional predictor, performed worse than M23 (ΔAIC = 6.2), and wind variables appeared in none of the top-performing models.
+Model M23 included smooth terms for previous butterfly count, average temperature, butterflies in direct sunlight, and minutes since sunrise, achieving an AIC value of 8081.848 (Table \ref{tab:model_selection}). This model carried 88\% of the support among all candidate models (AIC weight = 0.88), with the next-best model (M22) showing substantially less support (ΔAIC = 4.796). Notably, model M24, which included maximum wind gust as an additional predictor, performed worse than M23 (ΔAIC = 6.2), and wind variables appeared in none of the top-performing models.
 
 \begin{table}[htbp]
 \centering
@@ -33,13 +33,10 @@ M17 & Lagged butterflies, Temperature, & 8105.9 & 24.0 & <0.001 & NA \\
 The best-fit model (M23) explained a modest but significant portion of variance in monarch abundance changes (adjusted R² = 0.057). The model formula was:
 
 \begin{equation}
-\text{butterfly\_difference\_cbrt} \sim s(\text{total\_butterflies\_t\_lag}) + s(\text{temperature\_avg}) + 
+\text{Change in abundance} \sim s(\text{Previous count}) + s(\text{Temperature}) + s(\text{Sun exposure}) + s(\text{Minutes since sunrise})
 \end{equation}
-\begin{equation*}
-s(\text{butterflies\_direct\_sun\_t\_lag}) + s(\text{time\_within\_day\_t})
-\end{equation*}
 
-where $s()$ denotes smooth terms estimated using penalized regression splines. All four smooth terms showed significant effects on monarch abundance changes (Table \ref{tab:smooth_terms}).
+where $s()$ denotes smooth terms. All four smooth terms showed significant effects on monarch abundance changes (Table \ref{tab:smooth_terms}).
 
 \begin{table}[htbp]
 \centering
@@ -57,71 +54,71 @@ Time within day & 4.90 & 4.90 & 8.90 & <2e-16 \\
 \end{tabular}
 \end{table}
 
-The previous butterfly count showed a significant non-linear negative relationship with abundance change (effective degrees of freedom [EDF] = 2.62, F = 12.02, p < 0.001). As the initial roost size increased, the change in abundance became increasingly negative, indicating proportionally greater departures from larger aggregations (Figure \ref{fig:effect_roost_size}). Average temperature exhibited a complex non-linear relationship (EDF = 3.93, F = 3.23, p = 0.028), with positive effects on monarch movement peaking at approximately 20°C before declining at higher temperatures (Figure \ref{fig:effect_temperature}).
+The previous butterfly count showed a significant non-linear negative relationship with abundance change (EDF = 2.62, F = 12.02, p < 0.001). As the initial roost size increased, the change in abundance became increasingly negative, indicating proportionally greater departures from larger aggregations (Figure \ref{fig:effect_roost_size}). Average temperature exhibited a complex non-linear relationship (EDF = 3.93, F = 3.23, p = 0.028), with effects peaking at approximately 20°C (Figure \ref{fig:effect_temperature}).
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/effect_lagged_roost_size.png}
-\caption{Partial effect of previous butterfly count on the cube-root transformed change in abundance. The smooth relationship shows increasing negative changes (more butterflies leaving) as initial roost size increases. Shaded area represents 95\% confidence interval.}
+\caption{Partial effect of previous butterfly count on abundance change, showing greater departures from larger roosts. Shaded area: 95\% confidence interval.}
 \label{fig:effect_roost_size}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/effect_temperature.png}
-\caption{Partial effect of average temperature on monarch abundance change. The non-linear relationship peaks at approximately 20°C, suggesting optimal temperatures for monarch activity. Shaded area represents 95\% confidence interval.}
+\caption{Partial effect of temperature on monarch abundance change, peaking at approximately 20°C. Shaded area: 95\% confidence interval.}
 \label{fig:effect_temperature}
 \end{figure}
 
-Butterflies exposed to direct sunlight showed a strong negative effect on roost abundance (EDF = 1.53, F = 19.36, p < 0.001), with greater sun exposure associated with larger decreases in total abundance (Figure \ref{fig:effect_sun}). This nearly linear relationship (EDF close to 1) suggests a consistent departure response to solar radiation. Time within day revealed a pronounced diurnal pattern (EDF = 4.90, F = 8.90, p < 0.001), capturing cyclical changes in monarch activity throughout daylight hours (Figure \ref{fig:effect_diurnal}).
+Butterflies exposed to direct sunlight showed a strong negative effect on roost abundance (EDF = 1.53, F = 19.36, p < 0.001), with greater sun exposure associated with larger decreases in total abundance (Figure \ref{fig:effect_sun}). This nearly linear relationship suggests a consistent departure response to solar radiation. Minutes since sunrise revealed a pronounced diurnal pattern (EDF = 4.90, F = 8.90, p < 0.001), capturing cyclical changes in monarch activity throughout daylight hours (Figure \ref{fig:effect_diurnal}).
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/effect_sun_exposure.png}
-\caption{Partial effect of butterflies in direct sunlight on abundance change. The negative relationship indicates that greater sun exposure drives departures from the roost. Shaded area represents 95\% confidence interval.}
+\caption{Partial effect of sun exposure on abundance change. Greater sun exposure drives departures from the roost. Shaded area: 95\% confidence interval.}
 \label{fig:effect_sun}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/effect_diurnal_pattern.png}
-\caption{Diurnal pattern of monarch abundance changes throughout the day. The complex smooth function captures multiple peaks and troughs in activity corresponding to different times of day. Shaded area represents 95\% confidence interval.}
+\caption{Diurnal pattern of monarch abundance changes relative to minutes since sunrise. Shaded area: 95\% confidence interval.}
 \label{fig:effect_diurnal}
 \end{figure}
 
 \subsection{Evaluation of the Disruptive Wind Hypothesis}
 
-Our analysis provided no support for the disruptive wind hypothesis. Wind variables failed to appear in any of the top-performing models, indicating that wind was not a primary driver of monarch abundance changes at overwintering roosts.
+Our analysis provided no support for the three hierarchical wind hypotheses:
 
-The first hypothesis, that wind acts as a disruptive force to overwintering monarchs, was not supported. The AIC-based model selection process did not identify wind as an important predictor, with all top models excluding wind variables entirely. When wind (maximum gust) was forced into the best model structure (M24), model performance declined (\u0394AIC = 6.2), and the wind effect was not statistically significant (p = 0.218).
+First, wind did not act as a disruptive force to overwintering monarchs. Wind variables failed to appear in any top-performing models. When maximum gust was forced into the best model structure (M24), model performance declined (ΔAIC = 6.2) and the wind effect was not statistically significant (p = 0.218).
 
-The second hypothesis, that wind becomes disruptive above a specific 2 m/s threshold, was similarly unsupported. Despite mean wind gusts averaging 2.2 m/s (SD = 1.4 m/s) across our observations—conditions that should have revealed threshold effects if present—we found no evidence for disruption at or above this proposed boundary.
+Second, we found no evidence for disruption above the proposed 2 m/s threshold. Despite mean wind gusts averaging 2.2 m/s (SD = 1.4 m/s)—conditions that should have revealed threshold effects if present—no disruption occurred at or above this boundary.
 
-The third hypothesis, that wind's disruptive effects scale with intensity, also lacked support. Maximum gust speed, our measure of wind intensity, showed no relationship with monarch abundance changes. Visual examination confirmed this null relationship, with the scatter plot revealing no trend between wind speed and butterfly departures (Figure \ref{fig:wind_scatter}). The fitted relationship line remained flat across the entire range of observed wind speeds (0–8 m/s), with confidence intervals consistently encompassing zero effect.
+Third, wind's effects did not scale with intensity. Maximum gust speed showed no relationship with monarch abundance changes across the entire observed range (0–8 m/s), with the fitted relationship remaining flat and confidence intervals consistently encompassing zero (Figure \ref{fig:wind_scatter}).
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/wind_hypothesis_scatter.png}
-\caption{Relationship between maximum wind gust speed and cube-root transformed change in monarch abundance. The flat trend line and confidence interval encompassing zero indicate no meaningful relationship between wind speed and butterfly departures from roosts. Points represent individual 30-minute observation periods.}
+\caption{Relationship between maximum wind gust speed (m/s) and monarch abundance change. Flat trend line indicates no effect of wind on butterfly departures. Points represent 30-minute observation periods.}
 \label{fig:wind_scatter}
 \end{figure}
 
 \subsection{Model Diagnostics}
 
-Examination of model residuals revealed patterns indicative of the discrete nature of our response variable. The residuals versus fitted values plot showed distinct linear banding, an artifact arising from the binned counting method used to estimate butterfly abundance (Figure \ref{fig:residuals}). This patterning, while visually prominent, reflected the methodological constraints of estimating large aggregations rather than model misspecification.
+Model residuals showed distinct linear banding patterns consistent with the discrete counting method used to estimate butterfly abundance (Figure \ref{fig:residuals}).
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/residuals_vs_fitted.png}
-\caption{Residuals versus fitted values for the best-fit model (M23). The visible linear banding pattern reflects the discrete nature of the response variable arising from order-of-magnitude counting methods. Red line shows the smoothed relationship.}
+\caption{Residuals versus fitted values for model M23. Banding reflects the discrete counting method. Red line: smoothed relationship.}
 \label{fig:residuals}
 \end{figure}
 
-The normal quantile-quantile plot indicated that model residuals were approximately normally distributed, though with some deviation in the tails (Figure \ref{fig:qqplot}). These tail deviations were consistent with the discrete patterning observed in the residual plot and did not suggest substantial violation of model assumptions. The central portion of the distribution closely followed the theoretical normal line, supporting the validity of our statistical inferences.
+The Q-Q plot indicated approximately normal residual distribution with minor tail deviations consistent with the discrete counting method (Figure \ref{fig:qqplot}).
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/qq_plot.png}
-\caption{Normal Q-Q plot of model residuals. The approximately linear relationship indicates reasonable adherence to normality assumptions, with minor deviations in the tails consistent with the discrete nature of the counting method.}
+\caption{Q-Q plot of model residuals showing reasonable normality with minor tail deviations from discrete counting.}
 \label{fig:qqplot}
 \end{figure}
