@@ -2,9 +2,9 @@
 
 \subsection{Summary of Data and Model Selection}
 
-Environmental factors, but not wind, drove monarch abundance changes in 1,894 paired observations from 115 monitoring periods at two overwintering sites during the 2023-2024 season. Testing of 47 candidate models identified M23 as the best-fit model.
+Environmental factors, but not wind, drove monarch abundance changes in 1,894 paired observations from 115 monitoring periods at two overwintering sites during the 2023-2024 season. Testing of 48 candidate models identified M23 as the best-fit model.
 
-Model M23 included smooth terms for previous butterfly count, temperature, butterflies in direct sun, and time since sunrise, achieving an AIC value of 8081.848 (Table~\ref{tab:model_selection}). This model accounted for 88\% of the model weight (AIC weight = 0.88), with the next-best model (M22) showing substantially less support (ΔAIC = 4.796). Notably, model M24, which included maximum wind speed as an additional predictor, performed worse than M23 (ΔAIC = 6.2), and wind variables appeared in none of the top-performing models.
+Model M23 included smooth terms for previous butterfly count, temperature, butterflies in direct sun, and time since sunrise, achieving an AIC value of 8081.848 (Table~\ref{tab:model_selection}). This model accounted for 88\% of the model weight (AIC weight = 0.88), with the next-best model (M22) showing substantially less support (ΔAIC = 4.796). Wind variables appeared in only one of the top five models (M24), which included maximum wind speed but performed substantially worse than M23 (ΔAIC = 6.2, AIC weight = 0.04), with the wind effect showing weak evidence of an association (p = 0.218).
 
 \begin{table}[htbp]
 \centering
@@ -67,9 +67,9 @@ Time since sunrise revealed a pronounced diurnal pattern (EDF = 4.90, F = 8.90, 
 
 Our analysis provided no support for the three hierarchical wind hypotheses:
 
-First, wind did not act as a disruptive force to overwintering monarchs. Wind variables failed to appear in any top-performing models. When maximum wind speed was forced into the best model structure (M24), model performance declined (ΔAIC = 6.2) and the wind effect was not statistically significant (p = 0.218).
+First, wind did not act as a disruptive force to overwintering monarchs. Among our 48 candidate models, wind appeared in only one of the top five models (M24), where it showed little evidence of an effect (p = 0.218) and resulted in substantially poorer model performance compared to the best model (ΔAIC = 6.2).
 
-Second, we found no evidence for disruption above the proposed 2~m/s threshold. A sensitivity analysis using a specific threshold predictor ('minutes with wind speed > 2~m/s') confirmed this lack of a threshold effect, as this variable also failed to appear in any top-performing models. Visually, the relationship between wind and monarch abundance change remained flat across the 2~m/s boundary (Figure~\ref{fig:wind_scatter}). With mean maximum wind speeds of 2.2~m/s (SD = 1.4~m/s), conditions that should have revealed threshold effects if present, no disruption occurred at or above this boundary.
+Second, we found no evidence for disruption above the proposed 2~m/s threshold. A sensitivity analysis using a specific threshold predictor ('minutes with wind speed > 2~m/s') confirmed this lack of a threshold effect, as models with this variable performed poorly and did not rank among the top candidates. Visually, the relationship between wind and monarch abundance change remained flat across the 2~m/s boundary (Figure~\ref{fig:wind_scatter}). With mean maximum wind speeds of 2.2~m/s (SD = 1.4~m/s), conditions that should have revealed threshold effects if present, no disruption occurred at or above this boundary.
 
 Third, wind's effects did not scale with intensity. The relationship remained flat across all observed wind speeds (0–12~m/s), with confidence intervals consistently encompassing zero (Figure~\ref{fig:wind_scatter}).
 
