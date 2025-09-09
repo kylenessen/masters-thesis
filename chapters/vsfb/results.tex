@@ -59,8 +59,8 @@ Time since sunrise revealed a pronounced diurnal pattern (EDF = 4.90, F = 8.90, 
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{supplemental/results/thesis_exports/figures/partial_effects_1x4_display.png}
-\caption{Partial effects of the four significant predictors on monarch abundance change. From left to right: butterflies in direct sun, previous butterfly count, time since sunrise (minutes), and temperature (°C). Solid lines show the estimated smooth functions with 95\% confidence intervals (shaded regions). All effects are shown on the same scale for comparison.}\label{fig:partial_effects}
+\includegraphics[width=\textwidth]{supplemental/results/thesis_exports/figures/combined_partial_effects_2x2_final.png}
+\caption{Partial effects of the four significant predictors on monarch abundance change in a 2x2 layout. Top row: butterflies in direct sun (left) and previous butterfly count (right). Bottom row: time since sunrise in minutes (left) and temperature in °C (right). Solid lines show the estimated smooth functions with 95\% confidence intervals (shaded regions). All effects are shown on the same scale for comparison.}\label{fig:partial_effects}
 \end{figure}
 
 \subsection{Evaluation of the Disruptive Wind Hypothesis}
@@ -87,20 +87,12 @@ Post-hoc power analysis confirmed our study had adequate statistical power to de
 
 \subsection{Model Diagnostics}
 
-Model residuals showed distinct linear banding patterns consistent with the discrete counting method used to estimate butterfly abundance (Figure~\ref{fig:residuals}).
+Model residuals showed distinct linear banding patterns consistent with the discrete counting method used to estimate butterfly abundance, while the Q-Q plot indicated approximately normal residual distribution with minor tail deviations (Figure~\ref{fig:diagnostics}).
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/residuals_vs_fitted.png}
-\caption{Residuals versus fitted values for model M23. Banding reflects the discrete counting method. Red line: smoothed relationship.}\label{fig:residuals}
-\end{figure}
-
-The Q-Q plot indicated approximately normal residual distribution with minor tail deviations (Figure~\ref{fig:qqplot}).
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/qq_plot.png}
-\caption{Q-Q plot of model residuals showing reasonable normality with minor tail deviations.}\label{fig:qqplot}
+\includegraphics[width=\textwidth]{supplemental/results/thesis_exports/figures/combined_diagnostics.png}
+\caption{Model diagnostics for M23. Left: Residuals versus fitted values showing banding that reflects the discrete counting method, with smoothed relationship shown in blue. Right: Normal Q-Q plot of model residuals showing reasonable normality with minor tail deviations.}\label{fig:diagnostics}
 \end{figure}
 
 % To update figures, rerun the quarto doc masters-analysis/analysis/monarch_gam_analysis.qmd (separate repo) and copy the thesis-exports folder to this one.
