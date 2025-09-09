@@ -53,32 +53,14 @@ Time since sunrise & 4.90 & 4.90 & 8.90 & <2e-16 \\
 \end{tabular}
 \end{table}
 
-The previous butterfly count showed a significant non-linear negative relationship with abundance change (EDF = 2.62, F = 12.02, p < 0.001). As the previous count increased, the change in abundance became increasingly negative, indicating proportionally greater departures from larger aggregations (Figure~\ref{fig:effect_roost_size}). Temperature exhibited a complex non-linear relationship (EDF = 3.93, F = 3.23, p = 0.028), with effects peaking at approximately 20°C (Figure~\ref{fig:effect_temperature}).
+All four predictors in the best-fit model showed significant effects on monarch abundance changes (Figure~\ref{fig:partial_effects}). The previous butterfly count exhibited a significant non-linear negative relationship (EDF = 2.62, F = 12.02, p < 0.001), with increasingly negative changes as the previous count increased, indicating proportionally greater departures from larger aggregations. Butterflies in direct sun showed a strong negative effect on roost abundance (EDF = 1.53, F = 19.36, p < 0.001), with greater numbers in direct sun associated with larger decreases in total abundance.
+
+Time since sunrise revealed a pronounced diurnal pattern (EDF = 4.90, F = 8.90, p < 0.001), capturing cyclical changes in monarch activity throughout the day. Temperature exhibited a complex non-linear relationship (EDF = 3.93, F = 3.23, p = 0.028), with effects peaking at approximately 20°C.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/effect_previous_butterfly_count.png}
-\caption{Partial effect of previous butterfly count on abundance change, showing greater departures from larger roosts. Dashed lines: 95\% confidence interval.}\label{fig:effect_roost_size}
-\end{figure}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/effect_temperature.png}
-\caption{Partial effect of temperature on monarch abundance change, peaking at approximately 20°C. Dashed lines: 95\% confidence interval.}\label{fig:effect_temperature}
-\end{figure}
-
-Butterflies in direct sun showed a strong negative effect on roost abundance (EDF = 1.53, F = 19.36, p < 0.001), with greater numbers in direct sun associated with larger decreases in total abundance (Figure~\ref{fig:effect_sun}). Time since sunrise revealed a pronounced diurnal pattern (EDF = 4.90, F = 8.90, p < 0.001), capturing cyclical changes in monarch activity throughout the day (Figure~\ref{fig:effect_diurnal}).
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/effect_butterflies_direct_sun.png}
-\caption{Partial effect of butterflies in direct sun on abundance change. Greater numbers in direct sun drive departures from the roost. Dashed lines: 95\% confidence interval.}\label{fig:effect_sun}
-\end{figure}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.8\textwidth]{supplemental/results/thesis_exports/figures/diurnal_patterns.png}
-\caption{Diurnal pattern of monarch abundance changes relative to time since sunrise. Dashed lines: 95\% confidence interval.}\label{fig:effect_diurnal}
+\includegraphics[width=\textwidth]{supplemental/results/thesis_exports/figures/partial_effects_1x4_display.png}
+\caption{Partial effects of the four significant predictors on monarch abundance change. From left to right: butterflies in direct sun, previous butterfly count, time since sunrise (minutes), and temperature (°C). Solid lines show the estimated smooth functions with 95\% confidence intervals (shaded regions). All effects are shown on the same scale for comparison.}\label{fig:partial_effects}
 \end{figure}
 
 \subsection{Evaluation of the Disruptive Wind Hypothesis}
