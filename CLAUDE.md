@@ -84,3 +84,4 @@ This uses the official Cal Poly thesis template with specific formatting require
 - Search supplemental materials using filename patterns and content
 - Edit the authoritative LaTeX files directly (not create new files)
 - Focus on enhancing existing sections with additional context and detail
+- Never use em dashes

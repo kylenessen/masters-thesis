@@ -93,3 +93,7 @@ To test specifically for threshold effects at the proposed 2 m/s disruptive wind
 
 Model assumptions were verified through standard residual diagnostics including examination of residual distributions, fitted versus residual plots, and quantile-quantile plots. Convergence was confirmed for all candidate models in both the primary and sensitivity analyses. Model performance and predictor significance were evaluated through AIC comparison, with models differing by less than 2 AIC units considered equivalent.
 
+\subsubsection{Statistical Power Analysis}
+
+To evaluate whether our study had adequate statistical power to detect wind effects if present, we conducted a simulation-based power analysis. This approach assessed our ability to detect various effect sizes given our sample size of 1,894 paired observations. We simulated 200 datasets from the best-fitting model (which excluded wind effects) and artificially introduced wind effects of known magnitude ranging from 0.05 to 0.20 standard deviations of the response variable. For each effect size, we refitted models including wind terms to determine the proportion of simulations where the artificial effect was detected as statistically significant ($\alpha = 0.05$). This simulation approach accounts for the complexity of our GAMM framework and hierarchical data structure, providing robust estimates of statistical power for detecting wind effects across a range of biologically plausible magnitudes.
+
