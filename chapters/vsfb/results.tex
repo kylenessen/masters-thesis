@@ -8,7 +8,7 @@ Model M23 included smooth terms for previous butterfly count, temperature, butte
 
 \begin{table}[htbp]
 \centering
-\caption{Model selection results showing the top five candidate models ranked by AIC. Model terms are shown with their respective AIC values, ΔAIC relative to the best model, and AIC weights. Wind p-values are shown where applicable; NA indicates the model did not include wind variables.}
+\caption{Model selection results showing the top five candidate models ranked by AIC. Model terms are shown with their respective AIC values, ΔAIC relative to the best model, and AIC weights across the five top performing models. Given that no models are regarded as equivalent to the best fit model (M23), the actual weight of M23 is 1.0. Wind p-values are shown where applicable; NA indicates the model did not include wind variables.}
 \label{tab:model_selection}
 \begin{tabular}{lllrrr}
 \hline
@@ -60,7 +60,7 @@ Time since sunrise revealed a pronounced diurnal pattern (EDF = 4.90, F = 8.90, 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/results/combined_partial_effects_2x2_final.png}
-\caption{Partial effects of the four significant predictors on monarch abundance change in a 2x2 layout. Top row: butterflies in direct sun (left) and previous butterfly count (right). Bottom row: time since sunrise in minutes (left) and temperature in °C (right). Solid lines show the estimated smooth functions with 95\% confidence intervals (shaded regions). All effects are shown on the same scale for comparison.}\label{fig:partial_effects}
+\caption{Partial effects of the four significant predictors on monarch abundance change in a 2x2 layout. The partial effect on monarch abundance as estimated from the single attribute being compared to abundance while assuming all other attribute values are held constant. Top row: butterflies in direct sun (left) and previous butterfly count (right). Bottom row: time since sunrise in minutes (left) and temperature in °C (right). Solid lines show the estimated smooth functions with 95\% confidence intervals (shaded regions). All effects are shown on the same scale for comparison.}\label{fig:partial_effects}
 \end{figure}
 
 \subsection{Evaluation of the Disruptive Wind Hypothesis}
