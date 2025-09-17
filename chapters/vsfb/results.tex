@@ -16,21 +16,21 @@ The comprehensive temporal coverage, with observations at 30-minute intervals ca
 
 Environmental factors, but not wind, drove monarch abundance changes in 1,894 paired observations from 115 monitoring periods at two overwintering sites during the 2023-2024 season. Testing of 48 candidate models identified M23 as the best-fit model.
 
-Model M23 included smooth terms for previous butterfly count, temperature, butterflies in direct sun, and time since sunrise, achieving an AIC value of 8081.848 (Table~\ref{tab:model_selection}). This model accounted for 88\% of the model weight (AIC weight = 0.88), with the next-best model (M22) showing substantially less support (ΔAIC = 4.796). Wind variables appeared in only one of the top five models (M24), which included maximum wind speed but performed substantially worse than M23 (ΔAIC = 6.2, AIC weight = 0.04), with the wind effect showing weak evidence of an association (p = 0.218).
+Model M23 included smooth terms for previous butterfly count, temperature, butterflies in direct sun, and time since sunrise, achieving an AIC value of 8081.848 (Table~\ref{tab:model_selection}). This model captured essentially all model weight when considering all 48 candidate models (AIC weight = 1.000), with the next-best model (M22) showing substantially less support (ΔAIC = 4.796). Wind variables appeared in only one of the top five models (M24), which included maximum wind speed but performed substantially worse than M23 (ΔAIC = 6.2), with the wind effect showing weak evidence of an association (p = 0.218).
 
 \begin{table}[htbp]
 \centering
-\caption{Model selection results showing the top five candidate models ranked by AIC. Model terms are shown with their respective AIC values, ΔAIC relative to the best model, and AIC weights across the five top performing models. Given that no models are regarded as equivalent to the best fit model (M23), the actual weight of M23 is 1.0. Wind p-values are shown where applicable; NA indicates the model did not include wind variables.}
+\caption{Model selection results showing the top five candidate models from 48 tested, ranked by AIC. Model terms are shown with their respective AIC values, ΔAIC relative to the best model, and AIC weights calculated across all 48 models. Wind p-values are shown where applicable; NA indicates the model did not include wind variables.}
 \label{tab:model_selection}
 \begin{tabular}{lllrrr}
 \hline
 Model & Terms & AIC & ΔAIC & Weight & Wind p \\
 \hline
-M23 & Previous butterfly count, Temperature, & 8081.8 & 0.0 & 0.880 & NA \\
+M23 & Previous butterfly count, Temperature, & 8081.8 & 0.0 & 1.000 & NA \\
     & Butterflies in direct sun, Time since sunrise & & & & \\
-M22 & Previous butterfly count, Temperature (linear), & 8086.6 & 4.8 & 0.080 & NA \\
+M22 & Previous butterfly count, Temperature (linear), & 8086.6 & 4.8 & <0.001 & NA \\
     & Butterflies in direct sun, Time since sunrise & & & & \\
-M24 & Previous butterfly count, Maximum wind speed, & 8088.0 & 6.2 & 0.040 & 0.218 \\
+M24 & Previous butterfly count, Maximum wind speed, & 8088.0 & 6.2 & <0.001 & 0.218 \\
     & Temperature, Butterflies in direct sun, Time since sunrise & & & & \\
 M47 & Temperature, Butterflies in direct sun, & 8101.3 & 19.4 & <0.001 & NA \\
     & Time since sunrise & & & & \\
