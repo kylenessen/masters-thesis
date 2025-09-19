@@ -94,16 +94,21 @@ Second, we found no evidence for disruption above the proposed 2~m/s threshold. 
 \centering
 \caption{Model selection results from sensitivity analysis using wind threshold predictor (minutes with wind speed > 2 m/s). Poor model performance (high $\Delta$AIC values) demonstrates lack of support for the 2 m/s disruption threshold.}
 \label{tab:threshold_model_selection}
-\begin{tabular}{llllll}
-\toprule
-Model ID & Terms included & AIC & $\Delta$AIC & Weight & Wind threshold $p$-value\\
-\midrule
-T24 & \begin{tabular}[l]{@{}l@{}}\textbullet\ Previous butterfly count\\\textbullet\ Minutes above 2~m/s\\\textbullet\ Temperature\\\textbullet\ Butterflies in direct sun\\\textbullet\ Time since sunrise\end{tabular} & 8089.408 & 7.560 & 0.0205 & 0.372\\
-T44 & \begin{tabular}[l]{@{}l@{}}\textbullet\ Minutes above 2~m/s\\\textbullet\ Temperature\\\textbullet\ Butterflies in direct sun\\\textbullet\ Time since sunrise\end{tabular} & 8108.379 & 26.530 & $<0.0001$ & 0.256\\
-T21 & \begin{tabular}[l]{@{}l@{}}\textbullet\ Previous butterfly count\\\textbullet\ Minutes above 2~m/s\\\textbullet\ Temperature\\\textbullet\ Butterflies in direct sun\end{tabular} & 8110.567 & 28.719 & $<0.0001$ & 0.0528\\
-T43 & \begin{tabular}[l]{@{}l@{}}\textbullet\ Minutes above 2~m/s\\\textbullet\ Temperature (linear)\\\textbullet\ Butterflies in direct sun\\\textbullet\ Time since sunrise\end{tabular} & 8115.505 & 33.657 & $<0.0001$ & 0.275\\
-T19 & \begin{tabular}[l]{@{}l@{}}\textbullet\ Previous butterfly count\\\textbullet\ Minutes above 2~m/s\\\textbullet\ Temperature (linear)\\\textbullet\ Butterflies in direct sun\end{tabular} & 8119.798 & 37.949 & $<0.0001$ & 0.0776\\
-\bottomrule
+\begin{tabular}{lllrrr}
+\hline
+Model & Terms & AIC & $\Delta$AIC & Weight & Wind p \\
+\hline
+T24 & Previous butterfly count, Minutes above 2~m/s, & 8089.4 & 7.6 & 0.021 & 0.372 \\
+    & Temperature, Butterflies in direct sun, Time since sunrise & & & & \\
+T44 & Minutes above 2~m/s, Temperature, & 8108.4 & 26.5 & <0.001 & 0.256 \\
+    & Butterflies in direct sun, Time since sunrise & & & & \\
+T21 & Previous butterfly count, Minutes above 2~m/s, & 8110.6 & 28.7 & <0.001 & 0.053 \\
+    & Temperature, Butterflies in direct sun & & & & \\
+T43 & Minutes above 2~m/s, Temperature (linear), & 8115.5 & 33.7 & <0.001 & 0.275 \\
+    & Butterflies in direct sun, Time since sunrise & & & & \\
+T19 & Previous butterfly count, Minutes above 2~m/s, & 8119.8 & 37.9 & <0.001 & 0.078 \\
+    & Temperature (linear), Butterflies in direct sun & & & & \\
+\hline
 \end{tabular}
 \end{table}
 
