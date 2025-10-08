@@ -99,7 +99,7 @@ Post-hoc power analysis confirmed our study had adequate statistical power to de
 
 \input{supplemental/results/thesis_exports/tables/power_analysis_table.tex}
 
-\subsection{Site Fidelity Anlaysis}
+\subsection{Site Fidelity Analysis}
 
 To test whether cumulative weather exposure influenced day-to-day roost dynamics, we analyzed 96 consecutive-day pairs from the same deployment dataset using biologically-aligned temporal windows. The primary analysis employed a sunset window spanning from the previous day's maximum count to the current day's last observation (mean duration = 29.6 hours), capturing the full period from peak aggregation through the subsequent roosting decision. A secondary analysis using fixed 24-hour windows (n = 94 pairs) provided a sensitivity test of our findings.
 
@@ -112,6 +112,23 @@ We evaluated 76 candidate models using generalized additive mixed models (GAMMs)
 \input{supplemental/results/sunset/tables/top5_models.tex}
 
 \subsubsection{Analysis of Best Fit Model}
+
+The best-fit model (M32) predicted square-root transformed change in butterfly abundance as a function of: (1) the previous day's maximum butterfly count, (2) window duration in hours, and (3) a tensor smooth interaction between maximum wind gust speed and cumulative butterflies in direct sunlight.
+
+Statistical analysis revealed significant effects for the previous day's maximum count (t = -4.988, p < 0.001) and the wind-sunlight interaction (F = 4.097, p < 0.001), while window duration showed no significant effect (t = -1.067, p = 0.289) (Table~\ref{tab:m32_summary}). The model explained 39.7\% of the variance in day-to-day cluster size changes (adjusted $R^2$ = 0.397, n = 96), representing substantially greater explanatory power than the 30-minute responsive change analysis.
+
+\input{supplemental/results/sunset/tables/m32_model_summary.tex}
+
+The previous day's maximum count showed a significant negative linear relationship (coefficient = -0.030, SE = 0.006), indicating that larger clusters experienced proportionally greater losses between days. This pattern aligns with the responsive change analysis and suggests regression toward mean cluster sizes regardless of temporal scale.
+
+The tensor smooth interaction between maximum wind gust and cumulative direct sun exposure (p < 0.001) revealed complex conditional relationships between sustained weather exposure and cumulative butterflies in direct light (Figure~\ref{fig:interaction_wind_sun_sunset}). All observations during the study period experienced wind speeds exceeding 2 m/s. Under low wind speeds around 2 m/s with minimal butterfly counts in direct sun, clusters increased the following day, though this pattern reversed sharply as butterfly counts increased, resulting in decreased cluster sizes. When butterfly counts approached zero, cluster sizes showed minimal change to slight decreases across most wind speeds, with the exception of extreme wind values where sparse data limits interpretation. At intermediate to high values of both wind speed and butterfly sun exposure, cluster sizes increased the next day. Interpretation requires caution at interpolation boundaries and regions with single observations. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{supplemental/results/sunset/figures/interaction_wind_x_sun_binned.png}
+    \caption{Tensor smooth interaction between maximum wind gust (m/s) and cumulative butterflies in direct sun on day-to-day cluster size changes. Color gradient indicates partial effect magnitude on square-root transformed scale (red = positive, blue = negative). Black points show observed data distribution. Gray regions indicate areas beyond reliable interpolation range.}
+    \label{fig:interaction_wind_sun_sunset}
+\end{figure}
 
 \subsubsection{Model Diagnostics}
 

@@ -1,0 +1,24 @@
+% Model M32 Summary Table - Best fit model for Site Fidelity Analysis
+% Family: gaussian, Link: identity
+% Formula: butterfly_diff_sqrt ~ max_butterflies_t_1 + lag_duration_hours + ti(wind_max_gust, sum_butterflies_direct_sun)
+
+\begin{table}[htbp]
+\centering
+\caption{Summary statistics for the best-fit site fidelity model (M32) predicting square-root transformed day-to-day changes in maximum butterfly count. The model includes parametric terms for previous day's maximum count and window duration, plus a tensor smooth interaction between maximum wind gust and cumulative butterflies in direct sun.}
+\label{tab:m32_summary}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Parametric Coefficients} & \textbf{Estimate} & \textbf{Std. Error} & \textbf{t value} & \textbf{Pr(>|t|)} \\
+\midrule
+(Intercept) & 9.426 & 5.516 & 1.709 & 0.091 \\
+max\_butterflies\_t\_1 & -0.030 & 0.006 & -4.988 & <0.001*** \\
+lag\_duration\_hours & -0.190 & 0.178 & -1.067 & 0.289 \\
+\midrule
+\textbf{Smooth Terms} & \textbf{edf} & \textbf{Ref.df} & \textbf{F} & \textbf{p-value} \\
+\midrule
+ti(wind\_max\_gust, sum\_butterflies\_direct\_sun) & 6.679 & 6.679 & 4.097 & <0.001*** \\
+\bottomrule
+\multicolumn{5}{l}{\footnotesize{Signif. codes: *** p < 0.001, ** p < 0.01, * p < 0.05}} \\
+\multicolumn{5}{l}{\footnotesize{Adjusted R² = 0.397, Scale est. = 41.056, n = 96}} \\
+\end{tabular}
+\end{table}
