@@ -14,7 +14,7 @@ The comprehensive temporal coverage, with observations at 30-minute intervals ca
 
 \subsection{Responsive Change}
 
-% A few introductory sentences here to remind the reader of what this analysis is, and some context to help them understand what comes next. "Responsive Change" refers to my 30 minute analysis. All figures and information should come from supplemental/results/30_min. 
+% A few introductory sentences here to remind the reader of what this analysis is, and some context to help them understand what comes next. "Responsive Change" refers to my 30 minute analysis. All figures and information should come from supplemental/results/30_min. See the first sentence of the Daily Change section for inspiration.
 
 \subsubsection{Model Selection}
 
@@ -34,5 +34,14 @@ The comprehensive temporal coverage, with observations at 30-minute intervals ca
 
 % Note here that we basically redid the whole analysis, but instead of using max gust, we used minutes above 2 m/s to test the threshold hypothesis. The best model followed the same structure as above, but had a lower R2 value and was not the decisive winner in the AIC comparison, sharing model weight with the next best one. For this reason, we are preferring the direct measure of wind instead of the threshold. Still, you should include the AIC table, and I want to include the interaction plot as well to lend evidence that wind is not an important factor. The other plots can be left out. You can find what you need for this section here: supplemental/results/30_min_threshold. 
 
+\subsection{Statistical Power to Detect Wind Effects}
+
+Post-hoc power analysis confirmed our study had adequate statistical power to detect biologically meaningful wind effects (Table~\ref{tab:power_analysis}). With 1,894 paired observations, we achieved 87.5\% power to detect moderate effect sizes (0.15 standard deviations) and 98.5\% power to detect larger effects (0.20 standard deviations). Power for small effects (0.10 standard deviations) was 56\%, while very small effects (0.05 standard deviations) yielded only 16.5\% power. These results indicate that our study has sufficient statistical power for effect sizes of biological relevance.
+
+\input{supplemental/results/thesis_exports/tables/power_analysis_table.tex}
+
 \subsection{Daily Change}
 
+To test whether cumulative weather exposure influenced day-to-day roost dynamics, we analyzed 96 consecutive-day pairs from the same deployment dataset using biologically-aligned temporal windows. The primary analysis employed a sunset window spanning from the previous day's maximum count to the current day's last observation (mean duration = 29.6 hours), capturing the full period from peak aggregation through the subsequent roosting decision. A secondary analysis using fixed 24-hour windows (n = 94 pairs) provided a sensitivity test of our findings.
+
+Daily maximum cluster sizes ranged from 0 to 770 butterflies (mean = 134.7 ± 138.1), with day-to-day changes in maximum count ranging from losses of 376 butterflies to gains of 464 butterflies (mean change = -10.5 ± 111.6). Within the sunset windows, maximum wind gusts ranged from 2.0 to 12.8 m/s (mean = 4.5 ± 1.8 m/s), with all observation windows exceeding the proposed 2 m/s threshold. Cumulative direct sun exposure varied from 0 to 1,122 butterfly-observations in sunlight per window (mean = 139.8 ± 206.9), reflecting diverse thermal exposure conditions across monitoring days.
