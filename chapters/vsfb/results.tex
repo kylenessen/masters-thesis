@@ -14,81 +14,44 @@ The comprehensive temporal coverage, with observations at 30-minute intervals ca
 
 \subsection{Summary of Data and Model Selection}
 
-Environmental factors, but not wind, drove monarch abundance changes in 1,894 paired observations from 115 monitoring periods at two overwintering sites during the 2023-2024 season. Testing of 48 candidate models identified M23 as the best-fit model.
+Environmental factors drove monarch abundance changes in 1,894 paired observations from 115 monitoring periods at two overwintering sites during the 2023–2024 season. After expanding the candidate set to include tensor–product interactions (ti), testing of 52 candidate models identified model M50 as the best‑fit.
 
-Model M23 included smooth terms for previous butterfly count, temperature, butterflies in direct sun, and time since sunrise, achieving an AIC value of 8081.848 (Table~\ref{tab:model_selection}). M23 captured all the model weight across 48 candidates (AIC = 8081.8), with the next best model ΔAIC = 4.8. Wind variables appeared in only one of the top five models (M24), which included maximum wind speed but performed substantially worse than M23 (ΔAIC = 6.2), with the wind effect showing weak evidence of an association (p = 0.218).
+Model M50 included smooth terms for previous butterfly count, temperature, and time since sunrise, plus a tensor–product interaction between maximum wind speed and butterflies in direct sun. The AIC comparison favored M50 (AIC ≈ 8078.0) over the next best models (ΔAIC ≥ 3.8). We report full model selection details via the exported table.
 
 \begin{table}[htbp]
 \centering
-\caption{Model selection results showing the top five candidate models from 48 tested, ranked by AIC. Model terms are shown with their respective AIC values, ΔAIC relative to the best model, and AIC weights calculated across all 48 models. Wind p-values are shown where applicable; NA indicates the model did not include wind variables.}
+\caption{Top five candidate models ranked by AIC for the 30‑minute analysis.}
 \label{tab:model_selection}
-\begin{tabular}{lllrrr}
-\hline
-Model & Terms & AIC & ΔAIC & Weight & Wind p \\
-\hline
-M23 & Previous butterfly count, Temperature, & 8081.8 & 0.0 & 1.000 & NA \\
-    & Butterflies in direct sun, Time since sunrise & & & & \\
-M22 & Previous butterfly count, Temperature (linear), & 8086.6 & 4.8 & <0.001 & NA \\
-    & Butterflies in direct sun, Time since sunrise & & & & \\
-M24 & Previous butterfly count, Maximum wind speed, & 8088.0 & 6.2 & <0.001 & 0.218 \\
-    & Temperature, Butterflies in direct sun, Time since sunrise & & & & \\
-M47 & Temperature, Butterflies in direct sun, & 8101.3 & 19.4 & <0.001 & NA \\
-    & Time since sunrise & & & & \\
-M17 & Previous butterfly count, Temperature, & 8105.9 & 24.0 & <0.001 & NA \\
-    & Butterflies in direct sun & & & & \\
-\hline
-\end{tabular}
+\input{supplemental/results/thesis_exports/tables/model_selection_table}
 \end{table}
 
 \subsection{Analysis of the Best-Fit Model}
 
-The best-fit model (M23) explained 5.7\% of variance in monarch abundance changes (adjusted R² = 0.057). The model formula was:
+The best‑fit model (M50) included three smooth main effects and one tensor–product interaction:
 
 \begin{equation}
-\text{Change in abundance} \sim s(\text{Previous butterfly count}) + s(\text{Temperature}) + s(\text{Butterflies in direct sun}) + s(\text{Time since sunrise})
+\text{Change in abundance} \sim s(\text{Previous butterfly count}) + s(\text{Temperature}) + s(\text{Time since sunrise}) + ti(\text{Maximum wind speed},\, \text{Butterflies in direct sun}).
 \end{equation}
 
-where $s()$ denotes smooth terms. All four smooth terms showed significant effects on monarch abundance changes.
+All three smooth main effects were significant, and the wind × sun interaction was strongly supported in the AIC comparison (Table~\ref{tab:model_selection}). Smooth‑term statistics for the best model are provided via the exported table.
 
 \begin{table}[htbp]
 \centering
-\caption{Summary of smooth terms in the best-fit model (M23). EDF represents effective degrees of freedom, indicating the complexity of each smooth relationship.}\label{tab:smooth_terms}
-\begin{tabular}{lrrrr}
-\hline
-Term & EDF & Ref.~df & F-value & p-value \\
-\hline
-Previous butterfly count & 2.62 & 2.62 & 12.02 & 8.26e-07 \\
-Temperature & 3.93 & 3.93 & 3.23 & 0.028 \\
-Butterflies in direct sun & 1.53 & 1.53 & 19.36 & 1.22e-05 \\
-Time since sunrise & 4.90 & 4.90 & 8.90 & <2e-16 \\
-\hline
-\end{tabular}
+\caption{Summary of smooth terms in the best‑fit model (M50). EDF represents effective degrees of freedom.}\label{tab:smooth_terms}
+\input{supplemental/results/thesis_exports/tables/smooth_terms_summary}
 \end{table}
 
-All four predictors in the best-fit model showed significant effects on monarch abundance changes (Figure~\ref{fig:partial_effects}). The previous butterfly count exhibited a significant non-linear negative relationship (EDF = 2.62, F = 12.02, p < 0.001), with increasingly negative changes as the previous count increased, indicating proportionally greater departures from larger aggregations. Butterflies in direct sun showed a strong negative effect on roost abundance (EDF = 1.53, F = 19.36, p < 0.001), with greater numbers in direct sun associated with larger decreases in total abundance.
-
-Time since sunrise revealed a pronounced diurnal pattern (EDF = 4.90, F = 8.90, p < 0.001), with monarchs departing clusters throughout the morning and reaching peak departures approximately 3.25 hours after sunrise. Cluster reformation began in the afternoon, with most butterflies returning around 8.25 hours after sunrise, capturing the characteristic daily rhythm of monarch activity at overwintering sites. Temperature exhibited a complex non-linear relationship (EDF = 3.93, F = 3.23, p = 0.028). Below the flight threshold (blue vertical band) of 12.7-16°C established by Masters et al. (1988), temperature had minimal effect on cluster abundance. Above this threshold, clusters reformed as temperatures increased up to 25°C, with peak reformation occurring around 21°C. Beyond 25°C, the pattern reversed, with each additional degree Celsius increasing departure rates from clusters.
+Partial effects for the three smooth main effects are shown in Figure~\ref{fig:partial_effects}. The previous butterfly count showed a non‑linear negative relationship consistent with proportionally greater departures from larger aggregations. Time since sunrise captured a diurnal pattern with morning departures and afternoon returns. Temperature displayed a non‑linear response with minimal effects below the 12.7–16°C flight threshold and reformation at moderate temperatures.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{figures/results/combined_partial_effects_2x2_final.png}
-\caption{Partial effects of the four significant predictors on monarch abundance change in a 2x2 layout. The partial effect on monarch abundance as estimated from the single attribute being compared to abundance while assuming all other attribute values are held constant. Top row: butterflies in direct sun (left) and previous butterfly count (right). Bottom row: time since sunrise in minutes (left) and temperature in °C (right). Solid lines show the estimated smooth functions with 95\% confidence intervals (shaded regions). All effects are shown on the same scale for comparison.}\label{fig:partial_effects}
+\includegraphics[width=\textwidth]{figures/results/combined_partial_effects_1x3_final.png}
+\caption{Partial effects for the three smooth main effects in the best model: previous butterfly count (purple), time since sunrise (green), and temperature (mauve). Solid lines show estimated smooths with 95\% confidence intervals (shaded regions), on a shared y‑axis scale.}\label{fig:partial_effects}
 \end{figure}
 
 \subsection{Evaluation of the Disruptive Wind Hypothesis}
 
-Our analysis provided no support for the three hierarchical wind hypotheses:
-
-First, wind did not act as a disruptive force to overwintering monarchs. Among our 48 candidate models, wind appeared in only one of the top five models (M24), where it showed little evidence of an effect (p = 0.218) and resulted in substantially poorer model performance compared to the best model (ΔAIC = 6.2). The partial effect of maximum wind speed from this model remains flat with wide uncertainty across the observed range, reinforcing the lack of a coherent signal (Figure~\ref{fig:m24_wind_partial_effect}).
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.65\textwidth]{figures/results/m24_wind_partial_effect.png}
-\caption{Partial effect of maximum wind speed on monarch abundance change from model M24. The flat relationship with wide confidence intervals demonstrates no clear effect of wind on butterfly departures. The red dashed line indicates the proposed 2~m/s disruptive threshold.}
-\label{fig:m24_wind_partial_effect}
-\end{figure}
-
-Second, we found no evidence for disruption above the proposed 2~m/s threshold. A sensitivity analysis using a specific threshold predictor ('minutes with wind speed > 2~m/s') confirmed this lack of a threshold effect, as models with this variable performed poorly and did not rank among the top candidates (Table~\ref{tab:threshold_model_selection}). Visually, the relationship between wind and monarch abundance change remained flat across the 2~m/s boundary (Figure~\ref{fig:wind_scatter}). With mean maximum wind speeds of 2.2~m/s (SD = 1.4~m/s), conditions that should have revealed threshold effects if present, no disruption occurred at or above this boundary.
+Our analysis did not support a simple disruptive wind effect or a fixed 2~m/s threshold at the 30‑minute scale. Instead, when wind was selected it entered as a smooth interaction with direct sun exposure (ti), indicating that any wind association with departures is conditional on solar exposure rather than monotonic or threshold‑based. A sensitivity analysis using ‘minutes above 2~m/s’ performed poorly and did not rank among top candidates (Table~\ref{tab:threshold_model_selection}). Visually, the relationship between wind and abundance change shows no disruption at the 2~m/s boundary (Figure~\ref{fig:wind_scatter}).
 
 \begin{table}[htbp]
 \centering
@@ -181,7 +144,7 @@ Model residuals showed distinct linear banding patterns consistent with the disc
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/results/combined_diagnostics.png}
-\caption{Model diagnostics for M23. Left: Residuals versus fitted values showing banding that reflects the discrete counting method, with smoothed relationship shown in blue. Right: Normal Q-Q plot of model residuals showing reasonable normality with minor tail deviations.}\label{fig:diagnostics}
+\caption{Model diagnostics for the best model. Left: Residuals versus fitted values showing banding consistent with discrete counting; right: Normal Q-Q plot of residuals showing reasonable normality with minor tail deviations.}\label{fig:diagnostics}
 \end{figure}
 
 % To update figures, rerun the quarto doc masters-analysis/analysis/monarch_gam_analysis.qmd (separate repo) and copy the thesis-exports folder to this one.
