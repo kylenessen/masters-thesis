@@ -50,7 +50,7 @@ The tensor interaction between wind speed and butterflies in direct sun (p < 0.0
 
 \subsubsection{Model Diagnostics}
 
-Model diagnostic plots confirmed the adequacy of the GAMM specification (Figure~\ref{fig:model_diagnostics_30min}). Residual versus fitted value plots showed no systematic patterns or heteroscedasticity, indicating appropriate model structure. The quantile-quantile plot revealed approximately normal residual distribution with minor deviations in the tails, acceptable given the large sample size and complexity of ecological data. Basis dimension checks indicated adequate smoothing parameter selection, with all k-indices near 1.0 and p-values > 0.05, except for time since sunrise which showed marginal evidence of potential undersmoothing (k-index = 0.96, p = 0.065).
+Model diagnostic plots confirmed the adequacy of the GAMM specification (Figure~\ref{fig:model_diagnostics_30min}). Residual versus fitted value plots showed no systematic patterns or heteroscedasticity, indicating appropriate model structure. The quantile-quantile plot revealed approximately normal residual distribution with minor deviations in the tails, acceptable given the large sample size and complexity of ecological data.
 
 \begin{figure}[htbp]
     \centering
@@ -58,6 +58,10 @@ Model diagnostic plots confirmed the adequacy of the GAMM specification (Figure~
     \caption{Diagnostic plots for the best-fit GAMM model (M50). Left panel shows quantile-quantile plot comparing model residuals to theoretical normal distribution. Right panel displays residuals versus fitted values to assess homoscedasticity and model adequacy.}
     \label{fig:model_diagnostics_30min}
 \end{figure}
+
+Basis dimension checks confirmed adequate smoothing parameter selection for all model terms (Table~\ref{tab:gam_basis_check}). All smooth functions showed k-index values near 1.0, indicating sufficient basis dimensions to capture the underlying functional forms. None of the smooth terms showed evidence of undersmoothing (all p-values > 0.05), with the possible exception of time within day which showed marginal evidence (k-index = 0.96, p = 0.065). These diagnostics confirm that the chosen basis dimensions adequately represent the complexity of the smooth relationships without overfitting.
+
+\input{supplemental/results/30_min/tables/gam_basis_check.tex}
 
 Temporal autocorrelation analysis revealed minimal residual correlation structure after accounting for the AR(1) correlation within deployment days (Figure~\ref{fig:acf_diagnostics}). The autocorrelation function showed rapid decay with all lags beyond lag 1 falling within the significance bounds, confirming that the model adequately captured temporal dependencies in the data. This indicates that our mixed-effects structure with autoregressive errors appropriately addressed the repeated measures nature of the time-series observations.
 

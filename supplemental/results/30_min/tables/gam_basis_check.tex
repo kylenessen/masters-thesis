@@ -1,0 +1,15 @@
+\begin{table}[htbp]
+\centering
+\caption{Basis dimension adequacy checks for smooth terms in best-fit GAMM model (M50). Low p-values (k-index < 1) may indicate insufficient basis dimensions, particularly when edf approaches k'.}
+\label{tab:gam_basis_check}
+\begin{tabular}{lrrrc}
+\toprule
+Smooth Term & k' & edf & k-index & p-value \\
+\midrule
+s(total butterflies $t_{lag}$) & 9.00 & 2.41 & 1.00 & 0.735 \\
+s(temperature avg) & 9.00 & 3.67 & 1.02 & 0.895 \\
+s(time within day $t$) & 9.00 & 4.87 & 0.96 & 0.065 \\
+ti(max gust, butterflies direct sun $t_{lag}$) & 16.00 & 7.35 & 0.99 & 0.490 \\
+\bottomrule
+\end{tabular}
+\end{table}
