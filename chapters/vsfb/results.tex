@@ -119,7 +119,14 @@ Statistical analysis revealed significant effects for the previous day's maximum
 
 \input{supplemental/results/sunset/tables/m32_model_summary.tex}
 
-The previous day's maximum count showed a significant negative linear relationship (coefficient = -0.030, SE = 0.006), indicating that larger clusters experienced proportionally greater losses between days. This pattern aligns with the responsive change analysis and suggests regression toward mean cluster sizes regardless of temporal scale.
+The previous day's maximum count showed a significant negative linear relationship (coefficient = -0.030, SE = 0.006), indicating that larger clusters experienced proportionally greater losses between days. This pattern aligns with the wind disruption analysis. Window duration showed no significant relationship with cluster size changes. Partial effects for these linear predictors are shown in Figure~\ref{fig:partial_effects_sunset}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{supplemental/results/sunset/figures/partial_effects_best_1x2.png}
+    \caption{Partial effects of control variables on day-to-day monarch butterfly cluster size changes from the best-fit GAMM model (M32). Left panel shows the strong negative effect of previous day maximum count. Right panel shows window duration had no significant effect on cluster size changes. Shaded regions represent 95\% confidence intervals.}
+    \label{fig:partial_effects_sunset}
+\end{figure}
 
 The tensor smooth interaction between maximum wind gust and cumulative direct sun exposure (p < 0.001) revealed complex conditional relationships between sustained weather exposure and cumulative butterflies in direct light (Figure~\ref{fig:interaction_wind_sun_sunset}). All observations during the study period experienced wind speeds exceeding 2 m/s. Under low wind speeds around 2 m/s with minimal butterfly counts in direct sun, clusters increased the following day, though this pattern reversed sharply as butterfly counts increased, resulting in decreased cluster sizes. When butterfly counts approached zero, cluster sizes showed minimal change to slight decreases across most wind speeds, with the exception of extreme wind values where sparse data limits interpretation. At intermediate to high values of both wind speed and butterfly sun exposure, cluster sizes increased the next day. Interpretation requires caution at interpolation boundaries and regions with single observations. 
 
