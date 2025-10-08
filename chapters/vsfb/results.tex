@@ -139,4 +139,24 @@ The tensor smooth interaction between maximum wind gust and cumulative direct su
 
 \subsubsection{Model Diagnostics}
 
+Model diagnostic plots confirmed the adequacy of the GAMM specification (Figure~\ref{fig:model_diagnostics_sunset}). Residual versus fitted value plots showed no systematic patterns or heteroscedasticity, indicating appropriate model structure. The quantile-quantile plot revealed approximately normal residual distribution with minor deviations in the tails, acceptable given the sample size and complexity of ecological data.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{supplemental/results/sunset/figures/diag_qq_and_residuals_1x2.png}
+    \caption{Diagnostic plots for the best-fit GAMM model (M32). Left panel shows quantile-quantile plot comparing model residuals to theoretical normal distribution. Right panel displays residuals versus fitted values to assess homoscedasticity and model adequacy.}
+    \label{fig:model_diagnostics_sunset}
+\end{figure}
+
+Basis dimension checks confirmed adequate smoothing parameter selection for the tensor smooth interaction term. The wind-sunlight interaction showed a k-index value of 1.06 (p = 0.72), indicating sufficient basis dimensions to capture the underlying functional form without evidence of undersmoothing. This confirms that the chosen basis dimensions adequately represent the complexity of the smooth relationship without overfitting.
+
+Temporal autocorrelation analysis revealed minimal residual correlation structure after accounting for the AR(1) correlation within deployment days (Figure~\ref{fig:acf_diagnostics_sunset}). The autocorrelation function showed rapid decay with all lags beyond lag 1 falling within the significance bounds, confirming that the model adequately captured temporal dependencies in the data. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{supplemental/results/sunset/figures/diag_acf.png}
+    \caption{Autocorrelation function of model residuals showing minimal temporal correlation after accounting for AR(1) structure within deployment days. Blue dashed lines indicate 95\% confidence bounds for white noise.}
+    \label{fig:acf_diagnostics_sunset}
+\end{figure}
+
 \subsubsection{Sensitivity Analysis}
