@@ -4,12 +4,12 @@
 \centering
 \begin{tabular}[t]{llrrrl}
 \toprule
-  & Smooth Term & EDF & Ref. df & F & p-value\\
+  & Smooth term & EDF & Ref. df & F & p-value\\
 \midrule
-s(total\_butterflies\_t\_lag) & Previous butterfly count & 2.409 & 2.409 & 12.500 & 9.98e-07\\
-s(temperature\_avg) & Temperature & 3.674 & 3.674 & 3.193 & 0.0571\\
-s(time\_within\_day\_t) & Time since sunrise & 4.870 & 4.870 & 9.845 & < 2e-16\\
-ti(max\_gust,butterflies\_direct\_sun\_t\_lag) & Butterflies in direct sun & 7.348 & 7.348 & 4.666 & 5.55e-05\\
+Previous butterfly count & Previous butterfly count & 2.41 & 2.41 & 12.50 & p < 0.001\\
+Temperature & Temperature & 3.67 & 3.67 & 3.19 & 0.057\\
+Time since sunrise & Time since sunrise & 4.87 & 4.87 & 9.85 & p < 0.001\\
+Butterflies in direct sun (interaction with wind) & Butterflies in direct sun & 7.35 & 7.35 & 4.67 & p < 0.001\\
 \bottomrule
 \end{tabular}
 \end{table}
