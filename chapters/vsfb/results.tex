@@ -107,6 +107,10 @@ Daily maximum cluster sizes ranged from 0 to 770 butterflies (mean = 134.7 ± 13
 
 \subsubsection{Model Selection}
 
+We evaluated 76 candidate models using generalized additive mixed models (GAMMs) to identify environmental predictors of day-to-day changes in maximum cluster size. The model space included null, single-predictor, interaction-only, additive, main effects with interactions, and complex formulations, all incorporating deployment random intercepts and AR(1) temporal correlation. Model selection via corrected Akaike Information Criterion (AICc) identified M32 as the decisively best-fit model, capturing 84.7\% of the total model weight (Table~\ref{tab:sunset-model-selection-table}). The next best model (M52) showed substantially weaker support with $\Delta$AICc = 5.6 and only 5.2\% model weight. Model M32 incorporated a tensor smooth interaction between maximum wind gust and cumulative direct sun exposure, along with baseline controls for previous day's maximum count and window duration.
+
+\input{supplemental/results/sunset/tables/top5_models.tex}
+
 \subsubsection{Analysis of Best Fit Model}
 
 \subsubsection{Model Diagnostics}
