@@ -14,25 +14,76 @@ The comprehensive temporal coverage, with observations at 30-minute intervals ca
 
 \subsection{Responsive Change}
 
-% A few introductory sentences here to remind the reader of what this analysis is, and some context to help them understand what comes next. "Responsive Change" refers to my 30 minute analysis. All figures and information should come from supplemental/results/30_min. See the first sentence of the Daily Change section for inspiration.
+To examine how monarchs respond to immediate environmental conditions, we analyzed 1,894 paired observations collected at 30-minute intervals throughout the overwintering season. This responsive change analysis tested whether short-term fluctuations in cluster size could be explained by concurrent weather variables, particularly wind exposure.
 
 \subsubsection{Model Selection}
 
-% Here you can briefly explain how many models were tested. The AIC table should go in this section and be the bulk of the content. 
+We evaluated 52 candidate models using generalized additive mixed models (GAMMs) to identify the environmental predictors of monarch abundance changes. Model selection via Akaike Information Criterion (AIC) identified M50 as the decisively best-fit model, capturing 85.8\% of the total model weight (Table~\ref{tab:export-model-selection-table}). The next best model (M23) showed substantially weaker support with $\Delta$AIC = 3.8 and only 12.6\% model weight. Model M50 incorporated smooth terms for previous butterfly count, temperature, and time since sunrise, along with a tensor interaction between maximum wind speed and butterflies in direct sun.
+
+\input{supplemental/results/30_min/tables/top5_models.tex} 
 
 \subsubsection{Analysis of Best Fit Model}
 
-% Here I want you to idnetify the best fit model and include the formula for the model written in plain english. Give a bit of flavor about the description of the model, then provide a summary of the model results as a table. We should also include the partial effects plot here with a description (below), and the interaction plot separately, again with a description. OK to leave the description to me fill in for the interaction. I'm going to paste the old description I have for the partial effects below, but make sure the numbers are correct for the new analysis. 
+The best-fit model (M50) predicted change in butterfly abundance as a function of: (1) the previous observation's butterfly count, (2) average temperature, (3) time since sunrise, and (4) an interaction between maximum wind gust speed and the number of butterflies in direct sunlight. This model structure captures both the inherent clustering dynamics (through previous count) and environmental drivers of movement, while allowing wind effects to vary based on thermal conditions experienced by the cluster.
 
-% "Partial effects for the three smooth main effects are shown in Figure 1.1. The previous butterfly count showed a significant non‑linear negative relationship (p < 0.001) consistent with proportionally greater departures from larger aggregations. Time since sunrise captured a significant diurnal pattern (p < 0.001) with morning departures and afternoon returns. Temperature showed a marginally non-significant trend (p = 0.057) suggesting possible effects below the 12.7–16°C flight threshold."
+Analysis of the smooth terms revealed distinct patterns in monarch responsiveness to environmental conditions (Table~\ref{tab:export-smooth-terms-table}). The model explained substantial variation in butterfly abundance changes, with all main effects showing statistical significance except temperature, which approached significance.
+
+\input{supplemental/results/thesis_exports/tables/smooth_terms_summary.tex}
+
+Partial effects for the smooth terms are shown in Figure~\ref{fig:partial_effects_30min}. The previous butterfly count showed a significant non-linear negative relationship (p < 0.001) consistent with proportionally greater departures from larger aggregations. Time since sunrise captured a significant diurnal pattern (p < 0.001) with morning departures and afternoon returns. Temperature showed a marginally non-significant trend (p = 0.057) suggesting possible effects near the 12.7–16°C flight threshold range.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{supplemental/results/30_min/figures/partial_effects_best_1x3.png}
+    \caption{Partial effects of environmental predictors on monarch butterfly abundance changes from the best-fit GAMM model (M50). Shaded regions represent 95\% confidence intervals.}
+    \label{fig:partial_effects_30min}
+\end{figure}
+
+The tensor interaction between wind speed and butterflies in direct sun (p < 0.001) revealed a conditional relationship where wind effects depended on solar exposure conditions (Figure~\ref{fig:interaction_wind_sun}). This interaction term improved model fit substantially, suggesting that the influence of wind on cluster dynamics varies with the thermal environment experienced by roosting monarchs.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{supplemental/results/30_min/figures/interaction_wind_x_sun_binned.png}
+    \caption{Interaction effect between maximum wind gust speed and butterflies in direct sun on abundance changes. The tensor smooth interaction reveals how wind effects vary with solar exposure conditions.}
+    \label{fig:interaction_wind_sun}
+\end{figure}
 
 \subsubsection{Model Diagnostics}
 
-% We need to show the combined residuales vs fitted vales and qq plot here. I also want to show the diag_acf plot as well. Take a try at describing them in text. Only for the 30_min analysis. 
+Model diagnostic plots confirmed the adequacy of the GAMM specification (Figure~\ref{fig:model_diagnostics_30min}). Residual versus fitted value plots showed no systematic patterns or heteroscedasticity, indicating appropriate model structure. The quantile-quantile plot revealed approximately normal residual distribution with minor deviations in the tails, acceptable given the large sample size and complexity of ecological data. Basis dimension checks indicated adequate smoothing parameter selection, with all k-indices near 1.0 and p-values > 0.05, except for time since sunrise which showed marginal evidence of potential undersmoothing (k-index = 0.96, p = 0.065).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{supplemental/results/30_min/figures/diag_qq_and_residuals_1x2.png}
+    \caption{Diagnostic plots for the best-fit GAMM model (M50). Left panel shows quantile-quantile plot comparing model residuals to theoretical normal distribution. Right panel displays residuals versus fitted values to assess homoscedasticity and model adequacy.}
+    \label{fig:model_diagnostics_30min}
+\end{figure}
+
+Temporal autocorrelation analysis revealed minimal residual correlation structure after accounting for the AR(1) correlation within deployment days (Figure~\ref{fig:acf_diagnostics}). The autocorrelation function showed rapid decay with all lags beyond lag 1 falling within the significance bounds, confirming that the model adequately captured temporal dependencies in the data. This indicates that our mixed-effects structure with autoregressive errors appropriately addressed the repeated measures nature of the time-series observations.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{supplemental/results/30_min/figures/diag_acf.png}
+    \caption{Autocorrelation function of model residuals showing minimal temporal correlation after accounting for AR(1) structure within deployment days. Blue dashed lines indicate 95\% confidence bounds for white noise.}
+    \label{fig:acf_diagnostics}
+\end{figure} 
 
 \subsubsection{Sensitivity Analysis}
 
-% Note here that we basically redid the whole analysis, but instead of using max gust, we used minutes above 2 m/s to test the threshold hypothesis. The best model followed the same structure as above, but had a lower R2 value and was not the decisive winner in the AIC comparison, sharing model weight with the next best one. For this reason, we are preferring the direct measure of wind instead of the threshold. Still, you should include the AIC table, and I want to include the interaction plot as well to lend evidence that wind is not an important factor. The other plots can be left out. You can find what you need for this section here: supplemental/results/30_min_threshold. 
+To test the hypothesis that wind acts as a binary disruption threshold rather than a continuous variable, we repeated the entire analysis using minutes above 2 m/s as the wind predictor. This threshold-based approach directly tests whether exceeding the proposed 2 m/s wind speed threshold drives butterfly movement, as suggested by previous literature. The best threshold model (T50) maintained the same structure as our primary analysis but showed notably weaker performance (Table~\ref{tab:exports}).
+
+While T50 achieved the lowest AIC among threshold models, it failed to decisively outperform simpler alternatives, capturing only 55.4\% of model weight compared to 40.4\% for the model without any wind term (T23). The negligible difference in AIC ($\Delta$AIC = 0.63) between these models indicates substantial uncertainty about whether the threshold wind variable improves predictions. Furthermore, the wind threshold term showed weak statistical support even in the best model (p = 0.0001), and non-significant effects in alternative model specifications (e.g., T24: p = 0.372).
+
+\input{supplemental/results/thesis_exports/tables/threshold_model_selection_table.tex}
+
+The interaction plot from the threshold analysis provides additional evidence against meaningful wind effects on monarch clustering behavior (Figure~\ref{fig:threshold_interaction}). The relatively flat response surface across different combinations of wind exposure duration and solar conditions suggests that time above the 2 m/s threshold does not substantially influence butterfly abundance changes, regardless of thermal conditions. This lack of clear pattern, combined with the poor model performance, supports our conclusion that direct measurement of wind speed provides more appropriate characterization than binary threshold approaches, though neither reveals biologically important effects on monarch cluster dynamics.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{supplemental/results/30_min_threshold/figures/interaction_wind_x_sun_binned.png}
+    \caption{Interaction effect between minutes above 2 m/s wind threshold and butterflies in direct sun from sensitivity analysis. The minimal variation in response across wind exposure categories provides evidence against the threshold disruption hypothesis.}
+    \label{fig:threshold_interaction}
+\end{figure} 
 
 \subsection{Statistical Power to Detect Wind Effects}
 
