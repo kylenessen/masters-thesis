@@ -12,139 +12,27 @@ Cluster sizes varied markedly among the 10 deployment locations. Site SC10 recor
 
 The comprehensive temporal coverage, with observations at 30-minute intervals capturing 16.5 observations per deployment-day on average, provided fine-scale resolution of monarch behavioral responses to changing environmental conditions. Peak observation activity occurred at 16:00 hours (196 observations), corresponding with afternoon warming periods when monarchs typically exhibit increased movement.
 
-\subsection{Summary of Data and Model Selection}
+\subsection{Responsive Change}
 
-Environmental factors drove monarch abundance changes in 1,894 paired observations from 115 monitoring periods at two overwintering sites during the 2023–2024 season. After expanding the candidate set to include tensor–product interactions (ti), testing of 52 candidate models identified model M50 as the best‑fit.
-
-Model M50 included smooth terms for previous butterfly count, temperature, and time since sunrise, plus a tensor–product interaction between maximum wind speed and butterflies in direct sun. The AIC comparison favored M50 (AIC ≈ 8078.0) over the next best models (ΔAIC ≥ 3.8). We report full model selection details via the exported table.
-
-\begin{table}[htbp]
-\centering
-\caption{Top five candidate models ranked by AIC for the 30‑minute analysis.}
-\label{tab:model_selection}
-\input{supplemental/results/thesis_exports/tables/model_selection_table}
-\end{table}
-
-\subsection{Analysis of the Best-Fit Model}
-
-The best‑fit model (M50) included three smooth main effects and one tensor–product interaction:
-
-\begin{equation}
-\text{Change in abundance} \sim s(\text{Previous butterfly count}) + s(\text{Temperature}) + s(\text{Time since sunrise}) + ti(\text{Maximum wind speed},\, \text{Butterflies in direct sun}).
-\end{equation}
-
-All three smooth main effects were significant, and the wind × sun interaction was strongly supported in the AIC comparison (Table~\ref{tab:model_selection}). Smooth‑term statistics for the best model are provided via the exported table.
-
-\begin{table}[htbp]
-\centering
-\caption{Summary of smooth terms in the best‑fit model (M50). EDF represents effective degrees of freedom.}\label{tab:smooth_terms}
-\input{supplemental/results/thesis_exports/tables/smooth_terms_summary}
-\end{table}
-
-Partial effects for the three smooth main effects are shown in Figure~\ref{fig:partial_effects}. The previous butterfly count showed a non‑linear negative relationship consistent with proportionally greater departures from larger aggregations. Time since sunrise captured a diurnal pattern with morning departures and afternoon returns. Temperature displayed a non‑linear response with minimal effects below the 12.7–16°C flight threshold and reformation at moderate temperatures.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{figures/results/combined_partial_effects_1x3_final.png}
-\caption{Partial effects for the three smooth main effects in the best model: previous butterfly count (purple), time since sunrise (green), and temperature (mauve). Solid lines show estimated smooths with 95\% confidence intervals (shaded regions), on a shared y‑axis scale.}\label{fig:partial_effects}
-\end{figure}
-
-\subsection{Evaluation of the Disruptive Wind Hypothesis}
-
-Our analysis did not support a simple disruptive wind effect or a fixed 2~m/s threshold at the 30‑minute scale. Instead, when wind was selected it entered as a smooth interaction with direct sun exposure (ti), indicating that any wind association with departures is conditional on solar exposure rather than monotonic or threshold‑based. A sensitivity analysis using ‘minutes above 2~m/s’ performed poorly and did not rank among top candidates (Table~\ref{tab:threshold_model_selection}). Visually, the relationship between wind and abundance change shows no disruption at the 2~m/s boundary (Figure~\ref{fig:wind_scatter}).
-
-\begin{table}[htbp]
-\centering
-\caption{Model selection results from sensitivity analysis using wind threshold predictor (minutes with wind speed > 2 m/s). Poor model performance (high $\Delta$AIC values) demonstrates lack of support for the 2 m/s disruption threshold.}
-\label{tab:threshold_model_selection}
-\begin{tabular}{lllrrr}
-\hline
-Model & Terms & AIC & $\Delta$AIC & Weight & Wind p \\
-\hline
-T24 & Previous butterfly count, Minutes above 2~m/s, & 8089.4 & 7.6 & 0.021 & 0.372 \\
-    & Temperature, Butterflies in direct sun, Time since sunrise & & & & \\
-T44 & Minutes above 2~m/s, Temperature, & 8108.4 & 26.5 & <0.001 & 0.256 \\
-    & Butterflies in direct sun, Time since sunrise & & & & \\
-T21 & Previous butterfly count, Minutes above 2~m/s, & 8110.6 & 28.7 & <0.001 & 0.053 \\
-    & Temperature, Butterflies in direct sun & & & & \\
-T43 & Minutes above 2~m/s, Temperature (linear), & 8115.5 & 33.7 & <0.001 & 0.275 \\
-    & Butterflies in direct sun, Time since sunrise & & & & \\
-T19 & Previous butterfly count, Minutes above 2~m/s, & 8119.8 & 37.9 & <0.001 & 0.078 \\
-    & Temperature (linear), Butterflies in direct sun & & & & \\
-\hline
-\end{tabular}
-\end{table}
-
-Third, wind's effects did not scale with intensity. The relationship remained flat across all observed wind speeds (0–12~m/s), with confidence intervals consistently encompassing zero (Figure~\ref{fig:wind_scatter}).
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.8\textwidth]{figures/results/wind_hypothesis_scatter.png}
-\caption{Relationship between maximum wind speed (m/s) and monarch abundance change. The red dashed line shows the proposed 2 m/s disruptive wind threshold, while the flat trend line indicates no effect of wind on butterfly departures. Points represent 30-minute observation periods.}\label{fig:wind_scatter}
-\end{figure}
-
-\subsection{Statistical Power to Detect Wind Effects}
-
-Post-hoc power analysis confirmed our study had adequate statistical power to detect biologically meaningful wind effects (Table~\ref{tab:power_analysis}). With 1,894 paired observations, we achieved 87.5\% power to detect moderate effect sizes (0.15 standard deviations) and 98.5\% power to detect larger effects (0.20 standard deviations). Power for small effects (0.10 standard deviations) was 56\%, while very small effects (0.05 standard deviations) yielded only 16.5\% power. These results indicate that our failure to detect wind effects is unlikely due to insufficient statistical power for effect sizes of biological relevance.
-
-\input{supplemental/results/thesis_exports/tables/power_analysis_table.tex}
-
-\subsection{Dynamic Window Analysis}
-
-To test whether cumulative weather exposure influenced day-to-day roost dynamics, we analyzed 96 consecutive-day pairs from the same deployment dataset using biologically-aligned temporal windows. The primary analysis employed a sunset window spanning from the previous day's maximum count to the current day's last observation (mean duration = 29.6 hours), capturing the full period from peak aggregation through the subsequent roosting decision. A secondary analysis using fixed 24-hour windows (n = 94 pairs) provided a sensitivity test of our findings.
-
-Daily maximum cluster sizes ranged from 0 to 770 butterflies (mean = 134.7 ± 138.1), with day-to-day changes in maximum count ranging from losses of 376 butterflies to gains of 464 butterflies (mean change = -10.5 ± 111.6). Within the sunset windows, maximum wind gusts ranged from 2.0 to 12.8 m/s (mean = 4.5 ± 1.8 m/s), with all observation windows exceeding the proposed 2 m/s threshold. Cumulative direct sun exposure varied from 0 to 1,122 butterfly-observations in sunlight per window (mean = 139.8 ± 206.9), reflecting diverse thermal exposure conditions across monitoring days.
+% A few introductory sentences here to remind the reader of what this analysis is, and some context to help them understand what comes next. "Responsive Change" refers to my 30 minute analysis. All figures and information should come from supplemental/results/30_min. 
 
 \subsubsection{Model Selection}
 
-Among 76 candidate models tested, the sunset window analysis identified a smooth interaction between maximum wind gust and cumulative direct sun exposure as the best-supported structure (Table~\ref{tab:dynamic_model_selection}). This model achieved an adjusted R² of 0.397, with the interaction term showing strong statistical support (edf = 6.68, F = 4.10, p < 0.001). The 24-hour window sensitivity analysis converged on the same interaction structure, though with reduced explanatory power (adjusted R² = 0.232) and weaker statistical significance (edf = 3.54, F = 3.59, p = 0.020), confirming the robustness of the finding across window definitions.
+% Here you can briefly explain how many models were tested. The AIC table should go in this section and be the bulk of the content. 
 
-\begin{table}[htbp]
-\centering
-\caption{Top five models from dynamic window analyses ranked by AICc. The sunset window represents the primary biologically-aligned analysis (n = 96), while the 24-hour window provides a sensitivity test (n = 94). Convergence on wind-sun interaction models across both approaches supports conditional rather than threshold-based wind effects.}
-\label{tab:dynamic_model_selection}
-\begin{tabular}{lrrr}
-\hline
-Model Terms & AICc & $\Delta$AICc & Weight \\
-\hline
-\multicolumn{4}{l}{\textit{Sunset Window Analysis}} \\
-Baseline + ti(wind\_gust, sun\_exposure) & 351.2 & 0.0 & 0.312 \\
-Baseline + wind\_gust $\times$ sun\_exposure & 352.8 & 1.6 & 0.141 \\
-Baseline + te(wind\_gust, sun\_exposure) & 353.1 & 1.9 & 0.121 \\
-Baseline + s(wind\_gust) + s(sun\_exposure) & 355.4 & 4.2 & 0.038 \\
-Baseline controls only & 356.7 & 5.5 & 0.020 \\
-\\
-\multicolumn{4}{l}{\textit{24-Hour Window Sensitivity Analysis}} \\
-Baseline + ti(wind\_gust, sun\_exposure) & 367.5 & 0.0 & 0.298 \\
-Baseline + wind\_gust $\times$ sun\_exposure & 368.9 & 1.4 & 0.148 \\
-Baseline + s(wind\_gust) + s(sun\_exposure) & 369.3 & 1.8 & 0.121 \\
-Baseline + te(wind\_gust, sun\_exposure) & 370.1 & 2.6 & 0.081 \\
-Baseline controls only & 372.4 & 4.9 & 0.026 \\
-\hline
-\end{tabular}
-\end{table}
+\subsubsection{Analysis of Best Fit Model}
 
-\subsubsection{Interaction Pattern}
+% Here I want you to idnetify the best fit model and include the formula for the model written in plain english. Give a bit of flavor about the description of the model, then provide a summary of the model results as a table. We should also include the partial effects plot here with a description (below), and the interaction plot separately, again with a description. OK to leave the description to me fill in for the interaction. I'm going to paste the old description I have for the partial effects below, but make sure the numbers are correct for the new analysis. 
 
-The partial effect surfaces revealed consistent patterns across both analyses (Figure~\ref{fig:dynamic_interaction}). Positive effects on daily roost change, indicating aggregation gains, concentrated at moderate sun exposure (500-1,500 butterfly-observations) combined with moderate wind speeds (5-10 m/s). At low sun exposure (<200 butterfly-observations), the partial effects remained near zero across all wind speeds. At very high sun exposure (>2,000 butterfly-observations), effects became negative regardless of wind conditions. The surface showed no evidence of disruption at the proposed 2 m/s threshold, with the gradient remaining continuous across this boundary.
+% "Partial effects for the three smooth main effects are shown in Figure 1.1. The previous butterfly count showed a significant non‑linear negative relationship (p < 0.001) consistent with proportionally greater departures from larger aggregations. Time since sunrise captured a significant diurnal pattern (p < 0.001) with morning departures and afternoon returns. Temperature showed a marginally non-significant trend (p = 0.057) suggesting possible effects below the 12.7–16°C flight threshold."
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{figures/results/window_comparison_interaction.png}
-\caption{Partial effect surfaces from the best-fit generalized additive mixed models showing the interaction between maximum wind gust and cumulative direct sun exposure on daily roost change. Positive values (red) indicate aggregation gains; negative values (blue) indicate losses. Gray regions denote parameter combinations without data support. The sunset window analysis (left) shows the primary result, with the 24-hour window (right) providing sensitivity confirmation.}
-\label{fig:dynamic_interaction}
-\end{figure}
+\subsubsection{Model Diagnostics}
 
-No models incorporating the 2 m/s threshold as a discrete predictor ranked among the top candidates in either analysis. Models testing minutes above 2 m/s, cumulative gust exposure above 2 m/s, or binary threshold indicators consistently performed worse than models with continuous wind-sun interactions ($\Delta$AICc > 10 for all threshold models).
+% We need to show the combined residuales vs fitted vales and qq plot here. I also want to show the diag_acf plot as well. Take a try at describing them in text. Only for the 30_min analysis. 
 
-\subsection{Model Diagnostics}
+\subsubsection{Sensitivity Analysis}
 
-Model residuals showed distinct linear banding patterns consistent with the discrete counting method used to estimate butterfly abundance, while the Q-Q plot indicated approximately normal residual distribution with minor tail deviations (Figure~\ref{fig:diagnostics}).
+% Note here that we basically redid the whole analysis, but instead of using max gust, we used minutes above 2 m/s to test the threshold hypothesis. The best model followed the same structure as above, but had a lower R2 value and was not the decisive winner in the AIC comparison, sharing model weight with the next best one. For this reason, we are preferring the direct measure of wind instead of the threshold. Still, you should include the AIC table, and I want to include the interaction plot as well to lend evidence that wind is not an important factor. The other plots can be left out. You can find what you need for this section here: supplemental/results/30_min_threshold. 
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{figures/results/combined_diagnostics.png}
-\caption{Model diagnostics for the best model. Left: Residuals versus fitted values showing banding consistent with discrete counting; right: Normal Q-Q plot of residuals showing reasonable normality with minor tail deviations.}\label{fig:diagnostics}
-\end{figure}
+\subsection{Daily Change}
 
-% To update figures, rerun the quarto doc masters-analysis/analysis/monarch_gam_analysis.qmd (separate repo) and copy the thesis-exports folder to this one.
