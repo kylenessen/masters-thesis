@@ -159,4 +159,17 @@ Temporal autocorrelation analysis revealed minimal residual correlation structur
     \label{fig:acf_diagnostics_sunset}
 \end{figure}
 
-\subsubsection{Sensitivity Analysis}
+\subsection{Sensitivity Analysis: 24-Hour Butterfly Change}
+
+To assess the robustness of our findings, we conducted a sensitivity analysis examining butterfly cluster changes over 24-hour periods rather than sunset-specific intervals. This analysis evaluated the same 72 candidate models using identical GAMM specifications with deployment random intercepts and AR(1) temporal correlation. Notably, model selection converged on the same structural form as the primary sunset analysis. Model M31, incorporating a tensor smooth interaction between maximum wind gust and cumulative direct sun exposure, emerged as the decisively best-fit model with 50.7\% of the total model weight (Table~\ref{tab:24hr-model-selection-table}). Alternative models showed substantially weaker support, with the next best model achieving only 8.4\% weight and $\Delta$AICc = 3.6.
+
+\input{supplemental/results/24hr/tables/top5_models.tex}
+
+The 24-hour analysis revealed qualitatively similar interaction patterns to the sunset-specific model, though with attenuated effect magnitudes reflecting the longer temporal window (Figure~\ref{fig:interaction_wind_sun_24hr}). Under low wind conditions (approximately 2 m/s) with minimal butterflies in direct sun, clusters increased over the subsequent 24 hours. This effect reversed sharply as butterfly counts increased under low winds, resulting in rapid cluster size decreases. When no butterflies occupied direct sun positions, cluster sizes remained relatively stable across wind speed values. Intermediate values for both wind speed and sun exposure produced cluster size increases. The convergent model selection and consistent interaction patterns across temporal scales strengthen confidence in the identified environmental relationships, while interpretation requires similar caution near data boundaries and regions with sparse observations.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{supplemental/results/24hr/figures/interaction_wind_x_sun_binned.png}
+    \caption{Tensor smooth interaction between maximum wind gust (m/s) and cumulative butterflies in direct sun on 24-hour cluster size changes. Color gradient indicates partial effect magnitude on square-root transformed scale (red = positive, blue = negative). Black points show observed data distribution. Gray regions indicate areas beyond reliable interpolation range. The interaction pattern mirrors that observed in the sunset-specific analysis, supporting the robustness of identified environmental relationships.}
+    \label{fig:interaction_wind_sun_24hr}
+\end{figure}
