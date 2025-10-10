@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1760070343 "main.bcf" "main.bbl" "main" 1760070357 0
+["biber main"] 1760070343 "main.bcf" "main.bbl" "main" 1760070611 0
   "./bibliography/Thesis.bib" 1760069462 229692 edcd3bfa54055b8fbf8d8b85c69bf2a6 ""
-  "main.bcf" 1760070357 136064 b6f2c9433601a23648c15e115420010f "pdflatex"
+  "main.bcf" 1760070611 136064 b6f2c9433601a23648c15e115420010f "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1760070352 "main.tex" "main.pdf" "main" 1760070357 0
+["pdflatex"] 1760070605 "main.tex" "main.pdf" "main" 1760070611 0
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -251,22 +251,22 @@
   "chapters/vsfb/introduction.tex" 1760067414 20279 b167d09cc933c929278b7dbf40a07496 ""
   "chapters/vsfb/methods.tex" 1760067438 26217 9e271ffbc3ccf014d3b1c4419749f12d ""
   "chapters/vsfb/results.tex" 1760067438 24809 49cf477202796010ec2b49a383b44c6c ""
-  "cpthesis.cls" 1727715126 49929 8571e43ed3562298597a791add5a5840 ""
+  "cpthesis.cls" 1760070600 49935 94a8dd5d81f8b627e7412e5cf0895958 ""
   "figures/discussion/weiss_adapted_boxplot.png" 1758485666 87096 39e93dfddc67f38b3e2cc0e0c994f743 ""
   "frontmatter/abstract.tex" 1727715126 41 41295d08feedaee1f1f4ef884c8b4803 ""
   "frontmatter/acknowledgments.tex" 1760064241 2795 f3d9854217e2f271d195c25d6ea427c9 ""
   "frontmatter/dedication.tex" 1760065874 266 22a17f082b9e5f7804d648ae0944f7f0 ""
-  "frontmatter/information.tex" 1760069729 660 3dbd21c7506a6e49b40fc4fb353718e4 ""
+  "frontmatter/information.tex" 1760070574 660 3dbd21c7506a6e49b40fc4fb353718e4 ""
   "frontmatter/listings.tex" 1760064703 206 d7a75e5bf2b9186f348fbe08b26a0462 ""
-  "frontmatter/preamble.tex" 1727715126 833 a4e89eb3ea01f4f7d1f994899cfd4595 ""
-  "main.aux" 1760070357 51924 449d3369c0537c757760090f3ab2ced3 "pdflatex"
+  "frontmatter/preamble.tex" 1760070590 1029 7a733336422efc34aac55e9eb866bdf4 ""
+  "main.aux" 1760070611 51924 449d3369c0537c757760090f3ab2ced3 "pdflatex"
   "main.bbl" 1760070346 460264 0c50ac249db7f209e47e45e3fa0874f8 "biber main"
-  "main.lof" 1760070357 5060 c50c6e3ff2f2d1bdc58537cd94910047 "pdflatex"
-  "main.lot" 1760070357 2661 ec2dc4bea8b1b79a8d1a3df9afab4049 "pdflatex"
-  "main.out" 1760070357 11316 366c6e693fcbe5083f12c41293968844 "pdflatex"
-  "main.run.xml" 1760070357 2436 113bf459bb46407684bb051e361334c0 "pdflatex"
+  "main.lof" 1760070611 5060 c50c6e3ff2f2d1bdc58537cd94910047 "pdflatex"
+  "main.lot" 1760070611 2661 ec2dc4bea8b1b79a8d1a3df9afab4049 "pdflatex"
+  "main.out" 1760070611 11316 366c6e693fcbe5083f12c41293968844 "pdflatex"
+  "main.run.xml" 1760070611 2436 113bf459bb46407684bb051e361334c0 "pdflatex"
   "main.tex" 1760068503 7177 ecd93fdfa757ed4909f46b6a8d7e0792 ""
-  "main.toc" 1760070357 5383 e35a65851a0a16b39afa0421bdee0531 "pdflatex"
+  "main.toc" 1760070611 5383 e35a65851a0a16b39afa0421bdee0531 "pdflatex"
   "supplemental/results/24hr/figures/interaction_wind_x_sun_binned.png" 1759964449 93552 ed31a53708b22b69227e2b150abedb7e ""
   "supplemental/results/24hr/tables/top5_models.tex" 1759964757 897 8f421a3138a63249245898bc1a82d726 ""
   "supplemental/results/30_min/figures/diag_acf.png" 1759943187 25003 b5d1a28d20d7dd5e5acdd9742ccb81e8 ""

@@ -351,7 +351,7 @@
 
     \vfill\null
   \begin{center}
-        \invpyramid{\MakeUppercase{\nohyphens{\@title}}}
+        \invpyramid{\MakeUppercase{\nohyphens{\displaytitle}}}
 
         %\vfill\null
         \addvspace{1.4in}
