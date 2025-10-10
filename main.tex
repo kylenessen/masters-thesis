@@ -86,13 +86,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[
     backend=biber,
-    style=chicago-authordate,
+    style=apa,
     url=true,
     maxnames=4,
     minnames=3,
 ]{biblatex} % bibliography
-%\AtEveryBibitem{\clearlist{language}}
-%\AtEveryBibitem{\clearfield{note}}
+\AtEveryBibitem{\clearfield{annotation}}
+\AtEveryBibitem{\clearlist{language}}
+\AtEveryBibitem{\clearfield{note}}
 \addbibresource{bibliography/Thesis.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

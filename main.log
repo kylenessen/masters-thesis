@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.3)  9 OCT 2025 20:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.3)  9 OCT 2025 21:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -474,7 +474,11 @@ Package biblatex Info: ... file 'blx-dm.def' found.
 File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'chicago-authordate.dbx' not found.
+Package biblatex Info: ... file 'apa.dbx' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex-apa/apa.dbx
+File: apa.dbx 2022/06/22 v9.16 APA biblatex style data model
+)
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@afterword=\count353
@@ -513,38 +517,48 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@savedshortauthor=\count386
 \c@shorteditor=\count387
 \c@savedshorteditor=\count388
-\c@labelname=\count389
-\c@savedlabelname=\count390
-\c@institution=\count391
-\c@savedinstitution=\count392
-\c@lista=\count393
-\c@savedlista=\count394
-\c@listb=\count395
-\c@savedlistb=\count396
-\c@listc=\count397
-\c@savedlistc=\count398
-\c@listd=\count399
-\c@savedlistd=\count400
-\c@liste=\count401
-\c@savedliste=\count402
-\c@listf=\count403
-\c@savedlistf=\count404
-\c@location=\count405
-\c@savedlocation=\count406
-\c@organization=\count407
-\c@savedorganization=\count408
-\c@origlocation=\count409
-\c@savedoriglocation=\count410
-\c@origpublisher=\count411
-\c@savedorigpublisher=\count412
-\c@publisher=\count413
-\c@savedpublisher=\count414
-\c@language=\count415
-\c@savedlanguage=\count416
-\c@origlanguage=\count417
-\c@savedoriglanguage=\count418
-\c@pageref=\count419
-\c@savedpageref=\count420
+\c@narrator=\count389
+\c@savednarrator=\count390
+\c@execproducer=\count391
+\c@savedexecproducer=\count392
+\c@execdirector=\count393
+\c@savedexecdirector=\count394
+\c@with=\count395
+\c@savedwith=\count396
+\c@labelname=\count397
+\c@savedlabelname=\count398
+\c@institution=\count399
+\c@savedinstitution=\count400
+\c@lista=\count401
+\c@savedlista=\count402
+\c@listb=\count403
+\c@savedlistb=\count404
+\c@listc=\count405
+\c@savedlistc=\count406
+\c@listd=\count407
+\c@savedlistd=\count408
+\c@liste=\count409
+\c@savedliste=\count410
+\c@listf=\count411
+\c@savedlistf=\count412
+\c@location=\count413
+\c@savedlocation=\count414
+\c@organization=\count415
+\c@savedorganization=\count416
+\c@origlocation=\count417
+\c@savedoriglocation=\count418
+\c@origpublisher=\count419
+\c@savedorigpublisher=\count420
+\c@publisher=\count421
+\c@savedpublisher=\count422
+\c@language=\count423
+\c@savedlanguage=\count424
+\c@origlanguage=\count425
+\c@savedoriglanguage=\count426
+\c@citation=\count427
+\c@savedcitation=\count428
+\c@pageref=\count429
+\c@savedpageref=\count430
 \shorthandwidth=\skip85
 \shortjournalwidth=\skip86
 \shortserieswidth=\skip87
@@ -570,76 +584,82 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count421
-\c@textcitetotal=\count422
-\c@textcitemaxnames=\count423
-\c@biburlbigbreakpenalty=\count424
-\c@biburlbreakpenalty=\count425
-\c@biburlnumpenalty=\count426
-\c@biburlucpenalty=\count427
-\c@biburllcpenalty=\count428
+\c@textcitecount=\count431
+\c@textcitetotal=\count432
+\c@textcitemaxnames=\count433
+\c@biburlbigbreakpenalty=\count434
+\c@biburlbreakpenalty=\count435
+\c@biburlnumpenalty=\count436
+\c@biburlucpenalty=\count437
+\c@biburllcpenalty=\count438
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count429
+\c@smartand=\count439
 )
-Package biblatex Info: Trying to load bibliography style 'chicago-authordate'..
-.
-Package biblatex Info: ... file 'chicago-authordate.bbx' found.
+Package biblatex Info: Trying to load bibliography style 'apa'...
+Package biblatex Info: ... file 'apa.bbx' found.
 
-(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex-chicago/chicago-authorda
-te.bbx
-File: chicago-authordate.bbx 2022/11/17 v 3.18b biblatex bibliography style
-\lositemsep=\skip99
-Package biblatex Info: Delimiter 'revsdnamedelim' in context '' already defined
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex-apa/apa.bbx
+File: apa.bbx 2022/06/22 v9.16 APA biblatex references style
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count440
+\c@bbx:relatedtotal=\count441
+)
+Package biblatex Info: Delimiter 'nameyeardelim' in context 'bib' already defin
+ed, overwriting.
+Package biblatex Info: Delimiter 'nameyeardelim' in context 'biblist' already d
+efined, overwriting.
+Package biblatex Info: Delimiter 'nonameyeardelim' in context 'bib' already def
+ined, overwriting.
+Package biblatex Info: Delimiter 'nonameyeardelim' in context 'biblist' already
+ defined, overwriting.
+)
+Package biblatex Info: Trying to load citation style 'apa'...
+Package biblatex Info: ... file 'apa.cbx' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex-apa/apa.cbx
+File: apa.cbx 2022/06/22 v9.16 APA biblatex citation style
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
+ overwriting.
+Package biblatex Info: Delimiter 'andothersdelim' in context '' already defined
 , overwriting.
-\cms@tempcnta=\count430
-\cms@tempcntb=\count431
-\c@bbx:relatedcount=\count432
-\c@bbx:relatedtotal=\count433
-)
-Package biblatex Info: Trying to load citation style 'chicago-authordate'...
-Package biblatex Info: ... file 'chicago-authordate.cbx' found.
-
-(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex-chicago/chicago-authorda
-te.cbx
-File: chicago-authordate.cbx 2022/07/02 v 3.18 biblatex citation style
-Package biblatex Info: Trying to load citation style 'chicago-dates-common'...
-Package biblatex Info: ... file 'chicago-dates-common.cbx' found.
-
-(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex-chicago/chicago-dates-co
-mmon.cbx
-File: chicago-dates-common.cbx 2022/11/17 v 3.18b biblatex citation style
-Package biblatex Info: Redefining '\cite'.
-Package biblatex Info: Redefining '\parencite'.
-Package biblatex Info: Redefining '\footcite'.
-Package biblatex Info: Redefining '\footcitetext'.
-Package biblatex Info: Redefining '\footfullcite'.
 Package biblatex Info: Redefining '\fullcite'.
+Package biblatex Info: Redefining '\citeauthor'.
+Package biblatex Info: Redefining '\citeyear'.
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcites'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\footcitetexts'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\smartcites'.
 Package biblatex Info: Redefining '\textcite'.
 Package biblatex Info: Redefining '\textcites'.
-Package biblatex Info: Redefining '\cites'.
-Package biblatex Info: Redefining '\parencites'.
-Package biblatex Info: Redefining '\footcites'.
-Package biblatex Info: Redefining '\footcitetexts'.
-\c@cms@punct=\count434
-Package biblatex Info: Delimiter 'dateeradelim' in context '' already defined, 
-overwriting.
-))
+)
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.cfg
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
+
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2023-02-22 L3 programming layer (loader) 
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count435
+\l__color_backend_stack_int=\count442
 \l__pdf_internal_box=\box60
 ))
 Package biblatex Info: ... and expl3
@@ -659,7 +679,7 @@ Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
 (/usr/local/texlive/2023/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
-\c@algorithm=\count436
+\c@algorithm=\count443
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/algpseudocodex/algpseudocodex.sty
 Package: algpseudocodex 2023-02-17 v1.1.0 pseudocode typesetting
@@ -667,26 +687,26 @@ Package: algpseudocodex 2023-02-17 v1.1.0 pseudocode typesetting
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count437
-\c@ALG@rem=\count438
-\c@ALG@nested=\count439
-\ALG@tlm=\skip100
-\ALG@thistlm=\skip101
-\c@ALG@Lnr=\count440
-\c@ALG@blocknr=\count441
-\c@ALG@storecount=\count442
-\c@ALG@tmpcounter=\count443
-\ALG@tmplength=\skip102
+\c@ALG@line=\count444
+\c@ALG@rem=\count445
+\c@ALG@nested=\count446
+\ALG@tlm=\skip99
+\ALG@thistlm=\skip100
+\c@ALG@Lnr=\count447
+\c@ALG@blocknr=\count448
+\c@ALG@storecount=\count449
+\c@ALG@tmpcounter=\count450
+\ALG@tmplength=\skip101
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/fifo-stack/fifo-stack.sty
 Package: fifo-stack 2014/03/24 v1.0 Multi-FIFO/stack system
-\tmp@fifo@stack@top=\count444
-\tmp@fifo@stack@bottom=\count445
-\tmp@fifo@stack@size=\count446
+\tmp@fifo@stack@top=\count451
+\tmp@fifo@stack@bottom=\count452
+\tmp@fifo@stack@size=\count453
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box61
-\sift@deathcycles=\count447
+\sift@deathcycles=\count454
 \@vwid@loff=\dimen265
 \@vwid@roff=\dimen266
 )
@@ -740,14 +760,14 @@ tered.code.tex
 \pgf@yd=\dimen280
 \w@pgf@writea=\write5
 \r@pgf@reada=\read3
-\c@pgf@counta=\count448
-\c@pgf@countb=\count449
-\c@pgf@countc=\count450
-\c@pgf@countd=\count451
+\c@pgf@counta=\count455
+\c@pgf@countb=\count456
+\c@pgf@countc=\count457
+\c@pgf@countd=\count458
 \t@pgf@toka=\toks43
 \t@pgf@tokb=\toks44
 \t@pgf@tokc=\toks45
-\pgf@sys@id@count=\count452
+\pgf@sys@id@count=\count459
 
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
@@ -765,8 +785,8 @@ File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count453
-\pgfsyssoftpath@bigbuffer@items=\count454
+\pgfsyssoftpath@smallbuffer@items=\count460
+\pgfsyssoftpath@bigbuffer@items=\count461
 )
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -796,7 +816,7 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen281
-\pgfmath@count=\count455
+\pgfmath@count=\count462
 \pgfmath@box=\box63
 \pgfmath@toks=\toks46
 \pgfmath@stack@operand=\toks47
@@ -822,7 +842,7 @@ code.tex)
 erarithmetics.code.tex)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count456
+\c@pgfmathroundto@lastzeros=\count463
 )) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
@@ -860,7 +880,7 @@ File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box64
 \pgf@hbox=\box65
 \pgf@layerbox@main=\box66
-\pgf@picture@serial@count=\count457
+\pgf@picture@serial@count=\count464
 )
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
@@ -895,8 +915,8 @@ File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 e.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen305
-\pgf@sys@shading@range@num=\count458
-\pgf@shadingcount=\count459
+\pgf@sys@shading@range@num=\count465
+\pgf@shadingcount=\count466
 )
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -961,7 +981,7 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count460
+\pgf@plot@mark@count=\count467
 \pgfplotmarksize=\dimen310
 )
 \tikz@lastx=\dimen311
@@ -976,19 +996,19 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@figbox@bg=\box70
 \tikz@tempbox=\box71
 \tikz@tempbox@bg=\box72
-\tikztreelevel=\count461
-\tikznumberofchildren=\count462
-\tikznumberofcurrentchild=\count463
-\tikz@fig@count=\count464
+\tikztreelevel=\count468
+\tikznumberofchildren=\count469
+\tikznumberofcurrentchild=\count470
+\tikz@fig@count=\count471
 
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count465
-\pgfmatrixcurrentcolumn=\count466
-\pgf@matrix@numberofcolumns=\count467
+\pgfmatrixcurrentrow=\count472
+\pgfmatrixcurrentcolumn=\count473
+\pgf@matrix@numberofcolumns=\count474
 )
-\tikz@expandcount=\count468
+\tikz@expandcount=\count475
 
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
@@ -1015,52 +1035,52 @@ Package: l3keys2e 2023-02-02 LaTeX2e option processing using LaTeX3 keys
 \l__sn_xa_dim=\dimen321
 \l__sn_ya_dim=\dimen322
 )
-\algpx@codeBoxInnerSep=\skip103
-\algpx@codeBoxSep=\skip104
-\algpx@codeBoxOuterSep=\skip105
-\algpx@indShiftX=\skip106
-\algpx@indStartShiftY=\skip107
-\algpx@indEndShiftY=\skip108
-\algpx@indXLineLength=\skip109
-\algpx@minIndDist=\skip110
-\algpx@oldPos=\skip111
-\algpx@newPos=\skip112
-\algpx@tmpLen=\skip113
-\algpx@indStartY=\skip114
-\algpx@indEndY=\skip115
-\algpx@indStartX=\skip116
-\algpx@extraShiftX=\skip117
-\algpx@minTopPageHeight=\skip118
-\algpx@minBotPageDepth=\skip119
-\c@algpx@codeBoxCount=\count469
-\c@algpx@nestedCBoxCount=\count470
-\c@algpx@startedBoxesCount=\count471
-\c@algpx@endedBoxesCount=\count472
-\c@algpx@nestedBoxedStringCount=\count473
-\c@algpx@nestedBoxedStringMaxCount=\count474
-\c@algpx@indentCount=\count475
-\c@algpx@lastIndentEnded=\count476
-\c@algpx@pageCount=\count477
-\c@algpx@tmpCount=\count478
+\algpx@codeBoxInnerSep=\skip102
+\algpx@codeBoxSep=\skip103
+\algpx@codeBoxOuterSep=\skip104
+\algpx@indShiftX=\skip105
+\algpx@indStartShiftY=\skip106
+\algpx@indEndShiftY=\skip107
+\algpx@indXLineLength=\skip108
+\algpx@minIndDist=\skip109
+\algpx@oldPos=\skip110
+\algpx@newPos=\skip111
+\algpx@tmpLen=\skip112
+\algpx@indStartY=\skip113
+\algpx@indEndY=\skip114
+\algpx@indStartX=\skip115
+\algpx@extraShiftX=\skip116
+\algpx@minTopPageHeight=\skip117
+\algpx@minBotPageDepth=\skip118
+\c@algpx@codeBoxCount=\count476
+\c@algpx@nestedCBoxCount=\count477
+\c@algpx@startedBoxesCount=\count478
+\c@algpx@endedBoxesCount=\count479
+\c@algpx@nestedBoxedStringCount=\count480
+\c@algpx@nestedBoxedStringMaxCount=\count481
+\c@algpx@indentCount=\count482
+\c@algpx@lastIndentEnded=\count483
+\c@algpx@pageCount=\count484
+\c@algpx@tmpCount=\count485
 \algpx@boxedStringBox=\box73
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count479
+\lst@mode=\count486
 \lst@gtempboxa=\box74
 \lst@token=\toks51
-\lst@length=\count480
+\lst@length=\count487
 \lst@currlwidth=\dimen323
-\lst@column=\count481
-\lst@pos=\count482
+\lst@column=\count488
+\lst@pos=\count489
 \lst@lostspace=\dimen324
 \lst@width=\dimen325
-\lst@newlines=\count483
-\lst@lineno=\count484
+\lst@newlines=\count490
+\lst@lineno=\count491
 \lst@maxwidth=\dimen326
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count485
-\lst@skipnumbers=\count486
+\c@lstnumber=\count492
+\lst@skipnumbers=\count493
 \lst@framebox=\box75
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
@@ -1071,9 +1091,9 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 (./frontmatter/preamble.tex
 (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count487
-\l__lipsum_a_int=\count488
-\l__lipsum_b_int=\count489
+\g__lipsum_par_int=\count494
+\l__lipsum_a_int=\count495
+\l__lipsum_b_int=\count496
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)))
 (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -1104,11 +1124,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count490
+\c@section@level=\count497
 )
 \@linkdim=\dimen327
-\Hy@linkcounter=\count491
-\Hy@pagecounter=\count492
+\Hy@linkcounter=\count498
+\Hy@pagecounter=\count499
  (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -1120,7 +1140,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count493
+\Hy@SavedSpaceFactor=\count500
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
@@ -1136,7 +1156,7 @@ Package hyperref Info: Plain pages OFF on input line 4192.
 Package hyperref Info: Backreferencing OFF on input line 4197.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4425.
-\c@Hy@tempcnt=\count494
+\c@Hy@tempcnt=\count501
 LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen328
 
@@ -1147,7 +1167,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count495
+\Fld@menulength=\count502
 \Field@Width=\dimen329
 \Fld@charsize=\dimen330
 Package hyperref Info: Hyper figures OFF on input line 6042.
@@ -1162,9 +1182,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count496
-\c@Item=\count497
-\c@Hfootnote=\count498
+\Hy@abspage=\count503
+\c@Item=\count504
+\c@Hfootnote=\count505
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -1176,8 +1196,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count499
-\c@bookmark@seq@number=\count500
+\Fld@listcount=\count506
+\c@bookmark@seq@number=\count507
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
@@ -1188,12 +1208,12 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip120
+\Hy@SectionHShift=\skip119
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 146.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 147.
 
-Package hyperref Info: Option `bookmarksopen' set `false' on input line 146.
-Package hyperref Info: Option `colorlinks' set `false' on input line 146.
+Package hyperref Info: Option `bookmarksopen' set `false' on input line 147.
+Package hyperref Info: Option `colorlinks' set `false' on input line 147.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
@@ -1211,29 +1231,29 @@ Package cleveref Info: `algorithmicx' support loaded on input line 3120.
 Package cleveref Info: `listings' support loaded on input line 3131.
 )
 (./frontmatter/information.tex)
-\@quotelevel=\count501
-\@quotereset=\count502
+\@quotelevel=\count508
+\@quotereset=\count509
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1278,16 +1298,16 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count503
+\scratchcounter=\count510
 \scratchdimen=\dimen331
 \scratchbox=\box76
-\nofMPsegments=\count504
-\nofMParguments=\count505
+\nofMPsegments=\count511
+\nofMParguments=\count512
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count506
+\MPscratchCnt=\count513
 \MPscratchDim=\dimen332
-\MPnumerator=\count507
-\makeMPintoPDFobject=\count508
+\MPnumerator=\count514
+\makeMPintoPDFobject=\count515
 \everyMPtoPDFconversion=\toks53
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1298,12 +1318,33 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package biblatex Info: Trying to load language 'english' -> 'english-apa'...
+Package biblatex Info: ... file 'english-apa.lbx' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex-apa/english-apa.lbx
+File: english-apa.lbx 2022/06/22 v9.16 APA biblatex localisation
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
+Package biblatex Info: Trying to load language 'american' -> 'american-apa'...
+Package biblatex Info: ... file 'american-apa.lbx' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex-apa/american-apa.lbx
+File: american-apa.lbx 2022/06/22 v9.16 APA biblatex localisation
+Package biblatex Info: Trying to load language 'american'...
+Package biblatex Info: ... file 'american.lbx' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/american.lbx
+File: american.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+))))
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1313,26 +1354,26 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 171.
-Package biblatex Info: Reference segment=0 on input line 171.
-\c@lstlisting=\count509
-Package hyperref Info: Link coloring OFF on input line 171.
+Package biblatex Info: Reference section=0 on input line 172.
+Package biblatex Info: Reference segment=0 on input line 172.
+\c@lstlisting=\count516
+Package hyperref Info: Link coloring OFF on input line 172.
  (./main.out) (./main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
 
-Package hyperref Info: Option `pageanchor' set `false' on input line 175.
-Package hyperref Info: Option `pageanchor' set `true' on input line 175.
+Package hyperref Info: Option `pageanchor' set `false' on input line 176.
+Package hyperref Info: Option `pageanchor' set `true' on input line 176.
  [1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2{/
 usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-\colwidth=\skip121
-LaTeX Font Info:    Trying to load font information for U+msa on input line 180
+\colwidth=\skip120
+LaTeX Font Info:    Trying to load font information for U+msa on input line 181
 .
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 180
+LaTeX Font Info:    Trying to load font information for U+msb on input line 181
 .
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1418,7 +1459,7 @@ Overfull \hbox (423.25375pt too wide) in paragraph at lines 5--16
  []
 
 ) [26] (./supplemental/results/30_min/tables/m50_model_summary.tex)
-<supplemental/results/30_min/figures/partial_effects_best_1x3.png, id=773, 1011
+<supplemental/results/30_min/figures/partial_effects_best_1x3.png, id=744, 1011
 .78pt x 332.442pt>
 File: supplemental/results/30_min/figures/partial_effects_best_1x3.png Graphic 
 file (type png)
@@ -1427,7 +1468,7 @@ Package pdftex.def Info: supplemental/results/30_min/figures/partial_effects_be
 st_1x3.png  used on input line 37.
 (pdftex.def)             Requested size: 433.62001pt x 142.47551pt.
  [27 <./supplemental/results/30_min/figures/partial_effects_best_1x3.png>]
-<supplemental/results/30_min/figures/interaction_wind_x_sun_binned.png, id=779,
+<supplemental/results/30_min/figures/interaction_wind_x_sun_binned.png, id=750,
  505.89pt x 433.62pt>
 File: supplemental/results/30_min/figures/interaction_wind_x_sun_binned.png Gra
 phic file (type png)
@@ -1435,7 +1476,7 @@ phic file (type png)
 Package pdftex.def Info: supplemental/results/30_min/figures/interaction_wind_x
 _sun_binned.png  used on input line 46.
 (pdftex.def)             Requested size: 346.89732pt x 297.3455pt.
-<supplemental/results/30_min/figures/diag_qq_and_residuals_1x2.png, id=781, 867
+<supplemental/results/30_min/figures/diag_qq_and_residuals_1x2.png, id=752, 867
 .24pt x 361.35pt>
 File: supplemental/results/30_min/figures/diag_qq_and_residuals_1x2.png Graphic
  file (type png)
@@ -1446,7 +1487,7 @@ als_1x2.png  used on input line 57.
  [28] [29 <./supplemental/results/30_min/figures/interaction_wind_x_sun_binned.
 png> <./supplemental/results/30_min/figures/diag_qq_and_residuals_1x2.png>]
 (./supplemental/results/30_min/tables/gam_basis_check.tex)
-<supplemental/results/30_min/figures/diag_acf.png, id=792, 903.375pt x 602.25pt
+<supplemental/results/30_min/figures/diag_acf.png, id=763, 903.375pt x 602.25pt
 >
 File: supplemental/results/30_min/figures/diag_acf.png Graphic file (type png)
 <use supplemental/results/30_min/figures/diag_acf.png>
@@ -1461,7 +1502,7 @@ Overfull \hbox (418.74963pt too wide) in paragraph at lines 5--16
 
 ) [31 <./supplemental/results/30_min/figures/diag_acf.png>]
 <supplemental/results/30_min_threshold/figures/interaction_wind_x_sun_binned.pn
-g, id=806, 505.89pt x 433.62pt>
+g, id=777, 505.89pt x 433.62pt>
 File: supplemental/results/30_min_threshold/figures/interaction_wind_x_sun_binn
 ed.png Graphic file (type png)
 <use supplemental/results/30_min_threshold/figures/interaction_wind_x_sun_binne
@@ -1483,7 +1524,7 @@ Overfull \hbox (498.45296pt too wide) in paragraph at lines 5--16
  []
 
 ) [35] (./supplemental/results/sunset/tables/m32_model_summary.tex)
-<supplemental/results/sunset/figures/partial_effects_best_1x2.png, id=826, 722.
+<supplemental/results/sunset/figures/partial_effects_best_1x2.png, id=797, 722.
 7pt x 332.442pt>
 File: supplemental/results/sunset/figures/partial_effects_best_1x2.png Graphic 
 file (type png)
@@ -1492,7 +1533,7 @@ Package pdftex.def Info: supplemental/results/sunset/figures/partial_effects_be
 st_1x2.png  used on input line 126.
 (pdftex.def)             Requested size: 433.62001pt x 199.46672pt.
  [36]
-<supplemental/results/sunset/figures/interaction_wind_x_sun_binned.png, id=833,
+<supplemental/results/sunset/figures/interaction_wind_x_sun_binned.png, id=804,
  505.89pt x 433.62pt>
 File: supplemental/results/sunset/figures/interaction_wind_x_sun_binned.png Gra
 phic file (type png)
@@ -1503,7 +1544,7 @@ _sun_binned.png  used on input line 135.
 
 [37 <./supplemental/results/sunset/figures/partial_effects_best_1x2.png>]
 [38 <./supplemental/results/sunset/figures/interaction_wind_x_sun_binned.png>]
-<supplemental/results/sunset/figures/diag_qq_and_residuals_1x2.png, id=843, 867
+<supplemental/results/sunset/figures/diag_qq_and_residuals_1x2.png, id=814, 867
 .24pt x 361.35pt>
 File: supplemental/results/sunset/figures/diag_qq_and_residuals_1x2.png Graphic
  file (type png)
@@ -1511,7 +1552,7 @@ File: supplemental/results/sunset/figures/diag_qq_and_residuals_1x2.png Graphic
 Package pdftex.def Info: supplemental/results/sunset/figures/diag_qq_and_residu
 als_1x2.png  used on input line 146.
 (pdftex.def)             Requested size: 390.25536pt x 162.60599pt.
-<supplemental/results/sunset/figures/diag_acf.png, id=845, 903.375pt x 602.25pt
+<supplemental/results/sunset/figures/diag_acf.png, id=816, 903.375pt x 602.25pt
 >
 File: supplemental/results/sunset/figures/diag_acf.png Graphic file (type png)
 <use supplemental/results/sunset/figures/diag_acf.png>
@@ -1526,7 +1567,7 @@ Overfull \hbox (8.63275pt too wide) in paragraph at lines 5--16
  []
 
 ) [40 <./supplemental/results/sunset/figures/diag_acf.png>]
-<supplemental/results/24hr/figures/interaction_wind_x_sun_binned.png, id=858, 5
+<supplemental/results/24hr/figures/interaction_wind_x_sun_binned.png, id=828, 5
 05.89pt x 433.62pt>
 File: supplemental/results/24hr/figures/interaction_wind_x_sun_binned.png Graph
 ic file (type png)
@@ -1537,7 +1578,7 @@ un_binned.png  used on input line 172.
 )
 (./chapters/vsfb/discussion.tex [41] [42 <./supplemental/results/24hr/figures/i
 nteraction_wind_x_sun_binned.png>] [43] [44] [45] [46] [47]
-<figures/discussion/weiss_adapted_boxplot.png, id=906, 1830.84pt x 1080.035pt>
+<figures/discussion/weiss_adapted_boxplot.png, id=875, 1830.84pt x 1080.035pt>
 File: figures/discussion/weiss_adapted_boxplot.png Graphic file (type png)
 <use figures/discussion/weiss_adapted_boxplot.png>
 Package pdftex.def Info: figures/discussion/weiss_adapted_boxplot.png  used on 
@@ -1547,85 +1588,80 @@ input line 49.
 fo.tex) [49]
 [50
 
-] [51] [52]
-Overfull \hbox (1.60858pt too wide) in paragraph at lines 212--212
-[]\OT1/cmr/m/n/12 Calvert, William H., Lee E. Hedrick, and Lin-coln P. Brower. 
-``Mor-tal-ity of the Monarch
- []
-
-[53]
-Overfull \hbox (18.29077pt too wide) in paragraph at lines 212--212
-\OT1/cmr/m/n/12 ``Dis-tri-bu-tion of the Monarch But-ter-fly, Danaus Plex-ip-pu
-s (L.) (Lep-i-doptera: Nymphal-
- []
-
-[54] [55]
-Overfull \hbox (29.6016pt too wide) in paragraph at lines 212--212
-\OT1/cmr/m/n/12 ,[] + 167 % E2 % 80 % 93176 . &ots = VnM8VZYUic & sig = w8XXwiT
-rAT8HNlNKkgC8kCuZ7IA$[]. 
- []
-
-[56] [57] [58] [59] [60] [61] [62]
-Overfull \hbox (4.18259pt too wide) in paragraph at lines 212--212
-[]\OT1/cmr/m/n/12 Mouritsen, Hen-rik, and Bar-rie J. Frost. ``Vir-tual Mi-gra-t
-ion in Teth-ered Fly-ing Monarch
- []
-
-[63] [64] [65] [66] [67]
-Overfull \hbox (3.06pt too wide) in paragraph at lines 212--212
-\OT1/cmr/m/n/12 ig-na-tion of Crit-i-cal Habi-tat''. Fed-eral Reg-is-ter, Dec. 
-12, 2024. Vis-ited on 12/14/2024.
+]
+Overfull \hbox (47.15485pt too wide) in paragraph at lines 213--213
+\OT1/cmr/m/n/12 ballooning -[] motivation -[] under -[] Bonte -[] Lens / d6118c
+2cd143572bc4f098b5916186ec63c0f12a$[] 
  []
 
 
-Overfull \hbox (3.55049pt too wide) in paragraph at lines 212--212
-\OT1/cmr/m/n/12 Way the Wind Blows - Fre-quent Wind Dis-per-sal Drives Species 
-Sort-ing in Ephemeral
+Overfull \hbox (23.33357pt too wide) in paragraph at lines 213--213
+\OT1/cmr/m/it/12 dopter-ists So-ci-ety\OT1/cmr/m/n/12 . Re-trieved De-cem-ber 7
+, 2024, from []$https : / / www . semanticscholar .
  []
 
-[68] [69] [70] (./appendices/outline.tex (./appendices/appendix01.tex [71]
+[51] [52] [53]
+Overfull \hbox (5.02792pt too wide) in paragraph at lines 213--213
+\OT1/cmr/m/n/12 but-ter-fly, Danaus plex-ip-pus (L.) \OT1/cmr/m/it/12 Zeitschri
+ft f^^?ur ver-gle-ichende Phys-i-olo-gie\OT1/cmr/m/n/12 , \OT1/cmr/m/it/12 68\O
+T1/cmr/m/n/12 (3),
+ []
+
+[54] [55] [56]
+Overfull \hbox (1.98563pt too wide) in paragraph at lines 213--213
+[][]\OT1/cmr/m/n/12 U.S. Fish and Wildlife Ser-vice. (2024, De-cem-ber). \OT1/c
+mr/m/it/12 Monarch (Danaus plex-ip-pus) Species
+ []
+
+
+Overfull \hbox (0.58754pt too wide) in paragraph at lines 213--213
+[][]\OT1/cmr/m/n/12 Vidal, O., & Rend^^Son-Salinas, E. (2014). Dy-nam-ics and t
+rends of over-win-ter-ing colonies
+ []
+
+[57] (./appendices/outline.tex (./appendices/appendix01.tex [58]
 Appendix A.
-[72
+[59
 
 ]
-<example-image.pdf, id=1402, 321.2pt x 240.9pt>
+<example-image.pdf, id=1018, 321.2pt x 240.9pt>
 File: example-image.pdf Graphic file (type pdf)
 <use example-image.pdf>
 Package pdftex.def Info: example-image.pdf  used on input line 38.
 (pdftex.def)             Requested size: 252.94499pt x 189.71341pt.
- [73] [74 </usr/local/texlive/2023/texmf-dist/tex/latex/mwe/example-image.pdf>]
-<example-image-golden.pdf, id=1417, 324.82053pt x 200.75pt>
+ [60] [61 </usr/local/texlive/2023/texmf-dist/tex/latex/mwe/example-image.pdf>]
+<example-image-golden.pdf, id=1034, 324.82053pt x 200.75pt>
 File: example-image-golden.pdf Graphic file (type pdf)
 <use example-image-golden.pdf>
 Package pdftex.def Info: example-image-golden.pdf  used on input line 46.
 (pdftex.def)             Requested size: 324.81972pt x 200.7495pt.
- [75 </usr/local/texlive/2023/texmf-dist/tex/latex/mwe/example-image-golden.pdf
->] [76]) [77] (./appendices/appendix02.tex [78]
+ [62 </usr/local/texlive/2023/texmf-dist/tex/latex/mwe/example-image-golden.pdf
+>] [63]) [64] (./appendices/appendix02.tex [65]
 Appendix B.
-[79
+[66
 
 ]
 File: example-image.pdf Graphic file (type pdf)
 <use example-image.pdf>
 Package pdftex.def Info: example-image.pdf  used on input line 38.
 (pdftex.def)             Requested size: 252.94499pt x 189.71341pt.
- [80] [81]
+ [67] [68]
 File: example-image-golden.pdf Graphic file (type pdf)
 <use example-image-golden.pdf>
 Package pdftex.def Info: example-image-golden.pdf  used on input line 46.
 (pdftex.def)             Requested size: 324.81972pt x 200.7495pt.
- [82] [83]
-<example-image-a.pdf, id=1470, 321.2pt x 240.9pt>
+ [69] [70]
+<example-image-a.pdf, id=1086, 321.2pt x 240.9pt>
 File: example-image-a.pdf Graphic file (type pdf)
 <use example-image-a.pdf>
 Package pdftex.def Info: example-image-a.pdf  used on input line 71.
 (pdftex.def)             Requested size: 252.94499pt x 189.71341pt.
-) [84] [85 </usr/local/texlive/2023/texmf-dist/tex/latex/mwe/example-image-a.pd
-f>] (./appendices/appendix03.tex [86]
+) [71] [72 </usr/local/texlive/2023/texmf-dist/tex/latex/mwe/example-image-a.pd
+f>] (./appendices/appendix03.tex [73]
 Appendix C.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 4.
-(./appendices/fibonacci.py) [87
+(./appendices/fibonacci.py) [74
 
 ]))
 
@@ -1637,30 +1673,29 @@ Package caption Warning: Unused \captionsetup[subtable] on input line 40.
 See the caption package documentation for explanation.
 
 
-Package caption Warning: Unused \captionsetup[algorithm] on input line 104.
+Package caption Warning: Unused \captionsetup[algorithm] on input line 105.
 See the caption package documentation for explanation.
 
-[88] (./main.aux)
+[75] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AD88BF5AB44BFEABE4A1467D6DB02E78;11268.
+(rerunfilecheck)             Checksum: E53D4B84A5E0FBC3E899557C224F840A;11258.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39863 strings out of 476025
- 788931 string characters out of 5790018
- 2065518 words of memory out of 5000000
- 59332 multiletter control sequences out of 15000+600000
- 521512 words of font info for 65 fonts, out of 8000000 for 9000
+ 38570 strings out of 476025
+ 750130 string characters out of 5790018
+ 2020388 words of memory out of 5000000
+ 58098 multiletter control sequences out of 15000+600000
+ 521588 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,103p,10141b,2076s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,11n,103p,10146b,5177s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
-b></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
 b></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
@@ -1672,11 +1707,12 @@ al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/loca
 l/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/
 2023/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2023/texmf
 -dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2023/texmf-dist/font
-s/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (101 pages, 2051735 bytes).
+s/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/
+type1/public/cm-super/sfti1200.pfb>
+Output written on main.pdf (88 pages, 2017431 bytes).
 PDF statistics:
- 1668 PDF objects out of 1728 (max. 8388607)
- 1505 compressed objects within 16 object streams
- 347 named destinations out of 1000 (max. 500000)
+ 1270 PDF objects out of 1440 (max. 8388607)
+ 1124 compressed objects within 12 object streams
+ 275 named destinations out of 1000 (max. 500000)
  531 words of extra memory for PDF output out of 10000 (max. 10000000)
 

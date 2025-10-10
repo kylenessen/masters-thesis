@@ -42,20 +42,20 @@
 \contentsline {subsection}{\numberline {0.4.4}Management Implications}{46}{subsection.0.4.4}%
 \contentsline {subsection}{\numberline {0.4.5}Future Research Directions}{47}{subsection.0.4.5}%
 \contentsline {subsection}{\numberline {0.4.6}Conclusions}{49}{subsection.0.4.6}%
-\contentsline {chapter}{\MakeUppercase []{Bibliography}}{50}{chapter*.23}%
+\contentsline {chapter}{\MakeUppercase []{References}}{50}{chapter*.23}%
 \let \l@chapter \l@section 
 \noindent \MakeUppercase []{Appendices}
 \let \l@chapter \l@section 
-\contentsline {chapter}{\numberline {A.}{First Appendix}}{72}{appendix.A}%
-\contentsline {section}{\numberline {A.1}A Section}{73}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}A Subsection}{74}{subsection.A.1.1}%
-\contentsline {section}{\numberline {A.2}Another Section}{76}{section.A.2}%
-\contentsline {subsection}{\numberline {A.2.1}Another Subsection}{77}{subsection.A.2.1}%
-\contentsline {subsubsection}{\numberline {A.2.1.1}A Sub-Subsection}{78}{subsubsection.A.2.1.1}%
-\contentsline {chapter}{\numberline {B.}{Second Appendix}}{79}{appendix.B}%
-\contentsline {section}{\numberline {B.1}A Section}{80}{section.B.1}%
-\contentsline {subsection}{\numberline {B.1.1}A Subsection}{81}{subsection.B.1.1}%
-\contentsline {section}{\numberline {B.2}Another Section}{83}{section.B.2}%
-\contentsline {subsection}{\numberline {B.2.1}Another Subsection}{84}{subsection.B.2.1}%
-\contentsline {subsubsection}{\numberline {B.2.1.1}A Sub-Subsection}{85}{subsubsection.B.2.1.1}%
-\contentsline {chapter}{\numberline {C.}{Code Examples}}{87}{appendix.C}%
+\contentsline {chapter}{\numberline {A.}{First Appendix}}{59}{appendix.A}%
+\contentsline {section}{\numberline {A.1}A Section}{60}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}A Subsection}{61}{subsection.A.1.1}%
+\contentsline {section}{\numberline {A.2}Another Section}{63}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Another Subsection}{64}{subsection.A.2.1}%
+\contentsline {subsubsection}{\numberline {A.2.1.1}A Sub-Subsection}{65}{subsubsection.A.2.1.1}%
+\contentsline {chapter}{\numberline {B.}{Second Appendix}}{66}{appendix.B}%
+\contentsline {section}{\numberline {B.1}A Section}{67}{section.B.1}%
+\contentsline {subsection}{\numberline {B.1.1}A Subsection}{68}{subsection.B.1.1}%
+\contentsline {section}{\numberline {B.2}Another Section}{70}{section.B.2}%
+\contentsline {subsection}{\numberline {B.2.1}Another Subsection}{71}{subsection.B.2.1}%
+\contentsline {subsubsection}{\numberline {B.2.1.1}A Sub-Subsection}{72}{subsubsection.B.2.1.1}%
+\contentsline {chapter}{\numberline {C.}{Code Examples}}{74}{appendix.C}%

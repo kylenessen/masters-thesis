@@ -7,9 +7,9 @@
 \contentsline {table}{\numberline {0.6}{\ignorespaces Top 5 models ranked by AICc (sunset analysis)\relax }}{36}{table.caption.14}%
 \contentsline {table}{\numberline {0.7}{\ignorespaces Summary of best-fit model (M32) for predicting site fidelity. The model uses square-root transformed day-to-day changes in butterfly count as the response variable.\relax }}{36}{table.caption.15}%
 \contentsline {table}{\numberline {0.8}{\ignorespaces Top five models from 24-hour sensitivity analysis ranked by AICc. The best-fit model (M31) included a tensor smooth interaction between maximum wind gust and cumulative butterflies in direct sun, matching the structure identified in the sunset-specific analysis but applied to 24-hour periods.\relax }}{41}{table.caption.20}%
-\contentsline {table}{\numberline {A.1}{\ignorespaces This is the caption for the first table.\relax }}{72}{table.caption.24}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces This is the caption for another table.\relax }}{73}{table.caption.25}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces This is the caption for yet another table.\relax }}{76}{table.caption.28}%
-\contentsline {table}{\numberline {B.1}{\ignorespaces This is the caption for the first table.\relax }}{79}{table.caption.29}%
-\contentsline {table}{\numberline {B.2}{\ignorespaces This is the caption for another table.\relax }}{80}{table.caption.30}%
-\contentsline {table}{\numberline {B.3}{\ignorespaces This is the caption for yet another table.\relax }}{83}{table.caption.33}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces This is the caption for the first table.\relax }}{59}{table.caption.24}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces This is the caption for another table.\relax }}{60}{table.caption.25}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces This is the caption for yet another table.\relax }}{63}{table.caption.28}%
+\contentsline {table}{\numberline {B.1}{\ignorespaces This is the caption for the first table.\relax }}{66}{table.caption.29}%
+\contentsline {table}{\numberline {B.2}{\ignorespaces This is the caption for another table.\relax }}{67}{table.caption.30}%
+\contentsline {table}{\numberline {B.3}{\ignorespaces This is the caption for yet another table.\relax }}{70}{table.caption.33}%
