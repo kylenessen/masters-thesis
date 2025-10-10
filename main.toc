@@ -2,46 +2,47 @@
 \contentsline {chapter}{\uppercase {List of Tables}}{xi}{chapter*.2}%
 \contentsline {chapter}{\uppercase {List of Figures}}{xii}{chapter*.3}%
 \noindent CHAPTER 
-\contentsline {section}{\numberline {0.1}Introduction}{1}{section.0.1}%
-\contentsline {section}{\numberline {0.2}Materials and Methods}{10}{section.0.2}%
-\contentsline {subsection}{\numberline {0.2.1}Study Site}{10}{subsection.0.2.1}%
-\contentsline {subsection}{\numberline {0.2.2}Monitoring Strategy}{11}{subsection.0.2.2}%
-\contentsline {subsection}{\numberline {0.2.3}Field Equipment}{12}{subsection.0.2.3}%
-\contentsline {subsection}{\numberline {0.2.4}Image Analysis}{15}{subsection.0.2.4}%
-\contentsline {subsubsection}{\numberline {0.2.4.1}Grid-based Counting Method}{15}{subsubsection.0.2.4.1}%
-\contentsline {subsubsection}{\numberline {0.2.4.2}Counting Protocol}{15}{subsubsection.0.2.4.2}%
-\contentsline {subsubsection}{\numberline {0.2.4.3}Abundance Calculation}{17}{subsubsection.0.2.4.3}%
-\contentsline {subsection}{\numberline {0.2.5}Temperature Data Extraction}{17}{subsection.0.2.5}%
-\contentsline {subsection}{\numberline {0.2.6}Statistical Analysis}{18}{subsection.0.2.6}%
-\contentsline {subsubsection}{\numberline {0.2.6.1}Data Preparation}{18}{subsubsection.0.2.6.1}%
-\contentsline {subsubsection}{\numberline {0.2.6.2}Variable Selection}{19}{subsubsection.0.2.6.2}%
-\contentsline {subsubsection}{\numberline {0.2.6.3}Model Framework}{20}{subsubsection.0.2.6.3}%
-\contentsline {subsubsection}{\numberline {0.2.6.4}Model Validation}{20}{subsubsection.0.2.6.4}%
-\contentsline {subsubsection}{\numberline {0.2.6.5}Statistical Power Analysis}{21}{subsubsection.0.2.6.5}%
-\contentsline {subsubsection}{\numberline {0.2.6.6}Dynamic Window Analysis}{21}{subsubsection.0.2.6.6}%
-\contentsline {section}{\numberline {0.3}Results}{24}{section.0.3}%
-\contentsline {subsection}{\numberline {0.3.1}Descriptive Statistics}{24}{subsection.0.3.1}%
-\contentsline {subsection}{\numberline {0.3.2}Wind Disruption Analysis}{25}{subsection.0.3.2}%
-\contentsline {subsubsection}{\numberline {0.3.2.1}Model Selection}{26}{subsubsection.0.3.2.1}%
-\contentsline {subsubsection}{\numberline {0.3.2.2}Analysis of Best Fit Model}{26}{subsubsection.0.3.2.2}%
-\contentsline {subsubsection}{\numberline {0.3.2.3}Model Diagnostics}{28}{subsubsection.0.3.2.3}%
-\contentsline {subsubsection}{\numberline {0.3.2.4}Sensitivity Analysis}{30}{subsubsection.0.3.2.4}%
-\contentsline {subsection}{\numberline {0.3.3}Statistical Power to Detect Wind Effects}{34}{subsection.0.3.3}%
-\contentsline {subsection}{\numberline {0.3.4}Site Fidelity Analysis}{34}{subsection.0.3.4}%
-\contentsline {subsubsection}{\numberline {0.3.4.1}Model Selection}{35}{subsubsection.0.3.4.1}%
-\contentsline {subsubsection}{\numberline {0.3.4.2}Analysis of Best Fit Model}{35}{subsubsection.0.3.4.2}%
-\contentsline {subsubsection}{\numberline {0.3.4.3}Model Diagnostics}{39}{subsubsection.0.3.4.3}%
-\contentsline {subsection}{\numberline {0.3.5}Sensitivity Analysis: 24-Hour Butterfly Change}{40}{subsection.0.3.5}%
-\contentsline {section}{\numberline {0.4}Discussion}{41}{section.0.4}%
-\contentsline {subsection}{\numberline {0.4.1}Wind Does Not Disrupt Overwintering Monarch Butterflies}{41}{subsection.0.4.1}%
-\contentsline {subsection}{\numberline {0.4.2}Alternative Drivers of Monarch Movement}{44}{subsection.0.4.2}%
-\contentsline {subsubsection}{\numberline {0.4.2.1}Direct Sunlight as the Strongest Predictor}{44}{subsubsection.0.4.2.1}%
-\contentsline {subsubsection}{\numberline {0.4.2.2}Temperature Effects and Their Interpretation}{45}{subsubsection.0.4.2.2}%
-\contentsline {subsubsection}{\numberline {0.4.2.3}Diurnal Activity Patterns}{45}{subsubsection.0.4.2.3}%
-\contentsline {subsection}{\numberline {0.4.3}Study Limitations}{46}{subsection.0.4.3}%
-\contentsline {subsection}{\numberline {0.4.4}Management Implications}{46}{subsection.0.4.4}%
-\contentsline {subsection}{\numberline {0.4.5}Future Research Directions}{47}{subsection.0.4.5}%
-\contentsline {subsection}{\numberline {0.4.6}Conclusions}{49}{subsection.0.4.6}%
+\contentsline {chapter}{\numberline {1.}\uppercase {}}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Materials and Methods}{10}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Study Site}{10}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Monitoring Strategy}{11}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Field Equipment}{12}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Image Analysis}{15}{subsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.4.1}Grid-based Counting Method}{15}{subsubsection.1.2.4.1}%
+\contentsline {subsubsection}{\numberline {1.2.4.2}Counting Protocol}{16}{subsubsection.1.2.4.2}%
+\contentsline {subsubsection}{\numberline {1.2.4.3}Abundance Calculation}{17}{subsubsection.1.2.4.3}%
+\contentsline {subsection}{\numberline {1.2.5}Temperature Data Extraction}{18}{subsection.1.2.5}%
+\contentsline {subsection}{\numberline {1.2.6}Statistical Analysis}{18}{subsection.1.2.6}%
+\contentsline {subsubsection}{\numberline {1.2.6.1}Data Preparation}{18}{subsubsection.1.2.6.1}%
+\contentsline {subsubsection}{\numberline {1.2.6.2}Variable Selection}{19}{subsubsection.1.2.6.2}%
+\contentsline {subsubsection}{\numberline {1.2.6.3}Model Framework}{20}{subsubsection.1.2.6.3}%
+\contentsline {subsubsection}{\numberline {1.2.6.4}Model Validation}{21}{subsubsection.1.2.6.4}%
+\contentsline {subsubsection}{\numberline {1.2.6.5}Statistical Power Analysis}{21}{subsubsection.1.2.6.5}%
+\contentsline {subsubsection}{\numberline {1.2.6.6}Dynamic Window Analysis}{21}{subsubsection.1.2.6.6}%
+\contentsline {section}{\numberline {1.3}Results}{24}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Descriptive Statistics}{24}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Wind Disruption Analysis}{25}{subsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.2.1}Model Selection}{26}{subsubsection.1.3.2.1}%
+\contentsline {subsubsection}{\numberline {1.3.2.2}Analysis of Best Fit Model}{26}{subsubsection.1.3.2.2}%
+\contentsline {subsubsection}{\numberline {1.3.2.3}Model Diagnostics}{28}{subsubsection.1.3.2.3}%
+\contentsline {subsubsection}{\numberline {1.3.2.4}Sensitivity Analysis}{30}{subsubsection.1.3.2.4}%
+\contentsline {subsection}{\numberline {1.3.3}Statistical Power to Detect Wind Effects}{34}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Site Fidelity Analysis}{34}{subsection.1.3.4}%
+\contentsline {subsubsection}{\numberline {1.3.4.1}Model Selection}{35}{subsubsection.1.3.4.1}%
+\contentsline {subsubsection}{\numberline {1.3.4.2}Analysis of Best Fit Model}{35}{subsubsection.1.3.4.2}%
+\contentsline {subsubsection}{\numberline {1.3.4.3}Model Diagnostics}{39}{subsubsection.1.3.4.3}%
+\contentsline {subsection}{\numberline {1.3.5}Sensitivity Analysis: 24-Hour Butterfly Change}{40}{subsection.1.3.5}%
+\contentsline {section}{\numberline {1.4}Discussion}{41}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Wind Does Not Disrupt Overwintering Monarch Butterflies}{41}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Alternative Drivers of Monarch Movement}{44}{subsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.2.1}Direct Sunlight as the Strongest Predictor}{44}{subsubsection.1.4.2.1}%
+\contentsline {subsubsection}{\numberline {1.4.2.2}Temperature Effects and Their Interpretation}{45}{subsubsection.1.4.2.2}%
+\contentsline {subsubsection}{\numberline {1.4.2.3}Diurnal Activity Patterns}{45}{subsubsection.1.4.2.3}%
+\contentsline {subsection}{\numberline {1.4.3}Study Limitations}{46}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Management Implications}{46}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Future Research Directions}{47}{subsection.1.4.5}%
+\contentsline {subsection}{\numberline {1.4.6}Conclusions}{49}{subsection.1.4.6}%
 \contentsline {chapter}{\MakeUppercase []{References}}{50}{chapter*.23}%
 \let \l@chapter \l@section 
 \noindent \MakeUppercase []{Appendices}
