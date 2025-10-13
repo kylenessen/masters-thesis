@@ -1,0 +1,16 @@
+\begin{table}
+
+\caption{\label{tab:threshold_model_selection}Top 5 models ranked by AIC (30-minute threshold analysis)}
+\centering
+\begin{tabularx}{\textwidth}{lXrrr}
+\toprule
+Model & Terms & AIC & $\Delta$AIC & Weight\\
+\midrule
+T50 & Previous butterfly count, Temperature, Time since sunrise, Interaction (tensor): Minutes above 2 m/s, Butterflies in direct sun & 8077.23 & 0.00 & 0.55\\
+T23 & Previous butterfly count, Temperature, Butterflies in direct sun, Time since sunrise & 8077.86 & 0.63 & 0.40\\
+T22 & Previous butterfly count, Temperature (linear), Butterflies in direct sun, Time since sunrise & 8082.90 & 5.67 & 0.03\\
+T24 & Previous butterfly count, Minutes above 2 m/s, Temperature, Butterflies in direct sun, Time since sunrise & 8085.41 & 8.18 & 0.01\\
+T47 & Temperature, Butterflies in direct sun, Time since sunrise & 8097.30 & 20.07 & 0.00\\
+\bottomrule
+\end{tabularx}
+\end{table}

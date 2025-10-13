@@ -8,30 +8,44 @@ This is a Master's thesis LaTeX project studying monarch butterfly ecology and w
 
 ## Build Commands
 
-**IMPORTANT: NEVER attempt to build LaTeX documents. The user will handle all LaTeX compilation themselves.**
+**When to Build:**
 
-Build commands are provided for reference only:
+- Only build LaTeX documents when explicitly requested by the user
+- Do NOT build automatically after making edits
+- If the user says "build this" or "compile the thesis", then you should build
 
 **Primary build:**
+
 ```bash
 latexmk -pdf main.tex
 ```
 
 **Individual chapter renders:**
+
 ```bash
 latexmk -pdf render_pismo.tex  # Pismo site chapter
 latexmk -pdf render_vsfb.tex   # VSFB site chapter
 ```
 
 **Clean build files:**
+
 ```bash
 latexmk -c
 ```
 
 **Force rebuild:**
+
 ```bash
 latexmk -pdf -f main.tex
 ```
+
+**Important Notes:**
+
+- The main thesis uses BibLaTeX with Chicago author-date style
+- Use `\parencite{}` for citations (not `\autocite{}`, `\citep{}`, or `\citet{}`)
+- Unicode math symbols (≥, Δ, etc.) must be replaced with LaTeX commands (`$\geq$`, `$\Delta$`)
+- Chapter files should use `\section{}` not `\chapter{}`
+- Do not include `\usepackage{}` commands in chapter files
 
 ## Project Structure
 
@@ -57,6 +71,7 @@ Uses BibLaTeX with Biber backend. Bibliography files are in `bibliography/` dire
 ## Research Data Context
 
 The thesis involves:
+
 - Wind monitoring using RainWise WindLog sensors (12 units at Pismo)
 - Time-lapse photography at VSFB
 - Multi-season data collection (2023-2024, 2024-2025)
@@ -70,17 +85,20 @@ This uses the official Cal Poly thesis template with specific formatting require
 ## Supplemental Materials Workflow
 
 **Supplemental Content Structure:**
+
 - `/supplemental/methods/` - Voice memos, advisor materials, feedback for methods section
 - Voice memos are processed into densified markdown files with descriptive names
 - Example: `Vandenberg_Methods_Section-_Justifications_and_...md`
 
 **GitHub Issue Workflow:**
+
 - Issues reference specific LaTeX file locations (e.g., `chapters/vsfb.tex lines 45-60`)
 - Include relevant supplemental file patterns to search for context
 - Goal: Find relevant supplemental materials and integrate directly into authoritative LaTeX text
 - Author reviews changes and merges via PR
 
 **Integration Approach:**
+
 - Search supplemental materials using filename patterns and content
 - Edit the authoritative LaTeX files directly (not create new files)
 - Focus on enhancing existing sections with additional context and detail
