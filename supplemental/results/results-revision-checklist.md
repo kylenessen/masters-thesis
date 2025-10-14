@@ -216,7 +216,7 @@ These address confusion about variables, terms, and concepts.
 ### Task 2.3: Explain Why "Butterflies in Direct Sun" Not as Main Effect
 
 **Priority**: MEDIUM
-**Status**: [ ]
+**Status**: [x]
 
 **Issue**: Jenn questions why this variable only appears in interaction terms, not as a standalone predictor.
 
@@ -245,7 +245,7 @@ These address confusion about variables, terms, and concepts.
 ### Task 2.4: Improve "Partial Effects" Explanations in Captions
 
 **Priority**: MEDIUM
-**Status**: [ ]
+**Status**: [x]
 
 **Issue**: Not all readers will understand what "partial effects" means in a statistical context. Need clearer caption language.
 
