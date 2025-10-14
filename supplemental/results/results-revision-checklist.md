@@ -441,7 +441,7 @@ These address how results are interpreted and contextualized.
 ### Task 4.1: Interpret Interaction Plot with Closed System Assumption
 
 **Priority**: HIGH
-**Status**: [ ]
+**Status**: [x]
 **Reviewer Request**: Yes - Francis (comment #99)
 
 **Issue**: Francis wants explicit interpretation of what the red vs. blue regions mean for butterfly movement patterns.
@@ -740,11 +740,13 @@ These span multiple sections.
 **Tasks Actually Requested by Francis or Jenn:**
 
 **INCOMPLETE:**
+
 - Task 3.1 - Add regression statistics (Francis #26)
 - Task 4.1 - Interpret interaction plot with closed system assumption (Francis #99)
 - Task 4.4 - Add R² interpretation (Francis provided text - verify if in LaTeX)
 
 **COMPLETED:**
+
 - Task 1.1 - Wind variable paradox (Jenn #34-35)
 - Task 1.2 - Section labels and reminders (Francis #30, #72)
 - Task 1.3 - Transition between analyses (Francis #72)
@@ -757,6 +759,7 @@ These span multiple sections.
 - Task 3.3 - Add citations (Francis #52, #102)
 
 **NOT REQUESTED (Author Inferences):**
+
 - Task 2.6 - Descriptive variable names (Jenn said "maybe no action")
 - Task 4.2 - Emphasize shaded observations
 - Task 4.3 - Time since sunrise biological meaning (REMOVED from results.tex)
@@ -768,6 +771,7 @@ These span multiple sections.
 - Task 6.3 - Verify statistics
 
 **NOT APPLICABLE:**
+
 - Task 2.5 - Figure numbers (export artifact per Kyle)
 
 ---
