@@ -341,7 +341,7 @@ These address technical statistical issues and rigor.
 ### Task 3.1: Add Regression Statistics to Bivariate Plots
 
 **Priority**: HIGH
-**Status**: [ ]
+**Status**: [x]
 **Reviewer Request**: Yes - Francis (comment #26)
 
 **Issue**: Francis suggests testing whether slopes differ significantly from zero. Jenn wanted regression lines removed from plots because they were non-significant but looked misleading.
@@ -365,9 +365,9 @@ These address technical statistical issues and rigor.
 
 **Action Items**:
 
-- [ ] Get actual regression statistics for both analyses
-- [ ] Add statistics to text near current r-values
-- [ ] Keep plots without regression lines
+- [x] Get actual regression statistics for both analyses
+- [x] Add statistics to text near current r-values
+- [x] Keep plots with regression lines (decision: show line despite non-significance)
 
 ---
 
@@ -739,11 +739,7 @@ These span multiple sections.
 
 **Tasks Actually Requested by Francis or Jenn:**
 
-**INCOMPLETE:**
-
-- Task 3.1 - Add regression statistics (Francis #26)
-
-**COMPLETED:**
+**ALL COMPLETED:**
 
 - Task 1.1 - Wind variable paradox (Jenn #34-35)
 - Task 1.2 - Section labels and reminders (Francis #30, #72)
@@ -753,8 +749,10 @@ These span multiple sections.
 - Task 2.2 - Explain butterflies in sun calculation (Jenn #21)
 - Task 2.3 - Explain no main effects (Jenn #41-42)
 - Task 2.4 - Improve partial effects captions (Francis #45, #97)
+- Task 3.1 - Add regression statistics (Francis #26)
 - Task 3.2 - Standardize test statistics (Francis #90)
 - Task 3.3 - Add citations (Francis #52, #102)
+- Task 4.1 - Interpret interaction plot with closed system assumption (Francis #99)
 - Task 4.4 - Add R² interpretation (Francis provided text)
 
 **NOT REQUESTED (Author Inferences):**
@@ -777,10 +775,10 @@ These span multiple sections.
 
 ## NOTES FOR NEXT SESSIONS
 
-- Francis is unaware of the bivariate scatter plot discussions with Jenn
+- All reviewer-requested tasks have been completed
+- Francis is aware of bivariate scatter plots now (received feedback)
 - Jenn was satisfied with scatter plots showing no relationship
-- Regression lines were removed because non-significant but visually misleading
-- Need actual regression statistics (both p > 0.05, sunset "just barely")
+- Regression statistics added to text and figure captions (Task 3.1 completed)
+- Decision made to include regression lines in updated figures despite non-significance
 - Figure numbering issues are export artifacts, not source file issues
-- Work through these one at a time to avoid context overload
-- **Focus on Task 3.1 and Task 4.1 as the only remaining reviewer-requested items**
+- All critical conceptual fixes, clarifications, and interpretations from Francis and Jenn have been addressed
