@@ -529,7 +529,7 @@ These address how results are interpreted and contextualized.
 ### Task 4.4: Add Interpretation of Adjusted R² Difference
 
 **Priority**: MEDIUM
-**Status**: [ ] (Verify if already done - Francis provided text)
+**Status**: [x]
 **Reviewer Request**: Yes - Francis inserted suggested text in revisions
 
 **Issue**: The day-to-day analysis has much higher R² (0.397) than 30-minute analysis (0.064), but this isn't interpreted clearly.
@@ -742,8 +742,6 @@ These span multiple sections.
 **INCOMPLETE:**
 
 - Task 3.1 - Add regression statistics (Francis #26)
-- Task 4.1 - Interpret interaction plot with closed system assumption (Francis #99)
-- Task 4.4 - Add R² interpretation (Francis provided text - verify if in LaTeX)
 
 **COMPLETED:**
 
@@ -757,6 +755,7 @@ These span multiple sections.
 - Task 2.4 - Improve partial effects captions (Francis #45, #97)
 - Task 3.2 - Standardize test statistics (Francis #90)
 - Task 3.3 - Add citations (Francis #52, #102)
+- Task 4.4 - Add R² interpretation (Francis provided text)
 
 **NOT REQUESTED (Author Inferences):**
 
