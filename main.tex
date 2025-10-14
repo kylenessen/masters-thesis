@@ -156,9 +156,6 @@
 %% Note: must be included after hyperref
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{cleveref}
-% Define Appendix refs
-\crefname{app}{appendix}{appendices}
-\Crefname{app}{Appendix}{Appendices}
 % oxford comma
 \newcommand{\creflastconjunction}{, and~}
 
@@ -211,7 +208,4 @@
         heading=bibintoc,
         title={\MakeUppercase{\bibname}}
     ]
-
-    %% Input the appendices (if any) as configured from the file
-    \input{appendices/outline}
 \end{document}
