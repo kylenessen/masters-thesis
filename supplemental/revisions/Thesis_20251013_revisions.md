@@ -873,31 +873,31 @@ butterflies in direct sun.
   Model   Terms                                              AIC   $\Delta$AIC   Weight
   ------- -------------------------------------------- --------- ------------- --------
   M50     [even if these are your variable names, you    8074.03          0.00     0.86
-          can call them whatever you want here to make                         
-          it clear what the variable is. Just FYI.                             
-          Maybe no action]{.comment-start id="36"                              
-          author="Jenn Yost"                                                   
-          date="2025-10-08T18:34:00Z"}Previous                                 
-          butterfly count, Temperature, Time since                             
-          sunrise, Interaction (tensor): Maximum wind                          
-          speed, Butterflies in direct                                         
-          sun[]{.comment-end id="36"}                                          
+          can call them whatever you want here to make
+          it clear what the variable is. Just FYI.
+          Maybe no action]{.comment-start id="36"
+          author="Jenn Yost"
+          date="2025-10-08T18:34:00Z"}Previous
+          butterfly count, Temperature, Time since
+          sunrise, Interaction (tensor): Maximum wind
+          speed, Butterflies in direct
+          sun[]{.comment-end id="36"}
 
   M23     Previous butterfly count, Temperature,         8077.86          3.83     0.13
-          Butterflies in direct sun, Time since                                
-          sunrise                                                              
+          Butterflies in direct sun, Time since
+          sunrise
 
   M22     Previous butterfly count, Temperature          8082.90          8.87     0.01
-          (linear), Butterflies in direct sun, Time                            
-          since sunrise                                                        
+          (linear), Butterflies in direct sun, Time
+          since sunrise
 
   M24     Previous butterfly count, Maximum wind         8084.05         10.02     0.01
-          speed, Temperature, Butterflies in direct                            
-          sun, Time since sunrise                                              
+          speed, Temperature, Butterflies in direct
+          sun, Time since sunrise
 
-  M52     Temperature, Time since sunrise, Interaction   8092.72         18.69     0.00
-          (tensor): Maximum wind speed, Butterflies in                         
-          direct sun                                                           
+M52     Temperature, Time since sunrise, Interaction   8092.72         18.69     0.00
+          (tensor): Maximum wind speed, Butterflies in
+          direct sun
   -------------------------------------------------------------------------------------
 
   : Top 5 models ranked by A[Since your hypothesis is about wind, it\'s
@@ -1066,8 +1066,8 @@ smooth relationships without overfitting.
 
   s(time within day $t$)                    9.00   4.87      0.96   0.065
 
-  ti(max gust, butterflies direct sun      16.00   7.35      0.99   0.490
-  $t_{lag}$)                                                      
+ti(max gust, butterflies direct sun      16.00   7.35      0.99   0.490
+  $t_{lag}$)
   -------------------------------------------------------------------------
 
   : []{#tab:gam_basis_check .anchor}Basis dimension adequacy checks for
@@ -1136,23 +1136,23 @@ warrants examination.
   Model   Terms                                              AIC   $\Delta$AIC   Weight
   ------- -------------------------------------------- --------- ------------- --------
   T50     Previous butterfly count, Temperature, Time    8077.23          0.00     0.55
-          since sunrise, Interaction (tensor): Minutes                         
-          above 2 m/s, Butterflies in direct sun                               
+          since sunrise, Interaction (tensor): Minutes
+          above 2 m/s, Butterflies in direct sun
 
   T23     Previous butterfly count, Temperature,         8077.86          0.63     0.40
-          Butterflies in direct sun, Time since                                
-          sunrise                                                              
+          Butterflies in direct sun, Time since
+          sunrise
 
   T22     Previous butterfly count, Temperature          8082.90          5.67     0.03
-          (linear), Butterflies in direct sun, Time                            
-          since sunrise                                                        
+          (linear), Butterflies in direct sun, Time
+          since sunrise
 
   T24     Previous butterfly count, Minutes above 2      8085.41          8.18     0.01
-          m/s, Temperature, Butterflies in direct sun,                         
-          Time since sunrise                                                   
+          m/s, Temperature, Butterflies in direct sun,
+          Time since sunrise
 
-  T47     Temperature, Butterflies in direct sun, Time   8097.30         20.07     0.00
-          since sunrise                                                        
+T47     Temperature, Butterflies in direct sun, Time   8097.30         20.07     0.00
+          since sunrise
   -------------------------------------------------------------------------------------
 
   : []{#tab:threshold_model_selection .anchor}Top 5 models ranked by AIC
@@ -1214,7 +1214,7 @@ power for effect sizes of biological relevance.
 
   0.15                         0.15                    0.875 87.5%
 
-  0.2                          0.20                    0.985 98.5%
+0.2                          0.20                    0.985 98.5%
   ------------------------------------------------------------------------
 
   : []{#tab:power_analysis .anchor}Estimated power to detect wind
@@ -1306,36 +1306,36 @@ previous day's maximum count and window duration.
   Model                                Terms                                            AICc   $\Delta$AICc   Weight
   ------------------------------------ -------------------------------------------- -------- -------------- --------
   [Man\~. I think this is              Interaction (tensor): Maximum wind gust,       648.85           0.00     0.85
-  weird.]{.comment-start id="87"       Cumulative butterflies in direct                                     
-  author="Jenn Yost"                   sun[[]{.comment-end id="88"}]{.comment-end                           
-  date="2025-10-09T16:47:00Z"}[There   id="87"}                                                             
-  are two things here: First you could                                                                      
-  say 1)what predicts roost                                                                                 
-  abandonment? or 2) does wind effect                                                                       
-  roost abandonment? Two different                                                                          
-  questions. The model selection                                                                            
-  process is addressing the first                                                                           
-  question, not the                                                                                         
-  second.]{.comment-start id="88"                                                                           
-  author="Jenn Yost"                                                                                        
-  date="2025-10-09T16:48:00Z"}M32                                                                           
+  weird.]{.comment-start id="87"       Cumulative butterflies in direct
+  author="Jenn Yost"                   sun[[]{.comment-end id="88"}]{.comment-end
+  date="2025-10-09T16:47:00Z"}[There   id="87"}
+  are two things here: First you could
+  say 1)what predicts roost
+  abandonment? or 2) does wind effect
+  roost abandonment? Two different
+  questions. The model selection
+  process is addressing the first
+  question, not the
+  second.]{.comment-start id="88"
+  author="Jenn Yost"
+  date="2025-10-09T16:48:00Z"}M32
 
   M52                                  Maximum wind gust, Cumulative butterflies in   654.45           5.60     0.05
-                                       direct sun, Interaction (tensor): Maximum                            
-                                       wind gust, Cumulative butterflies in direct                          
-                                       sun                                                                  
+                                       direct sun, Interaction (tensor): Maximum
+                                       wind gust, Cumulative butterflies in direct
+                                       sun
 
   M20                                  Interaction (tensor): Minimum temperature,     656.77           7.92     0.02
-                                       Cumulative butterflies in direct sun                                 
+                                       Cumulative butterflies in direct sun
 
   M46                                  Maximum temperature, Cumulative butterflies    657.70           8.85     0.01
-                                       in direct sun, Interaction (tensor): Maximum                         
-                                       temperature, Cumulative butterflies in                               
-                                       direct sun                                                           
+                                       in direct sun, Interaction (tensor): Maximum
+                                       temperature, Cumulative butterflies in
+                                       direct sun
 
-  M30                                  Interaction (tensor): Temperature at           657.90           9.06     0.01
-                                       previous maximum count, Cumulative                                   
-                                       butterflies in direct sun                                            
+M30                                  Interaction (tensor): Temperature at           657.90           9.06     0.01
+                                       previous maximum count, Cumulative
+                                       butterflies in direct sun
   ------------------------------------------------------------------------------------------------------------------
 
   : Top 5 models ranked by AICc (sunset analysis)
@@ -1511,18 +1511,18 @@ best model achieving only 8.4% weight and $\Delta$AICc = 3.6.
                                                                               $R^{2}$
   ------- ---------------------------------- ------- -------------- -------- ---------
   M31     Wind $\times$ sun exposure          636.3       0.0        0.507     0.235
-          (smooth)                                                           
+          (smooth)
 
   M23     Temperature $\times$ wind (smooth)  639.9       3.6        0.084      --
 
   M29     Temperature $\times$ sun exposure   640.8       4.4        0.056      --
-          (smooth)                                                           
+          (smooth)
 
   M19     Min. temp. $\times$ sun exposure    641.1       4.8        0.047      --
-          (smooth)                                                           
+          (smooth)
 
-  M51     Wind + sun + wind$\times$sun        641.7       5.4        0.034      --
-          (smooth)                                                           
+M51     Wind + sun + wind$\times$sun        641.7       5.4        0.034      --
+          (smooth)
   ------------------------------------------------------------------------------------
 
   : []{#tab:24hr-model-selection-table .anchor}Top five models from
@@ -1568,461 +1568,88 @@ environmental relationships.
 
 # [[\@Francis X. Villablanca](mailto:fvillabl@calpoly.edu) [\@Jenn Yost](mailto:jyost@calpoly.edu) Updated discussion to match new analysis.]{.comment-start id="113" author="Kyle Nessen" date="2025-10-10T13:18:00Z"}Discussion[]{.comment-end id="113"}
 
-Our study provides the first direct empirical test of the long-standing
-hypothesis that wind disrupts overwintering monarch butterfly clusters.
-For over three decades, conservation practice has operated under the
-assumption that wind speeds exceeding 2 m/s force butterflies to abandon
-their roosts, either by physically dislodging them or triggering
-behavioral departures (Kingston L. H. Leong 2016). Our findings
-challenge this fundamental assumption[.]{.insertion
-author="Francis X. Villablanca" date="2025-10-12T20:02:00Z"}
-[T]{.insertion author="Francis X. Villablanca"
-date="2025-10-12T20:03:00Z"}[hough there does appear to be a "wind
-effect]{.insertion author="Francis X. Villablanca"
-date="2025-10-10T23:33:00Z"}[,]{.insertion
-author="Francis X. Villablanca" date="2025-10-12T20:04:00Z"}[" it is
-not]{.insertion author="Francis X. Villablanca"
-date="2025-10-10T23:33:00Z"} [at 2 m/s nor]{.insertion
-author="Francis X. Villablanca" date="2025-10-12T20:03:00Z"} [the only
-effect.]{.insertion author="Francis X. Villablanca"
-date="2025-10-10T23:33:00Z"} [and]{.deletion
-author="Francis X. Villablanca" date="2025-10-10T23:33:00Z"} [and
-i]{.insertion author="Francis X. Villablanca"
-date="2025-10-12T20:03:00Z"}[nstead, o]{.insertion
-author="Francis X. Villablanca" date="2025-10-12T20:02:00Z"}[ur
-results]{.insertion author="Francis X. Villablanca"
-date="2025-10-10T23:33:00Z"} suggest a more complex relationship between
-monarchs and their overwintering [I know this sentence is a little
-clunky. I rewrote it so that we could not be quoted out of
-context.]{.comment-start id="127" author="Francis X. Villablanca"
-date="2025-10-12T13:05:00Z"}environment[]{.comment-end id="127"}.
+Our study provides the first direct empirical test of the long-standing hypothesis that wind disrupts overwintering monarch butterfly clusters. For over three decades, conservation practice has operated under the assumption that wind speeds exceeding 2 m/s force butterflies to abandon their roosts, either by physically dislodging them or triggering behavioral departures (Kingston L. H. Leong 2016). Our findings challenge this fundamental assumption[.]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:02:00Z"} [T]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:03:00Z"}[hough there does appear to be a "wind effect]{.insertion author="Francis X. Villablanca" date="2025-10-10T23:33:00Z"}[,]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:04:00Z"}[" it is not]{.insertion author="Francis X. Villablanca" date="2025-10-10T23:33:00Z"} [at 2 m/s nor]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:03:00Z"} [the only effect.]{.insertion author="Francis X. Villablanca" date="2025-10-10T23:33:00Z"} [and]{.deletion author="Francis X. Villablanca" date="2025-10-10T23:33:00Z"} [and i]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:03:00Z"}[nstead, o]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:02:00Z"}[ur results]{.insertion author="Francis X. Villablanca" date="2025-10-10T23:33:00Z"} suggest a more complex relationship between monarchs and their overwintering [I know this sentence is a little clunky. I rewrote it so that we could not be quoted out of context.]{.comment-start id="127" author="Francis X. Villablanca" date="2025-10-12T13:05:00Z"}environment[]{.comment-end id="127"}.
 
 ## Evidence Against Wind Disruption
 
-The evidence against the wind disruption hypothesis emerges from
-multiple, independent lines of analysis. Most strikingly, every single
-observation period in our day-to-day analysis experienced maximum wind
-speeds exceeding the proposed 2 m/s threshold (range: 2.0--12.8 m/s),
-yet monarch clusters persisted throughout the 78-day study period. If
-the hypothesis were correct, we should have observed either mass
-departures when temperatures permitted flight or butterflies physically
-dislodged and littering the ground when too cold to fly, as described in
-the literature (K. L. H. Leong 1999). We observed neither.
+The evidence against the wind disruption hypothesis emerges from multiple, independent lines of analysis. Most strikingly, every single observation period in our day-to-day analysis experienced maximum wind speeds exceeding the proposed 2 m/s threshold (range: 2.0--12.8 m/s), yet monarch clusters persisted throughout the 78-day study period. If the hypothesis were correct, we should have observed either mass departures when temperatures permitted flight or butterflies physically dislodged and littering the ground when too cold to fly, as described in the literature (K. L. H. Leong 1999). We observed neither.
 
-[I think you should take this sentence out of here, and make it the
-introductory sentence to the next paragraph. That next paragraph should
-very briefly summarize results of the bivariate analysis. Even just
-indicating that the two factors interact, and that wind does not defined
-the interaction entirely. See the next comment\...]{.comment-start
-id="129" author="Francis X. Villablanca" date="2025-10-12T13:10:00Z"}Our
-bivariate analyses provide additional refutation. []{.comment-end
-id="129"}When we examined the simple relationship between wind speed and
-cluster size changes, we found essentially no correlation at either
-temporal scale (30-minute r = 0.04, n = 1,894; day-to-day r = 0.13, n =
-96). These analyses tested the most basic prediction of the hypothesis
-that increasing wind speed should produce decreasing cluster sizes. The
-absence of this relationship across wind speeds ranging from calm
-conditions to six times the proposed threshold suggests that wind alone
-does not drive clustering decisions.
+[I think you should take this sentence out of here, and make it the introductory sentence to the next paragraph. That next paragraph should very briefly summarize results of the bivariate analysis. Even just indicating that the two factors interact, and that wind does not defined the interaction entirely. See the next comment\...]{.comment-start id="129" author="Francis X. Villablanca" date="2025-10-12T13:10:00Z"}Our bivariate analyses provide additional refutation. []{.comment-end id="129"}When we examined the simple relationship between wind speed and cluster size changes, we found essentially no correlation at either temporal scale (30-minute r = 0.04, n = 1,894; day-to-day r = 0.13, n = 96). These analyses tested the most basic prediction of the hypothesis that increasing wind speed should produce decreasing cluster sizes. The absence of this relationship across wind speeds ranging from calm conditions to six times the proposed threshold suggests that wind alone does not drive clustering decisions.
 
-Statistical power was not a limitation. Our analysis achieved 87.5%
-power to detect moderate effects and 98.5% power for large effects. The
-wind disruption hypothesis predicts substantial, observable impacts, not
-subtle statistical signals. Our failure to detect these effects, despite
-adequate power and validated methodology that successfully identified
-other environmental signals, provides strong evidence against the
-hypothesis rather than merely absence of evidence.
+Statistical power was not a limitation. Our analysis achieved 87.5% power to detect moderate effects and 98.5% power for large effects. The wind disruption hypothesis predicts substantial, observable impacts, not subtle statistical signals. Our failure to detect these effects, despite adequate power and validated methodology that successfully identified other environmental signals, provides strong evidence against the hypothesis rather than merely absence of evidence.
 
 ## Thermoregulation as an Alternative Explanation
 
-[This could probably be moved into the new paragraph just
-above]{.comment-start id="132" author="Francis X. Villablanca"
-date="2025-10-12T13:11:00Z"}While wind alone showed no disruptive
-effect, our models revealed that monarchs respond to environmental
-conditions through complex interactions, particularly between wind and
-solar exposure. []{.comment-end id="132"}[]{.paragraph-insertion
-author="Francis X. Villablanca" date="2025-10-12T20:12:00Z"}
+[This could probably be moved into the new paragraph just above]{.comment-start id="132" author="Francis X. Villablanca" date="2025-10-12T13:11:00Z"}While wind alone showed no disruptive effect, our models revealed that monarchs respond to environmental conditions through complex interactions, particularly between wind and solar exposure. []{.comment-end id="132"}[]{.paragraph-insertion author="Francis X. Villablanca" date="2025-10-12T20:12:00Z"}
 
-Th[e]{.insertion author="Francis X. Villablanca"
-date="2025-10-12T20:12:00Z"}[is]{.deletion
-author="Francis X. Villablanca" date="2025-10-12T20:12:00Z"} interaction
-[between wind and solar exposure]{.insertion
-author="Francis X. Villablanca" date="2025-10-12T20:12:00Z"} emerged as
-the dominant environmental signal in both temporal [I suggest using the
-R squared since it is widely, regarded as a correlation
-coefficient]{.comment-start id="136" author="Francis X. Villablanca"
-date="2025-10-10T16:40:00Z"}analyses []{.comment-end id="136"}(30-minute
-F = 4.67, p \< 0.001; day-to-day F = 4.10, p \< 0.001), suggesting that
-the relationship between wind and monarch behavior depends critically on
-light conditions.
+Th[e]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:12:00Z"}[is]{.deletion author="Francis X. Villablanca" date="2025-10-12T20:12:00Z"} interaction [between wind and solar exposure]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:12:00Z"} emerged as the dominant environmental signal in both temporal [I suggest using the R squared since it is widely, regarded as a correlation coefficient]{.comment-start id="136" author="Francis X. Villablanca" date="2025-10-10T16:40:00Z"}analyses []{.comment-end id="136"}(30-minute F = 4.67, p \< 0.001; day-to-day F = 4.10, p \< 0.001), suggesting that the relationship between wind and monarch behavior depends critically on light conditions.
 
-The interpretation of these wind-light interactions requires careful
-consideration. During our study, butterflies rarely experienced direct
-sunlight, with most observations recording few or no butterflies in sun.
-This natural behavioral pattern meant that our models extrapolated
-interaction effects into data-sparse regions, particularly at high sun
-exposure values where fewer than 3% of observations occurred. The
-patterns we describe therefore reflect a combination of robust findings
-in data-rich conditions (primarily shaded butterflies) and model
-predictions in less-observed states [(that reflected a different
-dynamic)]{.insertion author="Francis X. Villablanca"
-date="2025-10-12T20:13:00Z"}.
+The interpretation of these wind-light interactions requires careful consideration. During our study, butterflies rarely experienced direct sunlight, with most observations recording few or no butterflies in sun. This natural behavioral pattern meant that our models extrapolated interaction effects into data-sparse regions, particularly at high sun exposure values where fewer than 3% of observations occurred. The patterns we describe therefore reflect a combination of robust findings in data-rich conditions (primarily shaded butterflies) and model predictions in less-observed states [(that reflected a different dynamic)]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:13:00Z"}.
 
-The clearest finding emerges from our most common condition: when
-butterflies remained in shade, wind speed had no effect on cluster
-dynamics across the entire observed range (0 to 12.4 m/s). This pattern
-was consistent across both our 30-minute and [Call it \"sunset\"
-throughout and replace the day-to-day in the text.]{.comment-start
-id="138" author="Francis X. Villablanca"
-date="2025-10-12T13:14:00Z"}sunset []{.comment-end id="138"}analyses[,
-with o]{.deletion author="Francis X. Villablanca"
-date="2025-10-12T20:15:00Z"}[.O]{.insertion
-author="Francis X. Villablanca" date="2025-10-12T20:15:00Z"}nly the most
-extreme observations in the sunset analysis[state what that observation
-is - otherwise it may not be clear what you are referring
-to.]{.comment-start id="141" author="Francis X. Villablanca"
-date="2025-10-12T13:16:00Z"} []{.comment-end id="141"}showing any
-deviation, directly [contradicts]{.deletion
-author="Francis X. Villablanca" date="2025-10-12T20:15:00Z"}
-[]{.insertion author="Francis X. Villablanca"
-date="2025-10-12T20:19:00Z"}[contradicting]{.insertion
-author="Francis X. Villablanca" date="2025-10-12T20:15:00Z"} the wind
-disruption hypothesis. The interaction patterns at higher sun exposure,
-while statistically significant, [explain the basis off this comment -
-why do you conclude this. Otherwise it may not be clear what you are
-referring to.]{.comment-start id="145" author="Francis X. Villablanca"
-date="2025-10-12T13:18:00Z"}derive largely from model
-interpolation[]{.comment-end id="145"}. Intriguingly, the 30-minute and
-sunset analyses suggested [State with these different patterns were.
-Otherwise it may not be clear what you are referring to.]{.comment-start
-id="146" author="Francis X. Villablanca"
-date="2025-10-12T13:19:00Z"}different directional effects[]{.comment-end
-id="146"} under similar wind-sun combinations, potentially reflecting
-distinct behavioral responses operating at immediate versus day-to-day
-temporal scales.
+The clearest finding emerges from our most common condition: when butterflies remained in shade, wind speed had no effect on cluster dynamics across the entire observed range (0 to 12.4 m/s). This pattern was consistent across both our 30-minute and [Call it \"sunset\" throughout and replace the day-to-day in the text.]{.comment-start id="138" author="Francis X. Villablanca" date="2025-10-12T13:14:00Z"}sunset []{.comment-end id="138"}analyses[, with o]{.deletion author="Francis X. Villablanca" date="2025-10-12T20:15:00Z"}[.O]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:15:00Z"}nly the most extreme observations in the sunset analysis[state what that observation is - otherwise it may not be clear what you are referring to.]{.comment-start id="141" author="Francis X. Villablanca" date="2025-10-12T13:16:00Z"} []{.comment-end id="141"}showing any deviation, directly [contradicts]{.deletion author="Francis X. Villablanca" date="2025-10-12T20:15:00Z"} []{.insertion author="Francis X. Villablanca" date="2025-10-12T20:19:00Z"}[contradicting]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:15:00Z"} the wind disruption hypothesis. The interaction patterns at higher sun exposure, while statistically significant, [explain the basis off this comment - why do you conclude this. Otherwise it may not be clear what you are referring to.]{.comment-start id="145" author="Francis X. Villablanca" date="2025-10-12T13:18:00Z"}derive largely from model interpolation[]{.comment-end id="145"}. Intriguingly, the 30-minute and sunset analyses suggested [State with these different patterns were. Otherwise it may not be clear what you are referring to.]{.comment-start id="146" author="Francis X. Villablanca" date="2025-10-12T13:19:00Z"}different directional effects[]{.comment-end id="146"} under similar wind-sun combinations, potentially reflecting distinct behavioral responses operating at immediate versus day-to-day temporal scales.
 
-These patterns suggest thermoregulation as a plausible mechanism. [The
-preceding paragraph should provide the statements that would be
-supportive of this conclusion. Essentially, provide more support before
-you state this.\
-I am not at all disagreeing. I just want it to be crystal clear why this
-is likely the case.]{.comment-start id="147"
-author="Francis X. Villablanca" date="2025-10-12T13:20:00Z"}Monarchs
-appear to both seek and avoid sunny locations depending on their thermal
-state[]{.comment-end id="147"}. Masters, Malcolm, and Brower (1988)
-demonstrated that cold monarchs actively seek [Split sentence to avoid a
-run-on-ish sentence, and to call out \"seek\"\
-Other word smithing in the paragraph is to emphasize the seek and avoid
-depending on thermal state.]{.comment-start id="148"
-author="Francis X. Villablanca"
-date="2025-10-12T13:23:00Z"}sun[]{.comment-end id="148"}[. The seeking
-allows]{.insertion author="Francis X. Villablanca"
-date="2025-10-12T20:22:00Z"}[,]{.deletion
-author="Francis X. Villablanca" date="2025-10-12T20:22:00Z"} warming
-from below flight threshold (12.7°C) to well above it within one minute
-through solar basking at ambient temperatures as low as 9°C. This
-represents an energetic advantage over the alternative warming
-mechanism, as Kammer (1970) showed that shivering requires 25 to 31
-times more energy than resting. However, Masters, Malcolm, and Brower
-(1988) also found that monarchs [avoid sun]{.insertion
-author="Francis X. Villablanca" date="2025-10-12T20:24:00Z"} [when
-thoracic temperatures approach 30°C]{.insertion
-author="Francis X. Villablanca"
-date="2025-10-12T20:29:00Z"}[.]{.insertion
-author="Francis X. Villablanca" date="2025-10-12T20:24:00Z"}
-[Monarchs]{.insertion author="Francis X. Villablanca"
-date="2025-10-12T20:27:00Z"} depart sunny clusters [when thoracic
-temperatures approach 30°C]{.deletion author="Francis X. Villablanca"
-date="2025-10-12T20:29:00Z"}, [and]{.insertion
-author="Francis X. Villablanca" date="2025-10-12T20:27:00Z"}
-adopt[ing]{.deletion author="Francis X. Villablanca"
-date="2025-10-12T20:27:00Z"} sun-minimizing postures [delete - same as
-depart sunny clusters]{.comment-start id="158"
-author="Francis X. Villablanca" date="2025-10-12T13:28:00Z"}or flying
-away[]{.comment-end id="158"} to avoid overheating and excessive lipid
-depletion.
+These patterns suggest thermoregulation as a plausible mechanism. [The preceding paragraph should provide the statements that would be supportive of this conclusion. Essentially, provide more support before you state this.\
+I am not at all disagreeing. I just want it to be crystal clear why this is likely the case.]{.comment-start id="147" author="Francis X. Villablanca" date="2025-10-12T13:20:00Z"}Monarchs appear to both seek and avoid sunny locations depending on their thermal state[]{.comment-end id="147"}. Masters, Malcolm, and Brower (1988) demonstrated that cold monarchs actively seek [Split sentence to avoid a run-on-ish sentence, and to call out \"seek\"\
+Other word smithing in the paragraph is to emphasize the seek and avoid depending on thermal state.]{.comment-start id="148" author="Francis X. Villablanca" date="2025-10-12T13:23:00Z"}sun[]{.comment-end id="148"}[. The seeking allows]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:22:00Z"}[,]{.deletion author="Francis X. Villablanca" date="2025-10-12T20:22:00Z"} warming from below flight threshold (12.7°C) to well above it within one minute through solar basking at ambient temperatures as low as 9°C. This represents an energetic advantage over the alternative warming mechanism, as Kammer (1970) showed that shivering requires 25 to 31 times more energy than resting. However, Masters, Malcolm, and Brower (1988) also found that monarchs [avoid sun]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:24:00Z"} [when thoracic temperatures approach 30°C]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:29:00Z"}[.]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:24:00Z"} [Monarchs]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:27:00Z"} depart sunny clusters [when thoracic temperatures approach 30°C]{.deletion author="Francis X. Villablanca" date="2025-10-12T20:29:00Z"}, [and]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:27:00Z"} adopt[ing]{.deletion author="Francis X. Villablanca" date="2025-10-12T20:27:00Z"} sun-minimizing postures [delete - same as depart sunny clusters]{.comment-start id="158" author="Francis X. Villablanca" date="2025-10-12T13:28:00Z"}or flying away[]{.comment-end id="158"} to avoid overheating and excessive lipid depletion.
 
-The model-predicted increases in cluster size at intermediate wind and
-sun levels could reflect a thermoregulatory balance where wind moderates
-the heating effects of solar exposure. Masters, Malcolm, and Brower
-(1988) observed that monarchs dissipate heat while gliding through
-airflow across their bodies. Similarly, environmental wind could provide
-passive convective cooling, as described by [this would be a great
-citation to have an introduction, and also to use here]{.comment-start
-id="159" author="Francis X. Villablanca"
-date="2025-10-12T13:32:00Z"}Riddell and Porter (2025), who found that
-wind-driven convective cooling interacts strongly with solar radiation
-effects in terrestrial organisms. []{.comment-end id="159"}This cooling
-mechanism might allow butterflies to remain in sunny locations longer
-than they otherwise would, with wind offsetting some of the solar heat
-gain that would typically trigger departure. In contrast, shaded
-butterflies experience no solar heat gain, making wind-driven cooling
-unnecessary and potentially explaining the absence of wind effects in
-shade. However, the contrasting patterns between our immediate
-(30-minute) and daily (sunset) temporal scales suggest that multiple
-behavioral mechanisms may operate simultaneously, [and]{.deletion
-author="Francis X. Villablanca" date="2025-10-12T20:33:00Z"}
-[while]{.insertion author="Francis X. Villablanca"
-date="2025-10-12T20:33:00Z"} other explanations could [also]{.insertion
-author="Francis X. Villablanca" date="2025-10-12T20:33:00Z"} produce
-these statistical patterns. Rather than attempting to definitively
-resolve these mechanisms with limited data from [rare]{.deletion
-author="Francis X. Villablanca" date="2025-10-12T20:33:00Z"}
-[specific]{.insertion author="Francis X. Villablanca"
-date="2025-10-12T20:33:00Z"} conditions, our findings point toward the
-importance of light exposure as a driver of butterfly behavior,
-warranting focused investigation of how canopy structure and resulting
-light regimes influence cluster dynamics.
+The model-predicted increases in cluster size at intermediate wind and sun levels could reflect a thermoregulatory balance where wind moderates the heating effects of solar exposure. Masters, Malcolm, and Brower (1988) observed that monarchs dissipate heat while gliding through airflow across their bodies. Similarly, environmental wind could provide passive convective cooling, as described by [this would be a great citation to have an introduction, and also to use here]{.comment-start id="159" author="Francis X. Villablanca" date="2025-10-12T13:32:00Z"}Riddell and Porter (2025), who found that wind-driven convective cooling interacts strongly with solar radiation effects in terrestrial organisms. []{.comment-end id="159"}This cooling mechanism might allow butterflies to remain in sunny locations longer than they otherwise would, with wind offsetting some of the solar heat gain that would typically trigger departure. In contrast, shaded butterflies experience no solar heat gain, making wind-driven cooling unnecessary and potentially explaining the absence of wind effects in shade. However, the contrasting patterns between our immediate (30-minute) and daily (sunset) temporal scales suggest that multiple behavioral mechanisms may operate simultaneously, [and]{.deletion author="Francis X. Villablanca" date="2025-10-12T20:33:00Z"} [while]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:33:00Z"} other explanations could [also]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:33:00Z"} produce these statistical patterns. Rather than attempting to definitively resolve these mechanisms with limited data from [rare]{.deletion author="Francis X. Villablanca" date="2025-10-12T20:33:00Z"} [specific]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:33:00Z"} conditions, our findings point toward the importance of light exposure as a driver of butterfly behavior, warranting focused investigation of how canopy structure and resulting light regimes influence cluster dynamics.
 
-Additional observations align with thermal management. Time since
-sunrise revealed strong diurnal patterns (30-minute F = 9.85, p \<
-0.001), with butterflies departing clusters in late morning and early
-afternoon, then reforming aggregations later in the day. This pattern
-persisted after controlling for temperature and sunlight, potentially
-reflecting endogenous circadian rhythms, though it also aligns with
-predictable daily thermal cycles. The midday dispersal may reflect
-routine activities such as patrolling flights or nectaring. Monarchs
-have been observed gliding during these dispersal periods, which could
-facilitate thermoregulatory cooling while accomplishing other essential
-behaviors. Our study could not follow individual butterflies once they
-departed cluster locations, so these activities remain speculative.
-Similar temporal patterns have been consistently documented at
-California overwintering sites (Tuskes and Brower 1978; Chaplin and
-Wells 1982), and the Xerces Society's standardized monitoring protocols
-explicitly restrict counting to specific time windows to account for
-these diurnal movements (Xerces Society 2017).
+Additional observations align with thermal management. Time since sunrise revealed strong diurnal patterns (30-minute F = 9.85, p \< 0.001), with butterflies departing clusters in late morning and early afternoon, then reforming aggregations later in the day. This pattern persisted after controlling for temperature and sunlight, potentially reflecting endogenous circadian rhythms, though it also aligns with predictable daily thermal cycles. The midday dispersal may reflect routine activities such as patrolling flights or nectaring. Monarchs have been observed gliding during these dispersal periods, which could facilitate thermoregulatory cooling while accomplishing other essential behaviors. Our study could not follow individual butterflies once they departed cluster locations, so these activities remain speculative. Similar temporal patterns have been consistently documented at California overwintering sites (Tuskes and Brower 1978; Chaplin and Wells 1982), and the Xerces Society's standardized monitoring protocols explicitly restrict counting to specific time windows to account for these diurnal movements (Xerces Society 2017).
 
-Our models explained 6.4% of variance in 30-minute cluster changes and
-39.7% of variance in day-to-day roost fidelity. The environmental
-factors that did explain variance were predominantly thermal in nature:
-the wind-light interaction, direct sunlight exposure, and diurnal
-patterns of dispersal and aggregation. While substantial variation
-remains unexplained, the environmental signals we detected suggest
-thermal factors may play a more important role than wind avoidance in
-organizing clustering behavior. Without direct body temperature
-measurements under varying environmental conditions, thermoregulation
-remains one plausible interpretation among potentially others, and
-further research is needed to confirm the underlying mechanisms.
+Our models explained 6.4% of variance in 30-minute cluster changes and 39.7% of variance in day-to-day roost fidelity. The environmental factors that did explain variance were predominantly thermal in nature: the wind-light interaction, direct sunlight exposure, and diurnal patterns of dispersal and aggregation. While substantial variation remains unexplained, the environmental signals we detected suggest thermal factors may play a more important role than wind avoidance in organizing clustering behavior. Without direct body temperature measurements under varying environmental conditions, thermoregulation remains one plausible interpretation among potentially others, and further research is needed to confirm the underlying mechanisms.
 
 ## Limitations and Context
 
-Several factors shape the interpretation of our findings. First, our
-data come from a single overwintering season (2023--2024) when monarch
-populations were relatively typical (Xerces Society 2025a). The
-following season saw near-complete absence of monarchs at our study
-sites, coinciding with the second-lowest overwintering population on
-record (Xerces Society 2025b). This dramatic population crash prevented
-temporal replication but underscores the urgency of understanding
-overwintering ecology with the data we have.
+Several factors shape the interpretation of our findings. First, our data come from a single overwintering season (2023--2024) when monarch populations were relatively typical (Xerces Society 2025a). The following season saw near-complete absence of monarchs at our study sites, coinciding with the second-lowest overwintering population on record (Xerces Society 2025b). This dramatic population crash prevented temporal replication but underscores the urgency of understanding overwintering ecology with the data we have.
 
-Second, our study observed relatively small clusters where butterflies
-maintained direct contact with eucalyptus substrates. The wind
-disruption hypothesis was developed during an era of massive
-aggregations containing hundreds of thousands of individuals, where many
-butterflies attached only to other butterflies in multi-layered
-formations (Kingston. L. H. Leong 1990; L. P. Brower et al. 2008). If
-substrate attachment provides greater wind resistance than
-butterfly-to-butterfly attachment, wind might affect these different
-clustering configurations differently. The hypothesis may have been
-accurate for the extreme densities of past decades but less relevant to
-today's smaller populations.
+Second, our study observed relatively small clusters where butterflies maintained direct contact with eucalyptus substrates. The wind disruption hypothesis was developed during an era of massive aggregations containing hundreds of thousands of individuals, where many butterflies attached only to other butterflies in multi-layered formations (Kingston. L. H. Leong 1990; L. P. Brower et al. 2008). If substrate attachment provides greater wind resistance than butterfly-to-butterfly attachment, wind might affect these different clustering configurations differently. The hypothesis may have been accurate for the extreme densities of past decades but less relevant to today's smaller populations.
 
-Finally, our models explained relatively little variance overall
-(30-minute 6.4%; day-to-day 39.7%), reflecting both the complexity of
-butterfly behavior and our focus on testing specific hypotheses rather
-than comprehensively explaining movement patterns. However, the strong
-signals we did detect and our adequate statistical power give confidence
-in our main conclusion that wind alone does not disrupt monarch clusters
-as previously believed.
+Finally, our models explained relatively little variance overall (30-minute 6.4%; day-to-day 39.7%), reflecting both the complexity of butterfly behavior and our focus on testing specific hypotheses rather than comprehensively explaining movement patterns. However, the strong signals we did detect and our adequate statistical power give confidence in our main conclusion that wind alone does not disrupt monarch clusters as previously believed.
 
 ## Implications for Conservation
 
-Our findings suggest that wind protection, long considered a limiting
-environmental factor in overwintering monarch conservation, may
-constrain habitat suitability far less than previously believed. This
-realization carries important implications for how we understand,
-manage, and restore overwintering sites.
+Our findings suggest that wind protection, long considered a limiting environmental factor in overwintering monarch conservation, may constrain habitat suitability far less than previously believed. This realization carries important implications for how we understand, manage, and restore overwintering sites.
 
 ### Expanded Habitat Availability and Population Limitations
 
-The absence of wind disruption despite frequent threshold exceedances
-indicates that suitable habitat within existing groves may be more
-extensive than currently recognized. Areas previously dismissed due to
-wind exposure might support clusters if they provide appropriate thermal
-and light conditions. With western monarch populations at historically
-low levels, this raises an important question: are we observing limited
-suitable habitat, or limited butterflies to occupy potentially suitable
-space? At historical abundances, monarchs may have utilized far more
-locations within groves than currently expressed. The small clusters we
-documented may represent only a fraction of available habitat, with
-suitable but unoccupied areas going unrecognized simply because too few
-butterflies exist to reveal these possibilities.
+The absence of wind disruption despite frequent threshold exceedances indicates that suitable habitat within existing groves may be more extensive than currently recognized. Areas previously dismissed due to wind exposure might support clusters if they provide appropriate thermal and light conditions. With western monarch populations at historically low levels, this raises an important question: are we observing limited suitable habitat, or limited butterflies to occupy potentially suitable space? At historical abundances, monarchs may have utilized far more locations within groves than currently expressed. The small clusters we documented may represent only a fraction of available habitat, with suitable but unoccupied areas going unrecognized simply because too few butterflies exist to reveal these possibilities.
 
 ### Simplified Management Requirements
 
-Previous management frameworks required protecting extensive buffer
-zones around clustering sites. For example, Althouse & Meade, Inc. and
-Creekside Science (2023) recommended maintaining trees up to six tree
-heights from clustering locations to ensure adequate wind protection.
-For mature eucalyptus reaching 40 meters, this translates to protecting
-all trees within approximately 240 meters, creating substantial
-complexity in coastal California where overwintering sites often involve
-diverse stakeholders and contentious land use decisions.
+Previous management frameworks required protecting extensive buffer zones around clustering sites. For example, Althouse & Meade, Inc. and Creekside Science (2023) recommended maintaining trees up to six tree heights from clustering locations to ensure adequate wind protection. For mature eucalyptus reaching 40 meters, this translates to protecting all trees within approximately 240 meters, creating substantial complexity in coastal California where overwintering sites often involve diverse stakeholders and contentious land use decisions.
 
-If wind protection plays a less critical role than assumed, these
-extensive buffer requirements may no longer be necessary. Trees distant
-from core groves, previously considered essential for wind breaks, may
-contribute far less than previously thought. This simplification focuses
-conservation efforts more precisely on immediate grove structure rather
-than attempting to control wind patterns across vast surrounding areas.
+If wind protection plays a less critical role than assumed, these extensive buffer requirements may no longer be necessary. Trees distant from core groves, previously considered essential for wind breaks, may contribute far less than previously thought. This simplification focuses conservation efforts more precisely on immediate grove structure rather than attempting to control wind patterns across vast surrounding areas.
 
-However, a precautionary approach remains warranted. Where buffer trees
-exist as healthy, mature specimens, maintaining them represents prudent
-hedging against incomplete understanding. This temporal asymmetry, where
-removing trees or modifying canopy structure is always possible while
-accelerating large tree growth is not, argues for maintaining existing
-trees wherever possible. Previous recommendations to plant trees,
-maintain them for longevity, and develop succession plans remain
-entirely valid, even if the mechanistic understanding of why these
-practices work requires updating.
+However, a precautionary approach remains warranted. Where buffer trees exist as healthy, mature specimens, maintaining them represents prudent hedging against incomplete understanding. This temporal asymmetry, where removing trees or modifying canopy structure is always possible while accelerating large tree growth is not, argues for maintaining existing trees wherever possible. Previous recommendations to plant trees, maintain them for longevity, and develop succession plans remain entirely valid, even if the mechanistic understanding of why these practices work requires updating.
 
 ### Proactive Habitat Creation Through Canopy Management
 
-If monarchs respond primarily to light and thermal patterns rather than
-strict wind thresholds, strategic canopy modification may create new
-overwintering habitat. The wind protection framework offered little
-beyond planting trees and waiting decades for maturation. Light-based
-management might enable shorter-timeframe interventions.
+If monarchs respond primarily to light and thermal patterns rather than strict wind thresholds, strategic canopy modification may create new overwintering habitat. The wind protection framework offered little beyond planting trees and waiting decades for maturation. Light-based management might enable shorter-timeframe interventions.
 
-Real-world examples support this possibility. At Monarch Lane in Los
-Osos, strategic canopy opening resulted in monarchs appearing and
-persisting (K. L. H. Leong 1999; Xerces Society 2025a). At Andrew Molera
-State Park in Big Sur, clearing an overgrown grove increased butterfly
-counts from zero to over one thousand (E. Pelton, personal
-communication). Conversely, tree planting at Pacific Grove required
-approximately 15 years of canopy maturation before monarchs returned (S.
-Weiss, personal communication). These patterns suggest that appropriate
-canopy structure, including carefully designed openings creating dappled
-light, can attract butterflies far more quickly than waiting for tree
-growth alone.
+Real-world examples support this possibility. At Monarch Lane in Los Osos, strategic canopy opening resulted in monarchs appearing and persisting (K. L. H. Leong 1999; Xerces Society 2025a). At Andrew Molera State Park in Big Sur, clearing an overgrown grove increased butterfly counts from zero to over one thousand (E. Pelton, personal communication). Conversely, tree planting at Pacific Grove required approximately 15 years of canopy maturation before monarchs returned (S. Weiss, personal communication). These patterns suggest that appropriate canopy structure, including carefully designed openings creating dappled light, can attract butterflies far more quickly than waiting for tree growth alone.
 
-Unidentified eucalyptus stands or overly dense groves might thus be
-converted to functional habitat through selective thinning. However,
-additional research is needed before implementing large-scale canopy
-modifications, particularly at established overwintering sites. Rather
-than passive waiting, managers might proactively create suitable
-conditions by strategically opening existing canopies at appropriate
-locations, representing a significant departure from previous approaches
-focused almost entirely on wind protection and tree growth.
+Unidentified eucalyptus stands or overly dense groves might thus be converted to functional habitat through selective thinning. However, additional research is needed before implementing large-scale canopy modifications, particularly at established overwintering sites. Rather than passive waiting, managers might proactively create suitable conditions by strategically opening existing canopies at appropriate locations, representing a significant departure from previous approaches focused almost entirely on wind protection and tree growth.
 
 ### Long-term Optimism Despite Current Uncertainty
 
-While this study reduces certainty regarding some aspects of
-overwintering ecology, the long-term trajectory points toward management
-practices that may be simpler to implement, [are]{.insertion
-author="Francis X. Villablanca" date="2025-10-12T20:42:00Z"} grounded in
-empirical evidence, and potentially [are]{.insertion
-author="Francis X. Villablanca" date="2025-10-12T20:42:00Z"}
-[outright]{.insertion author="Francis X. Villablanca"
-date="2025-10-12T20:47:00Z"} [effective instead of simply]{.insertion
-author="Francis X. Villablanca" date="2025-10-12T20:42:00Z"} more
-effective. The strict 2 m/s threshold created an overly constraining
-understanding of habitat requirements, suggesting suitable sites were
-overly limited. Our results indicate monarchs may be more resilient to
-environmental variation than previously believed, potentially revealing
-more opportunities for habitat creation and maintenance.
+While this study reduces certainty regarding some aspects of overwintering ecology, the long-term trajectory points toward management practices that may be simpler to implement, [are]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:42:00Z"} grounded in empirical evidence, and potentially [are]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:42:00Z"} [outright]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:47:00Z"} [effective instead of simply]{.insertion author="Francis X. Villablanca" date="2025-10-12T20:42:00Z"} more effective. The strict 2 m/s threshold created an overly constraining understanding of habitat requirements, suggesting suitable sites were overly limited. Our results indicate monarchs may be more resilient to environmental variation than previously believed, potentially revealing more opportunities for habitat creation and maintenance.
 
-The fundamental conservation tools remain unchanged: maintaining
-existing groves, planting and managing trees for longevity, and
-developing succession plans for aging forests. But we may now recognize
-more locations where habitat might be suitable and fewer absolute
-constraints on where sites can be maintained or created. As Saniee and
-Villablanca (2022) suggest, managing canopy structure to create
-appropriate light patterns and temperature gradients may prove more
-important than achieving specific wind speed thresholds. This
-perspective aligns with our finding that interactions between
-environmental factors, rather than single variables in isolation, shape
-clustering behavior.
+The fundamental conservation tools remain unchanged: maintaining existing groves, planting and managing trees for longevity, and developing succession plans for aging forests. But we may now recognize more locations where habitat might be suitable and fewer absolute constraints on where sites can be maintained or created. As Saniee and Villablanca (2022) suggest, managing canopy structure to create appropriate light patterns and temperature gradients may prove more important than achieving specific wind speed thresholds. This perspective aligns with our finding that interactions between environmental factors, rather than single variables in isolation, shape clustering behavior.
 
-Conservation efforts should continue protecting forest structure at
-overwintering sites while research clarifies the specific environmental
-factors, particularly light patterns and thermal regimes, that monarchs
-select for when choosing roost locations.
+Conservation efforts should continue protecting forest structure at overwintering sites while research clarifies the specific environmental factors, particularly light patterns and thermal regimes, that monarchs select for when choosing roost locations.
 
 ## Future Research Directions
 
-Our findings open several important avenues for future research. While
-the wind-light interaction we observed suggests complex relationships
-between environmental factors and clustering behavior, the strong effect
-of light exposure itself points toward canopy structure as a potentially
-primary driver of habitat selection. This conclusion finds support in
-Saniee and Villablanca (2022), who found that while temperature and
-humidity failed to support the microclimate hypothesis at aggregation
-locations, solar radiation was one of the few environmental factors that
-distinguished occupied sites from other grove locations. Similarly,
-Stuart B. Weiss et al. (1991) found that successful overwintering sites
-maintain consistent canopy openness around 20%, while unsuccessful sites
-show greater variability. Combined with our findings, this suggests that
-predictable light patterns created by canopy structure may provide a
-stable, reliable environmental cue that monarchs can consistently locate
-and respond to year after year. Unlike weather conditions that fluctuate
-unpredictably, the spatial pattern of light created by canopy
-architecture remains relatively constant across seasons, offering a
-dependable signal for site selection. Monarchs possess sophisticated
-visual systems that enable sun compass navigation during migration
-(Nguyen et al. 2021; Mouritsen and Frost 2002), capabilities that would
-allow them to detect and respond to consistent light patterns within
-groves. Future research should prioritize characterizing canopy
-structure and the resulting light regimes at both occupied and
-unoccupied sites to determine whether specific light patterns predict
-roost site selection and fidelity.
+Our findings open several important avenues for future research. While the wind-light interaction we observed suggests complex relationships between environmental factors and clustering behavior, the strong effect of light exposure itself points toward canopy structure as a potentially primary driver of habitat selection. This conclusion finds support in Saniee and Villablanca (2022), who found that while temperature and humidity failed to support the microclimate hypothesis at aggregation locations, solar radiation was one of the few environmental factors that distinguished occupied sites from other grove locations. Similarly, Stuart B. Weiss et al. (1991) found that successful overwintering sites maintain consistent canopy openness around 20%, while unsuccessful sites show greater variability. Combined with our findings, this suggests that predictable light patterns created by canopy structure may provide a stable, reliable environmental cue that monarchs can consistently locate and respond to year after year. Unlike weather conditions that fluctuate unpredictably, the spatial pattern of light created by canopy architecture remains relatively constant across seasons, offering a dependable signal for site selection. Monarchs possess sophisticated visual systems that enable sun compass navigation during migration (Nguyen et al. 2021; Mouritsen and Frost 2002), capabilities that would allow them to detect and respond to consistent light patterns within groves. Future research should prioritize characterizing canopy structure and the resulting light regimes at both occupied and unoccupied sites to determine whether specific light patterns predict roost site selection and fidelity.
 
-Beyond environmental factors, social dynamics may explain additional
-variation in our models. The strong effect of previous butterfly count
-on subsequent changes suggests that monarchs do not distribute randomly
-within groves but rather exhibit overdispersed clustering patterns where
-the presence of butterflies attracts others. This positive feedback
-mechanism, where initial settlement increases the probability of others
-joining, could create self-reinforcing aggregation patterns independent
-of immediate environmental conditions (Berdahl et al. 2013).
+Beyond environmental factors, social dynamics may explain additional variation in our models. The strong effect of previous butterfly count on subsequent changes suggests that monarchs do not distribute randomly within groves but rather exhibit overdispersed clustering patterns where the presence of butterflies attracts others. This positive feedback mechanism, where initial settlement increases the probability of others joining, could create self-reinforcing aggregation patterns independent of immediate environmental conditions (Berdahl et al. 2013).
 
-Finally, testing these patterns across the broader overwintering range
-would establish their generality. Sites with different tree species,
-latitudes, and especially population densities could reveal whether wind
-responses vary with clustering configuration or if our findings
-represent fundamental aspects of monarch overwintering behavior.
+Finally, testing these patterns across the broader overwintering range would establish their generality. Sites with different tree species, latitudes, and especially population densities could reveal whether wind responses vary with clustering configuration or if our findings represent fundamental aspects of monarch overwintering behavior.
 
 ## Conclusions
 
-Our direct test of the wind disruption hypothesis found no evidence that
-wind speeds above 2 m/s force monarchs to abandon their clusters. Every
-observation in our day-to-day analysis exceeded this threshold, yet
-clusters persisted. Bivariate analyses showed no relationship between
-wind and cluster changes. Model selection consistently identified other
-factors as more important. These multiple lines of evidence converge on
-a clear conclusion. Wind alone does not disrupt overwintering monarch
-butterflies as has been assumed for over three decades.
+Our direct test of the wind disruption hypothesis found no evidence that wind speeds above 2 m/s force monarchs to abandon their clusters. Every observation in our day-to-day analysis exceeded this threshold, yet clusters persisted. Bivariate analyses showed no relationship between wind and cluster changes. Model selection consistently identified other factors as more important. These multiple lines of evidence converge on a clear conclusion. Wind alone does not disrupt overwintering monarch butterflies as has been assumed for over three decades.
 
-Instead, our results suggest that thermal factors may play a more
-important role in clustering dynamics than previously recognized.
-Monarchs responded strongly to direct sunlight and diurnal patterns,
-both factors that could influence body temperature. The unexpected
-wind-light interaction, where moderate wind combined with sun exposure
-sometimes increased cluster sizes, suggests that environmental
-conditions interact in complex ways that simple threshold-based
-management approaches cannot capture.
+Instead, our results suggest that thermal factors may play a more important role in clustering dynamics than previously recognized. Monarchs responded strongly to direct sunlight and diurnal patterns, both factors that could influence body temperature. The unexpected wind-light interaction, where moderate wind combined with sun exposure sometimes increased cluster sizes, suggests that environmental conditions interact in complex ways that simple threshold-based management approaches cannot capture.
 
-These findings arrive at a critical moment for monarch conservation.
-With western populations at historic lows, every assumption about
-habitat requirements deserves scrutiny. While questions remain about the
-precise mechanisms, our findings demonstrate that current management
-guidelines based on wind speed thresholds are not supported by empirical
-evidence. Moving forward, conservation efforts should prioritize
-maintaining existing overwintering groves while additional research
-clarifies what environmental factors monarchs select for when choosing
-roost sites. As we face the challenge of preserving overwintering
-habitat for a declining population, evidence-based understanding of
-monarch ecology becomes not just scientifically important, but essential
-for preserving the remarkable phenomenon of monarch migration in western
-North America.
-
+These findings arrive at a critical moment for monarch conservation. With western populations at historic lows, every assumption about habitat requirements deserves scrutiny. While questions remain about the precise mechanisms, our findings demonstrate that current management guidelines based on wind speed thresholds are not supported by empirical evidence. Moving forward, conservation efforts should prioritize maintaining existing overwintering groves while additional research clarifies what environmental factors monarchs select for when choosing roost sites. As we face the challenge of preserving overwintering habitat for a declining population, evidence-based understanding of monarch ecology becomes not just scientifically important, but essential for preserving the remarkable phenomenon of monarch migration in western North America.
