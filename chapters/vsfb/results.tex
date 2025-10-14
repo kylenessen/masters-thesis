@@ -14,7 +14,7 @@ The comprehensive temporal coverage, with observations at 30-minute intervals ca
 
 \subsection{Linear Regression Between Wind and Cluster Dynamics}
 
-Linear regression analyses examined whether wind speed alone could explain changes in monarch cluster size, revealing no meaningful relationship between maximum wind speed and cluster size changes at either temporal scale (Figure~\ref{fig:wind_bivariate_30min} and~\ref{fig:wind_bivariate_sunset}).
+Linear regression analyses examined whether wind speed alone could explain changes in monarch cluster size, revealing no meaningful relationship between maximum wind speed and cluster size changes at either temporal scale (Figure~\ref{fig:wind_linear_regression_30min} and~\ref{fig:wind_linear_regression_sunset}).
 
 At 30-minute intervals, linear regression confirmed no statistically significant relationship between maximum wind speed and butterfly abundance change ($\beta$ = 1.19 butterflies per m/s, SE = 0.66, p = 0.073, n = 1,894). The correlation was negligible (r = 0.041, $R^2$ = 0.002), with wind speed explaining only 0.17\% of the variance in cluster size changes. Data points scattered uniformly across all wind speeds from calm conditions to 12.4 m/s. The proposed 2 m/s behavioral threshold showed no apparent demarcation in butterfly responses, with similar variance in cluster size changes both above and below this threshold.
 
@@ -26,14 +26,14 @@ These null linear regression relationships indicated that wind speed alone canno
     \centering
     \includegraphics[width=0.8\textwidth]{supplemental/results/30_min/figures/wind_vs_change_bivariate_untransformed.png}
     \caption{Linear regression of maximum wind speed and butterfly abundance change at 30-minute intervals. Each point represents a paired observation (n = 1,894). Linear regression showed no significant relationship ($\beta$ = 1.19, SE = 0.66, p = 0.073, r = 0.041, $R^2$ = 0.002). The red dashed line indicates the proposed 2 m/s behavioral threshold. The blue regression line is shown for reference despite non-significance.}
-    \label{fig:wind_bivariate_30min}
+    \label{fig:wind_linear_regression_30min}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{supplemental/results/sunset/figures/wind_vs_change_bivariate_untransformed.png}
     \caption{Linear regression of maximum wind speed and day-to-day cluster size changes from maximum count to next sunset. Each point represents consecutive day pairs at the same deployment (n = 101). Linear regression showed no significant relationship ($\beta$ = 5.34, SE = 4.63, p = 0.252, r = 0.115, $R^2$ = 0.013). The red dashed line indicates the 2 m/s threshold. All observations experienced winds exceeding this threshold. The blue regression line is shown for reference despite non-significance.}
-    \label{fig:wind_bivariate_sunset}
+    \label{fig:wind_linear_regression_sunset}
 \end{figure}
 
 \subsection{Wind Disruption Analysis}
@@ -68,7 +68,7 @@ In the 30-minute wind disruption analysis, the tensor interaction between wind s
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{supplemental/results/30_min/figures/interaction_wind_x_sun_binned.png}
-    \caption{Figure 1.3 Tensor smooth interaction between maximum wind speed (m/s) and butterflies in direct sun on cluster size changes in the 30-minute wind disruption analysis. Color gradient indicates partial effect magnitude (red = positive, blue = negative). Black points show observed data distribution. Red dashed line marks the 2 m/s behavioral threshold. Gray regions indicate areas beyond reliable interpolation range.}
+    \caption{Tensor smooth interaction between maximum wind speed (m/s) and butterflies in direct sun on cluster size changes in the 30-minute wind disruption analysis. Color gradient indicates partial effect magnitude (red = positive, blue = negative). Black points show observed data distribution. Red dashed line marks the 2 m/s behavioral threshold. Gray regions indicate areas beyond reliable interpolation range.}
     \label{fig:interaction_wind_sun}
 \end{figure}
 

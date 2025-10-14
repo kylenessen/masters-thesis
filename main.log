@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.3)  14 OCT 2025 12:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.3)  14 OCT 2025 13:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1459,7 +1459,7 @@ Ms) im-ple-mented through
 
 [19] [20] [21] [22]) (./chapters/vsfb/results.tex [23] [24] [25]
 <supplemental/results/30_min/figures/wind_vs_change_bivariate_untransformed.png
-, id=689, 505.89pt x 433.62pt>
+, id=688, 505.89pt x 433.62pt>
 File: supplemental/results/30_min/figures/wind_vs_change_bivariate_untransforme
 d.png Graphic file (type png)
 <use supplemental/results/30_min/figures/wind_vs_change_bivariate_untransformed
@@ -1468,7 +1468,7 @@ Package pdftex.def Info: supplemental/results/30_min/figures/wind_vs_change_biv
 ariate_untransformed.png  used on input line 27.
 (pdftex.def)             Requested size: 346.89732pt x 297.3455pt.
 <supplemental/results/sunset/figures/wind_vs_change_bivariate_untransformed.png
-, id=690, 505.89pt x 433.62pt>
+, id=689, 505.89pt x 433.62pt>
 File: supplemental/results/sunset/figures/wind_vs_change_bivariate_untransforme
 d.png Graphic file (type png)
 <use supplemental/results/sunset/figures/wind_vs_change_bivariate_untransformed
@@ -1485,7 +1485,7 @@ Underfull \hbox (badness 1983) in paragraph at lines 16--16
  []
 
 ) [29] (./supplemental/results/30_min/tables/m50_model_summary.tex)
-<supplemental/results/30_min/figures/partial_effects_best_1x3.png, id=712, 1011
+<supplemental/results/30_min/figures/partial_effects_best_1x3.png, id=711, 1011
 .78pt x 332.442pt>
 File: supplemental/results/30_min/figures/partial_effects_best_1x3.png Graphic 
 file (type png)
@@ -1494,7 +1494,7 @@ Package pdftex.def Info: supplemental/results/30_min/figures/partial_effects_be
 st_1x3.png  used on input line 61.
 (pdftex.def)             Requested size: 433.62001pt x 142.47551pt.
  [30]
-<supplemental/results/30_min/figures/interaction_wind_x_sun_binned.png, id=719,
+<supplemental/results/30_min/figures/interaction_wind_x_sun_binned.png, id=718,
  505.89pt x 433.62pt>
 File: supplemental/results/30_min/figures/interaction_wind_x_sun_binned.png Gra
 phic file (type png)
@@ -1504,7 +1504,7 @@ _sun_binned.png  used on input line 70.
 (pdftex.def)             Requested size: 346.89732pt x 297.3455pt.
 
 [31 <./supplemental/results/30_min/figures/partial_effects_best_1x3.png>]
-<supplemental/results/30_min/figures/diag_qq_and_residuals_1x2.png, id=725, 867
+<supplemental/results/30_min/figures/diag_qq_and_residuals_1x2.png, id=724, 867
 .24pt x 361.35pt>
 File: supplemental/results/30_min/figures/diag_qq_and_residuals_1x2.png Graphic
  file (type png)
@@ -1516,7 +1516,7 @@ als_1x2.png  used on input line 81.
 [32 <./supplemental/results/30_min/figures/interaction_wind_x_sun_binned.png>]
 (./supplemental/results/30_min/tables/gam_basis_check.tex) [33 <./supplemental/
 results/30_min/figures/diag_qq_and_residuals_1x2.png>]
-<supplemental/results/30_min/figures/diag_acf.png, id=736, 903.375pt x 602.25pt
+<supplemental/results/30_min/figures/diag_acf.png, id=735, 903.375pt x 602.25pt
 >
 File: supplemental/results/30_min/figures/diag_acf.png Graphic file (type png)
 <use supplemental/results/30_min/figures/diag_acf.png>
@@ -1526,7 +1526,7 @@ Package pdftex.def Info: supplemental/results/30_min/figures/diag_acf.png  used
  [34 <./supplemental/results/30_min/figures/diag_acf.png>]
 (./supplemental/results/30_min_threshold/tables/top5_models.tex) [35]
 <supplemental/results/30_min_threshold/figures/interaction_wind_x_sun_binned.pn
-g, id=750, 505.89pt x 433.62pt>
+g, id=749, 505.89pt x 433.62pt>
 File: supplemental/results/30_min_threshold/figures/interaction_wind_x_sun_binn
 ed.png Graphic file (type png)
 <use supplemental/results/30_min_threshold/figures/interaction_wind_x_sun_binne
@@ -1539,7 +1539,7 @@ ion_wind_x_sun_binned.png  used on input line 115.
 [37 <./supplemental/results/30_min_threshold/figures/interaction_wind_x_sun_bin
 ned.png>]) [38] (./supplemental/results/sunset/tables/top5_models.tex [39])
 [40] (./supplemental/results/sunset/tables/m32_model_summary.tex)
-<supplemental/results/sunset/figures/partial_effects_best_1x2.png, id=775, 722.
+<supplemental/results/sunset/figures/partial_effects_best_1x2.png, id=774, 722.
 7pt x 332.442pt>
 File: supplemental/results/sunset/figures/partial_effects_best_1x2.png Graphic 
 file (type png)
@@ -1548,7 +1548,7 @@ Package pdftex.def Info: supplemental/results/sunset/figures/partial_effects_be
 st_1x2.png  used on input line 152.
 (pdftex.def)             Requested size: 433.62001pt x 199.46672pt.
  [41]
-<supplemental/results/sunset/figures/interaction_wind_x_sun_binned.png, id=782,
+<supplemental/results/sunset/figures/interaction_wind_x_sun_binned.png, id=781,
  505.89pt x 433.62pt>
 File: supplemental/results/sunset/figures/interaction_wind_x_sun_binned.png Gra
 phic file (type png)
@@ -1556,7 +1556,7 @@ phic file (type png)
 Package pdftex.def Info: supplemental/results/sunset/figures/interaction_wind_x
 _sun_binned.png  used on input line 161.
 (pdftex.def)             Requested size: 346.89732pt x 297.3455pt.
-<supplemental/results/sunset/figures/diag_qq_and_residuals_1x2.png, id=784, 867
+<supplemental/results/sunset/figures/diag_qq_and_residuals_1x2.png, id=783, 867
 .24pt x 361.35pt>
 File: supplemental/results/sunset/figures/diag_qq_and_residuals_1x2.png Graphic
  file (type png)
@@ -1566,7 +1566,7 @@ als_1x2.png  used on input line 172.
 (pdftex.def)             Requested size: 390.25536pt x 162.60599pt.
  [42 <./supplemental/results/sunset/figures/partial_effects_best_1x2.png>] [43 
 <./supplemental/results/sunset/figures/interaction_wind_x_sun_binned.png>]
-<supplemental/results/sunset/figures/diag_acf.png, id=794, 903.375pt x 602.25pt
+<supplemental/results/sunset/figures/diag_acf.png, id=793, 903.375pt x 602.25pt
 >
 File: supplemental/results/sunset/figures/diag_acf.png Graphic file (type png)
 <use supplemental/results/sunset/figures/diag_acf.png>
@@ -1581,7 +1581,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--15
  []
 
 ) [45 <./supplemental/results/sunset/figures/diag_acf.png>]
-<supplemental/results/24hr/figures/interaction_wind_x_sun_binned.png, id=806, 5
+<supplemental/results/24hr/figures/interaction_wind_x_sun_binned.png, id=805, 5
 05.89pt x 433.62pt>
 File: supplemental/results/24hr/figures/interaction_wind_x_sun_binned.png Graph
 ic file (type png)
@@ -1647,7 +1647,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  38170 strings out of 476025
- 746181 string characters out of 5790018
+ 746213 string characters out of 5790018
  1871388 words of memory out of 5000000
  57780 multiletter control sequences out of 15000+600000
  521419 words of font info for 64 fonts, out of 8000000 for 9000
@@ -1664,10 +1664,10 @@ ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/loc
 al/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local
 /texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (83 pages, 2334468 bytes).
+Output written on main.pdf (83 pages, 2334188 bytes).
 PDF statistics:
- 1127 PDF objects out of 1200 (max. 8388607)
- 996 compressed objects within 10 object streams
+ 1126 PDF objects out of 1200 (max. 8388607)
+ 995 compressed objects within 10 object streams
  214 named destinations out of 1000 (max. 500000)
  441 words of extra memory for PDF output out of 10000 (max. 10000000)
 
