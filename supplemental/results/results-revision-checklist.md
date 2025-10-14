@@ -161,7 +161,7 @@ These address confusion about variables, terms, and concepts.
 ### Task 2.1: Clarify "Time Since Sunrise" Variable
 
 **Priority**: HIGH
-**Status**: [ ]
+**Status**: [x]
 
 **Issue**: Multiple reviewers confused about what this variable represents. Is it time of day? Duration of observations? Something else?
 
@@ -486,7 +486,7 @@ These address how results are interpreted and contextualized.
 ### Task 4.3: Clarify "Time Since Sunrise" Biological Meaning
 
 **Priority**: MEDIUM
-**Status**: [ ]
+**Status**: [x]
 
 **Issue**: After defining what the variable is (Task 2.1), need to explain why it matters biologically.
 
