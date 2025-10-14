@@ -191,7 +191,7 @@ These address confusion about variables, terms, and concepts.
 ### Task 2.2: Explain "Butterflies in Direct Sun" Calculation
 
 **Priority**: HIGH
-**Status**: [ ]
+**Status**: [x]
 
 **Issue**: Jenn confused about how the average is only 17 individuals across 600+ observations of direct sunlight.
 
