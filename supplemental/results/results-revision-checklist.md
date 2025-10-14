@@ -391,7 +391,7 @@ These address technical statistical issues and rigor.
 ### Task 3.3: Add Citations for Statistical Claims
 
 **Priority**: MEDIUM
-**Status**: [ ]
+**Status**: [x]
 
 **Issue**: Claims about what's "acceptable" for residuals need supporting references.
 
