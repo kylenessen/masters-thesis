@@ -25,14 +25,14 @@ These null linear regression relationships indicated that wind speed alone canno
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{supplemental/results/30_min/figures/wind_vs_change_bivariate_untransformed.png}
-    \caption{Linear regression of maximum wind speed and butterfly abundance change at 30-minute intervals. Each point represents a paired observation (n = 1,894). Linear regression showed no significant relationship ($\beta$ = 1.19, SE = 0.66, p = 0.073, r = 0.041, $R^2$ = 0.002). The red dashed line indicates the proposed 2 m/s behavioral threshold. The blue regression line is shown for reference despite non-significance.}
+    \caption[Wind speed vs. abundance change (30-minute)]{Linear regression of maximum wind speed and butterfly abundance change at 30-minute intervals. Each point represents a paired observation (n = 1,894). Linear regression showed no significant relationship ($\beta$ = 1.19, SE = 0.66, p = 0.073, r = 0.041, $R^2$ = 0.002). The red dashed line indicates the proposed 2 m/s behavioral threshold. The blue regression line is shown for reference despite non-significance.}
     \label{fig:wind_linear_regression_30min}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{supplemental/results/sunset/figures/wind_vs_change_bivariate_untransformed.png}
-    \caption{Linear regression of maximum wind speed and day-to-day cluster size changes from maximum count to next sunset. Each point represents consecutive day pairs at the same deployment (n = 101). Linear regression showed no significant relationship ($\beta$ = 5.34, SE = 4.63, p = 0.252, r = 0.115, $R^2$ = 0.013). The red dashed line indicates the 2 m/s threshold. All observations experienced winds exceeding this threshold. The blue regression line is shown for reference despite non-significance.}
+    \caption[Wind speed vs. cluster size changes (day-to-day)]{Linear regression of maximum wind speed and day-to-day cluster size changes from maximum count to next sunset. Each point represents consecutive day pairs at the same deployment (n = 101). Linear regression showed no significant relationship ($\beta$ = 5.34, SE = 4.63, p = 0.252, r = 0.115, $R^2$ = 0.013). The red dashed line indicates the 2 m/s threshold. All observations experienced winds exceeding this threshold. The blue regression line is shown for reference despite non-significance.}
     \label{fig:wind_linear_regression_sunset}
 \end{figure}
 
@@ -59,7 +59,7 @@ Partial effects for the smooth terms, which represent the isolated influence of 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{supplemental/results/30_min/figures/partial_effects_best_1x3.png}
-    \caption{Partial effects of environmental predictors on monarch butterfly abundance changes from the best-fit GAMM model (M50) in the 30-minute wind disruption analysis. Partial effects show how each environmental factor influences butterfly abundance while holding all other variables constant at their average values, isolating each predictor's individual contribution to the response. Shaded regions represent 95\% confidence intervals.}
+    \caption[Partial effects of environmental predictors (M50)]{Partial effects of environmental predictors on monarch butterfly abundance changes from the best-fit GAMM model (M50) in the 30-minute wind disruption analysis. Partial effects show how each environmental factor influences butterfly abundance while holding all other variables constant at their average values, isolating each predictor's individual contribution to the response. Shaded regions represent 95\% confidence intervals.}
     \label{fig:partial_effects_30min}
 \end{figure}
 
@@ -68,7 +68,7 @@ In the 30-minute wind disruption analysis, the tensor interaction between wind s
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{supplemental/results/30_min/figures/interaction_wind_x_sun_binned.png}
-    \caption{Tensor smooth interaction between maximum wind speed (m/s) and butterflies in direct sun on cluster size changes in the 30-minute wind disruption analysis. Color gradient indicates partial effect magnitude (red = positive, blue = negative). Black points show observed data distribution. Red dashed line marks the 2 m/s behavioral threshold. Gray regions indicate areas beyond reliable interpolation range.}
+    \caption[Wind × sunlight interaction (30-minute analysis)]{Tensor smooth interaction between maximum wind speed (m/s) and butterflies in direct sun on cluster size changes in the 30-minute wind disruption analysis. Color gradient indicates partial effect magnitude (red = positive, blue = negative). Black points show observed data distribution. Red dashed line marks the 2 m/s behavioral threshold. Gray regions indicate areas beyond reliable interpolation range.}
     \label{fig:interaction_wind_sun}
 \end{figure}
 
@@ -79,7 +79,7 @@ Model diagnostic plots confirmed the adequacy of the GAMM specification (Figure~
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{supplemental/results/30_min/figures/diag_qq_and_residuals_1x2.png}
-    \caption{Diagnostic plots for the best-fit GAMM model (M50). Left panel shows quantile-quantile plot comparing model residuals to theoretical normal distribution. Right panel displays residuals versus fitted values to assess homoscedasticity and model adequacy.}
+    \caption[Diagnostic plots (M50)]{Diagnostic plots for the best-fit GAMM model (M50). Left panel shows quantile-quantile plot comparing model residuals to theoretical normal distribution. Right panel displays residuals versus fitted values to assess homoscedasticity and model adequacy.}
     \label{fig:model_diagnostics_30min}
 \end{figure}
 
@@ -92,7 +92,7 @@ Temporal autocorrelation analysis revealed minimal residual correlation structur
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{supplemental/results/30_min/figures/diag_acf.png}
-    \caption{Autocorrelation function of model residuals showing minimal temporal correlation after accounting for AR(1) structure within deployment days. Blue dashed lines indicate 95\% confidence bounds for white noise.}
+    \caption[Autocorrelation function (M50)]{Autocorrelation function of model residuals showing minimal temporal correlation after accounting for AR(1) structure within deployment days. Blue dashed lines indicate 95\% confidence bounds for white noise.}
     \label{fig:acf_diagnostics}
 \end{figure} 
 
@@ -113,7 +113,7 @@ The same caveats apply regarding sparse data at the extremes and the limits of i
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{supplemental/results/30_min_threshold/figures/interaction_wind_x_sun_binned.png}
-    \caption{Tensor smooth interaction between minutes above 2 m/s wind threshold and butterflies in direct sun on cluster size changes. Color gradient indicates partial effect magnitude (red = positive, blue = negative). Black points show observed data distribution. Gray regions indicate areas beyond reliable interpolation range.}
+    \caption[Wind threshold × sunlight interaction]{Tensor smooth interaction between minutes above 2 m/s wind threshold and butterflies in direct sun on cluster size changes. Color gradient indicates partial effect magnitude (red = positive, blue = negative). Black points show observed data distribution. Gray regions indicate areas beyond reliable interpolation range.}
     \label{fig:threshold_interaction}
 \end{figure} 
 
@@ -150,7 +150,7 @@ The previous day's maximum count showed a significant negative linear relationsh
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{supplemental/results/sunset/figures/partial_effects_best_1x2.png}
-    \caption{Partial effects of control variables on day-to-day monarch butterfly cluster size changes from the best-fit GAMM model (M32). Partial effects isolate how each variable influences cluster size changes while holding other factors constant at their average values. Left panel shows the strong negative effect of previous day maximum count. Right panel shows window duration had no significant effect on cluster size changes. Shaded regions represent 95\% confidence intervals.}
+    \caption[Partial effects of control variables (M32)]{Partial effects of control variables on day-to-day monarch butterfly cluster size changes from the best-fit GAMM model (M32). Partial effects isolate how each variable influences cluster size changes while holding other factors constant at their average values. Left panel shows the strong negative effect of previous day maximum count. Right panel shows window duration had no significant effect on cluster size changes. Shaded regions represent 95\% confidence intervals.}
     \label{fig:partial_effects_sunset}
 \end{figure}
 
@@ -159,7 +159,7 @@ In the day-to-day site fidelity analysis, the tensor smooth interaction between 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{supplemental/results/sunset/figures/interaction_wind_x_sun_binned.png}
-    \caption{Tensor smooth interaction between maximum wind gust (m/s) and cumulative butterflies in direct sun on day-to-day cluster size changes. Color gradient indicates partial effect magnitude on square-root transformed scale (red = positive, blue = negative). Black points show observed data distribution. Gray regions indicate areas beyond reliable interpolation range.}
+    \caption[Wind × sunlight interaction (day-to-day analysis)]{Tensor smooth interaction between maximum wind gust (m/s) and cumulative butterflies in direct sun on day-to-day cluster size changes. Color gradient indicates partial effect magnitude on square-root transformed scale (red = positive, blue = negative). Black points show observed data distribution. Gray regions indicate areas beyond reliable interpolation range.}
     \label{fig:interaction_wind_sun_sunset}
 \end{figure}
 
@@ -170,7 +170,7 @@ Model diagnostic plots confirmed the adequacy of the GAMM specification (Figure~
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{supplemental/results/sunset/figures/diag_qq_and_residuals_1x2.png}
-    \caption{Diagnostic plots for the best-fit GAMM model (M32). Left panel shows quantile-quantile plot comparing model residuals to theoretical normal distribution. Right panel displays residuals versus fitted values to assess homoscedasticity and model adequacy.}
+    \caption[Diagnostic plots (M32)]{Diagnostic plots for the best-fit GAMM model (M32). Left panel shows quantile-quantile plot comparing model residuals to theoretical normal distribution. Right panel displays residuals versus fitted values to assess homoscedasticity and model adequacy.}
     \label{fig:model_diagnostics_sunset}
 \end{figure}
 
@@ -181,7 +181,7 @@ Temporal autocorrelation analysis revealed minimal residual correlation structur
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{supplemental/results/sunset/figures/diag_acf.png}
-    \caption{Autocorrelation function of model residuals showing minimal temporal correlation after accounting for AR(1) structure within deployment days. Blue dashed lines indicate 95\% confidence bounds for white noise.}
+    \caption[Autocorrelation function (M32)]{Autocorrelation function of model residuals showing minimal temporal correlation after accounting for AR(1) structure within deployment days. Blue dashed lines indicate 95\% confidence bounds for white noise.}
     \label{fig:acf_diagnostics_sunset}
 \end{figure}
 
@@ -196,6 +196,6 @@ The 24-hour robustness analysis revealed qualitatively similar interaction patte
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{supplemental/results/24hr/figures/interaction_wind_x_sun_binned.png}
-    \caption{Tensor smooth interaction between maximum wind gust (m/s) and cumulative butterflies in direct sun on 24-hour cluster size changes. Color gradient indicates partial effect magnitude on square-root transformed scale (red = positive, blue = negative). Black points show observed data distribution. Gray regions indicate areas beyond reliable interpolation range. The interaction pattern mirrors that observed in the sunset-specific analysis, supporting the robustness of identified environmental relationships.}
+    \caption[Wind × sunlight interaction (24-hour robustness)]{Tensor smooth interaction between maximum wind gust (m/s) and cumulative butterflies in direct sun on 24-hour cluster size changes. Color gradient indicates partial effect magnitude on square-root transformed scale (red = positive, blue = negative). Black points show observed data distribution. Gray regions indicate areas beyond reliable interpolation range. The interaction pattern mirrors that observed in the sunset-specific analysis, supporting the robustness of identified environmental relationships.}
     \label{fig:interaction_wind_sun_24hr}
 \end{figure}

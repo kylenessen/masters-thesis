@@ -1903,8 +1903,8 @@
         {{un=1,uniquepart=given,hash=53ce0eca0e41fcb85d528bfd561d6e11}{%
            family={Leong},
            familyi={L\bibinitperiod},
-           given={Kingston.\bibnamedelimi L.\bibnamedelimi H.},
-           giveni={Kingston\bibinitperiod\bibinitdelim \bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={Kingston\bibnamedelimb L.\bibnamedelimi H.},
+           giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim H\bibinitperiod},
            givenun=1}}%
       }
       \strng{namehash}{53ce0eca0e41fcb85d528bfd561d6e11}
@@ -1913,6 +1913,7 @@
       \strng{authorbibnamehash}{53ce0eca0e41fcb85d528bfd561d6e11}
       \strng{authornamehash}{53ce0eca0e41fcb85d528bfd561d6e11}
       \strng{authorfullhash}{53ce0eca0e41fcb85d528bfd561d6e11}
+      \field{extraname}{2}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
@@ -1965,7 +1966,7 @@
       \strng{authorbibnamehash}{53ce0eca0e41fcb85d528bfd561d6e11}
       \strng{authornamehash}{53ce0eca0e41fcb85d528bfd561d6e11}
       \strng{authorfullhash}{53ce0eca0e41fcb85d528bfd561d6e11}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
@@ -5711,8 +5712,8 @@
         {{un=1,uniquepart=given,hash=53ce0eca0e41fcb85d528bfd561d6e11}{%
            family={Leong},
            familyi={L\bibinitperiod},
-           given={Kingston.\bibnamedelimi L.\bibnamedelimi H.},
-           giveni={Kingston\bibinitperiod\bibinitdelim \bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={Kingston\bibnamedelimb L.\bibnamedelimi H.},
+           giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim H\bibinitperiod},
            givenun=1}}%
       }
       \strng{namehash}{53ce0eca0e41fcb85d528bfd561d6e11}
@@ -5721,6 +5722,7 @@
       \strng{authorbibnamehash}{53ce0eca0e41fcb85d528bfd561d6e11}
       \strng{authornamehash}{53ce0eca0e41fcb85d528bfd561d6e11}
       \strng{authorfullhash}{53ce0eca0e41fcb85d528bfd561d6e11}
+      \field{extraname}{2}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
@@ -5773,7 +5775,7 @@
       \strng{authorbibnamehash}{53ce0eca0e41fcb85d528bfd561d6e11}
       \strng{authornamehash}{53ce0eca0e41fcb85d528bfd561d6e11}
       \strng{authorfullhash}{53ce0eca0e41fcb85d528bfd561d6e11}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
