@@ -124,7 +124,7 @@ To test whether cumulative weather exposure influenced day-to-day roost dynamics
 ### Task 1.4: Rename "Sensitivity Analysis" Sections
 
 **Priority**: HIGH
-**Status**: [ ]
+**Status**: [x]
 
 **Issue**: "Sensitivity analysis" has a specific statistical meaning (testing which variables contribute most to effects), which is not what you're doing. Francis suggests alternative names.
 
