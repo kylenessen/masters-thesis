@@ -1245,52 +1245,6 @@
       \endverb
       \keyw{conservation,migration,monarch butterfly,population ecology,population genetics}
     \endentry
-    \entry{freyCanMicrohabitatSelection1993}{article}{}
-      \name{author}{2}{}{%
-        {{un=1,uniquepart=given,hash=bcf60fb6b31fbcaffc7f4a1beac9a55c}{%
-           family={Frey},
-           familyi={F\bibinitperiod},
-           given={Dennis\bibnamedelima F.},
-           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod},
-           givenun=1}}%
-        {{un=1,uniquepart=given,hash=53ce0eca0e41fcb85d528bfd561d6e11}{%
-           family={Leong},
-           familyi={L\bibinitperiod},
-           given={Kingston\bibnamedelimb L.\bibnamedelimi H.},
-           giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim H\bibinitperiod},
-           givenun=1}}%
-      }
-      \strng{namehash}{ef6e5eb913d287bdae1f2e2e4e696f8b}
-      \strng{fullhash}{ef6e5eb913d287bdae1f2e2e4e696f8b}
-      \strng{bibnamehash}{ef6e5eb913d287bdae1f2e2e4e696f8b}
-      \strng{authorbibnamehash}{ef6e5eb913d287bdae1f2e2e4e696f8b}
-      \strng{authornamehash}{ef6e5eb913d287bdae1f2e2e4e696f8b}
-      \strng{authorfullhash}{ef6e5eb913d287bdae1f2e2e4e696f8b}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{MAG ID: 1989562478}
-      \field{day}{1}
-      \field{journaltitle}{Animal Behaviour}
-      \field{month}{5}
-      \field{number}{5}
-      \field{title}{Can Microhabitat Selection or Differences in 'catchability' Explain Male-Biased Sex Ratios in Overwintering Populations of Monarch Butterflies?}
-      \field{volume}{45}
-      \field{year}{1993}
-      \field{dateera}{ce}
-      \field{pages}{1025\bibrangedash 1027}
-      \range{pages}{3}
-      \verb{doi}
-      \verb 10.1006/anbe.1993.1120
-      \endverb
-      \verb{file}
-      \verb /Users/kylenessen/Zotero/storage/ZI4V79RD/Frey and Leong - 1993 - Can microhabitat selection or differences in 'catc.pdf
-      \endverb
-    \endentry
     \entry{goehringEffectsPhotoperiodTemperature2002}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=b6d7be7f1bf1630854b2d3781cdabcbb}{%
@@ -2036,12 +1990,12 @@
            given={Kingston\bibnamedelima L.H.},
            giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod},
            givenun=1}}%
-        {{un=1,uniquepart=given,hash=8a2e1e783377b39e3976e221ab07d22c}{%
+        {{un=0,uniquepart=base,hash=8a2e1e783377b39e3976e221ab07d22c}{%
            family={Frey},
            familyi={F\bibinitperiod},
            given={D.},
            giveni={D\bibinitperiod},
-           givenun=1}}%
+           givenun=0}}%
         {{un=0,uniquepart=base,hash=7e2704cec64135146668b18f7ee86ac8}{%
            family={Brenner},
            familyi={B\bibinitperiod},
@@ -2797,6 +2751,63 @@
       \verb https://www.sciencedirect.com/science/article/pii/S0960982218302537
       \endverb
     \endentry
+    \entry{riddellWindNicheThermal2025}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=524938160bb62cbfb769d8f63a6a39f3}{%
+           family={Riddell},
+           familyi={R\bibinitperiod},
+           given={E\bibnamedelima A},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b4dee76396bdd7dd9bd587149fcfd54e}{%
+           family={Porter},
+           familyi={P\bibinitperiod},
+           given={C\bibnamedelima K},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9b46edb90016e3e2a188f5b54ca9af54}
+      \strng{fullhash}{9b46edb90016e3e2a188f5b54ca9af54}
+      \strng{bibnamehash}{9b46edb90016e3e2a188f5b54ca9af54}
+      \strng{authorbibnamehash}{9b46edb90016e3e2a188f5b54ca9af54}
+      \strng{authornamehash}{9b46edb90016e3e2a188f5b54ca9af54}
+      \strng{authorfullhash}{9b46edb90016e3e2a188f5b54ca9af54}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Wind can significantly influence heat and water exchange between organisms and their environment, yet microclimatic variation in wind is often overlooked in models forecasting the effects of environmental change on organismal performance. Accounting for the effects of wind may become even more critical given the anticipated changes in wind speed across the planet as climates continue to warm. In this study, we first assessed how wind speed varies across the planet and how wind speed may change under climate warming at macroclimatic scales. We also used microclimatic data to assess how wind speed changes temporally throughout the day and year as well as the relationship between wind speed, temperature, and standard deviation in each environmental variable using data from weather stations in North America. Finally, we used a suite of biophysical simulations to understand how wind speed (and its interactions with other environmental variables and organismal traits) affects the temperatures and rates of water loss that plants and animals experience at a microclimatic scale. We found substantial latitudinal variation in wind speed and the change in wind speed under climate change, demonstrating that temperate regions are predicted to experience simultaneous warming and reductions in wind speed. From the microclimatic data, we also found that wind speed is positively associated with temperature and temperature variability, indicating that the effects of wind speed may become more challenging to predict under future warming scenarios. The biophysical simulations demonstrated that convective and evaporative cooling from wind interacts strongly with organismal traits (such as body size, solar absorptance, and conductance) and the heating effects of solar radiation to shape heat and water fluxes in terrestrial plants and animals. In many cases, the effect of wind (or its interaction with other variables) was comparable to the effects of air temperature or solar radiation. Understanding these effects will be important for predicting the ecological impacts of climate change and for explaining clinal variation in traits that have evolved across a range of thermal environments.}
+      \field{day}{6}
+      \field{issn}{1540-7063}
+      \field{journaltitle}{Integrative and Comparative Biology}
+      \field{month}{5}
+      \field{shortjournal}{Integr Comp Biol}
+      \field{shorttitle}{The {{Wind Niche}}}
+      \field{title}{The {{Wind Niche}}: {{The Thermal}} and {{Hydric Effects}} of {{Wind Speed}} on {{Terrestrial Organisms}}}
+      \field{urlday}{10}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{icaf025}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1093/icb/icaf025
+      \endverb
+      \verb{file}
+      \verb /Users/kylenessen/Zotero/storage/QLHK8I2D/Riddell and Porter - 2025 - The Wind Niche The Thermal and Hydric Effects of Wind Speed on Terrestrial Organisms.pdf;/Users/kylenessen/Zotero/storage/HZV7RFLW/icaf025.html
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/icb/icaf025
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/icb/icaf025
+      \endverb
+    \endentry
     \entry{sanieeHierarchyScaleInfluence2022}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=3886a5ae114afb8af512a5201dc8416c}{%
@@ -3020,10 +3031,10 @@
       \field{pages}{79\bibrangedash 83}
       \range{pages}{5}
       \verb{urlraw}
-      \verb https://books.google.com/books?id=H5nRqhCGA4UC
+      \verb https://books.google.com/books?hl=en&lr=&id=H5nRqhCGA4UC&oi=fnd&pg=PA79&dq=Solensky,+M.J.+2004.+%22Overview+of+monarch+migration.%22+Pp.+79%E2%80%9383+in+Oberhauser+K.S.,+Solensky+M.J.,+eds.+The+Monarch+Butterfly:+Biology+and+Conservation.+Ithaca,+NY:+Cornell+University+Press.+(Cited+for+overwintering+locations)+.&ots=VnM9RX0Zgf&sig=eF0U4gBCGf47G-d3TFVnGnmB4ZY
       \endverb
       \verb{url}
-      \verb https://books.google.com/books?id=H5nRqhCGA4UC
+      \verb https://books.google.com/books?hl=en&lr=&id=H5nRqhCGA4UC&oi=fnd&pg=PA79&dq=Solensky,+M.J.+2004.+%22Overview+of+monarch+migration.%22+Pp.+79%E2%80%9383+in+Oberhauser+K.S.,+Solensky+M.J.,+eds.+The+Monarch+Butterfly:+Biology+and+Conservation.+Ithaca,+NY:+Cornell+University+Press.+(Cited+for+overwintering+locations)+.&ots=VnM9RX0Zgf&sig=eF0U4gBCGf47G-d3TFVnGnmB4ZY
       \endverb
     \endentry
     \entry{themonarchpressCityAwarded392019}{online}{}
@@ -3551,6 +3562,34 @@
       \verb https://www.xerces.org/sites/default/files/2018-05/16-015_01_XercesSoc_State-of-Monarch-Overwintering-Sites-in-California_web.pdf
       \endverb
     \endentry
+    \entry{xercessocietyStepbyStepWesternMonarch2017}{report}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=415649fecfd6bfe25d970d1047d0acf4}{%
+           family={{Xerces Society}},
+           familyi={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{415649fecfd6bfe25d970d1047d0acf4}
+      \strng{fullhash}{415649fecfd6bfe25d970d1047d0acf4}
+      \strng{bibnamehash}{415649fecfd6bfe25d970d1047d0acf4}
+      \strng{authorbibnamehash}{415649fecfd6bfe25d970d1047d0acf4}
+      \strng{authornamehash}{415649fecfd6bfe25d970d1047d0acf4}
+      \strng{authorfullhash}{415649fecfd6bfe25d970d1047d0acf4}
+      \field{extraname}{2}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Step-by-{{Step Western Monarch Thanksgiving Count Monitoring Guide}}}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/kylenessen/Zotero/storage/PRMQDEEB/Step-by-Step-Update-10.20.17.pdf
+      \endverb
+    \endentry
     \entry{xercessocietyManagingMonarchsWest2018}{report}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=415649fecfd6bfe25d970d1047d0acf4}{%
@@ -3569,7 +3608,7 @@
       \strng{authorbibnamehash}{415649fecfd6bfe25d970d1047d0acf4}
       \strng{authornamehash}{415649fecfd6bfe25d970d1047d0acf4}
       \strng{authorfullhash}{415649fecfd6bfe25d970d1047d0acf4}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{X}
       \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
       \field{extradatescope}{labelyear}
@@ -3586,10 +3625,10 @@
       \verb /Users/kylenessen/Zotero/storage/398KHXX3/1A15-18-009_01-Monarch_BMPs_Final_Web.pdf
       \endverb
       \verb{urlraw}
-      \verb https://www.xerces.org
+      \verb www.xerces.org
       \endverb
       \verb{url}
-      \verb https://www.xerces.org
+      \verb www.xerces.org
       \endverb
     \endentry
     \entry{xercessocietyWesternMonarchThanksgiving2025}{dataset}{}
@@ -3604,7 +3643,7 @@
       \strng{authorbibnamehash}{415649fecfd6bfe25d970d1047d0acf4}
       \strng{authornamehash}{415649fecfd6bfe25d970d1047d0acf4}
       \strng{authorfullhash}{415649fecfd6bfe25d970d1047d0acf4}
-      \field{extraname}{3}
+      \field{extraname}{4}
       \field{sortinit}{X}
       \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
       \field{extradate}{1}
@@ -3618,10 +3657,10 @@
       \field{year}{2025}
       \field{dateera}{ce}
       \verb{urlraw}
-      \verb https://WesternMonarchCount.com
+      \verb WesternMonarchCount.com
       \endverb
       \verb{url}
-      \verb https://WesternMonarchCount.com
+      \verb WesternMonarchCount.com
       \endverb
     \endentry
     \entry{xercessocietyWesternMonarchButterfly2025}{online}{}
@@ -3636,7 +3675,7 @@
       \strng{authorbibnamehash}{415649fecfd6bfe25d970d1047d0acf4}
       \strng{authornamehash}{415649fecfd6bfe25d970d1047d0acf4}
       \strng{authorfullhash}{415649fecfd6bfe25d970d1047d0acf4}
-      \field{extraname}{4}
+      \field{extraname}{5}
       \field{sortinit}{X}
       \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
       \field{extradate}{2}
@@ -5015,52 +5054,6 @@
       \endverb
       \keyw{conservation,migration,monarch butterfly,population ecology,population genetics}
     \endentry
-    \entry{freyCanMicrohabitatSelection1993}{article}{}
-      \name{author}{2}{}{%
-        {{un=1,uniquepart=given,hash=bcf60fb6b31fbcaffc7f4a1beac9a55c}{%
-           family={Frey},
-           familyi={F\bibinitperiod},
-           given={Dennis\bibnamedelima F.},
-           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod},
-           givenun=1}}%
-        {{un=1,uniquepart=given,hash=53ce0eca0e41fcb85d528bfd561d6e11}{%
-           family={Leong},
-           familyi={L\bibinitperiod},
-           given={Kingston\bibnamedelimb L.\bibnamedelimi H.},
-           giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim H\bibinitperiod},
-           givenun=1}}%
-      }
-      \strng{namehash}{ef6e5eb913d287bdae1f2e2e4e696f8b}
-      \strng{fullhash}{ef6e5eb913d287bdae1f2e2e4e696f8b}
-      \strng{bibnamehash}{ef6e5eb913d287bdae1f2e2e4e696f8b}
-      \strng{authorbibnamehash}{ef6e5eb913d287bdae1f2e2e4e696f8b}
-      \strng{authornamehash}{ef6e5eb913d287bdae1f2e2e4e696f8b}
-      \strng{authorfullhash}{ef6e5eb913d287bdae1f2e2e4e696f8b}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{MAG ID: 1989562478}
-      \field{day}{1}
-      \field{journaltitle}{Animal Behaviour}
-      \field{month}{5}
-      \field{number}{5}
-      \field{title}{Can Microhabitat Selection or Differences in 'catchability' Explain Male-Biased Sex Ratios in Overwintering Populations of Monarch Butterflies?}
-      \field{volume}{45}
-      \field{year}{1993}
-      \field{dateera}{ce}
-      \field{pages}{1025\bibrangedash 1027}
-      \range{pages}{3}
-      \verb{doi}
-      \verb 10.1006/anbe.1993.1120
-      \endverb
-      \verb{file}
-      \verb /Users/kylenessen/Zotero/storage/ZI4V79RD/Frey and Leong - 1993 - Can microhabitat selection or differences in 'catc.pdf
-      \endverb
-    \endentry
     \entry{goehringEffectsPhotoperiodTemperature2002}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=b6d7be7f1bf1630854b2d3781cdabcbb}{%
@@ -5806,12 +5799,12 @@
            given={Kingston\bibnamedelima L.H.},
            giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod},
            givenun=1}}%
-        {{un=1,uniquepart=given,hash=8a2e1e783377b39e3976e221ab07d22c}{%
+        {{un=0,uniquepart=base,hash=8a2e1e783377b39e3976e221ab07d22c}{%
            family={Frey},
            familyi={F\bibinitperiod},
            given={D.},
            giveni={D\bibinitperiod},
-           givenun=1}}%
+           givenun=0}}%
         {{un=0,uniquepart=base,hash=7e2704cec64135146668b18f7ee86ac8}{%
            family={Brenner},
            familyi={B\bibinitperiod},
@@ -6567,6 +6560,63 @@
       \verb https://www.sciencedirect.com/science/article/pii/S0960982218302537
       \endverb
     \endentry
+    \entry{riddellWindNicheThermal2025}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=524938160bb62cbfb769d8f63a6a39f3}{%
+           family={Riddell},
+           familyi={R\bibinitperiod},
+           given={E\bibnamedelima A},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b4dee76396bdd7dd9bd587149fcfd54e}{%
+           family={Porter},
+           familyi={P\bibinitperiod},
+           given={C\bibnamedelima K},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9b46edb90016e3e2a188f5b54ca9af54}
+      \strng{fullhash}{9b46edb90016e3e2a188f5b54ca9af54}
+      \strng{bibnamehash}{9b46edb90016e3e2a188f5b54ca9af54}
+      \strng{authorbibnamehash}{9b46edb90016e3e2a188f5b54ca9af54}
+      \strng{authornamehash}{9b46edb90016e3e2a188f5b54ca9af54}
+      \strng{authorfullhash}{9b46edb90016e3e2a188f5b54ca9af54}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Wind can significantly influence heat and water exchange between organisms and their environment, yet microclimatic variation in wind is often overlooked in models forecasting the effects of environmental change on organismal performance. Accounting for the effects of wind may become even more critical given the anticipated changes in wind speed across the planet as climates continue to warm. In this study, we first assessed how wind speed varies across the planet and how wind speed may change under climate warming at macroclimatic scales. We also used microclimatic data to assess how wind speed changes temporally throughout the day and year as well as the relationship between wind speed, temperature, and standard deviation in each environmental variable using data from weather stations in North America. Finally, we used a suite of biophysical simulations to understand how wind speed (and its interactions with other environmental variables and organismal traits) affects the temperatures and rates of water loss that plants and animals experience at a microclimatic scale. We found substantial latitudinal variation in wind speed and the change in wind speed under climate change, demonstrating that temperate regions are predicted to experience simultaneous warming and reductions in wind speed. From the microclimatic data, we also found that wind speed is positively associated with temperature and temperature variability, indicating that the effects of wind speed may become more challenging to predict under future warming scenarios. The biophysical simulations demonstrated that convective and evaporative cooling from wind interacts strongly with organismal traits (such as body size, solar absorptance, and conductance) and the heating effects of solar radiation to shape heat and water fluxes in terrestrial plants and animals. In many cases, the effect of wind (or its interaction with other variables) was comparable to the effects of air temperature or solar radiation. Understanding these effects will be important for predicting the ecological impacts of climate change and for explaining clinal variation in traits that have evolved across a range of thermal environments.}
+      \field{day}{6}
+      \field{issn}{1540-7063}
+      \field{journaltitle}{Integrative and Comparative Biology}
+      \field{month}{5}
+      \field{shortjournal}{Integr Comp Biol}
+      \field{shorttitle}{The {{Wind Niche}}}
+      \field{title}{The {{Wind Niche}}: {{The Thermal}} and {{Hydric Effects}} of {{Wind Speed}} on {{Terrestrial Organisms}}}
+      \field{urlday}{10}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{icaf025}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1093/icb/icaf025
+      \endverb
+      \verb{file}
+      \verb /Users/kylenessen/Zotero/storage/QLHK8I2D/Riddell and Porter - 2025 - The Wind Niche The Thermal and Hydric Effects of Wind Speed on Terrestrial Organisms.pdf;/Users/kylenessen/Zotero/storage/HZV7RFLW/icaf025.html
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/icb/icaf025
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/icb/icaf025
+      \endverb
+    \endentry
     \entry{sanieeHierarchyScaleInfluence2022}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=3886a5ae114afb8af512a5201dc8416c}{%
@@ -6790,10 +6840,10 @@
       \field{pages}{79\bibrangedash 83}
       \range{pages}{5}
       \verb{urlraw}
-      \verb https://books.google.com/books?id=H5nRqhCGA4UC
+      \verb https://books.google.com/books?hl=en&lr=&id=H5nRqhCGA4UC&oi=fnd&pg=PA79&dq=Solensky,+M.J.+2004.+%22Overview+of+monarch+migration.%22+Pp.+79%E2%80%9383+in+Oberhauser+K.S.,+Solensky+M.J.,+eds.+The+Monarch+Butterfly:+Biology+and+Conservation.+Ithaca,+NY:+Cornell+University+Press.+(Cited+for+overwintering+locations)+.&ots=VnM9RX0Zgf&sig=eF0U4gBCGf47G-d3TFVnGnmB4ZY
       \endverb
       \verb{url}
-      \verb https://books.google.com/books?id=H5nRqhCGA4UC
+      \verb https://books.google.com/books?hl=en&lr=&id=H5nRqhCGA4UC&oi=fnd&pg=PA79&dq=Solensky,+M.J.+2004.+%22Overview+of+monarch+migration.%22+Pp.+79%E2%80%9383+in+Oberhauser+K.S.,+Solensky+M.J.,+eds.+The+Monarch+Butterfly:+Biology+and+Conservation.+Ithaca,+NY:+Cornell+University+Press.+(Cited+for+overwintering+locations)+.&ots=VnM9RX0Zgf&sig=eF0U4gBCGf47G-d3TFVnGnmB4ZY
       \endverb
     \endentry
     \entry{themonarchpressCityAwarded392019}{online}{}
@@ -7321,6 +7371,34 @@
       \verb https://www.xerces.org/sites/default/files/2018-05/16-015_01_XercesSoc_State-of-Monarch-Overwintering-Sites-in-California_web.pdf
       \endverb
     \endentry
+    \entry{xercessocietyStepbyStepWesternMonarch2017}{report}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=415649fecfd6bfe25d970d1047d0acf4}{%
+           family={{Xerces Society}},
+           familyi={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{415649fecfd6bfe25d970d1047d0acf4}
+      \strng{fullhash}{415649fecfd6bfe25d970d1047d0acf4}
+      \strng{bibnamehash}{415649fecfd6bfe25d970d1047d0acf4}
+      \strng{authorbibnamehash}{415649fecfd6bfe25d970d1047d0acf4}
+      \strng{authornamehash}{415649fecfd6bfe25d970d1047d0acf4}
+      \strng{authorfullhash}{415649fecfd6bfe25d970d1047d0acf4}
+      \field{extraname}{2}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Step-by-{{Step Western Monarch Thanksgiving Count Monitoring Guide}}}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/kylenessen/Zotero/storage/PRMQDEEB/Step-by-Step-Update-10.20.17.pdf
+      \endverb
+    \endentry
     \entry{xercessocietyManagingMonarchsWest2018}{report}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=415649fecfd6bfe25d970d1047d0acf4}{%
@@ -7339,7 +7417,7 @@
       \strng{authorbibnamehash}{415649fecfd6bfe25d970d1047d0acf4}
       \strng{authornamehash}{415649fecfd6bfe25d970d1047d0acf4}
       \strng{authorfullhash}{415649fecfd6bfe25d970d1047d0acf4}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{X}
       \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
       \field{extradatescope}{labelyear}
@@ -7356,10 +7434,10 @@
       \verb /Users/kylenessen/Zotero/storage/398KHXX3/1A15-18-009_01-Monarch_BMPs_Final_Web.pdf
       \endverb
       \verb{urlraw}
-      \verb https://www.xerces.org
+      \verb www.xerces.org
       \endverb
       \verb{url}
-      \verb https://www.xerces.org
+      \verb www.xerces.org
       \endverb
     \endentry
     \entry{xercessocietyWesternMonarchThanksgiving2025}{dataset}{}
@@ -7374,7 +7452,7 @@
       \strng{authorbibnamehash}{415649fecfd6bfe25d970d1047d0acf4}
       \strng{authornamehash}{415649fecfd6bfe25d970d1047d0acf4}
       \strng{authorfullhash}{415649fecfd6bfe25d970d1047d0acf4}
-      \field{extraname}{3}
+      \field{extraname}{4}
       \field{sortinit}{X}
       \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
       \field{extradate}{1}
@@ -7388,10 +7466,10 @@
       \field{year}{2025}
       \field{dateera}{ce}
       \verb{urlraw}
-      \verb https://WesternMonarchCount.com
+      \verb WesternMonarchCount.com
       \endverb
       \verb{url}
-      \verb https://WesternMonarchCount.com
+      \verb WesternMonarchCount.com
       \endverb
     \endentry
     \entry{xercessocietyWesternMonarchButterfly2025}{online}{}
@@ -7406,7 +7484,7 @@
       \strng{authorbibnamehash}{415649fecfd6bfe25d970d1047d0acf4}
       \strng{authornamehash}{415649fecfd6bfe25d970d1047d0acf4}
       \strng{authorfullhash}{415649fecfd6bfe25d970d1047d0acf4}
-      \field{extraname}{4}
+      \field{extraname}{5}
       \field{sortinit}{X}
       \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
       \field{extradate}{2}

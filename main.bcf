@@ -2841,72 +2841,73 @@
     <bcf:citekey order="8" intorder="1">bidlingmayerEffectWindVelocity1995</bcf:citekey>
     <bcf:citekey order="9" intorder="1">bonteHeritabilitySpiderBallooning2007</bcf:citekey>
     <bcf:citekey order="10" intorder="1">leonardExposureWindAlters2016</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">hanrahanEffectWindForaging1997</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">velillaGoneWindSignal2020</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">browerUnderstandingMisunderstandingMigration1995</bcf:citekey>
-    <bcf:citekey order="13" intorder="2">solenskyOverviewMonarchMigration2004</bcf:citekey>
-    <bcf:citekey order="13" intorder="3">jepsenConservationStatusEcology2015</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">cockrellTimeTemperatureLatitudinal1993</bcf:citekey>
-    <bcf:citekey order="14" intorder="2">jepsenConservationStatusEcology2015</bcf:citekey>
-    <bcf:citekey order="14" intorder="3">freedmanAreEasternWestern2021</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">zaluckiTemperatureRateDevelopment1982</bcf:citekey>
-    <bcf:citekey order="15" intorder="2">cockrellTimeTemperatureLatitudinal1993</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">reppertDemystifyingMonarchButterfly2018</bcf:citekey>
-    <bcf:citekey order="16" intorder="2">goehringEffectsPhotoperiodTemperature2002</bcf:citekey>
-    <bcf:citekey order="16" intorder="3">hermanJuvenileHormoneRegulation2001</bcf:citekey>
-    <bcf:citekey order="16" intorder="4">barkerEffectPhotoperiodTemperature1976</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">barkerEffectPhotoperiodTemperature1976</bcf:citekey>
-    <bcf:citekey order="17" intorder="2">yangIntrapopulationVariationNatal2016</bcf:citekey>
-    <bcf:citekey order="17" intorder="3">tuskesOverwinteringEcologyMonarch1978</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">hermanJuvenileHormoneRegulation2001</bcf:citekey>
-    <bcf:citekey order="18" intorder="2">chaplinEnergyReservesMetabolic1982</bcf:citekey>
-    <bcf:citekey order="18" intorder="3">Urquhart1978Autumnal</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">mouritsenVirtualMigrationTethered2002</bcf:citekey>
-    <bcf:citekey order="19" intorder="2">nguyenSunCompassNeurons2021</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">browerUnderstandingMisunderstandingMigration1995</bcf:citekey>
-    <bcf:citekey order="20" intorder="2">Urquhart1978Autumnal</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">solenskyOverviewMonarchMigration2004</bcf:citekey>
-    <bcf:citekey order="21" intorder="2">vidalDynamicsTrendsOverwintering2014</bcf:citekey>
-    <bcf:citekey order="21" intorder="3">jepsenUnderstandingConservingWestern2015</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">chaplinEnergyReservesMetabolic1982</bcf:citekey>
-    <bcf:citekey order="22" intorder="2">mastersMonarchButterflyDanaus1988</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">mastersMonarchButterflyDanaus1988</bcf:citekey>
-    <bcf:citekey order="23" intorder="2">chaplinEnergyReservesMetabolic1982</bcf:citekey>
-    <bcf:citekey order="23" intorder="3">kammerThoracicTemperatureShivering1970</bcf:citekey>
-    <bcf:citekey order="23" intorder="4">alonso-mejiaInfluenceTemperatureSurface1992</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">riddellWindNicheThermal2025</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">hanrahanEffectWindForaging1997</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">velillaGoneWindSignal2020</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">browerUnderstandingMisunderstandingMigration1995</bcf:citekey>
+    <bcf:citekey order="14" intorder="2">solenskyOverviewMonarchMigration2004</bcf:citekey>
+    <bcf:citekey order="14" intorder="3">jepsenConservationStatusEcology2015</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">cockrellTimeTemperatureLatitudinal1993</bcf:citekey>
+    <bcf:citekey order="15" intorder="2">jepsenConservationStatusEcology2015</bcf:citekey>
+    <bcf:citekey order="15" intorder="3">freedmanAreEasternWestern2021</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">zaluckiTemperatureRateDevelopment1982</bcf:citekey>
+    <bcf:citekey order="16" intorder="2">cockrellTimeTemperatureLatitudinal1993</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">reppertDemystifyingMonarchButterfly2018</bcf:citekey>
+    <bcf:citekey order="17" intorder="2">goehringEffectsPhotoperiodTemperature2002</bcf:citekey>
+    <bcf:citekey order="17" intorder="3">hermanJuvenileHormoneRegulation2001</bcf:citekey>
+    <bcf:citekey order="17" intorder="4">barkerEffectPhotoperiodTemperature1976</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">barkerEffectPhotoperiodTemperature1976</bcf:citekey>
+    <bcf:citekey order="18" intorder="2">yangIntrapopulationVariationNatal2016</bcf:citekey>
+    <bcf:citekey order="18" intorder="3">tuskesOverwinteringEcologyMonarch1978</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">hermanJuvenileHormoneRegulation2001</bcf:citekey>
+    <bcf:citekey order="19" intorder="2">chaplinEnergyReservesMetabolic1982</bcf:citekey>
+    <bcf:citekey order="19" intorder="3">Urquhart1978Autumnal</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">mouritsenVirtualMigrationTethered2002</bcf:citekey>
+    <bcf:citekey order="20" intorder="2">nguyenSunCompassNeurons2021</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">browerUnderstandingMisunderstandingMigration1995</bcf:citekey>
+    <bcf:citekey order="21" intorder="2">Urquhart1978Autumnal</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">solenskyOverviewMonarchMigration2004</bcf:citekey>
+    <bcf:citekey order="22" intorder="2">vidalDynamicsTrendsOverwintering2014</bcf:citekey>
+    <bcf:citekey order="22" intorder="3">jepsenUnderstandingConservingWestern2015</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">chaplinEnergyReservesMetabolic1982</bcf:citekey>
+    <bcf:citekey order="23" intorder="2">mastersMonarchButterflyDanaus1988</bcf:citekey>
     <bcf:citekey order="24" intorder="1">mastersMonarchButterflyDanaus1988</bcf:citekey>
+    <bcf:citekey order="24" intorder="2">chaplinEnergyReservesMetabolic1982</bcf:citekey>
+    <bcf:citekey order="24" intorder="3">kammerThoracicTemperatureShivering1970</bcf:citekey>
+    <bcf:citekey order="24" intorder="4">alonso-mejiaInfluenceTemperatureSurface1992</bcf:citekey>
     <bcf:citekey order="25" intorder="1">mastersMonarchButterflyDanaus1988</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">barkerEffectPhotoperiodTemperature1976</bcf:citekey>
-    <bcf:citekey order="26" intorder="2">barkerEffectPhotoperiodTemperature1976</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">mastersMonarchButterflyDanaus1988</bcf:citekey>
-    <bcf:citekey order="27" intorder="2">alonso-mejiaInfluenceTemperatureSurface1992</bcf:citekey>
-    <bcf:citekey order="27" intorder="3">calvertEffectRainSnow1983</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">leongMicroenvironmentalFactorsAssociated1990</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">mastersMonarchButterflyDanaus1988</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">barkerEffectPhotoperiodTemperature1976</bcf:citekey>
+    <bcf:citekey order="27" intorder="2">barkerEffectPhotoperiodTemperature1976</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">mastersMonarchButterflyDanaus1988</bcf:citekey>
+    <bcf:citekey order="28" intorder="2">alonso-mejiaInfluenceTemperatureSurface1992</bcf:citekey>
+    <bcf:citekey order="28" intorder="3">calvertEffectRainSnow1983</bcf:citekey>
     <bcf:citekey order="29" intorder="1">leongMicroenvironmentalFactorsAssociated1990</bcf:citekey>
-    <bcf:citekey order="29" intorder="2">leongUseMultivariateAnalyses1991</bcf:citekey>
     <bcf:citekey order="30" intorder="1">leongMicroenvironmentalFactorsAssociated1990</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">leongUseMultivariateAnalyses1991</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">leongRestorationOverwinteringGrove1999</bcf:citekey>
+    <bcf:citekey order="30" intorder="2">leongUseMultivariateAnalyses1991</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">leongMicroenvironmentalFactorsAssociated1990</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">leongUseMultivariateAnalyses1991</bcf:citekey>
     <bcf:citekey order="33" intorder="1">leongRestorationOverwinteringGrove1999</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">leongEvaluationManagementCalifornia2016</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">xercessocietyStateMonarchOverwintering2016</bcf:citekey>
-    <bcf:citekey order="35" intorder="2">jepsenProtectingCaliforniasButterfly2017</bcf:citekey>
-    <bcf:citekey order="35" intorder="3">peltonMonarchButterflyOverwintering2020</bcf:citekey>
-    <bcf:citekey order="35" intorder="4">weissRecommendationsRestorationMonarch2008</bcf:citekey>
-    <bcf:citekey order="35" intorder="5">althouse&amp;meadeinc.EllwoodMesaSperling2023</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">sanieeHierarchyScaleInfluence2022</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">fisherClimaticNicheModel2018</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">sanieeHierarchyScaleInfluence2022</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">leongRestorationOverwinteringGrove1999</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">leongEvaluationManagementCalifornia2016</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">xercessocietyStateMonarchOverwintering2016</bcf:citekey>
+    <bcf:citekey order="36" intorder="2">jepsenProtectingCaliforniasButterfly2017</bcf:citekey>
+    <bcf:citekey order="36" intorder="3">peltonMonarchButterflyOverwintering2020</bcf:citekey>
+    <bcf:citekey order="36" intorder="4">weissRecommendationsRestorationMonarch2008</bcf:citekey>
+    <bcf:citekey order="36" intorder="5">althouse&amp;meadeinc.EllwoodMesaSperling2023</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">sanieeHierarchyScaleInfluence2022</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">fisherClimaticNicheModel2018</bcf:citekey>
     <bcf:citekey order="39" intorder="1">sanieeHierarchyScaleInfluence2022</bcf:citekey>
-    <bcf:citekey order="39" intorder="2">weissForestCanopyStructure1991</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">fisherClimaticNicheModel2018</bcf:citekey>
-    <bcf:citekey order="40" intorder="2">sanieeHierarchyScaleInfluence2022</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">leongEvaluationManagementCalifornia2016</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">sanieeHierarchyScaleInfluence2022</bcf:citekey>
+    <bcf:citekey order="40" intorder="2">weissForestCanopyStructure1991</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">fisherClimaticNicheModel2018</bcf:citekey>
+    <bcf:citekey order="41" intorder="2">sanieeHierarchyScaleInfluence2022</bcf:citekey>
     <bcf:citekey order="42" intorder="1">xercessocietyManagingMonarchsWest2018</bcf:citekey>
     <bcf:citekey order="42" intorder="2">jepsenProtectingCaliforniasButterfly2017</bcf:citekey>
     <bcf:citekey order="42" intorder="3">althouse&amp;meadeinc.EllwoodMesaSperling2023</bcf:citekey>
     <bcf:citekey order="42" intorder="4">u.s.fishandwildlifeserviceMonarchDanausPlexippus2024</bcf:citekey>
     <bcf:citekey order="42" intorder="5">weissAlbanyHillMonarch2018</bcf:citekey>
+    <bcf:citekey order="42" intorder="6">leongEvaluationManagementCalifornia2016</bcf:citekey>
     <bcf:citekey order="43" intorder="1">schultzCitizenScienceMonitoring2017</bcf:citekey>
     <bcf:citekey order="44" intorder="1">schultzCitizenScienceMonitoring2017</bcf:citekey>
     <bcf:citekey order="45" intorder="1">peltonWesternMonarchPopulation2019</bcf:citekey>
@@ -2928,22 +2929,38 @@
     <bcf:citekey order="57" intorder="1">xercessocietyWesternMonarchButterfly2025</bcf:citekey>
     <bcf:citekey order="58" intorder="1">hristovEstimatingOverwinteringMonarch2019</bcf:citekey>
     <bcf:citekey order="59" intorder="1">xercessocietyManagingMonarchsWest2018</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">mastersMonarchButterflyDanaus1988</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">mastersMonarchButterflyDanaus1988</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">leongEvaluationManagementCalifornia2016</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">leongRestorationOverwinteringGrove1999</bcf:citekey>
     <bcf:citekey order="62" intorder="1">mastersMonarchButterflyDanaus1988</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">sanieeHierarchyScaleInfluence2022</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">tuskesOverwinteringEcologyMonarch1978</bcf:citekey>
-    <bcf:citekey order="64" intorder="2">chaplinEnergyReservesMetabolic1982</bcf:citekey>
-    <bcf:citekey order="64" intorder="3">freyCanMicrohabitatSelection1993</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">xercessocietyWesternMonarchThanksgiving2025</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">xercessocietyWesternMonarchButterfly2025</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">browerMonarchButterflyClusters2008</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">sanieeHierarchyScaleInfluence2022</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">sanieeHierarchyScaleInfluence2022</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">nguyenSunCompassNeurons2021</bcf:citekey>
-    <bcf:citekey order="70" intorder="2">mouritsenVirtualMigrationTethered2002</bcf:citekey>
-    <bcf:citekey order="71" intorder="1">weissForestCanopyStructure1991</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">berdahlEmergentSensingComplex2013</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">mastersMonarchButterflyDanaus1988</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">kammerThoracicTemperatureShivering1970</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">kammerThoracicTemperatureShivering1970</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">mastersMonarchButterflyDanaus1988</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">mastersMonarchButterflyDanaus1988</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">mastersMonarchButterflyDanaus1988</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">mastersMonarchButterflyDanaus1988</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">riddellWindNicheThermal2025</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">riddellWindNicheThermal2025</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">tuskesOverwinteringEcologyMonarch1978</bcf:citekey>
+    <bcf:citekey order="72" intorder="2">chaplinEnergyReservesMetabolic1982</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">xercessocietyStepbyStepWesternMonarch2017</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">xercessocietyWesternMonarchThanksgiving2025</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">xercessocietyWesternMonarchButterfly2025</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">leongMicroenvironmentalFactorsAssociated1990</bcf:citekey>
+    <bcf:citekey order="76" intorder="2">browerMonarchButterflyClusters2008</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">althouse&amp;meadeinc.EllwoodMesaSperling2023</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">althouse&amp;meadeinc.EllwoodMesaSperling2023</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">leongRestorationOverwinteringGrove1999</bcf:citekey>
+    <bcf:citekey order="79" intorder="2">xercessocietyWesternMonarchThanksgiving2025</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">sanieeHierarchyScaleInfluence2022</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">sanieeHierarchyScaleInfluence2022</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">sanieeHierarchyScaleInfluence2022</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">sanieeHierarchyScaleInfluence2022</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">weissForestCanopyStructure1991</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">weissForestCanopyStructure1991</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">nguyenSunCompassNeurons2021</bcf:citekey>
+    <bcf:citekey order="86" intorder="2">mouritsenVirtualMigrationTethered2002</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">berdahlEmergentSensingComplex2013</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
