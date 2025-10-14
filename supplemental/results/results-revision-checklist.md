@@ -20,6 +20,7 @@ These address the most fundamental issues with the results section structure and
 
 **Priority**: CRITICAL
 **Status**: [x]
+**Reviewer Request**: Yes - Jenn (comments #34-35)
 
 **Issue**: Jenn pointed out that the best AIC models (M23) don't include wind terms, yet wind is your primary hypothesis. This creates a tension between "what predicts roost abandonment?" (model selection question) vs. "does wind affect roost abandonment?" (hypothesis testing question).
 
@@ -51,6 +52,7 @@ These address the most fundamental issues with the results section structure and
 
 **Priority**: CRITICAL
 **Status**: [x]
+**Reviewer Request**: Yes - Francis (comments #30, #72)
 
 **Issue**: Francis emphasized multiple times that readers will "get lost in the weeds" and that the document is vulnerable to being quoted out of context. Need to repeatedly remind readers which analysis section they're in.
 
@@ -88,6 +90,7 @@ These address the most fundamental issues with the results section structure and
 
 **Priority**: CRITICAL
 **Status**: [x]
+**Reviewer Request**: Yes - Francis (comment #72)
 
 **Issue**: The jump from 30-minute analysis to Site Fidelity Analysis is too abrupt. Readers need to understand WHY you're conducting a second analysis and how it differs conceptually from the first.
 
@@ -125,6 +128,7 @@ To test whether cumulative weather exposure influenced day-to-day roost dynamics
 
 **Priority**: HIGH
 **Status**: [x]
+**Reviewer Request**: Yes - Francis (comments #58, #106)
 
 **Issue**: "Sensitivity analysis" has a specific statistical meaning (testing which variables contribute most to effects), which is not what you're doing. Francis suggests alternative names.
 
@@ -162,6 +166,7 @@ These address confusion about variables, terms, and concepts.
 
 **Priority**: HIGH
 **Status**: [x]
+**Reviewer Request**: Yes - Jenn (comments #39-40)
 
 **Issue**: Multiple reviewers confused about what this variable represents. Is it time of day? Duration of observations? Something else?
 
@@ -192,6 +197,7 @@ These address confusion about variables, terms, and concepts.
 
 **Priority**: HIGH
 **Status**: [x]
+**Reviewer Request**: Yes - Jenn (comment #21)
 
 **Issue**: Jenn confused about how the average is only 17 individuals across 600+ observations of direct sunlight.
 
@@ -217,6 +223,7 @@ These address confusion about variables, terms, and concepts.
 
 **Priority**: MEDIUM
 **Status**: [x]
+**Reviewer Request**: Yes - Jenn (comments #41-42)
 
 **Issue**: Jenn questions why this variable only appears in interaction terms, not as a standalone predictor.
 
@@ -246,6 +253,7 @@ These address confusion about variables, terms, and concepts.
 
 **Priority**: MEDIUM
 **Status**: [x]
+**Reviewer Request**: Yes - Francis (comments #45, #97)
 
 **Issue**: Not all readers will understand what "partial effects" means in a statistical context. Need clearer caption language.
 
@@ -276,6 +284,7 @@ These address confusion about variables, terms, and concepts.
 
 **Priority**: LOW (per Kyle - export artifact)
 **Status**: [x]
+**Reviewer Request**: Yes - Francis (comment #46) BUT NOT APPLICABLE (export artifact)
 
 **Issue**: Text references figures by number but some captions lack numbers.
 
@@ -297,6 +306,7 @@ These address confusion about variables, terms, and concepts.
 
 **Priority**: LOW
 **Status**: [x]
+**Reviewer Request**: No - Jenn said "Just FYI. Maybe no action" (comment #36)
 
 **Issue**: Even if variable names match your code, they can be more reader-friendly in tables.
 
@@ -332,6 +342,7 @@ These address technical statistical issues and rigor.
 
 **Priority**: HIGH
 **Status**: [ ]
+**Reviewer Request**: Yes - Francis (comment #26)
 
 **Issue**: Francis suggests testing whether slopes differ significantly from zero. Jenn wanted regression lines removed from plots because they were non-significant but looked misleading.
 
@@ -364,6 +375,7 @@ These address technical statistical issues and rigor.
 
 **Priority**: MEDIUM
 **Status**: [x]
+**Reviewer Request**: Yes - Francis (comment #90)
 
 **Issue**: Mixing F-statistics in some tables and t-statistics in others creates inconsistency.
 
@@ -392,6 +404,7 @@ These address technical statistical issues and rigor.
 
 **Priority**: MEDIUM
 **Status**: [x]
+**Reviewer Request**: Yes - Francis (comments #52, #102)
 
 **Issue**: Claims about what's "acceptable" for residuals need supporting references.
 
@@ -429,6 +442,7 @@ These address how results are interpreted and contextualized.
 
 **Priority**: HIGH
 **Status**: [ ]
+**Reviewer Request**: Yes - Francis (comment #99)
 
 **Issue**: Francis wants explicit interpretation of what the red vs. blue regions mean for butterfly movement patterns.
 
@@ -457,6 +471,7 @@ These address how results are interpreted and contextualized.
 
 **Priority**: MEDIUM
 **Status**: [ ]
+**Reviewer Request**: No - Author inference, already mentioned in text
 
 **Issue**: The fact that most observations occurred with very few butterflies in direct sun is mentioned but not emphasized as an important biological finding.
 
@@ -486,7 +501,8 @@ These address how results are interpreted and contextualized.
 ### Task 4.3: Clarify "Time Since Sunrise" Biological Meaning
 
 **Priority**: MEDIUM
-**Status**: [x]
+**Status**: [x] REMOVED - Was not requested
+**Reviewer Request**: No - Author inference. Task 2.1 addressed Jenn's actual question (variable definition)
 
 **Issue**: After defining what the variable is (Task 2.1), need to explain why it matters biologically.
 
@@ -513,7 +529,8 @@ These address how results are interpreted and contextualized.
 ### Task 4.4: Add Interpretation of Adjusted R² Difference
 
 **Priority**: MEDIUM
-**Status**: [ ]
+**Status**: [ ] (Verify if already done - Francis provided text)
+**Reviewer Request**: Yes - Francis inserted suggested text in revisions
 
 **Issue**: The day-to-day analysis has much higher R² (0.397) than 30-minute analysis (0.064), but this isn't interpreted clearly.
 
@@ -547,7 +564,8 @@ These address how data is presented visually and in tables.
 ### Task 5.1: Add Caution About Interpolation Artifacts
 
 **Priority**: MEDIUM
-**Status**: [ ]
+**Status**: [ ] (Already in text - verify completeness)
+**Reviewer Request**: No - Author inference, but caution language already present
 
 **Issue**: Need to emphasize caution about strong partial effects at data distribution edges where observations are sparse.
 
@@ -578,6 +596,7 @@ These address how data is presented visually and in tables.
 
 **Priority**: LOW
 **Status**: [ ]
+**Reviewer Request**: No - Author inference
 
 **Issue**: Tables could be more reader-friendly with minor formatting improvements.
 
@@ -600,6 +619,7 @@ These address how data is presented visually and in tables.
 
 **Priority**: MEDIUM
 **Status**: [ ]
+**Reviewer Request**: No - Author inference
 
 **Issue**: Need to ensure gray regions consistently mask unreliable interpolation areas on all tensor interaction plots.
 
@@ -628,6 +648,7 @@ These span multiple sections.
 
 **Priority**: LOW
 **Status**: [ ]
+**Reviewer Request**: No - CLAUDE.md style requirement, not reviewer request
 
 **Issue**: CLAUDE.md specifies "Never use em dashes"
 
@@ -648,6 +669,7 @@ These span multiple sections.
 
 **Priority**: HIGH
 **Status**: [ ]
+**Reviewer Request**: No - Author inference (Francis asked for repeated labels, not standardization)
 
 **Issue**: Need consistent names for the two main analyses throughout the document.
 
@@ -669,6 +691,7 @@ These span multiple sections.
 
 **Priority**: HIGH
 **Status**: [ ]
+**Reviewer Request**: No - Author inference (good practice, not requested)
 
 **Issue**: Need to ensure all reported statistics are accurate and consistently formatted.
 
@@ -712,6 +735,43 @@ These span multiple sections.
 
 ---
 
+## VERIFIED REVIEWER REQUESTS
+
+**Tasks Actually Requested by Francis or Jenn:**
+
+**INCOMPLETE:**
+- Task 3.1 - Add regression statistics (Francis #26)
+- Task 4.1 - Interpret interaction plot with closed system assumption (Francis #99)
+- Task 4.4 - Add R² interpretation (Francis provided text - verify if in LaTeX)
+
+**COMPLETED:**
+- Task 1.1 - Wind variable paradox (Jenn #34-35)
+- Task 1.2 - Section labels and reminders (Francis #30, #72)
+- Task 1.3 - Transition between analyses (Francis #72)
+- Task 1.4 - Rename sensitivity analyses (Francis #58, #106)
+- Task 2.1 - Clarify time since sunrise (Jenn #39-40)
+- Task 2.2 - Explain butterflies in sun calculation (Jenn #21)
+- Task 2.3 - Explain no main effects (Jenn #41-42)
+- Task 2.4 - Improve partial effects captions (Francis #45, #97)
+- Task 3.2 - Standardize test statistics (Francis #90)
+- Task 3.3 - Add citations (Francis #52, #102)
+
+**NOT REQUESTED (Author Inferences):**
+- Task 2.6 - Descriptive variable names (Jenn said "maybe no action")
+- Task 4.2 - Emphasize shaded observations
+- Task 4.3 - Time since sunrise biological meaning (REMOVED from results.tex)
+- Task 5.1 - Interpolation caution (already in text)
+- Task 5.2 - Table readability
+- Task 5.3 - Gray masking verification
+- Task 6.1 - Em dashes (style guide, not reviewer)
+- Task 6.2 - Consistent terminology
+- Task 6.3 - Verify statistics
+
+**NOT APPLICABLE:**
+- Task 2.5 - Figure numbers (export artifact per Kyle)
+
+---
+
 ## NOTES FOR NEXT SESSIONS
 
 - Francis is unaware of the bivariate scatter plot discussions with Jenn
@@ -720,3 +780,4 @@ These span multiple sections.
 - Need actual regression statistics (both p > 0.05, sunset "just barely")
 - Figure numbering issues are export artifacts, not source file issues
 - Work through these one at a time to avoid context overload
+- **Focus on Task 3.1 and Task 4.1 as the only remaining reviewer-requested items**
