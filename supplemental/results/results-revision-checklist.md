@@ -275,7 +275,7 @@ These address confusion about variables, terms, and concepts.
 ### Task 2.5: Add Figure Numbers to All Captions
 
 **Priority**: LOW (per Kyle - export artifact)
-**Status**: [ ]
+**Status**: [x]
 
 **Issue**: Text references figures by number but some captions lack numbers.
 
@@ -296,7 +296,7 @@ These address confusion about variables, terms, and concepts.
 ### Task 2.6: Make Variable Names More Descriptive in Tables
 
 **Priority**: LOW
-**Status**: [ ]
+**Status**: [x]
 
 **Issue**: Even if variable names match your code, they can be more reader-friendly in tables.
 
@@ -363,7 +363,7 @@ These address technical statistical issues and rigor.
 ### Task 3.2: Standardize Test Statistics in Tables
 
 **Priority**: MEDIUM
-**Status**: [ ]
+**Status**: [x]
 
 **Issue**: Mixing F-statistics in some tables and t-statistics in others creates inconsistency.
 
