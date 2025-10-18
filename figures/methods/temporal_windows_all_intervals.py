@@ -1,0 +1,221 @@
+#!/usr/bin/env python3
+"""
+Generate a figure illustrating the temporal windows used in the monarch butterfly analysis.
+Shows both 30-minute lag windows and the sunset window analysis approach.
+"""
+
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+import numpy as np
+from datetime import datetime, timedelta
+import matplotlib.dates as mdates
+import pandas as pd
+
+# Set up the figure
+fig, ax = plt.subplots(figsize=(14, 6))
+
+# Define time range (2 days)
+start_time = datetime(2024, 1, 1, 0, 0)  # Arbitrary date
+hours = np.arange(0, 48, 0.5)  # Every 30 minutes for 2 days
+times = [start_time + timedelta(hours=h) for h in hours]
+
+# Define sunrise/sunset times (approximate for California winter)
+day1_sunrise = 7.0  # 7:00 AM
+day1_sunset = 17.5  # 5:30 PM
+day2_sunrise = 31.0  # 7:00 AM next day (24 + 7)
+day2_sunset = 41.5  # 5:30 PM next day (24 + 17.5)
+
+# Create gradient background for day/night
+for i in range(len(hours) - 1):
+    hour = hours[i]
+
+    # Determine color based on time of day
+    if (day1_sunrise <= hour <= day1_sunset) or (day2_sunrise <= hour <= day2_sunset):
+        # Daytime - calculate gradient based on position in day
+        if hour < 24:  # Day 1
+            day_progress = (hour - day1_sunrise) / (day1_sunset - day1_sunrise)
+        else:  # Day 2
+            day_progress = (hour - day2_sunrise) / (day2_sunset - day2_sunrise)
+
+        # Peak brightness at midday
+        if day_progress < 0.5:
+            brightness = 0.3 + 0.7 * (day_progress * 2)
+        else:
+            brightness = 0.3 + 0.7 * (2 - day_progress * 2)
+
+        # Light yellow at peak, transitioning to light blue at edges
+        r = 1.0
+        g = 0.95 + 0.05 * (1 - brightness)
+        b = 0.85 + 0.15 * (1 - brightness)
+        color = (r, g, b, 0.3)  # Semi-transparent
+    else:
+        # Nighttime - darker blue/gray
+        color = (0.7, 0.75, 0.85, 0.2)
+
+    # Draw background rectangle
+    rect = patches.Rectangle((times[i], -0.1),
+                            timedelta(hours=0.5), 1.2,
+                            facecolor=color, edgecolor='none')
+    ax.add_patch(rect)
+
+# Add observation points (only during daytime)
+observation_y = 0.5
+observation_times = []
+for i, hour in enumerate(hours):
+    if (day1_sunrise <= hour <= day1_sunset) or (day2_sunrise <= hour <= day2_sunset):
+        ax.plot(times[i], observation_y, 'ko', markersize=6, zorder=5)
+        observation_times.append((times[i], hour))
+
+# Add ALL 30-minute lag windows
+lag_y = 0.35
+# Draw all consecutive pairs
+for i in range(len(observation_times) - 1):
+    t1 = observation_times[i][0]
+    t2 = observation_times[i + 1][0]
+
+    # Check if they are consecutive (30 minutes apart)
+    time_diff = (t2 - t1).total_seconds() / 60
+    if abs(time_diff - 30) < 5:  # Allow small tolerance
+        # Draw bracket using matplotlib's native bracket annotation
+        ax.annotate('', xy=(mdates.date2num(t1), lag_y),
+                   xytext=(mdates.date2num(t2), lag_y),
+                   arrowprops=dict(arrowstyle='|-|', color='darkblue',
+                                 linewidth=1, shrinkA=0, shrinkB=0, alpha=0.7))
+
+        # Add small connecting lines (make them lighter)
+        ax.annotate('', xy=(t1, observation_y), xytext=(t1, lag_y + 0.05),
+                   arrowprops=dict(arrowstyle='-', color='darkblue',
+                                 linewidth=0.5, linestyle='dashed', alpha=0.5))
+        ax.annotate('', xy=(t2, observation_y), xytext=(t2, lag_y + 0.05),
+                   arrowprops=dict(arrowstyle='-', color='darkblue',
+                                 linewidth=0.5, linestyle='dashed', alpha=0.5))
+
+# Add sunset window
+# Find maximum count time for day 1 (let's say around 2 PM)
+day1_max_hour = 14.0  # 2:00 PM
+day1_max_time = start_time + timedelta(hours=day1_max_hour)
+
+# Last observation of day 2
+day2_last_hour = day2_sunset
+day2_last_time = start_time + timedelta(hours=day2_last_hour)
+
+# Draw sunset window bracket
+sunset_y = 0.75
+ax.annotate('', xy=(mdates.date2num(day1_max_time), sunset_y),
+           xytext=(mdates.date2num(day2_last_time), sunset_y),
+           arrowprops=dict(arrowstyle='|-|', color='darkred',
+                         linewidth=2, shrinkA=0, shrinkB=0))
+
+# Add arrows for sunset window
+ax.annotate('', xy=(day1_max_time, observation_y), xytext=(day1_max_time, sunset_y - 0.05),
+           arrowprops=dict(arrowstyle='-', color='darkred',
+                         linewidth=1.5, linestyle='dashed'))
+ax.annotate('', xy=(day2_last_time, observation_y), xytext=(day2_last_time, sunset_y - 0.05),
+           arrowprops=dict(arrowstyle='-', color='darkred',
+                         linewidth=1.5, linestyle='dashed'))
+
+# Add labels for both days
+# Find middle of day 1 observations
+day1_obs = [t for t, h in observation_times if h < 24]
+if len(day1_obs) > 0:
+    mid_day1_time = day1_obs[len(day1_obs) // 2]
+    ax.text(mid_day1_time, lag_y - 0.15,
+            '30-minute windows',
+            fontsize=11, ha='center', color='darkblue', weight='bold')
+
+# Find middle of day 2 observations
+day2_obs = [t for t, h in observation_times if h >= 24]
+if len(day2_obs) > 0:
+    mid_day2_time = day2_obs[len(day2_obs) // 2]
+    ax.text(mid_day2_time, lag_y - 0.15,
+            '30-minute windows',
+            fontsize=11, ha='center', color='darkblue', weight='bold')
+
+# Calculate midpoint of sunset window for label
+sunset_midpoint = day1_max_time + (day2_last_time - day1_max_time) / 2
+ax.text(sunset_midpoint, sunset_y + 0.05,
+        'Sunset window',
+        fontsize=11, ha='center', color='darkred', weight='bold')
+
+# Add day/night labels
+ax.text(start_time + timedelta(hours=3), 0.95, 'Night',
+        fontsize=10, ha='center', style='italic', color='gray')
+ax.text(start_time + timedelta(hours=(day1_sunrise + day1_sunset)/2), 0.95, 'Day 1',
+        fontsize=10, ha='center', weight='bold')
+ax.text(start_time + timedelta(hours=24), 0.95, 'Night',
+        fontsize=10, ha='center', style='italic', color='gray')
+ax.text(start_time + timedelta(hours=(day2_sunrise + day2_sunset)/2), 0.95, 'Day 2',
+        fontsize=10, ha='center', weight='bold')
+ax.text(start_time + timedelta(hours=45), 0.95, 'Night',
+        fontsize=10, ha='center', style='italic', color='gray')
+
+# Sunrise/sunset indicators removed for cleaner appearance
+
+# Add legend for observation points
+ax.plot([], [], 'ko', markersize=6, label='Observations')
+ax.legend(loc='upper left', fontsize=10)
+
+# Add histogram of max count times below Day 1 observations
+# Load the max count timing data
+df_max = pd.read_csv('max_count_timing_analysis.csv')
+
+# Convert hours_since_sunrise to time of day (starting from 7 AM = day1_sunrise)
+max_times_hours = day1_sunrise + df_max['hours_since_sunrise'].values
+
+# Filter to reasonable range (during Day 1 daylight hours)
+max_times_day1 = max_times_hours[(max_times_hours >= day1_sunrise) & (max_times_hours <= day1_sunset)]
+
+# Convert to datetime objects for plotting
+max_times_dt = [start_time + timedelta(hours=h) for h in max_times_day1]
+
+# Create histogram data
+counts, bins = np.histogram([mdates.date2num(t) for t in max_times_dt], bins=20)
+# Normalize counts to fit in the plot (scale to max height of 0.25)
+max_count = counts.max()
+if max_count > 0:
+    scaled_counts = counts * 0.25 / max_count
+else:
+    scaled_counts = counts
+
+# Draw histogram bars directly on the x-axis
+histogram_base = 0.0  # Position histogram on the x-axis
+for i in range(len(counts)):
+    if counts[i] > 0:
+        bar_left = mdates.num2date(bins[i])
+        bar_width = mdates.num2date(bins[i+1]) - bar_left
+        bar_height = scaled_counts[i]
+        rect = patches.Rectangle((bar_left, histogram_base), bar_width, bar_height,
+                                facecolor='orange', alpha=0.7, edgecolor='darkorange',
+                                linewidth=0.5, zorder=4)
+        ax.add_patch(rect)
+
+# Format the plot
+ax.set_xlim(times[0], times[-1])
+ax.set_ylim(0, 1.1)
+
+# Format x-axis
+ax.xaxis.set_major_locator(mdates.HourLocator(interval=6))
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%H:00'))
+ax.xaxis.set_minor_locator(mdates.HourLocator(interval=3))
+
+# Labels
+ax.set_xlabel('Time (hours)', fontsize=12)
+
+# Remove y-axis
+ax.set_yticks([])
+ax.spines['left'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['top'].set_visible(False)
+
+# Day labels removed for cleaner appearance
+
+# Adjust layout
+plt.tight_layout()
+
+# Save the figure
+plt.savefig('temporal_windows_all_intervals.pdf', dpi=300, bbox_inches='tight')
+plt.savefig('temporal_windows_all_intervals.png', dpi=300, bbox_inches='tight')
+
+print("Figure saved as temporal_windows_all_intervals.pdf and temporal_windows_all_intervals.png")
+plt.show()
