@@ -153,9 +153,12 @@ else:
     # Fallback if not enough observations
     day1_max_time = start_time + timedelta(hours=16.5)  # Default to 4:30 PM
 
-# Last observation of day 2
-day2_last_hour = day2_sunset
-day2_last_time = start_time + timedelta(hours=day2_last_hour)
+# Last observation of day 2 (get actual last observation)
+day2_obs = [t for t, h in observation_times if h >= 24]
+if len(day2_obs) > 0:
+    day2_last_time = day2_obs[-1]  # Last observation
+else:
+    day2_last_time = start_time + timedelta(hours=day2_sunset)
 
 # Draw sunset window bracket
 sunset_y = 0.75
@@ -172,8 +175,31 @@ ax.annotate('', xy=(day2_last_time, observation_y), xytext=(day2_last_time, suns
            arrowprops=dict(arrowstyle='-', color='darkred',
                          linewidth=1.5, linestyle='dashed'))
 
+# Add dashed extension lines to show sunset window start can vary
+# Get first observation of Day 1
+if len(day1_obs) > 0:
+    day1_first_time = day1_obs[0]
+
+    # Horizontal dashed line from first observation to last observation of Day 1
+    day1_last_time = day1_obs[-1]  # Last observation of Day 1
+    ax.plot([day1_first_time, day1_last_time], [sunset_y, sunset_y],
+            color='darkred', linestyle='--', linewidth=1.5, alpha=0.6)
+
+    # Vertical dashed line from first observation
+    ax.plot([day1_first_time, day1_first_time], [observation_y, sunset_y],
+            color='darkred', linestyle='--', linewidth=1.5, alpha=0.6)
+
+    # Add solid vertical line at first observation intersecting the dashed horizontal line (like a scale bar)
+    ax.plot([day1_first_time, day1_first_time], [sunset_y - 0.02, sunset_y + 0.02],
+            color='darkred', linestyle='-', linewidth=2.5, zorder=6)
+
+    # Add "Variable start time" label above the horizontal dashed line
+    mid_dashed = day1_first_time + (day1_last_time - day1_first_time) / 2
+    ax.text(mid_dashed, sunset_y + 0.02, 'Variable start time',
+            fontsize=9, ha='center', color='darkred', style='italic')
+
 # Add labels for both days - closer to the blue lines
-# Find middle of day 1 observations
+# Find middle of day 1 observations (recalculate after using above)
 day1_obs = [t for t, h in observation_times if h < 24]
 if len(day1_obs) > 0:
     mid_day1_time = day1_obs[len(day1_obs) // 2]
@@ -243,4 +269,4 @@ plt.savefig('temporal_windows_all_intervals.pdf', dpi=300, bbox_inches='tight')
 plt.savefig('temporal_windows_all_intervals.png', dpi=300, bbox_inches='tight')
 
 print("Figure saved as temporal_windows_all_intervals.pdf and temporal_windows_all_intervals.png")
-plt.show()
+# plt.show()  # Comment out to prevent hanging
