@@ -6,7 +6,6 @@ Shows both 30-minute lag windows and the sunset window analysis approach.
 
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
-from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 import numpy as np
 from datetime import datetime, timedelta
 import matplotlib.dates as mdates
@@ -237,13 +236,9 @@ ax.text(start_time + timedelta(hours=(day2_sunrise + day2_sunset)/2), 0.95, 'Day
 ax.text(start_time + timedelta(hours=45), 0.95, 'Night',
         fontsize=10, ha='center', style='italic', color='gray')
 
-# Sunrise/sunset indicators removed for cleaner appearance
-
 # Add legend for observation points
 ax.plot([], [], 'ko', markersize=6, label='Observations')
 ax.legend(loc='upper left', fontsize=10)
-
-# Histogram already created above with aligned observation points
 
 # Format the plot
 ax.set_xlim(times[0], times[-1])
@@ -263,8 +258,6 @@ ax.spines['left'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['top'].set_visible(False)
 
-# Day labels removed for cleaner appearance
-
 # Adjust layout
 plt.tight_layout()
 
@@ -273,4 +266,3 @@ plt.savefig('temporal_windows_all_intervals.pdf', dpi=300, bbox_inches='tight')
 plt.savefig('temporal_windows_all_intervals.png', dpi=300, bbox_inches='tight')
 
 print("Figure saved as temporal_windows_all_intervals.pdf and temporal_windows_all_intervals.png")
-# plt.show()  # Comment out to prevent hanging
