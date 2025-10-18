@@ -104,6 +104,10 @@ for i in range(len(counts)):
                                 linewidth=0.5, zorder=4)
         ax.add_patch(rect)
 
+# Add histogram label to the left of the histogram
+ax.text(start_time + timedelta(hours=day1_sunrise - 1), 0.125, 'Max count\nfrequency',
+        fontsize=9, ha='right', va='center', color='darkorange', weight='bold')
+
 # Now add observation points aligned with histogram bin centers
 observation_y = 0.5
 observation_times = []
