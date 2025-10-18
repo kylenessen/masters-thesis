@@ -89,9 +89,9 @@ for i in range(5):
                                  linewidth=1, linestyle='dashed'))
 
 # Add sunset window
-# Find maximum count time for day 1 (let's say around 2 PM)
-day1_max_hour = 14.0  # 2:00 PM
-day1_max_time = start_time + timedelta(hours=day1_max_hour)
+# End of day 1 (last observation of day 1)
+day1_end_hour = day1_sunset  # End of day 1
+day1_end_time = start_time + timedelta(hours=day1_end_hour)
 
 # Last observation of day 2
 day2_last_hour = day2_sunset
@@ -99,13 +99,13 @@ day2_last_time = start_time + timedelta(hours=day2_last_hour)
 
 # Draw sunset window bracket
 sunset_y = 0.75
-ax.annotate('', xy=(mdates.date2num(day1_max_time), sunset_y),
+ax.annotate('', xy=(mdates.date2num(day1_end_time), sunset_y),
            xytext=(mdates.date2num(day2_last_time), sunset_y),
            arrowprops=dict(arrowstyle='|-|', color='darkred',
                          linewidth=2, shrinkA=0, shrinkB=0))
 
 # Add arrows for sunset window
-ax.annotate('', xy=(day1_max_time, observation_y), xytext=(day1_max_time, sunset_y - 0.05),
+ax.annotate('', xy=(day1_end_time, observation_y), xytext=(day1_end_time, sunset_y - 0.05),
            arrowprops=dict(arrowstyle='-', color='darkred',
                          linewidth=1.5, linestyle='dashed'))
 ax.annotate('', xy=(day2_last_time, observation_y), xytext=(day2_last_time, sunset_y - 0.05),
@@ -118,7 +118,7 @@ ax.text(observation_times[example_start_idx + 2][0], lag_y - 0.15,
         fontsize=11, ha='center', color='darkblue', weight='bold')
 
 # Calculate midpoint of sunset window for label
-sunset_midpoint = day1_max_time + (day2_last_time - day1_max_time) / 2
+sunset_midpoint = day1_end_time + (day2_last_time - day1_end_time) / 2
 ax.text(sunset_midpoint, sunset_y + 0.05,
         'Sunset window',
         fontsize=11, ha='center', color='darkred', weight='bold')

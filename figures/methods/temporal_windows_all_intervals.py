@@ -149,13 +149,13 @@ for i in range(len(observation_times) - 1):
                                  linewidth=0.5, linestyle='dashed', alpha=0.5))
 
 # Add sunset window
-# Start at second-to-last observation of Day 1
+# Start at last observation of Day 1
 day1_obs = [t for t, h in observation_times if h < 24]
-if len(day1_obs) >= 2:
-    day1_max_time = day1_obs[-2]  # Second to last observation
+if len(day1_obs) >= 1:
+    day1_max_time = day1_obs[-1]  # Last observation of Day 1
 else:
     # Fallback if not enough observations
-    day1_max_time = start_time + timedelta(hours=16.5)  # Default to 4:30 PM
+    day1_max_time = start_time + timedelta(hours=17.0)  # Default to 5:00 PM
 
 # Last observation of day 2 (get actual last observation)
 day2_obs = [t for t, h in observation_times if h >= 24]
