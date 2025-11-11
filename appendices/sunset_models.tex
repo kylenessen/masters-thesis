@@ -1,8 +1,8 @@
-\section{Site Fidelity Analysis (Sunset Window): Candidate Models}
+\chapter{Site Fidelity Analysis (Sunset Window): Candidate Models}
 
 This appendix documents all candidate models tested in the sunset window site fidelity analysis. A total of 78 models were evaluated to identify factors predicting daily changes in roost abandonment using a biologically-aligned weather window (from time of maximum count through functional sunset).
 
-\subsection{Model Structure}
+\section{Model Structure}
 
 All models used Generalized Additive Mixed Models (GAMM) with the following structure:
 
@@ -13,7 +13,7 @@ All models used Generalized Additive Mixed Models (GAMM) with the following stru
     \item \textbf{Estimation method}: Restricted Maximum Likelihood (REML)
 \end{itemize}
 
-\subsection{Baseline Control Variables}
+\section{Baseline Control Variables}
 
 All models included control terms for:
 \begin{itemize}
@@ -21,7 +21,7 @@ All models included control terms for:
     \item \texttt{lag\_duration\_hours}: Weather window duration (tested as smooth or linear)
 \end{itemize}
 
-\subsection{Weather Predictor Variables}
+\section{Weather Predictor Variables}
 
 \begin{itemize}
     \item \texttt{temp\_min}: Minimum temperature from max count to sunset ($^\circ$C)
@@ -33,11 +33,11 @@ All models included control terms for:
     \item \texttt{ti()}: Tensor product interaction smooth
 \end{itemize}
 
-\subsection{Candidate Models}
+\section{Candidate Models}
 
 Models were generated programmatically across seven categories. The first number in parentheses indicates models with smooth baseline controls; the second indicates linear baseline controls.
 
-\subsubsection{Part 1: Null Models (2 models)}
+\subsection{Part 1: Null Models (2 models)}
 
 \begin{footnotesize}
 \begin{tabular}{>{\raggedright}p{2.5cm}>{\raggedright\arraybackslash}p{11cm}}
@@ -50,7 +50,7 @@ M2 & Null (linear baseline) \\
 \end{tabular}
 \end{footnotesize}
 
-\subsubsection{Part 2: Single Predictor Models (10 models)}
+\subsection{Part 2: Single Predictor Models (10 models)}
 
 Each of 5 weather predictors tested with smooth and linear baseline:
 
@@ -68,7 +68,7 @@ M11, M12 & Single: sum\_butterflies\_direct\_sun (smooth, linear) \\
 \end{tabular}
 \end{footnotesize}
 
-\subsubsection{Part 3: Two-Way Interaction Models (20 models)}
+\subsection{Part 3: Two-Way Interaction Models (20 models)}
 
 All pairwise interactions among 5 predictors (10 pairs $\times$ 2 baseline types):
 
@@ -91,7 +91,7 @@ M31, M32 & Interaction: wind\_max\_gust $\times$ sum\_butterflies\_direct\_sun (
 \end{tabular}
 \end{footnotesize}
 
-\subsubsection{Part 4: Main Effects + Interaction Models (20 models)}
+\subsection{Part 4: Main Effects + Interaction Models (20 models)}
 
 Same 10 pairs, but including both main effects and their interaction:
 
@@ -114,7 +114,7 @@ M51, M52 & Additive + Interaction: wind\_max\_gust + sum\_butterflies\_direct\_s
 \end{tabular}
 \end{footnotesize}
 
-\subsubsection{Part 5: Strategic Additive Combinations (14 models)}
+\subsection{Part 5: Strategic Additive Combinations (14 models)}
 
 Biologically-motivated predictor combinations (7 combinations $\times$ 2 baseline types):
 
@@ -134,7 +134,7 @@ M65, M66 & Additive: All predictors (smooth, linear) \\
 \end{tabular}
 \end{footnotesize}
 
-\subsubsection{Part 6: Complex Models with Multiple Interactions (6 models)}
+\subsection{Part 6: Complex Models with Multiple Interactions (6 models)}
 
 \begin{footnotesize}
 \begin{tabular}{>{\raggedright}p{2.5cm}>{\raggedright\arraybackslash}p{11cm}}
@@ -148,7 +148,7 @@ M71, M72 & FULL MODEL: All main effects + all two-way interactions (smooth, line
 \end{tabular}
 \end{footnotesize}
 
-\subsubsection{Part 7: Extra Linear Interaction Candidates (2 models)}
+\subsection{Part 7: Extra Linear Interaction Candidates (2 models)}
 
 Additional models for comparison with 30-minute analysis:
 
@@ -163,6 +163,6 @@ M78 & Linear interaction + temp\_min + temp\_max \\
 \end{tabular}
 \end{footnotesize}
 
-\subsection{Model Selection Results}
+\section{Model Selection Results}
 
 Model M32 (Interaction: wind\_max\_gust $\times$ sum\_butterflies\_direct\_sun with linear baseline) was identified as the best-fit model based on AICc (small-sample corrected AIC). Of the 78 candidate models, 42 converged successfully; models with smooth baseline controls generally failed to converge due to sample size limitations (n = 96 lag pairs). Complete model selection statistics are reported in the main text.

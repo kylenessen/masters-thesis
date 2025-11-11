@@ -1,8 +1,8 @@
-\section{Threshold Wind Disruption Analysis: Candidate Models}
+\chapter{Threshold Wind Disruption Analysis: Candidate Models}
 
 This appendix documents all candidate models tested in the threshold wind disruption sensitivity analysis. A total of 52 models were evaluated using a binary threshold-based wind metric to compare with the continuous maximum gust approach.
 
-\subsection{Model Structure}
+\section{Model Structure}
 
 All models used Generalized Additive Mixed Models (GAMM) with the following structure:
 
@@ -13,7 +13,7 @@ All models used Generalized Additive Mixed Models (GAMM) with the following stru
     \item \textbf{Estimation method}: Restricted Maximum Likelihood (REML)
 \end{itemize}
 
-\subsection{Variable Definitions}
+\section{Variable Definitions}
 
 \begin{itemize}
     \item \texttt{total\_butterflies\_t\_lag}: Previous butterfly count (lagged)
@@ -26,7 +26,7 @@ All models used Generalized Additive Mixed Models (GAMM) with the following stru
     \item \texttt{*}: Linear interaction term
 \end{itemize}
 
-\subsection{Candidate Models}
+\section{Candidate Models}
 
 \begin{footnotesize}
 \begin{longtable}{>{\raggedright}p{1.5cm}>{\raggedright\arraybackslash}p{13cm}}
@@ -118,6 +118,6 @@ T52 & s(temperature\_avg) + s(time\_within\_day\_t) + ti(minutes\_above\_thresho
 \end{longtable}
 \end{footnotesize}
 
-\subsection{Model Selection Results}
+\section{Model Selection Results}
 
 Model T50 was identified as the best-fit model based on Akaike Information Criterion (AIC). This model structure mirrors M50 from the continuous wind analysis, enabling direct comparison between threshold-based and continuous wind metrics. Complete model selection statistics are reported in the main text.

@@ -1,8 +1,8 @@
-\section{30-Minute Wind Disruption Analysis: Candidate Models}
+\chapter{30-Minute Wind Disruption Analysis: Candidate Models}
 
 This appendix documents all candidate models tested in the 30-minute wind disruption analysis. A total of 52 models were evaluated to identify the best-fitting model for predicting short-term changes in butterfly cluster presence based on weather conditions and direct sun exposure.
 
-\subsection{Model Structure}
+\section{Model Structure}
 
 All models used Generalized Additive Mixed Models (GAMM) with the following structure:
 
@@ -13,7 +13,7 @@ All models used Generalized Additive Mixed Models (GAMM) with the following stru
     \item \textbf{Estimation method}: Restricted Maximum Likelihood (REML)
 \end{itemize}
 
-\subsection{Variable Definitions}
+\section{Variable Definitions}
 
 \begin{itemize}
     \item \texttt{total\_butterflies\_t\_lag}: Previous butterfly count (lagged)
@@ -26,7 +26,7 @@ All models used Generalized Additive Mixed Models (GAMM) with the following stru
     \item \texttt{*}: Linear interaction term
 \end{itemize}
 
-\subsection{Candidate Models}
+\section{Candidate Models}
 
 \begin{footnotesize}
 \begin{longtable}{>{\raggedright}p{1.5cm}>{\raggedright\arraybackslash}p{13cm}}
@@ -118,6 +118,6 @@ M52 & s(temperature\_avg) + s(time\_within\_day\_t) + ti(max\_gust, butterflies\
 \end{longtable}
 \end{footnotesize}
 
-\subsection{Model Selection Results}
+\section{Model Selection Results}
 
 Model M50 was identified as the best-fit model based on Akaike Information Criterion (AIC). Complete model selection statistics and parameter estimates for the best-fit model are reported in the main text.
