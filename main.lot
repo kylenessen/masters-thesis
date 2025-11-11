@@ -1,9 +1,9 @@
-\hbox to \linewidth {\hspace {1.5em}Table\hfill Page}
-\contentsline {table}{\numberline {1.1}{\ignorespaces Top 5 models ranked by AIC (30-minute analysis)\relax }}{29}{table.caption.6}%
-\contentsline {table}{\numberline {1.2}{\ignorespaces Summary of best-fit model (M50)}}{30}{table.caption.7}%
-\contentsline {table}{\numberline {1.3}{\ignorespaces Basis dimension adequacy checks (M50)}}{33}{table.caption.11}%
-\contentsline {table}{\numberline {1.4}{\ignorespaces Top 5 models ranked by AIC (30-minute threshold analysis)\relax }}{35}{table.caption.13}%
-\contentsline {table}{\numberline {1.5}{\ignorespaces Statistical power to detect wind effects}}{38}{table.caption.15}%
-\contentsline {table}{\numberline {1.6}{\ignorespaces Top 5 models ranked by AICc (sunset analysis)\relax }}{40}{table.caption.16}%
-\contentsline {table}{\numberline {1.7}{\ignorespaces Summary of best-fit model (M32)}}{41}{table.caption.17}%
-\contentsline {table}{\numberline {1.8}{\ignorespaces Top models from 24-hour robustness analysis}}{46}{table.caption.22}%
+\hbox to \linewidth {\hspace {0em}Table\hfill Page}
+\contentsline {table}{\numberline {1.1}{\ignorespaces Top 5 models ranked by AIC (30-minute analysis)\relax }}{29}{table.caption.31}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Summary of best-fit model (M50)}}{30}{table.caption.33}%
+\contentsline {table}{\numberline {1.3}{\ignorespaces Basis dimension adequacy checks (M50)}}{34}{table.caption.38}%
+\contentsline {table}{\numberline {1.4}{\ignorespaces Top 5 models ranked by AIC (30-minute threshold analysis)\relax }}{36}{table.caption.41}%
+\contentsline {table}{\numberline {1.5}{\ignorespaces Statistical power to detect wind effects}}{38}{table.caption.44}%
+\contentsline {table}{\numberline {1.6}{\ignorespaces Top 5 models ranked by AICc (sunset analysis)\relax }}{40}{table.caption.47}%
+\contentsline {table}{\numberline {1.7}{\ignorespaces Summary of best-fit model (M32)}}{41}{table.caption.49}%
+\contentsline {table}{\numberline {1.8}{\ignorespaces Top models from 24-hour robustness analysis}}{46}{table.caption.56}%

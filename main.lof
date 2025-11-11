@@ -1,13 +1,14 @@
-\hbox to \linewidth {\hspace {1.5em}Figure\hfill Page}
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Wind speed vs. abundance change (30-minute)}}{27}{figure.caption.4}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Wind speed vs. cluster size changes (day-to-day)}}{28}{figure.caption.5}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Partial effects of environmental predictors (M50)}}{31}{figure.caption.8}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Wind × sunlight interaction (30-minute analysis)}}{32}{figure.caption.9}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Diagnostic plots (M50)}}{33}{figure.caption.10}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Autocorrelation function (M50)}}{34}{figure.caption.12}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Wind threshold × sunlight interaction}}{37}{figure.caption.14}%
-\contentsline {figure}{\numberline {1.8}{\ignorespaces Partial effects of control variables (M32)}}{42}{figure.caption.18}%
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Wind × sunlight interaction (day-to-day analysis)}}{43}{figure.caption.19}%
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Diagnostic plots (M32)}}{44}{figure.caption.20}%
-\contentsline {figure}{\numberline {1.11}{\ignorespaces Autocorrelation function (M32)}}{45}{figure.caption.21}%
-\contentsline {figure}{\numberline {1.12}{\ignorespaces Wind × sunlight interaction (24-hour robustness)}}{47}{figure.caption.23}%
+\hbox to \linewidth {\hspace {0em}Figure\hfill Page}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Temporal analysis windows for monarch butterfly monitoring. The figure illustrates two complementary approaches: (1) 30-minute lag analysis comparing consecutive observation intervals to capture immediate responses to environmental changes, and (2) sunset window analysis spanning from the previous day's maximum butterfly count to the current day's final observation (mean duration $\sim $29.6 hours). Camera observations occur at 30-minute intervals during daylight hours only. Background shading indicates day-night cycles with transitions at sunrise and sunset.\relax }}{24}{figure.caption.23}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Wind speed vs. abundance change (30-minute)}}{27}{figure.caption.27}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Wind speed vs. cluster size changes (day-to-day)}}{28}{figure.caption.28}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Partial effects of environmental predictors (M50)}}{31}{figure.caption.34}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Wind × sunlight interaction (30-minute analysis)}}{32}{figure.caption.35}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Diagnostic plots (M50)}}{33}{figure.caption.37}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Autocorrelation function (M50)}}{34}{figure.caption.39}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Wind threshold × sunlight interaction}}{37}{figure.caption.42}%
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Partial effects of control variables (M32)}}{42}{figure.caption.50}%
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Wind × sunlight interaction (day-to-day analysis)}}{43}{figure.caption.51}%
+\contentsline {figure}{\numberline {1.11}{\ignorespaces Diagnostic plots (M32)}}{44}{figure.caption.53}%
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Autocorrelation function (M32)}}{45}{figure.caption.54}%
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Wind × sunlight interaction (24-hour robustness)}}{47}{figure.caption.57}%

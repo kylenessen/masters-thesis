@@ -104,7 +104,7 @@
 %%% ====================================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cpthesis}[2024/08/31 DDM's modification of the modified v3.0 University of California Thesis Class]
+\ProvidesClass{cpthesis}[2025/09/04 DDM's modification of the modified v3.0 University of California Thesis Class]
 
 %    ****************************************
 %    *               OPTIONS                *
@@ -252,10 +252,6 @@
 \def\acknowledgename{Acknowledgments}
 %                    ~~~~~~~~~~~~~~~
 %
-% dedication environment:
-\def\dedicationname{Dedication}
-%                   ~~~~~~~~~~
-%
 % campus
 \def\campus{San Luis Obispo}
 %           ~~~~~~~~~~~~~~~
@@ -329,10 +325,10 @@
                 \parshape6
                 0.00in \textwidth
                 0.1\textwidth 0.8\textwidth
-                0.2\textwidth 0.7\textwidth
-                0.3\textwidth 0.6\textwidth
-                0.35\textwidth 0.55\textwidth
-                0.4\textwidth 0.5\textwidth
+                0.2\textwidth 0.6\textwidth
+                0.3\textwidth 0.4\textwidth
+                0.35\textwidth 0.3\textwidth
+                0.4\textwidth 0.1\textwidth
                 \strut
                 #1%
         }%
@@ -351,17 +347,17 @@
 
     \vfill\null
   \begin{center}
-        \invpyramid{\MakeUppercase{\nohyphens{\displaytitle}}}
+        \invpyramid{\MakeUppercase{\nohyphens{\@title}}}
 
         %\vfill\null
-        \addvspace{1.4in}
+        \addvspace{1.3in}
 
     A Thesis \\
     presented to \\
     the Faculty of California Polytechnic State University, \\
     \campus
 
-        \addvspace{1.4in}
+        \addvspace{1.3in}
         %\vfill\null
 
 
@@ -468,17 +464,6 @@ ALL RIGHTS RESERVED
 \fi
 \newpage
 }
-
-% DEDICATION
-%
-% The dedication environment just makes sure the dedication gets its
-% own page.
-
-\newenvironment{dedication}{
-\begin{center}
-{\MakeUppercase{\dedicationname}}
-\end{center}
-}{\newpage}
 
 % ACKNOWLEDGMENTS
 %
@@ -767,18 +752,32 @@ ALL RIGHTS RESERVED
 % replace the appendix macro with custom
 \newif\if@appendix
 \@appendixfalse
+\newif\if@oneappendix
+\@oneappendixfalse
 \renewcommand\appendix[1][2]{%
     \def\@chapapp{\appendixname}
-    \addtocontents{toc}{\let\protect\l@chapter\protect\l@section}
     \renewcommand\thechapter{\Alph{chapter}}
     \setcounter{chapter}{0}
     \ifnum#1>1
-        {\addtocontents{toc}{\noindent\MakeUppercase{\appendicestocname}}}
+        \addtocontents{toc}{\noindent\MakeUppercase{\appendicestocname}}
+        % Indent all entries in appendix and still show sub-subsections
+        \addtocontents{toc}{\protect\setcounter{tocdepth}{4}}%
+        \setcounter{tocdepth}{4}
+        \addtocontents{toc}{\let\protect\l@chapter\protect\l@section}
+        \addtocontents{toc}{\let\protect\l@section\protect\l@subsection}
+        \addtocontents{toc}{\let\protect\l@subsection\protect\l@subsubsection}
+        \addtocontents{toc}{\let\protect\l@subsubsection\protect\l@paragraph}
     \else
-        {\addtocontents{toc}{\noindent\MakeUppercase{\appendixtocname}}}
+        \@oneappendixtrue
+        % Custom format for the one appendix
+        % See: https://tex.stackexchange.com/a/110854
+        \titleformat{\chapter}
+          {\centering} % format
+          {}                % label
+          {0pt}             % sep
+          {}           % before-code
     \fi
-    % Indents Appendix in Table of Contents
-    \addtocontents{toc}{\let\protect\l@chapter\protect\l@section}
+    % Set flag to true
     \@appendixtrue
 }
 
@@ -793,32 +792,43 @@ ALL RIGHTS RESERVED
 % make toc entry uppercase
 % see: https://tex.stackexchange.com/a/109948
 \renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
-                    \thispagestyle{plain}%
-                    \global\@topnum\z@
-                    \@afterindentfalse
-                    \secdef\@chapter\@schapter}
+                      \thispagestyle{plain}%
+                      \global\@topnum\z@
+                      \@afterindentfalse
+                      \secdef\@chapter\@schapter}
 \def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
-                       \if@mainmatter
-                         \refstepcounter{chapter}%
-                         \typeout{\@chapapp\space\thechapter.}%
-                         \if@appendix
-                             \addcontentsline{toc}{chapter}%
-                                    {\protect\numberline{\thechapter.}{#1}}
-                         \else
-                             \addcontentsline{toc}{chapter}%
-                                    {\protect\numberline{\thechapter.}\uppercase{#1}}
-                         \fi
-                       \else
-                         \addcontentsline{toc}{chapter}{\MakeUppercase{#1}}%
-                       \fi
+                      \if@mainmatter
+                        \refstepcounter{chapter}%
+                        \typeout{\@chapapp\space\thechapter.}%
+                        \if@appendix
+                          \if@oneappendix
+                            \addcontentsline{toc}{chapter}{APPENDIX}
+                          \else
+                            \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter.}{#1}}
+                          \fi
+                        \else
+                          \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter.}\uppercase{#1}}
+                        \fi
+                      \else
+                        \addcontentsline{toc}{chapter}{\MakeUppercase{#1}}%
+                      \fi
                     \else
                       \addcontentsline{toc}{chapter}{\MakeUppercase{#1}}%
                     \fi
                     \chaptermark{#1}%
+                    \if@appendix
+                      \if@oneappendix
+                        \@makechapterhead{APPENDIX. #1}
+                        \@afterheading
+                      \else
+                        \@makechapterhead{#2}%
+                        \@afterheading
+                      \fi
+                    \else
                       \@makechapterhead{#2}%
                       \@afterheading
-                    }
-
+                    \fi
+                   }
 
 
 %    ****************************************
@@ -931,7 +941,7 @@ ALL RIGHTS RESERVED
   \ssp\@starttoc{lof}
 }
 
-\def\l@figure{\@dottedtocline{1}{1.5em}{3.2em}}
+\def\l@figure{\@dottedtocline{0}{0em}{3.2em}}
 
 
 % LIST OF TABLES
@@ -1399,5 +1409,21 @@ rmargin=1in
 % Set the counter depths
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Nomenclature packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[intoc,notocbasic]{nomencl}
+% changes to formatting of the list of symbols to be upper case
+\renewcommand{\nomname}{\MakeUppercase{\listsymbolsname}}
+% allow cross-references to the nomenclature
+% see: https://tex.stackexchange.com/a/158934
+\usepackage{etoolbox}
+\patchcmd{\thenomenclature}
+  {\chapter*{\nomname}}
+  {\phantomsection\chapter*{\nomname}\label{sec:Nomenclature}}
+  {}
+  {}
 
 \endinput
