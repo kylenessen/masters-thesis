@@ -38,7 +38,7 @@ These null linear regression relationships indicated that wind speed alone canno
 
 To examine how monarchs respond to immediate environmental conditions, we analyzed 1,894 paired observations collected at 30-minute intervals throughout the overwintering season. This responsive change analysis tested whether short-term fluctuations in cluster size could be explained by concurrent weather variables, particularly wind exposure.
 
-\section{Model Selection}
+\section{Model Selection: 30-Minute Analysis}
 
 In the 30-minute wind disruption analysis, we evaluated 52 candidate models using generalized additive mixed models (GAMMs) to identify the environmental predictors of monarch abundance changes. Model selection via Akaike Information Criterion (AIC) identified M50 as the decisively best-fit model, capturing 85.8\% of the total model weight (Table~\ref{tab:export-model-selection-table}). The next best model (M23) showed substantially weaker support with $\Delta$AIC = 3.8 and only 12.6\% model weight. Model M50 incorporated smoothed terms for previous butterfly count, temperature, and time of day (minutes since sunrise), along with a tensor interaction between maximum wind speed and butterflies in direct sun.
 
@@ -129,7 +129,7 @@ To implement this day-to-day analysis, we examined 96 consecutive-day pairs from
 
 Daily maximum cluster sizes ranged from 0 to 770 butterflies (mean = 134.7 ± 138.1), with day-to-day changes in maximum count ranging from losses of 376 butterflies to gains of 464 butterflies (mean change = -10.5 ± 111.6). Within the sunset windows, maximum wind gusts ranged from 2.0 to 12.8 m/s (mean = 4.5 ± 1.8 m/s), with all observation windows exceeding the proposed 2 m/s threshold. Cumulative direct sun exposure varied from 0 to 1,122 butterfly-observations in sunlight per window (mean = 139.8 ± 206.9), reflecting diverse thermal exposure conditions across monitoring days.
 
-\section{Model Selection}
+\section{Model Selection: Site Fidelity Analysis}
 
 We evaluated 78 candidate models using generalized additive mixed models (GAMMs) to identify environmental predictors of day-to-day changes in maximum cluster size. The model space included null, single-predictor, interaction-only, additive, main effects with interactions, and complex formulations, all incorporating deployment random intercepts and AR(1) temporal correlation. Model selection via corrected Akaike Information Criterion (AICc) identified the best-fit model (M32) as the decisively best-fit model, capturing 84.7\% of the total model weight (Table~\ref{tab:sunset-model-selection-table}). The next best model (M52) showed substantially weaker support with $\Delta$AICc = 5.6 and only 5.2\% model weight. Model M32 incorporated a tensor smooth interaction between maximum wind gust and cumulative direct sun exposure, along with baseline controls for previous day's maximum count and window duration.
 
