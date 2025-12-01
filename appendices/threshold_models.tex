@@ -1,0 +1,123 @@
+\chapter{Threshold Wind Disruption Analysis: Candidate Models}
+
+This appendix documents all candidate models tested in the threshold wind disruption sensitivity analysis. A total of 52 models were evaluated using a binary threshold-based wind metric to compare with the continuous maximum gust approach.
+
+\section{Model Structure}
+
+All models used Generalized Additive Mixed Models (GAMM) with the following structure:
+
+\begin{itemize}
+    \item \textbf{Response variable}: $\sqrt[3]{\Delta\text{Butterflies}}$ (cube root of butterfly count change between consecutive 30-minute intervals)
+    \item \textbf{Random effects}: Random intercept for deployment site
+    \item \textbf{Correlation structure}: AR(1) autocorrelation within observation days
+    \item \textbf{Estimation method}: Restricted Maximum Likelihood (REML)
+\end{itemize}
+
+\section{Variable Definitions}
+
+\begin{itemize}
+    \item \texttt{total\_butterflies\_t\_lag}: Previous butterfly count (lagged)
+    \item \texttt{minutes\_above\_threshold}: Minutes with wind speed $\geq$ 2 m/s
+    \item \texttt{temperature\_avg}: Average temperature ($^\circ$C)
+    \item \texttt{butterflies\_direct\_sun\_t\_lag}: Butterflies in direct sun (lagged)
+    \item \texttt{time\_within\_day\_t}: Time since sunrise (hours)
+    \item \texttt{s()}: Thin-plate regression spline smooth term
+    \item \texttt{ti()}: Tensor product interaction smooth
+    \item \texttt{*}: Linear interaction term
+\end{itemize}
+
+\section{Candidate Models}
+
+\begin{footnotesize}
+\begin{longtable}{>{\raggedright}p{1.5cm}>{\raggedright\arraybackslash}p{13cm}}
+\caption{Complete list of 52 candidate models tested in threshold wind disruption analysis} \\
+\toprule
+\textbf{Model} & \textbf{Formula} \\
+\midrule
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable{} -- continued from previous page} \\
+\toprule
+\textbf{Model} & \textbf{Formula} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{2}{r}{Continued on next page} \\
+\endfoot
+\bottomrule
+\endlastfoot
+%
+% Baseline
+T1 & total\_butterflies\_t\_lag \\
+\addlinespace
+% Main effects (with lag)
+T2 & total\_butterflies\_t\_lag + minutes\_above\_threshold \\
+T3 & total\_butterflies\_t\_lag + temperature\_avg \\
+T4 & total\_butterflies\_t\_lag + butterflies\_direct\_sun\_t\_lag \\
+\addlinespace
+% Two vars (with lag)
+T5 & total\_butterflies\_t\_lag + minutes\_above\_threshold + temperature\_avg \\
+T6 & total\_butterflies\_t\_lag + minutes\_above\_threshold + butterflies\_direct\_sun\_t\_lag \\
+T7 & total\_butterflies\_t\_lag + temperature\_avg + butterflies\_direct\_sun\_t\_lag \\
+\addlinespace
+% Three vars main effects (with lag)
+T8 & total\_butterflies\_t\_lag + minutes\_above\_threshold + temperature\_avg + butterflies\_direct\_sun\_t\_lag \\
+\addlinespace
+% Interactions (with lag)
+T9 & total\_butterflies\_t\_lag + minutes\_above\_threshold * temperature\_avg \\
+T10 & total\_butterflies\_t\_lag + minutes\_above\_threshold * butterflies\_direct\_sun\_t\_lag \\
+T11 & total\_butterflies\_t\_lag + temperature\_avg * butterflies\_direct\_sun\_t\_lag \\
+T12 & total\_butterflies\_t\_lag + minutes\_above\_threshold * temperature\_avg + butterflies\_direct\_sun\_t\_lag \\
+T13 & total\_butterflies\_t\_lag + minutes\_above\_threshold * butterflies\_direct\_sun\_t\_lag + temperature\_avg \\
+T14 & total\_butterflies\_t\_lag + temperature\_avg * butterflies\_direct\_sun\_t\_lag + minutes\_above\_threshold \\
+T15 & total\_butterflies\_t\_lag + minutes\_above\_threshold * temperature\_avg + minutes\_above\_threshold * butterflies\_direct\_sun\_t\_lag + temperature\_avg * butterflies\_direct\_sun\_t\_lag \\
+T16 & total\_butterflies\_t\_lag + minutes\_above\_threshold * temperature\_avg * butterflies\_direct\_sun\_t\_lag \\
+\addlinespace
+% Smooth (with lag)
+T17 & s(total\_butterflies\_t\_lag) + s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) \\
+T18 & s(total\_butterflies\_t\_lag) + temperature\_avg + s(butterflies\_direct\_sun\_t\_lag) \\
+T19 & s(total\_butterflies\_t\_lag) + s(minutes\_above\_threshold) + temperature\_avg + s(butterflies\_direct\_sun\_t\_lag) \\
+T20 & s(total\_butterflies\_t\_lag) + s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) \\
+T21 & s(total\_butterflies\_t\_lag) + s(minutes\_above\_threshold) + s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) \\
+T22 & s(total\_butterflies\_t\_lag) + temperature\_avg + s(butterflies\_direct\_sun\_t\_lag) + s(time\_within\_day\_t) \\
+T23 & s(total\_butterflies\_t\_lag) + s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) + s(time\_within\_day\_t) \\
+T24 & s(total\_butterflies\_t\_lag) + s(minutes\_above\_threshold) + s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) + s(time\_within\_day\_t) \\
+\addlinespace
+% Absolute-change framework (no lag)
+T25 & 1 (intercept only) \\
+T26 & minutes\_above\_threshold \\
+T27 & temperature\_avg \\
+T28 & butterflies\_direct\_sun\_t\_lag \\
+T29 & minutes\_above\_threshold + temperature\_avg \\
+T30 & minutes\_above\_threshold + butterflies\_direct\_sun\_t\_lag \\
+T31 & temperature\_avg + butterflies\_direct\_sun\_t\_lag \\
+T32 & minutes\_above\_threshold + temperature\_avg + butterflies\_direct\_sun\_t\_lag \\
+T33 & minutes\_above\_threshold * temperature\_avg \\
+T34 & minutes\_above\_threshold * butterflies\_direct\_sun\_t\_lag \\
+T35 & temperature\_avg * butterflies\_direct\_sun\_t\_lag \\
+T36 & minutes\_above\_threshold * temperature\_avg + butterflies\_direct\_sun\_t\_lag \\
+T37 & minutes\_above\_threshold * butterflies\_direct\_sun\_t\_lag + temperature\_avg \\
+T38 & temperature\_avg * butterflies\_direct\_sun\_t\_lag + minutes\_above\_threshold \\
+T39 & minutes\_above\_threshold * temperature\_avg + minutes\_above\_threshold * butterflies\_direct\_sun\_t\_lag + temperature\_avg * butterflies\_direct\_sun\_t\_lag \\
+T40 & minutes\_above\_threshold * temperature\_avg * butterflies\_direct\_sun\_t\_lag \\
+\addlinespace
+% Smooths (no lag)
+T41 & s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) \\
+T42 & temperature\_avg + s(butterflies\_direct\_sun\_t\_lag) \\
+T43 & s(minutes\_above\_threshold) + temperature\_avg + s(butterflies\_direct\_sun\_t\_lag) \\
+T44 & s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) \\
+T45 & s(minutes\_above\_threshold) + s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) \\
+T46 & temperature\_avg + s(butterflies\_direct\_sun\_t\_lag) + s(time\_within\_day\_t) \\
+T47 & s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) + s(time\_within\_day\_t) \\
+T48 & s(minutes\_above\_threshold) + s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) + s(time\_within\_day\_t) \\
+\addlinespace
+% Tensor-product interactions (wind × sun)
+T49 & s(total\_butterflies\_t\_lag) + ti(minutes\_above\_threshold, butterflies\_direct\_sun\_t\_lag) \\
+T50 & s(total\_butterflies\_t\_lag) + s(temperature\_avg) + s(time\_within\_day\_t) + ti(minutes\_above\_threshold, butterflies\_direct\_sun\_t\_lag) \\
+T51 & ti(minutes\_above\_threshold, butterflies\_direct\_sun\_t\_lag) \\
+T52 & s(temperature\_avg) + s(time\_within\_day\_t) + ti(minutes\_above\_threshold, butterflies\_direct\_sun\_t\_lag) \\
+\end{longtable}
+\end{footnotesize}
+
+\section{Model Selection Results}
+
+Model T50 was identified as the best-fit model based on Akaike Information Criterion (AIC). This model structure mirrors M50 from the continuous wind analysis, enabling direct comparison between threshold-based and continuous wind metrics. Complete model selection statistics are reported in the main text.

@@ -1,0 +1,123 @@
+\chapter{30-Minute Wind Disruption Analysis: Candidate Models}
+
+This appendix documents all candidate models tested in the 30-minute wind disruption analysis. A total of 52 models were evaluated to identify the best-fitting model for predicting short-term changes in butterfly cluster presence based on weather conditions and direct sun exposure.
+
+\section{Model Structure}
+
+All models used Generalized Additive Mixed Models (GAMM) with the following structure:
+
+\begin{itemize}
+    \item \textbf{Response variable}: $\sqrt[3]{\Delta\text{Butterflies}}$ (cube root of butterfly count change between consecutive 30-minute intervals)
+    \item \textbf{Random effects}: Random intercept for deployment site
+    \item \textbf{Correlation structure}: AR(1) autocorrelation within observation days
+    \item \textbf{Estimation method}: Restricted Maximum Likelihood (REML)
+\end{itemize}
+
+\section{Variable Definitions}
+
+\begin{itemize}
+    \item \texttt{total\_butterflies\_t\_lag}: Previous butterfly count (lagged)
+    \item \texttt{max\_gust}: Maximum wind gust speed (m/s)
+    \item \texttt{temperature\_avg}: Average temperature ($^\circ$C)
+    \item \texttt{butterflies\_direct\_sun\_t\_lag}: Butterflies in direct sun (lagged)
+    \item \texttt{time\_within\_day\_t}: Time since sunrise (hours)
+    \item \texttt{s()}: Thin-plate regression spline smooth term
+    \item \texttt{ti()}: Tensor product interaction smooth
+    \item \texttt{*}: Linear interaction term
+\end{itemize}
+
+\section{Candidate Models}
+
+\begin{footnotesize}
+\begin{longtable}{>{\raggedright}p{1.5cm}>{\raggedright\arraybackslash}p{13cm}}
+\caption{Complete list of 52 candidate models tested in 30-minute wind disruption analysis} \\
+\toprule
+\textbf{Model} & \textbf{Formula} \\
+\midrule
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable{} -- continued from previous page} \\
+\toprule
+\textbf{Model} & \textbf{Formula} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{2}{r}{Continued on next page} \\
+\endfoot
+\bottomrule
+\endlastfoot
+%
+% Baseline
+M1 & total\_butterflies\_t\_lag \\
+\addlinespace
+% Main effects (with lag)
+M2 & total\_butterflies\_t\_lag + max\_gust \\
+M3 & total\_butterflies\_t\_lag + temperature\_avg \\
+M4 & total\_butterflies\_t\_lag + butterflies\_direct\_sun\_t\_lag \\
+\addlinespace
+% Two vars (with lag)
+M5 & total\_butterflies\_t\_lag + max\_gust + temperature\_avg \\
+M6 & total\_butterflies\_t\_lag + max\_gust + butterflies\_direct\_sun\_t\_lag \\
+M7 & total\_butterflies\_t\_lag + temperature\_avg + butterflies\_direct\_sun\_t\_lag \\
+\addlinespace
+% Three vars main effects (with lag)
+M8 & total\_butterflies\_t\_lag + max\_gust + temperature\_avg + butterflies\_direct\_sun\_t\_lag \\
+\addlinespace
+% Interactions (with lag)
+M9 & total\_butterflies\_t\_lag + max\_gust * temperature\_avg \\
+M10 & total\_butterflies\_t\_lag + max\_gust * butterflies\_direct\_sun\_t\_lag \\
+M11 & total\_butterflies\_t\_lag + temperature\_avg * butterflies\_direct\_sun\_t\_lag \\
+M12 & total\_butterflies\_t\_lag + max\_gust * temperature\_avg + butterflies\_direct\_sun\_t\_lag \\
+M13 & total\_butterflies\_t\_lag + max\_gust * butterflies\_direct\_sun\_t\_lag + temperature\_avg \\
+M14 & total\_butterflies\_t\_lag + temperature\_avg * butterflies\_direct\_sun\_t\_lag + max\_gust \\
+M15 & total\_butterflies\_t\_lag + max\_gust * temperature\_avg + max\_gust * butterflies\_direct\_sun\_t\_lag + temperature\_avg * butterflies\_direct\_sun\_t\_lag \\
+M16 & total\_butterflies\_t\_lag + max\_gust * temperature\_avg * butterflies\_direct\_sun\_t\_lag \\
+\addlinespace
+% Smooth (with lag)
+M17 & s(total\_butterflies\_t\_lag) + s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) \\
+M18 & s(total\_butterflies\_t\_lag) + temperature\_avg + s(butterflies\_direct\_sun\_t\_lag) \\
+M19 & s(total\_butterflies\_t\_lag) + s(max\_gust) + temperature\_avg + s(butterflies\_direct\_sun\_t\_lag) \\
+M20 & s(total\_butterflies\_t\_lag) + s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) \\
+M21 & s(total\_butterflies\_t\_lag) + s(max\_gust) + s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) \\
+M22 & s(total\_butterflies\_t\_lag) + temperature\_avg + s(butterflies\_direct\_sun\_t\_lag) + s(time\_within\_day\_t) \\
+M23 & s(total\_butterflies\_t\_lag) + s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) + s(time\_within\_day\_t) \\
+M24 & s(total\_butterflies\_t\_lag) + s(max\_gust) + s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) + s(time\_within\_day\_t) \\
+\addlinespace
+% Absolute-change framework (no lag)
+M25 & 1 (intercept only) \\
+M26 & max\_gust \\
+M27 & temperature\_avg \\
+M28 & butterflies\_direct\_sun\_t\_lag \\
+M29 & max\_gust + temperature\_avg \\
+M30 & max\_gust + butterflies\_direct\_sun\_t\_lag \\
+M31 & temperature\_avg + butterflies\_direct\_sun\_t\_lag \\
+M32 & max\_gust + temperature\_avg + butterflies\_direct\_sun\_t\_lag \\
+M33 & max\_gust * temperature\_avg \\
+M34 & max\_gust * butterflies\_direct\_sun\_t\_lag \\
+M35 & temperature\_avg * butterflies\_direct\_sun\_t\_lag \\
+M36 & max\_gust * temperature\_avg + butterflies\_direct\_sun\_t\_lag \\
+M37 & max\_gust * butterflies\_direct\_sun\_t\_lag + temperature\_avg \\
+M38 & temperature\_avg * butterflies\_direct\_sun\_t\_lag + max\_gust \\
+M39 & max\_gust * temperature\_avg + max\_gust * butterflies\_direct\_sun\_t\_lag + temperature\_avg * butterflies\_direct\_sun\_t\_lag \\
+M40 & max\_gust * temperature\_avg * butterflies\_direct\_sun\_t\_lag \\
+\addlinespace
+% Smooths (no lag)
+M41 & s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) \\
+M42 & temperature\_avg + s(butterflies\_direct\_sun\_t\_lag) \\
+M43 & s(max\_gust) + temperature\_avg + s(butterflies\_direct\_sun\_t\_lag) \\
+M44 & s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) \\
+M45 & s(max\_gust) + s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) \\
+M46 & temperature\_avg + s(butterflies\_direct\_sun\_t\_lag) + s(time\_within\_day\_t) \\
+M47 & s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) + s(time\_within\_day\_t) \\
+M48 & s(max\_gust) + s(temperature\_avg) + s(butterflies\_direct\_sun\_t\_lag) + s(time\_within\_day\_t) \\
+\addlinespace
+% Tensor-product interactions (wind × sun)
+M49 & s(total\_butterflies\_t\_lag) + ti(max\_gust, butterflies\_direct\_sun\_t\_lag) \\
+M50 & s(total\_butterflies\_t\_lag) + s(temperature\_avg) + s(time\_within\_day\_t) + ti(max\_gust, butterflies\_direct\_sun\_t\_lag) \\
+M51 & ti(max\_gust, butterflies\_direct\_sun\_t\_lag) \\
+M52 & s(temperature\_avg) + s(time\_within\_day\_t) + ti(max\_gust, butterflies\_direct\_sun\_t\_lag) \\
+\end{longtable}
+\end{footnotesize}
+
+\section{Model Selection Results}
+
+Model M50 was identified as the best-fit model based on Akaike Information Criterion (AIC). Complete model selection statistics and parameter estimates for the best-fit model are reported in the main text.

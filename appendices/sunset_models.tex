@@ -1,0 +1,168 @@
+\chapter{Site Fidelity Analysis (Sunset Window): Candidate Models}
+
+This appendix documents all candidate models tested in the sunset window site fidelity analysis. A total of 78 models were evaluated to identify factors predicting daily changes in roost abandonment using a biologically-aligned weather window (from time of maximum count through functional sunset).
+
+\section{Model Structure}
+
+All models used Generalized Additive Mixed Models (GAMM) with the following structure:
+
+\begin{itemize}
+    \item \textbf{Response variable}: $\sqrt{\Delta\text{Butterflies}_{95th}}$ (square root of change in 95th percentile butterfly count between days)
+    \item \textbf{Random effects}: Random intercept for deployment site
+    \item \textbf{Correlation structure}: AR(1) autocorrelation for temporal dependence
+    \item \textbf{Estimation method}: Restricted Maximum Likelihood (REML)
+\end{itemize}
+
+\section{Baseline Control Variables}
+
+All models included control terms for:
+\begin{itemize}
+    \item \texttt{max\_butterflies\_t\_1}: Previous day maximum count (tested as smooth or linear)
+    \item \texttt{lag\_duration\_hours}: Weather window duration (tested as smooth or linear)
+\end{itemize}
+
+\section{Weather Predictor Variables}
+
+\begin{itemize}
+    \item \texttt{temp\_min}: Minimum temperature from max count to sunset ($^\circ$C)
+    \item \texttt{temp\_max}: Maximum temperature from max count to sunset ($^\circ$C)
+    \item \texttt{temp\_at\_max\_count\_t\_1}: Temperature when max count occurred ($^\circ$C)
+    \item \texttt{wind\_max\_gust}: Maximum wind gust in window (m/s)
+    \item \texttt{sum\_butterflies\_direct\_sun}: Cumulative butterflies in direct sun
+    \item \texttt{s()}: Thin-plate regression spline smooth term
+    \item \texttt{ti()}: Tensor product interaction smooth
+\end{itemize}
+
+\section{Candidate Models}
+
+Models were generated programmatically across seven categories. The first number in parentheses indicates models with smooth baseline controls; the second indicates linear baseline controls.
+
+\subsection{Part 1: Null Models (2 models)}
+
+\begin{footnotesize}
+\begin{tabular}{>{\raggedright}p{2.5cm}>{\raggedright\arraybackslash}p{11cm}}
+\toprule
+\textbf{Model} & \textbf{Description} \\
+\midrule
+M1 & Null (smooth baseline) \\
+M2 & Null (linear baseline) \\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+
+\subsection{Part 2: Single Predictor Models (10 models)}
+
+Each of 5 weather predictors tested with smooth and linear baseline:
+
+\begin{footnotesize}
+\begin{tabular}{>{\raggedright}p{2.5cm}>{\raggedright\arraybackslash}p{11cm}}
+\toprule
+\textbf{Model} & \textbf{Description} \\
+\midrule
+M3, M4 & Single: temp\_min (smooth, linear) \\
+M5, M6 & Single: temp\_max (smooth, linear) \\
+M7, M8 & Single: temp\_at\_max\_count\_t\_1 (smooth, linear) \\
+M9, M10 & Single: wind\_max\_gust (smooth, linear) \\
+M11, M12 & Single: sum\_butterflies\_direct\_sun (smooth, linear) \\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+
+\subsection{Part 3: Two-Way Interaction Models (20 models)}
+
+All pairwise interactions among 5 predictors (10 pairs $\times$ 2 baseline types):
+
+\begin{footnotesize}
+\begin{tabular}{>{\raggedright}p{2.5cm}>{\raggedright\arraybackslash}p{11cm}}
+\toprule
+\textbf{Model} & \textbf{Description} \\
+\midrule
+M13, M14 & Interaction: temp\_min $\times$ temp\_max (smooth, linear) \\
+M15, M16 & Interaction: temp\_min $\times$ temp\_at\_max\_count\_t\_1 (smooth, linear) \\
+M17, M18 & Interaction: temp\_min $\times$ wind\_max\_gust (smooth, linear) \\
+M19, M20 & Interaction: temp\_min $\times$ sum\_butterflies\_direct\_sun (smooth, linear) \\
+M21, M22 & Interaction: temp\_max $\times$ temp\_at\_max\_count\_t\_1 (smooth, linear) \\
+M23, M24 & Interaction: temp\_max $\times$ wind\_max\_gust (smooth, linear) \\
+M25, M26 & Interaction: temp\_max $\times$ sum\_butterflies\_direct\_sun (smooth, linear) \\
+M27, M28 & Interaction: temp\_at\_max\_count\_t\_1 $\times$ wind\_max\_gust (smooth, linear) \\
+M29, M30 & Interaction: temp\_at\_max\_count\_t\_1 $\times$ sum\_butterflies\_direct\_sun (smooth, linear) \\
+M31, M32 & Interaction: wind\_max\_gust $\times$ sum\_butterflies\_direct\_sun (smooth, linear) \\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+
+\subsection{Part 4: Main Effects + Interaction Models (20 models)}
+
+Same 10 pairs, but including both main effects and their interaction:
+
+\begin{footnotesize}
+\begin{tabular}{>{\raggedright}p{2.5cm}>{\raggedright\arraybackslash}p{11cm}}
+\toprule
+\textbf{Model} & \textbf{Description} \\
+\midrule
+M33, M34 & Additive + Interaction: temp\_min + temp\_max + interaction (smooth, linear) \\
+M35, M36 & Additive + Interaction: temp\_min + temp\_at\_max\_count\_t\_1 + interaction (smooth, linear) \\
+M37, M38 & Additive + Interaction: temp\_min + wind\_max\_gust + interaction (smooth, linear) \\
+M39, M40 & Additive + Interaction: temp\_min + sum\_butterflies\_direct\_sun + interaction (smooth, linear) \\
+M41, M42 & Additive + Interaction: temp\_max + temp\_at\_max\_count\_t\_1 + interaction (smooth, linear) \\
+M43, M44 & Additive + Interaction: temp\_max + wind\_max\_gust + interaction (smooth, linear) \\
+M45, M46 & Additive + Interaction: temp\_max + sum\_butterflies\_direct\_sun + interaction (smooth, linear) \\
+M47, M48 & Additive + Interaction: temp\_at\_max\_count\_t\_1 + wind\_max\_gust + interaction (smooth, linear) \\
+M49, M50 & Additive + Interaction: temp\_at\_max\_count\_t\_1 + sum\_butterflies\_direct\_sun + interaction (smooth, linear) \\
+M51, M52 & Additive + Interaction: wind\_max\_gust + sum\_butterflies\_direct\_sun + interaction (smooth, linear) \\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+
+\subsection{Part 5: Strategic Additive Combinations (14 models)}
+
+Biologically-motivated predictor combinations (7 combinations $\times$ 2 baseline types):
+
+\begin{footnotesize}
+\begin{tabular}{>{\raggedright}p{2.5cm}>{\raggedright\arraybackslash}p{11cm}}
+\toprule
+\textbf{Model} & \textbf{Description} \\
+\midrule
+M53, M54 & Additive: All temperature variables (smooth, linear) \\
+M55, M56 & Additive: temp\_min + temp\_max (smooth, linear) \\
+M57, M58 & Additive: temp\_min + wind\_max\_gust (smooth, linear) \\
+M59, M60 & Additive: temp\_max + wind\_max\_gust (smooth, linear) \\
+M61, M62 & Additive: temp\_at\_max\_count\_t\_1 + wind\_max\_gust (smooth, linear) \\
+M63, M64 & Additive: All temperature + wind (smooth, linear) \\
+M65, M66 & Additive: All predictors (smooth, linear) \\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+
+\subsection{Part 6: Complex Models with Multiple Interactions (6 models)}
+
+\begin{footnotesize}
+\begin{tabular}{>{\raggedright}p{2.5cm}>{\raggedright\arraybackslash}p{11cm}}
+\toprule
+\textbf{Model} & \textbf{Description} \\
+\midrule
+M67, M68 & All temperature main effects + all temperature interactions (smooth, linear) \\
+M69, M70 & All main effects + all temperature $\times$ wind interactions (smooth, linear) \\
+M71, M72 & FULL MODEL: All main effects + all two-way interactions (smooth, linear) \\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+
+\subsection{Part 7: Extra Linear Interaction Candidates (2 models)}
+
+Additional models for comparison with 30-minute analysis:
+
+\begin{footnotesize}
+\begin{tabular}{>{\raggedright}p{2.5cm}>{\raggedright\arraybackslash}p{11cm}}
+\toprule
+\textbf{Model} & \textbf{Description} \\
+\midrule
+M77 & Linear interaction: wind\_max\_gust $\times$ sum\_butterflies\_direct\_sun \\
+M78 & Linear interaction + temp\_min + temp\_max \\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+
+\section{Model Selection Results}
+
+Model M32 (Interaction: wind\_max\_gust $\times$ sum\_butterflies\_direct\_sun with linear baseline) was identified as the best-fit model based on AICc (small-sample corrected AIC). Of the 78 candidate models, 42 converged successfully; models with smooth baseline controls generally failed to converge due to sample size limitations (n = 96 lag pairs). Complete model selection statistics are reported in the main text.

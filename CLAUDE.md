@@ -82,6 +82,24 @@ The thesis involves:
 
 This uses the official Cal Poly thesis template with specific formatting requirements. The `guidelines/` directory contains university standards. Key metadata is defined in `frontmatter/information.tex`.
 
+## Template Editing Guidelines
+
+**IMPORTANT: Exercise extreme caution when editing template core files.**
+
+**`cpthesis.cls` (DO NOT EDIT):**
+- This is the low-level formatting file based on revisions dating to the early 1990s
+- If you need to change this file, you have most likely found a bug and should report it
+- Changes can cause unexpected results and make the thesis non-compliant with Graduate Education style guidelines
+- **Never modify this file**
+
+**`main.tex` (EDIT WITH CAUTION):**
+- This is the root file designed to minimize the need for editing
+- Contains formatting and content settings for Graduate Education compliance
+- Adding content structure (like appendices with `\appendix` and `\input{}` commands) is acceptable
+- Changing formatting settings, package configurations, or template structure should be avoided
+- Not all changes will cause problems, but care must be taken
+- When in doubt, add content in separate files and include them rather than modifying core settings
+
 ## Supplemental Materials Workflow
 
 **Supplemental Content Structure:**
