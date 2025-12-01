@@ -1,11 +1,13 @@
 \hbox to \linewidth {\hspace {0em}Table\hfill Page}
-\contentsline {table}{\numberline {1.1}{\ignorespaces Top 5 models ranked by AIC (30-minute analysis)\relax }}{29}{table.caption.31}%
-\contentsline {table}{\numberline {1.2}{\ignorespaces Summary of best-fit model (M50)}}{30}{table.caption.33}%
-\contentsline {table}{\numberline {1.3}{\ignorespaces Basis dimension adequacy checks (M50)}}{34}{table.caption.38}%
-\contentsline {table}{\numberline {1.4}{\ignorespaces Top 5 models ranked by AIC (30-minute threshold analysis)\relax }}{36}{table.caption.41}%
-\contentsline {table}{\numberline {1.5}{\ignorespaces Statistical power to detect wind effects}}{38}{table.caption.44}%
-\contentsline {table}{\numberline {1.6}{\ignorespaces Top 5 models ranked by AICc (sunset analysis)\relax }}{40}{table.caption.47}%
-\contentsline {table}{\numberline {1.7}{\ignorespaces Summary of best-fit model (M32)}}{41}{table.caption.49}%
-\contentsline {table}{\numberline {1.8}{\ignorespaces Top models from 24-hour robustness analysis}}{46}{table.caption.56}%
-\contentsline {table}{\numberline {A.1}{\ignorespaces Complete list of 52 candidate models tested in 30-minute wind disruption analysis\relax }}{71}{table.74}%
-\contentsline {table}{\numberline {B.1}{\ignorespaces Complete list of 52 candidate models tested in threshold wind disruption analysis\relax }}{75}{table.80}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Top 5 models ranked by AIC (30-minute analysis)\relax }}{30}{table.caption.30}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Summary of best-fit model (M50)}}{31}{table.caption.32}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Basis dimension adequacy checks (M50)}}{35}{table.caption.37}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Top 5 models ranked by AIC (30-minute threshold analysis)\relax }}{37}{table.caption.40}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Statistical power to detect wind effects}}{39}{table.caption.43}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces Top 5 models ranked by AICc (sunset analysis)\relax }}{41}{table.caption.46}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces Summary of best-fit model (M32)}}{42}{table.caption.48}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces Top models from 24-hour robustness analysis}}{47}{table.caption.55}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Complete list of 52 candidate models tested in 30-minute wind disruption analysis\relax }}{73}{table.73}%
+\contentsline {table}{\numberline {B.1}{\ignorespaces Complete list of 52 candidate models tested in threshold wind disruption analysis\relax }}{78}{table.79}%
+\contentsline {table}{\numberline {C.1}{\ignorespaces Complete list of 78 candidate models tested in sunset window site fidelity analysis\relax }}{83}{table.85}%
+\contentsline {table}{\numberline {D.1}{\ignorespaces Complete list of 76 candidate models tested in 24-hour robustness analysis\relax }}{88}{table.91}%

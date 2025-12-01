@@ -543,23 +543,16 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Background: Ballooning is the main dispersal mode in small spiders, by which individuals are carried by wind currents as spheres attached to thin silk threads. It involves a typical and unique pre-dispersal ‘tiptoe’ behaviour that can easily be observed under laboratory conditions. Hypotheses: Is the ballooning behaviour of a saltmarsh-inhabiting spider heritable? Do heritability estimates differ under two different environmental conditions (wind velocity)? Organism: Second-instar offspring from Pardosa purbeckensis (Lycosidae; Araneae). Site of experiments: Parents were collected in a large and a small salt marsh. Offspring were tested for behavioural variation under standardized laboratory experiments. Methods: Ballooning motivation (tiptoe behaviour) was assessed at two wind velocities in wind tunnels. We conducted a quantitative (half-sib) genetic analysis of ballooning motivation and applied threshold models to estimate heritabilities under both wind conditions. Results: Heritability estimates were 0.17 (standard error = 0.07) at low wind velocities and 0.42 (standard error = 0.21) at high wind velocities. Because of the absence of a genetic correlation among the two wind environments, independent selection on dispersal motivation under different wind velocities must be prevalent.}
+      \field{abstract}{Background: Ballooning is the main dispersal mode in small spiders, by which individuals are carried by wind currents as spheres attached to thin silk threads. It involves a typical and unique pre-dispersal 'tiptoe' behaviour that can easily be observed under laboratory conditions. Hypotheses: Is the ballooning behaviour of a saltmarsh-inhabiting spider heritable? Do heritability estimates differ under two different environmental conditions (wind velocity)? Organism: Second-instar offspring from Pardosa purbeckensis (Lycosidae; Araneae). Site of experiments: Parents were collected in a large and a small salt marsh. Offspring were tested for behavioural variation under standardized laboratory experiments. Methods: Ballooning motivation (tiptoe behaviour) was assessed at two wind velocities in wind tunnels. We conducted a quantitative (half-sib) genetic analysis of ballooning motivation and applied threshold models to estimate heritabilities under both wind conditions. Results: Heritability estimates were 0.17 (standard error = 0.07) at low wind velocities and 0.42 (standard error = 0.21) at high wind velocities. Because of the absence of a genetic correlation among the two wind environments, independent selection on dispersal motivation under different wind velocities must be prevalent.}
       \field{journaltitle}{Evolutionary Ecology Research}
       \field{title}{Heritability of Spider Ballooning Motivation under Different Wind Velocities}
-      \field{urlday}{16}
-      \field{urlmonth}{6}
-      \field{urlyear}{2025}
+      \field{volume}{9}
       \field{year}{2007}
       \field{dateera}{ce}
-      \field{urldateera}{ce}
+      \field{pages}{817\bibrangedash 827}
+      \range{pages}{11}
       \verb{file}
       \verb /Users/kylenessen/Zotero/storage/P378XFMX/Bonte and Lens - 2007 - Heritability of spider ballooning motivation under.pdf;/Users/kylenessen/Zotero/storage/V2W6MVAA/Reflection_on_Spider_Ballooning_Paper_&_Connect....md
-      \endverb
-      \verb{urlraw}
-      \verb https://www.semanticscholar.org/paper/Heritability-of-spider-ballooning-motivation-under-Bonte-Lens/d6118c2cd143572bc4f098b5916186ec63c0f12a
-      \endverb
-      \verb{url}
-      \verb https://www.semanticscholar.org/paper/Heritability-of-spider-ballooning-motivation-under-Bonte-Lens/d6118c2cd143572bc4f098b5916186ec63c0f12a
       \endverb
     \endentry
     \entry{browerUnderstandingMisunderstandingMigration1995}{article}{}
@@ -3171,6 +3164,9 @@
            family={{U.S. Fish and Wildlife Service}},
            familyi={U\bibinitperiod}}}%
       }
+      \list{location}{1}{%
+        {Washington, DC}%
+      }
       \strng{namehash}{593db5ab58dae7bd51c893b533a68b17}
       \strng{fullhash}{593db5ab58dae7bd51c893b533a68b17}
       \strng{bibnamehash}{593db5ab58dae7bd51c893b533a68b17}
@@ -3192,6 +3188,12 @@
       \field{dateera}{ce}
       \verb{file}
       \verb /Users/kylenessen/Zotero/storage/TLQ4YZWY/U.S. Fish and Wildlife Service - 2024 - Monarch (Danaus plexippus) Species Status Assessment Report.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.fws.gov/media/monarch-butterfly-danaus-plexippus-species-status-assessment-report-version-23
+      \endverb
+      \verb{url}
+      \verb https://www.fws.gov/media/monarch-butterfly-danaus-plexippus-species-status-assessment-report-version-23
       \endverb
     \endentry
     \entry{velillaGoneWindSignal2020}{article}{}
@@ -3647,10 +3649,10 @@
       \field{year}{2025}
       \field{dateera}{ce}
       \verb{urlraw}
-      \verb WesternMonarchCount.com
+      \verb https://westernmonarchcount.org/
       \endverb
       \verb{url}
-      \verb WesternMonarchCount.com
+      \verb https://westernmonarchcount.org/
       \endverb
     \endentry
     \entry{xercessocietyWesternMonarchButterfly2025}{online}{}
@@ -4342,23 +4344,16 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Background: Ballooning is the main dispersal mode in small spiders, by which individuals are carried by wind currents as spheres attached to thin silk threads. It involves a typical and unique pre-dispersal ‘tiptoe’ behaviour that can easily be observed under laboratory conditions. Hypotheses: Is the ballooning behaviour of a saltmarsh-inhabiting spider heritable? Do heritability estimates differ under two different environmental conditions (wind velocity)? Organism: Second-instar offspring from Pardosa purbeckensis (Lycosidae; Araneae). Site of experiments: Parents were collected in a large and a small salt marsh. Offspring were tested for behavioural variation under standardized laboratory experiments. Methods: Ballooning motivation (tiptoe behaviour) was assessed at two wind velocities in wind tunnels. We conducted a quantitative (half-sib) genetic analysis of ballooning motivation and applied threshold models to estimate heritabilities under both wind conditions. Results: Heritability estimates were 0.17 (standard error = 0.07) at low wind velocities and 0.42 (standard error = 0.21) at high wind velocities. Because of the absence of a genetic correlation among the two wind environments, independent selection on dispersal motivation under different wind velocities must be prevalent.}
+      \field{abstract}{Background: Ballooning is the main dispersal mode in small spiders, by which individuals are carried by wind currents as spheres attached to thin silk threads. It involves a typical and unique pre-dispersal 'tiptoe' behaviour that can easily be observed under laboratory conditions. Hypotheses: Is the ballooning behaviour of a saltmarsh-inhabiting spider heritable? Do heritability estimates differ under two different environmental conditions (wind velocity)? Organism: Second-instar offspring from Pardosa purbeckensis (Lycosidae; Araneae). Site of experiments: Parents were collected in a large and a small salt marsh. Offspring were tested for behavioural variation under standardized laboratory experiments. Methods: Ballooning motivation (tiptoe behaviour) was assessed at two wind velocities in wind tunnels. We conducted a quantitative (half-sib) genetic analysis of ballooning motivation and applied threshold models to estimate heritabilities under both wind conditions. Results: Heritability estimates were 0.17 (standard error = 0.07) at low wind velocities and 0.42 (standard error = 0.21) at high wind velocities. Because of the absence of a genetic correlation among the two wind environments, independent selection on dispersal motivation under different wind velocities must be prevalent.}
       \field{journaltitle}{Evolutionary Ecology Research}
       \field{title}{Heritability of Spider Ballooning Motivation under Different Wind Velocities}
-      \field{urlday}{16}
-      \field{urlmonth}{6}
-      \field{urlyear}{2025}
+      \field{volume}{9}
       \field{year}{2007}
       \field{dateera}{ce}
-      \field{urldateera}{ce}
+      \field{pages}{817\bibrangedash 827}
+      \range{pages}{11}
       \verb{file}
       \verb /Users/kylenessen/Zotero/storage/P378XFMX/Bonte and Lens - 2007 - Heritability of spider ballooning motivation under.pdf;/Users/kylenessen/Zotero/storage/V2W6MVAA/Reflection_on_Spider_Ballooning_Paper_&_Connect....md
-      \endverb
-      \verb{urlraw}
-      \verb https://www.semanticscholar.org/paper/Heritability-of-spider-ballooning-motivation-under-Bonte-Lens/d6118c2cd143572bc4f098b5916186ec63c0f12a
-      \endverb
-      \verb{url}
-      \verb https://www.semanticscholar.org/paper/Heritability-of-spider-ballooning-motivation-under-Bonte-Lens/d6118c2cd143572bc4f098b5916186ec63c0f12a
       \endverb
     \endentry
     \entry{browerUnderstandingMisunderstandingMigration1995}{article}{}
@@ -6970,6 +6965,9 @@
            family={{U.S. Fish and Wildlife Service}},
            familyi={U\bibinitperiod}}}%
       }
+      \list{location}{1}{%
+        {Washington, DC}%
+      }
       \strng{namehash}{593db5ab58dae7bd51c893b533a68b17}
       \strng{fullhash}{593db5ab58dae7bd51c893b533a68b17}
       \strng{bibnamehash}{593db5ab58dae7bd51c893b533a68b17}
@@ -6991,6 +6989,12 @@
       \field{dateera}{ce}
       \verb{file}
       \verb /Users/kylenessen/Zotero/storage/TLQ4YZWY/U.S. Fish and Wildlife Service - 2024 - Monarch (Danaus plexippus) Species Status Assessment Report.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.fws.gov/media/monarch-butterfly-danaus-plexippus-species-status-assessment-report-version-23
+      \endverb
+      \verb{url}
+      \verb https://www.fws.gov/media/monarch-butterfly-danaus-plexippus-species-status-assessment-report-version-23
       \endverb
     \endentry
     \entry{velillaGoneWindSignal2020}{article}{}
@@ -7446,10 +7450,10 @@
       \field{year}{2025}
       \field{dateera}{ce}
       \verb{urlraw}
-      \verb WesternMonarchCount.com
+      \verb https://westernmonarchcount.org/
       \endverb
       \verb{url}
-      \verb WesternMonarchCount.com
+      \verb https://westernmonarchcount.org/
       \endverb
     \endentry
     \entry{xercessocietyWesternMonarchButterfly2025}{online}{}
