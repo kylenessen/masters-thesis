@@ -1,6 +1,4 @@
-\section{Materials and Methods}
-
-\subsection{Study Site}
+\section{Study Site}
 
 Site selection followed a systematic filtering process driven by project requirements and practical constraints. The study was supported by a federal grant that mandated research be conducted on federal lands. We selected Vandenberg Space Force Base (VSFB, 34.7398°N, 120.5725°W) in Santa Barbara County, California, based on several key advantages: mild winters with infrequent frost events, extensive historical plantings of blue gum eucalyptus (\textit{Eucalyptus globulus}) that have created suitable overwintering habitat throughout the installation, and restricted access that provided security for long-term equipment deployment. The military base contains thirty documented monarch overwintering groves, with several sites consistently ranking within the top 10\% of population counts statewide over the past decade \parencite{xercessocietyWesternMonarchButterfly2025}. 
 
@@ -12,13 +10,13 @@ The second site, UDMH site (34.6719°N, 120.5950°W), also located in South Base
 
 % [Figure here showing all thirteen groves, with different symbology for the various subsets]
 
-\subsection{Monitoring Strategy}
+\section{Monitoring Strategy}
 
 Equipment deployment strategies differed between monitoring seasons to accommodate research objectives and field experience. During the 2023-2024 season, we employed two strategies: targeted deployments at sites with confirmed monarch presence, and anticipatory deployments at locations where monarchs were expected based on historical data but not currently observed. Targeted deployments concentrated at Spring Canyon and UDMH where active aggregations were documented throughout the season. Anticipatory deployments occurred at four overwintering sites: additional locations within Spring Canyon and UDMH, plus SLC-6 and Tangair. In the 2024-2025 season, no monarchs were recorded at these anticipatory deployment sites; consequently, these data are excluded from analysis.
 
 Building on insights from the 2023-2024 season, for the 2024-2025 season we modified our approach to establish monitoring stations at ten sites before monarch arrival, based on historical occurrence records compiled by the base conservation coordinator. This expanded spatial coverage aimed to capture greater environmental variation across potential overwintering sites. However, the 2024-2025 season coincided with historically low monarch abundance throughout California \parencite{xercessocietyWesternMonarchButterfly2025}, resulting in no observed clustering behavior at any of the ten monitored locations. Consequently, our analysis focuses exclusively on data collected during the 2023-2024 season.
 
-\subsection{Field Equipment}
+\section{Field Equipment}
 
 To observe changes in monarch abundance in response to strong wind events, we deployed remote monitoring equipment near butterfly clusters at overwintering sites. Field observations utilized 15-meter telescoping fiberglass poles (Max-Gain Systems, Inc., Marietta, GA) anchored at three points using ground anchors with guy lines securing both the top and base to create stable, freestanding structures. 
 
@@ -38,15 +36,15 @@ To systematically organize our heterogeneous monitoring efforts, we defined disc
 
 % [A tree with a measuring device and a diagram AI-generated content may be incorrect.]
 
-\subsection{Image Analysis}
+\section{Image Analysis}
 
-\subsubsection{Grid-based Counting Method}
+\section{Grid-based Counting Method}
 
 To quantify changes in monarch butterfly abundance from collected imagery, we developed a systematic grid-based counting protocol balancing accuracy with the practical constraints of analyzing tens of thousands of images. This approach addressed the challenge of estimating abundance in large aggregations where individual counts would be prohibitively time-consuming and emulated field researcher methods, including those used in the annual Thanksgiving Count \parencite{xercessocietyManagingMonarchsWest2018}. We subdivided each image using a grid overlay system where human labelers assigned order-of-magnitude estimates per cell. Grid dimensions remained fixed throughout each deployment to ensure consistency. Custom software developed using the Electron framework in JavaScript facilitated this labeling effort.
 
 Grid cell size varied by deployment based on camera-to-cluster distance. Cell dimensions were optimized to ensure most occupied cells contained butterflies in the 10–99 count range, balancing classification efficiency with spatial resolution. This standardization minimized cells alternating between widely different order-of-magnitude categories across the time series.
 
-\subsubsection{Counting Protocol}
+\section{Counting Protocol}
 
 Human labelers estimated butterfly abundance within each grid cell using four order-of-magnitude categories: 0 (no butterflies), 1–9 (single digits), 10–99 (dozens), and 100–999 (hundreds). Labelers trained using a comprehensive online guide with example images and detailed classification criteria (\url{https://kylenessen.github.io/monarch_trailcam_classifier/}). The protocol prioritized efficiency while maintaining consistency across observers.
 
@@ -56,7 +54,7 @@ In addition to estimating monarch abundance, labelers recorded whether cells rec
 
 Labelers received ongoing feedback throughout the classification process. All classifications underwent review for common errors including mislabeled cells, incorrect category assignments, and inconsistent counting criteria application. Direct communication of corrections to labelers ensured consistent protocol application.
 
-\subsubsection{Abundance Calculation}
+\section{Abundance Calculation}
 
 We calculated an abundance index for each frame by summing the products of cell counts and their assigned category values across all grid cells, employing conservative estimates using minimum values within each order-of-magnitude category:
 
@@ -66,38 +64,38 @@ We calculated an abundance index for each frame by summing the products of cell 
 
 where $\rho_i$ represents the number of cells in category $i$, and $C_i$ represents the conservative estimate for that category. We used minimum category values ($C_1 = 1$ for category 1–9, $C_2 = 10$ for category 10–99, and $C_3 = 100$ for category 100–999) rather than midpoint or maximum values to ensure temporal analyses reflected genuine population shifts rather than estimation uncertainty.
 
-\subsection{Temperature Data Extraction}
+\section{Temperature Data Extraction}
 
 Temperature represents a critical environmental variable influencing monarch activity patterns and potentially confounding wind effects. Ambient temperature data were extracted from trail camera images using optical character recognition (OCR). Each camera displayed temperature readings on the image overlay, but these values were not accessible through EXIF metadata, necessitating visual extraction methods. We developed an automated Python script utilizing OCR technology to extract temperature values from approximately 56,000 images across all deployments. The extraction process employed multiple preprocessing strategies and pattern matching algorithms to accommodate variations in image quality and display characteristics.
 
 Following initial automated extraction, we manually reviewed and corrected edge cases where OCR failed or produced anomalous values. All temperature data underwent systematic quality control through visualization of deployment-specific time series, enabling identification and correction of erroneous values. This process ensured complete temperature coverage for all analyzed images, providing the ambient temperature covariate required for our statistical models.
 
-\subsection{Statistical Analysis}
+\section{Statistical Analysis}
 \label{sec:statistical-analysis}
 
-\subsubsection{Data Preparation}
+\section{Data Preparation}
 
 Statistical analysis employed a lag-based framework to capture the temporal dynamics of butterfly responses to environmental changes, comparing butterfly counts between consecutive 30-minute intervals. Observation pairs were constructed by matching counts at time $t$ with counts at time $t-30$ minutes, applying a ±5 minute tolerance window to accommodate minor temporal variations in image capture. The response variable (change in butterfly abundance between time points) underwent cube root transformation to achieve approximate normality while preserving directional information: $y = \text{sign}(\Delta) \times |\Delta|^{1/3}$, where $\Delta$ represents the difference in butterfly counts. While exploratory data analysis revealed generally well-behaved distributions, we observed bimodality in the raw butterfly abundance data driven primarily by a single anomalous event at deployment SC8. At this deployment, a large butterfly aggregation abruptly declined to near zero without corresponding changes in the measured environmental variables (wind speed, temperature, or solar exposure). This singular event was unlike any other observation in the dataset. We retained this deployment in the final analysis for two reasons: first, to maximize sample size and avoid arbitrary data exclusion, and second, sensitivity analysis showed that the cube root transformation of abundance differences adequately addressed the distributional concerns, with model selection and parameter estimates remaining consistent whether SC8 was included or excluded. The transformation approach made the anomaly's inclusion or exclusion immaterial to the final results. Observation pairs where both time points recorded zero butterflies were excluded as uninformative, reducing the dataset from approximately 2,500 potential pairs to 1,894 analyzable observations across 115 unique deployment-day combinations.
 
-\subsubsection{Variable Selection}
+\section{Variable Selection}
 
 Predictor variables were selected to test specific hypotheses while avoiding multicollinearity. Maximum wind gust speed during each 30-minute interval served as the primary wind metric, with alternative wind measurements (average sustained speed, modal gust, gust standard deviation) excluded due to high correlation ($r > 0.75$). Environmental predictors included average temperature between observation pairs, number of butterflies in direct sunlight at the previous time point, and minutes elapsed since the first observation of each day to capture diurnal patterns. Total butterfly count at the previous time point was included as a control variable, enabling distinction between proportional and absolute changes in abundance. When included, this variable tests effects on proportional change; when excluded, models test effects on absolute change.
 
-\subsubsection{Model Framework}
+\section{Model Framework}
 
 Analysis employed generalized additive mixed models (GAMMs) implemented through the mgcv package in R. Model selection followed an information-theoretic approach, comparing 48 candidate models using Akaike Information Criterion (AIC). The candidate set comprised two fundamental frameworks: models including the lag abundance term (24 models) and models excluding it (24 models), with each framework containing null models, single predictor models, additive combinations, two- and three-way interactions, and models incorporating smooth terms for non-linear relationships. Random effects structure accounted for variation at three hierarchical levels: deployment location, observer, and deployment-day. Temporal autocorrelation within days was addressed using a first-order autoregressive (AR1) correlation structure grouped by deployment-day. All models were fitted using restricted maximum likelihood (REML) estimation.
 
 To test specifically for threshold effects at the proposed 2 m/s disruptive wind speed, we conducted a threshold wind disruption analysis using an alternative wind metric. We repeated the entire model selection process, replacing maximum wind gust speed with a threshold-based predictor: the count of minutes within each 30-minute observation period where wind gusts equaled or exceeded 2 m/s. This variable ranged from 0 to 30 minutes and was tested using the same 48 model structures, allowing direct comparison of continuous versus threshold-based wind effects.
 
-\subsubsection{Model Validation}
+\section{Model Validation}
 
 Model assumptions were verified through standard residual diagnostics including examination of residual distributions, fitted versus residual plots, and quantile-quantile plots. Convergence was confirmed for all candidate models in both the primary and threshold wind disruption analyses. Model performance and predictor significance were evaluated through AIC comparison, with models differing by less than 2 AIC units considered equivalent.
 
-\subsubsection{Statistical Power Analysis}
+\section{Statistical Power Analysis}
 
 To evaluate whether our study had adequate statistical power to detect wind effects if present, we conducted a simulation-based power analysis. This approach assessed our ability to detect various effect sizes given our sample size of 1,894 paired observations. We simulated 200 datasets from the best-fitting model (which excluded wind effects) and artificially introduced wind effects of known magnitude ranging from 0.05 to 0.20 standard deviations of the response variable. For each effect size, we refitted models including wind terms to determine the proportion of simulations where the artificial effect was detected as statistically significant ($\alpha = 0.05$). This simulation approach accounts for the complexity of our GAMM framework and hierarchical data structure, providing robust estimates of statistical power for detecting wind effects across a range of biologically plausible magnitudes.
 
-\subsubsection{Dynamic Window Analysis}
+\section{Dynamic Window Analysis}
 
 To examine whether day-to-day changes in roost size depend on cumulative weather exposure aligned with butterfly roosting biology, we conducted a complementary analysis using dynamic temporal windows. This approach tested wind effects at a daily scale, capturing overnight and full-day weather exposure that the 30-minute lag analysis could not assess.
 
