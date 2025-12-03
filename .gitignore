@@ -1,5 +1,21 @@
 .DS_Store
 
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.pdf
+*.run.xml
+*.toc
+*.synctex.gz
+
 # Common QGIS temporary files
 *.qgz~
 *.gpkg-shm

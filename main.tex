@@ -198,7 +198,23 @@
     %% Appendices
     \appendix
 
+    % Add "APPENDICES" title on same page as first appendix (required by Graduate Education)
+    \clearpage
+    \thispagestyle{plain}%
+    \vspace*{50pt}%
+    {\centering\bfseries\MakeUppercase{Appendices}\par}%
+    \vspace{24pt}%
+    % Now include first appendix - its \chapter command will NOT start new page
+    % because we already did \clearpage
+    \makeatletter
+    \let\origclearpage\clearpage
+    \let\origcleardoublepage\cleardoublepage
+    \renewcommand{\clearpage}{}%
+    \renewcommand{\cleardoublepage}{}%
     \input{appendices/30min_models}
+    \let\clearpage\origclearpage
+    \let\cleardoublepage\origcleardoublepage
+    \makeatother
 
     \input{appendices/threshold_models}
 
