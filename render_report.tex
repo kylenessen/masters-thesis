@@ -1,0 +1,58 @@
+\documentclass[12pt, letterpaper]{article}
+
+\input{report/preamble_report}
+
+\title{An Empirical Test of Wind Disruption Effects on Overwintering Monarch Butterfly Clusters at Vandenberg Space Force Base}
+\author{Kyle Nessen and Francis Villablanca}
+
+\begin{document}
+
+\pagenumbering{roman}
+
+% Title page
+\input{report/titlepage}
+\newpage
+
+% Transmittal letter
+\input{report/transmittal_letter}
+\newpage
+
+% Table of contents
+\tableofcontents
+\newpage
+
+% Lists of figures and tables
+\listoffigures
+\listoftables
+\newpage
+
+% Executive summary
+\input{report/executive_summary}
+\newpage
+
+% Body content
+\pagenumbering{arabic}
+\input{report/outline_report}
+
+% Bibliography
+\newpage
+\printbibliography[heading=bibintoc, title={References}]
+
+% Appendices
+\newpage
+\appendix
+
+% Demote sections within appendix files
+\let\section\realsubsection
+\let\subsection\realsubsubsection
+
+\input{appendices/30min_models}
+\input{appendices/threshold_models}
+\input{appendices/sunset_models}
+\input{appendices/24hr_models}
+
+% Restore
+\let\section\realsection
+\let\subsection\realsubsection
+
+\end{document}

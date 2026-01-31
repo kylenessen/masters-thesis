@@ -1,0 +1,27 @@
+%% Content outline for technical report
+%% Demotes \section to \subsection so that thesis content files
+%% nest correctly under the report's top-level sections.
+
+% Demote sectioning commands for included content files
+\let\section\realsubsection
+\let\subsection\realsubsubsection
+
+\realsection{Introduction}
+\label{sec:introduction}
+\input{chapters/vsfb/introduction}
+
+\realsection{Materials and Methods}
+\label{sec:methods}
+\input{chapters/vsfb/methods}
+
+\realsection{Results}
+\label{sec:results}
+\input{chapters/vsfb/results}
+
+\realsection{Discussion}
+\label{sec:discussion}
+\input{chapters/vsfb/discussion}
+
+% Restore original sectioning commands
+\let\section\realsection
+\let\subsection\realsubsection
