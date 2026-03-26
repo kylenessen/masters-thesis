@@ -11,10 +11,26 @@
 *.log
 *.lot
 *.out
-*.pdf
 *.run.xml
 *.toc
 *.synctex.gz
+*.nlo
+*.nls
+*.ilg
+*.ind
+*.idx
+*.ist
+*.glo
+*.gls
+*.glg
+*.brf
+*.snm
+*.nav
+*.vrb
+*.spl
+
+# Only ignore PDFs in root (build output) not in subdirectories
+/manuscript.pdf
 
 # Common QGIS temporary files
 *.qgz~
@@ -23,5 +39,6 @@
 *.aux.xml
 *.qgs~
 qgis/large_data/
-exports/~$vsfb.docx
-exports/~$nder_vsfb.docx
+
+# Word temp files
+~$*.docx
