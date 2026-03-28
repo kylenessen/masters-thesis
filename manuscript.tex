@@ -240,7 +240,7 @@ M52 & Temp., Time, ti(Wind, Sun) & 8092.72 & 18.69 & 0.00 \\
 
 \subsubsection{Analysis of Best Fit Model}
 
-The best-fit model (M50) from the 30-minute wind disruption analysis predicted $\Delta$BI as a function of: (1) the previous 30-minute observation's BI, (2) average 30-minute temperature, (3) time of day (minutes since sunrise), and (4) a tensor interaction between maximum wind gust speed and the number of butterflies in direct sunlight. Statistical analysis of this responsive change model revealed significant effects for three of the four predictors (Table~\ref{tab:m50_summary}). The previous butterfly count ($F$ = 12.50, $p < 0.001$), time of day ($F$ = 9.85, $p < 0.001$), and the wind-sunlight interaction ($F$ = 4.67, $p < 0.001$) all showed strong statistical significance. Temperature effects approached but did not reach conventional significance thresholds ($F$ = 3.19, $p$ = 0.057). The model only explained 6.4\% of the variance in $\Delta$BI (adjusted $R^{2}$ = 0.064, $n$ = 1894).
+The best-fit model (M50) from the 30-minute wind disruption analysis predicted $\Delta$BI as a function of: (1) the previous 30-minute observation's BI, (2) average 30-minute temperature, (3) time of day (minutes since sunrise), and (4) a tensor interaction between maximum wind gust speed and the number of butterflies in direct sunlight. Statistical analysis of this responsive change model revealed significant effects for three of the four predictors (Table~\ref{tab:m50_summary}). The previous butterfly index ($F$ = 12.50, $p < 0.001$), time of day ($F$ = 9.85, $p < 0.001$), and the wind-sunlight interaction ($F$ = 4.67, $p < 0.001$) all showed strong statistical significance. Temperature effects approached but did not reach conventional significance thresholds ($F$ = 3.19, $p$ = 0.057). The model only explained 6.4\% of the variance in $\Delta$BI (adjusted $R^{2}$ = 0.064, $n$ = 1894).
 
 \begin{table}[H]
 \caption{Summary of best-fit model (M50).}
@@ -251,7 +251,7 @@ The best-fit model (M50) from the 30-minute wind disruption analysis predicted $
 \toprule
 \textbf{Smooth Term} & \textbf{edf} & \textbf{Ref.df} & \textbf{$F$} & \textbf{$p$-value} \\
 \midrule
-Previous butterfly count & 2.41 & 2.41 & 12.50 & $< 0.001$*** \\
+Previous butterfly index & 2.41 & 2.41 & 12.50 & $< 0.001$*** \\
 Average temperature & 3.68 & 3.68 & 3.19 & 0.057 \\
 Time since sunrise & 4.87 & 4.87 & 9.85 & $< 0.001$*** \\
 Wind gust $\times$ Sunlight exposure & 7.35 & 7.35 & 4.67 & $< 0.001$*** \\
@@ -351,7 +351,7 @@ Daily maximum BI per cluster ranged from 0 to 770 butterflies (mean = 134.7 $\pm
 
 \subsubsection{Model Selection: Next Day Window and Site Fidelity Analysis}
 
-We evaluated 78 candidate models using generalized additive mixed models (GAMMs) to identify environmental predictors of changes in maximum BI from one day to the consecutive day's sunset. The model space included null, single-predictor, interaction-only, additive, main effects with interactions, and complex formulations, all incorporating deployment random intercepts and AR(1) temporal correlation. Model selection via AICc identified the best-fit model (M32) as capturing 84.7\% of the total model weight (Table~\ref{tab:sunset_model_selection}). The next best model showed substantially weaker support with $\Delta$AICc = 5.6 and only 5.2\% model weight. The best-fit model predicted square-root transformed change in BI as a function of: (1) the previous day's maximum butterfly count, (2) window duration in hours, and (3) a tensor smooth interaction between maximum wind gust speed and cumulative butterflies in direct sunlight.
+We evaluated 78 candidate models using generalized additive mixed models (GAMMs) to identify environmental predictors of changes in maximum BI from one day to the consecutive day's sunset. The model space included null, single-predictor, interaction-only, additive, main effects with interactions, and complex formulations, all incorporating deployment random intercepts and AR(1) temporal correlation. Model selection via AICc identified the best-fit model (M32) as capturing 84.7\% of the total model weight (Table~\ref{tab:sunset_model_selection}). The next best model showed substantially weaker support with $\Delta$AICc = 5.6 and only 5.2\% model weight. The best-fit model predicted square-root transformed change in BI as a function of: (1) the previous day's maximum butterfly index, (2) window duration in hours, and (3) a tensor smooth interaction between maximum wind gust speed and cumulative butterflies in direct sunlight.
 
 \begin{table}[H]
 \caption{Top 5 models ranked by AICc (Next Day Window and site fidelity analysis).}
@@ -384,7 +384,7 @@ The Next Day Window/site fidelity model explained 39.7\% of the variance in maxi
 \toprule
 \textbf{Smooth Term} & \textbf{edf} & \textbf{Ref.df} & \textbf{$F$} & \textbf{$p$-value} \\
 \midrule
-Previous day maximum count & 1.00 & 1.00 & 24.88 & $< 0.001$*** \\
+Previous day maximum butterfly index & 1.00 & 1.00 & 24.88 & $< 0.001$*** \\
 Window duration & 1.00 & 1.00 & 1.14 & 0.289 \\
 Wind gust $\times$ Sunlight exposure & 6.68 & 6.68 & 4.10 & $< 0.001$*** \\
 \midrule
@@ -505,7 +505,7 @@ Finally, our models explained relatively little variance overall (30-minute 6.4\
 
 Our best models explained 39.7\% of variance and suggested the existence of unaccounted for sources of variance. Here we identify possible sources of variation that we did not address. One is additional time intervals for predicting changes in the response variable ($\Delta$BI). Given a sixfold increase in variance explained between the shorter and longer time frames, we suspect that further increases in time frame would allow for an explanation of more variance. Environmental factors that did explain variance were predominantly thermal in nature. Thermal factors seem to clearly play an important role in organizing clustering behavior. This, and the marginal lack of significance for temperature attributes, suggests that sampling over a greater range of temperatures would provide more information.
 
-Beyond environmental factors, social dynamics may explain additional variance. The strong effect of previous butterfly count on $\Delta$BI (Figure~\ref{fig:partial_effects_30min}) suggests that monarchs exhibit statistically clumped spatial distributions. In spatial statistics, clumped or aggregated distributions are characterized by a higher variance relative to the mean. This pattern is overdispersion, or a contagious distribution, and is common in aposematic overwintering species. A positive feedback mechanism, where initial settlement increases the probability of others joining, creates self-reinforcing (contagious) aggregation patterns independent of immediate environmental conditions \cite{berdahlEmergentSensingComplex2013}. That monarchs form clusters thus suggests that modeling could incorporate clustering itself to help explain variance.
+Beyond environmental factors, social dynamics may explain additional variance. The strong effect of previous butterfly index on $\Delta$BI (Figure~\ref{fig:partial_effects_30min}) suggests that monarchs exhibit statistically clumped spatial distributions. In spatial statistics, clumped or aggregated distributions are characterized by a higher variance relative to the mean. This pattern is overdispersion, or a contagious distribution, and is common in aposematic overwintering species. A positive feedback mechanism, where initial settlement increases the probability of others joining, creates self-reinforcing (contagious) aggregation patterns independent of immediate environmental conditions \cite{berdahlEmergentSensingComplex2013}. That monarchs form clusters thus suggests that modeling could incorporate clustering itself to help explain variance.
 
 Finally, testing these patterns across the broader overwintering range would establish their generality while allowing the capture of both temporal and spatial variance. Sites with different tree species, latitudes, and especially population densities could reveal whether wind responses vary with clustering configuration or if our findings represent fundamental aspects of western monarch overwintering behavior.
 
@@ -588,7 +588,7 @@ All models used Generalized Additive Mixed Models (GAMM) with the following stru
 \end{itemize}
 
 \textbf{Variable Definitions.}
-\texttt{total\_butterflies\_t\_lag}: Previous butterfly count (lagged);
+\texttt{total\_butterflies\_t\_lag}: Previous butterfly index (lagged);
 \texttt{max\_gust}: Maximum wind gust speed (m/s);
 \texttt{temperature\_avg}: Average temperature ($^{\circ}$C);
 \texttt{butterflies\_direct\_sun\_t\_lag}: Butterflies in direct sun (lagged);
@@ -680,7 +680,7 @@ All models used Generalized Additive Mixed Models (GAMM) with the following stru
 \end{itemize}
 
 \textbf{Variable Definitions.}
-\texttt{total\_butterflies\_t\_lag}: Previous butterfly count (lagged);
+\texttt{total\_butterflies\_t\_lag}: Previous butterfly index (lagged);
 \texttt{minutes\_above\_threshold}: Minutes with wind speed $\geq$ 2~m/s;
 \texttt{temperature\_avg}: Average temperature ($^{\circ}$C);
 \texttt{butterflies\_direct\_sun\_t\_lag}: Butterflies in direct sun (lagged);
@@ -772,7 +772,7 @@ All models used Generalized Additive Mixed Models (GAMM) with the following stru
 \end{itemize}
 
 \textbf{Variable Definitions.}
-\texttt{max\_butterflies\_t\_1}: Previous day maximum count (tested as smooth or linear);
+\texttt{max\_butterflies\_t\_1}: Previous day maximum butterfly index (tested as smooth or linear);
 \texttt{lag\_duration\_hours}: Weather window duration (tested as smooth or linear);
 \texttt{temp\_min}: Minimum temperature from max count to sunset ($^{\circ}$C);
 \texttt{temp\_max}: Maximum temperature from max count to sunset ($^{\circ}$C);
