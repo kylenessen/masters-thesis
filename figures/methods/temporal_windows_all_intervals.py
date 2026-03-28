@@ -12,7 +12,7 @@ import matplotlib.dates as mdates
 import pandas as pd
 
 # Set up the figure
-fig, ax = plt.subplots(figsize=(14, 6))
+fig, ax = plt.subplots(figsize=(12, 6))
 
 # Define time range (2 days)
 start_time = datetime(2024, 1, 1, 0, 0)  # Arbitrary date
@@ -104,8 +104,8 @@ for i in range(len(counts)):
         ax.add_patch(rect)
 
 # Add histogram label to the left of the histogram
-ax.text(start_time + timedelta(hours=day1_sunrise - 1), 0.125, 'Max count\nfrequency',
-        fontsize=12, ha='right', va='center', color='darkorange', weight='bold')
+ax.text(start_time + timedelta(hours=day1_sunrise - 1), 0.125, 'Max BI\nfrequency',
+        fontsize=16, ha='right', va='center', color='darkorange', weight='bold')
 
 # Now add observation points aligned with histogram bin centers
 observation_y = 0.5
@@ -199,7 +199,7 @@ if len(day1_obs) > 0:
     # Add "Variable start time" label above the horizontal dashed line
     mid_dashed = day1_first_time + (day1_last_time - day1_first_time) / 2
     ax.text(mid_dashed, sunset_y + 0.02, 'Variable start time',
-            fontsize=12, ha='center', color='darkred', style='italic')
+            fontsize=16, ha='center', color='darkred', style='italic')
 
 # Add labels for both days - closer to the blue lines
 # Find middle of day 1 observations (recalculate after using above)
@@ -208,7 +208,7 @@ if len(day1_obs) > 0:
     mid_day1_time = day1_obs[len(day1_obs) // 2]
     ax.text(mid_day1_time, lag_y - 0.08,
             '30-minute windows',
-            fontsize=14, ha='center', color='darkblue', weight='bold')
+            fontsize=18, ha='center', color='darkblue', weight='bold')
 
 # Find middle of day 2 observations
 day2_obs = [t for t, h in observation_times if h >= 24]
@@ -216,32 +216,29 @@ if len(day2_obs) > 0:
     mid_day2_time = day2_obs[len(day2_obs) // 2]
     ax.text(mid_day2_time, lag_y - 0.08,
             '30-minute windows',
-            fontsize=14, ha='center', color='darkblue', weight='bold')
+            fontsize=18, ha='center', color='darkblue', weight='bold')
 
 # Calculate midpoint of sunset window for label
 sunset_midpoint = day1_max_time + (day2_last_time - day1_max_time) / 2
 ax.text(sunset_midpoint, sunset_y + 0.05,
         'Next Day Window',
-        fontsize=14, ha='center', color='darkred', weight='bold')
+        fontsize=18, ha='center', color='darkred', weight='bold')
 
 # Add day/night labels
 ax.text(start_time + timedelta(hours=3), 0.95, 'Night',
-        fontsize=13, ha='center', style='italic', color='gray')
+        fontsize=16, ha='center', style='italic', color='gray')
 ax.text(start_time + timedelta(hours=(day1_sunrise + day1_sunset)/2), 0.95, 'Day 1',
-        fontsize=13, ha='center', weight='bold')
+        fontsize=16, ha='center', weight='bold')
 ax.text(start_time + timedelta(hours=24), 0.95, 'Night',
-        fontsize=13, ha='center', style='italic', color='gray')
+        fontsize=16, ha='center', style='italic', color='gray')
 ax.text(start_time + timedelta(hours=(day2_sunrise + day2_sunset)/2), 0.95, 'Day 2',
-        fontsize=13, ha='center', weight='bold')
-ax.text(start_time + timedelta(hours=45), 0.95, 'Night',
-        fontsize=13, ha='center', style='italic', color='gray')
-
+        fontsize=16, ha='center', weight='bold')
 # Add legend for observation points
 ax.plot([], [], 'ko', markersize=6, label='Observations')
-ax.legend(loc='upper left', fontsize=12)
+ax.legend(loc='upper left', fontsize=16)
 
-# Format the plot
-ax.set_xlim(times[0], times[-1])
+# Format the plot — end at Day 2 sunset
+ax.set_xlim(times[0], start_time + timedelta(hours=day2_sunset + 1))
 ax.set_ylim(0, 1.1)
 
 # Format x-axis
@@ -250,8 +247,8 @@ ax.xaxis.set_major_formatter(mdates.DateFormatter('%H:00'))
 ax.xaxis.set_minor_locator(mdates.HourLocator(interval=3))
 
 # Labels
-ax.set_xlabel('Time (hours)', fontsize=14)
-ax.tick_params(axis='x', labelsize=12)
+ax.set_xlabel('Time (hours)', fontsize=18)
+ax.tick_params(axis='x', labelsize=14)
 
 # Remove y-axis
 ax.set_yticks([])
