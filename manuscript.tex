@@ -172,7 +172,7 @@ Model selection followed the same information-theoretic approach as the 30-minut
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/fig01_temporal_windows.png}
+\includegraphics[width=\textwidth]{figures/fig01_temporal_windows.png}
 \caption{Temporal analysis windows for monarch butterfly monitoring. The figure illustrates two complementary approaches: (1) 30-minute lag analysis comparing consecutive observation intervals to capture immediate responses to environmental changes, and (2) Next Day Window analysis spanning from the previous day's maximum BI to the current day's final observation (mean duration $\sim$29.6 hours). Camera observations occur at 30-minute intervals during daylight hours only. Background shading indicates day-night cycles with transitions at sunrise and sunset.}
 \label{fig:temporal_windows}
 \end{figure}
@@ -200,14 +200,14 @@ These null linear regression relationships indicated that the Disruptive Wind Hy
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/fig02_wind_vs_dbi_30min.png}
+\includegraphics[width=\textwidth]{figures/fig02_wind_vs_dbi_30min.png}
 \caption{Maximum wind speed vs. $\Delta$BI (30-minute window). Linear regression of maximum wind speed and $\Delta$BI at 30-minute intervals. Each point represents a paired observation ($n$ = 1,894) of abundance (or $\Delta$BI) over a 30-minute interval. Positive values denote an increase in abundance, and negative values denote a decrease. Linear regression showed no significant relationship ($\beta$ = 1.19, SE = 0.66, $p$ = 0.073, $r$ = 0.041, $R^{2}$ = 0.002). The red dashed line indicates the proposed 2~m/s behavioral threshold. The blue regression line is shown for reference despite non-significance.}
 \label{fig:wind_linear_30min}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/fig03_wind_vs_dbi_nextday.png}
+\includegraphics[width=\textwidth]{figures/fig03_wind_vs_dbi_nextday.png}
 \caption{Maximum wind speed vs. $\Delta$BI (Next Day Window). Linear regression of maximum wind speed and Next Day Window time interval which is the $\Delta$BI from maximum BI to the next day's sunset BI (see methods). Positive values denote an increase in abundance, and negative values denote a decrease. Linear regression showed no significant relationship ($\beta$ = 5.34, SE = 4.63, $p$ = 0.252, $r$ = 0.115, $R^{2}$ = 0.013). The red dashed line indicates the 2~m/s threshold. All observations experienced winds exceeding this threshold. The blue regression line is shown for reference despite non-significance.}
 \label{fig:wind_linear_sunset}
 \end{figure}
@@ -265,7 +265,7 @@ Partial effects for the smooth terms, which represent the isolated influence of 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/fig04_partial_effects_30min.png}
+\includegraphics[width=\textwidth]{figures/fig04_partial_effects_30min.png}
 \caption{Partial effects for best fit wind disruption model (30-minute window). Partial effects of environmental predictors on $\Delta$BI from the best-fit GAMM model (M50) in the 30-minute wind disruption analysis. Partial effects show how each environmental factor influences butterfly abundance while holding all other variables constant, thus isolating each predictor's individual contribution to the response. Shaded regions represent 95\% confidence intervals. The blue vertical shading in the right panel shows the range of temperatures over which the flight threshold occurs.}
 \label{fig:partial_effects_30min}
 \end{figure}
@@ -274,7 +274,7 @@ The tensor interaction between wind speed and butterflies in direct sun ($p < 0.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/fig05_interaction_wind_sun_30min.png}
+\includegraphics[width=\textwidth]{figures/fig05_interaction_wind_sun_30min.png}
 \caption{$\Delta$BI response to interaction of wind and direct sun (30-minute window). Tensor smooth interaction between maximum wind speed (m/s) and the count of butterflies in direct sun on change in butterfly index ($\Delta$BI) in the 30-minute time windows. Color gradient indicates partial effects magnitude on $\Delta$BI (red = positive, blue = negative). Black points show observed data distribution. Red dashed line marks the 2~m/s behavioral threshold. Gray regions indicate areas beyond reliable interpolation range.}
 \label{fig:interaction_wind_sun_30min}
 \end{figure}
@@ -285,7 +285,7 @@ Model diagnostic plots confirmed the adequacy of the GAMM specification (Figure~
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/fig06_diagnostics_30min.png}
+\includegraphics[width=\textwidth]{figures/fig06_diagnostics_30min.png}
 \caption{Quantile-quantile and residual plots for the best fit 30-minute wind disruption model. Quantile-quantile plot (left panel) comparing model residuals to theoretical normal distribution. Residuals versus fitted values (right panel) assess homoscedasticity and model adequacy.}
 \label{fig:diagnostics_30min}
 \end{figure}
@@ -313,7 +313,7 @@ Temporal autocorrelation analysis revealed minimal residual correlation structur
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/fig07_acf_30min.png}
+\includegraphics[width=\textwidth]{figures/fig07_acf_30min.png}
 \caption{Autocorrelation function for best fit 30-minute wind disruption model. Autocorrelation function of model residuals showing minimal temporal correlation after accounting for AR(1) structure within deployment-day time series. Blue dashed lines indicate 95\% confidence bounds for white noise.}
 \label{fig:acf_30min}
 \end{figure}
@@ -395,7 +395,7 @@ Wind gust $\times$ Sunlight exposure & 6.68 & 6.68 & 4.10 & $< 0.001$*** \\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/fig09_partial_effects_nextday.png}
+\includegraphics[width=\textwidth]{figures/fig09_partial_effects_nextday.png}
 \caption{Partial effects of control variables in best fit Next Day Window model. Partial effects of control variables on Next Day Window time interval on monarch butterfly maximum $\Delta$BI from the best-fit GAMM model (M32). Partial effects isolate how each variable influences BI changes while holding other factors constant at their average values. Left panel shows the strong negative effect of previous-day maximum BI. Right panel shows window duration with no significant effect on cluster BI changes. Shaded regions represent 95\% confidence intervals.}
 \label{fig:partial_effects_sunset}
 \end{figure}
@@ -404,7 +404,7 @@ In the Next Day Window and site fidelity analysis, the tensor smooth interaction
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/fig10_interaction_wind_sun_nextday.png}
+\includegraphics[width=\textwidth]{figures/fig10_interaction_wind_sun_nextday.png}
 \caption{$\Delta$BI response to interactions of wind and sun exposure (Next Day Window). Tensor smooth interaction between maximum wind gust (m/s) and cumulative butterflies in direct sun on day-to-day cluster size changes ($\Delta$BI). Color gradient indicates partial effect magnitude on square-root transformed scale (red = positive, blue = negative). Black points show observed data distribution. Gray regions indicate areas beyond reliable interpolation range.}
 \label{fig:interaction_wind_sun_sunset}
 \end{figure}
@@ -415,14 +415,14 @@ The quantile-quantile plot revealed approximately normal residual distribution w
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/fig11_diagnostics_nextday.png}
+\includegraphics[width=\textwidth]{figures/fig11_diagnostics_nextday.png}
 \caption{Quantile-quantile and residual diagnostic plot for best fit Next Day Window model. Diagnostic plots for the best-fit GAMM model (M32) of the Next Day Window analysis. Left panel shows quantile-quantile plot comparing model residuals to theoretical normal distribution. Right panel displays residuals versus fitted values to assess homoscedasticity and model adequacy.}
 \label{fig:diagnostics_sunset}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/fig12_acf_nextday.png}
+\includegraphics[width=\textwidth]{figures/fig12_acf_nextday.png}
 \caption{Autocorrelation function for best fit Next Day Window model. Autocorrelation function of model residuals showing minimal temporal correlation after accounting for AR(1) structure within deployment days. Blue dashed lines indicate 95\% confidence bounds for white noise.}
 \label{fig:acf_sunset}
 \end{figure}
@@ -453,7 +453,7 @@ The 24-hour robustness analysis revealed qualitatively similar interaction patte
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/fig13_interaction_wind_sun_24hr.png}
+\includegraphics[width=\textwidth]{figures/fig13_interaction_wind_sun_24hr.png}
 \caption{$\Delta$BI response to interactions of wind and sun exposure over 24-hours. Tensor smooth interaction between maximum wind gust (m/s) and cumulative butterflies in direct sun on 24-hour cluster size changes ($\Delta$BI). Color gradient indicates partial effect magnitude on square-root transformed scale (red = positive, blue = negative). Black points show observed data distribution. Gray regions indicate areas beyond reliable interpolation range. The interaction pattern mirrors that observed in the sunset-specific analysis, supporting the robustness of identified environmental relationships.}
 \label{fig:interaction_wind_sun_24hr}
 \end{figure}
