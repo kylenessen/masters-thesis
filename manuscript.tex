@@ -124,11 +124,11 @@ To systematically quantify changes in overwintering butterfly abundance from dep
 
 Human labelers, trained on a comprehensive online guide with example images and detailed classification criteria, estimated butterfly abundance within each grid cell using the four order-of-magnitude categories (\url{https://kylenessen.github.io/monarch_trailcam_classifier/}). The protocol optimized efficiency while maintaining consistency across observers. For example, abundance estimates derived from two-dimensional image planes only, without estimating three-dimensional cluster abundance, structure or depth. This approach intentionally excluded hidden individuals behind visible butterflies in overlapping aggregations, thus providing a conservative and less subjective but more consistent measure of abundance. When cells contained partial butterflies at grid boundaries, labelers included these in counts unless double-counting bumped an adjacent cell into a higher category. When butterfly counts fluctuated between categories along images of a time series, we consistently tried to apply the lower estimate as the starting point. Labelers also recorded whether cells received direct sunlight, and classified cells as receiving direct sunlight when branches or butterflies exhibited additional illumination clearly from direct rather than indirect light. This measurement was recorded only for occupied cells and stored separately. When individual butterflies became difficult to distinguish due to pixel oversaturation, classification required careful attention to subtle shape recognition and contextual awareness about butterfly locations established from previous images in the time series. Labelers received ongoing feedback throughout the classification process. All classifications underwent review (KN) for common errors including mislabeled cells, incorrect category assignments, and inconsistent counting-criteria application. Direct communication of corrections to all labelers ensured consistent protocol application.
 
-\subsubsection{Abundance Calculation}
+\subsubsection{Butterfly Index Calculation}
 
 We calculated a butterfly index (BI) for each frame in a deployment time series:
 \begin{equation}
-\text{Abundance index} = \sum_{i} \rho_{i} \times C_{i}
+\text{Butterfly index} = \sum_{i} \rho_{i} \times C_{i}
 \end{equation}
 where $\rho_{i}$ represents the number of cells in category $i$, and $C_{i}$ represents the protocol based count estimate for that category. We used minimum (conservative) category values ($C_{1} = 1$ for category 1--9, $C_{2} = 10$ for category 10--99, and $C_{3} = 100$ for category 100--999) rather than midpoint or maximum values to ensure temporal analyses reflected genuine population shifts on an order of magnitude scale.
 
