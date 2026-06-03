@@ -30,7 +30,7 @@ Complete this section before any analysis, figure, table, or final prose tasks. 
 
 ### EDIT-001. Sync title, Simple Summary, abstract, and keywords
 
-Status. Open.
+Status. Done.
 
 Source comments. None directly. This task comes from the document comparison.
 
@@ -39,6 +39,8 @@ Likely files. `manuscript.tex`.
 Context. The Word title differs from the LaTeX title. The Word Simple Summary is cleaner than the current LaTeX version. The Word abstract contains a current abstract and an `ALTERNATIVE ABSTRACT` block. The keywords differ slightly.
 
 Done when. The LaTeX front matter matches the intended current Word text. If the agent cannot infer which abstract Kyle wants, ask Kyle before choosing. Do not leave the alternate abstract in the manuscript unless Kyle confirms it belongs there.
+
+Completion note. Synced the LaTeX title, Simple Summary, current abstract, and keywords to the accepted Word front matter. The alternate abstract was not added because the Word document labels it as an alternative.
 
 ### EDIT-002. Sync the Introduction prose and citation intent
 
