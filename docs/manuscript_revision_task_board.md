@@ -84,7 +84,7 @@ Completion note. Synced the accepted April Word Results wording into `manuscript
 
 ### EDIT-005. Sync Discussion and Conclusions as the baseline
 
-Status. Open.
+Status. Done.
 
 Source comments. `556409408`, `1822051757`, `916610491`, `209493019`, `195942775`, `279432750`, `622324121`, `542124272`.
 
@@ -93,6 +93,8 @@ Likely files. `manuscript.tex`, `bibliography/Thesis.bib`.
 Context. The Word Discussion includes newer thermoregulation framing, a new `Discerning Between Possible Hypotheses` heading, updated limitation language, and conservation language that may still need smoothing.
 
 Done when. The LaTeX Discussion and Conclusions match the accepted Word baseline. Do not over-polish the conservation implications yet. That belongs in Section 4.
+
+Completion note. Synced the accepted Word Discussion and Conclusions into LaTeX, added the new Discerning Between Possible Hypotheses subsection, and added BibTeX entries for Munro et al. 2019, Tsai et al. 2020, and Krishna et al. 2021.
 
 ## Section 2. Statistical And Analysis Decisions
 
