@@ -42,7 +42,7 @@ Done when. The LaTeX front matter matches the intended current Word text. If the
 
 ### EDIT-002. Sync the Introduction prose and citation intent
 
-Status. Open.
+Status. Done.
 
 Source comments. `1435262033`, `1861464571`.
 
@@ -51,6 +51,8 @@ Likely files. `manuscript.tex`, `bibliography/Thesis.bib`.
 Context. The Word Introduction has newer wording around wind, butterfly thermoregulation, and the interaction of wind with temperature and insolation. Francis added references by Munro et al. 2019, Tsai et al. 2020, and Krishna et al. 2021. Jay also noted that the Introduction may need a more balanced setup if grove management plans already considered factors beyond wind.
 
 Done when. The Introduction in LaTeX reflects the accepted Word prose, the new references are represented correctly in BibTeX if they are used, and any claim that wind dominated management is phrased carefully enough to allow prior work on canopy and light.
+
+Completion note. Synced the Introduction against the accepted Word prose, added the butterfly wing thermal and optical references, and softened the management framing by acknowledging canopy and light work before isolating wind as the untested component.
 
 ### EDIT-003. Sync Materials and Methods prose
 
