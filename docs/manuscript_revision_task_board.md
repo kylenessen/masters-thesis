@@ -70,7 +70,7 @@ Completion note. Synced the accepted Word Methods baseline into `manuscript.tex`
 
 ### EDIT-004. Sync Results prose as the baseline
 
-Status. Open.
+Status. Done.
 
 Source comments. `850189325`, `2050568483`, `249936144`, `774033147`, `1837771308`, `931591290`, `184831444`, `1470233068`, `542381207`.
 
@@ -79,6 +79,8 @@ Likely files. `manuscript.tex`.
 Context. The Word Results text has newer wording around the simple regression bridge, model interpretation, Next Day Window results, and discussion-like interpretation. Some comments ask that interpretation move later. For Section 1, sync the current accepted text without doing the later restructure.
 
 Done when. The Results section in LaTeX reflects the accepted Word prose. Interpretation that may need relocation is still traceable for Section 4.
+
+Completion note. Synced the accepted April Word Results wording into `manuscript.tex` while keeping existing LaTeX figure and table structure. Interpretation that may need relocation remains traceable for EDIT-017.
 
 ### EDIT-005. Sync Discussion and Conclusions as the baseline
 
