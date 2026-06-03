@@ -56,7 +56,7 @@ Done when. The Introduction in LaTeX reflects the accepted Word prose, the new r
 
 ### EDIT-003. Sync Materials and Methods prose
 
-Status. Open.
+Status. Done.
 
 Source comments. `1824005225`, `473839288`, `1468403588`, `1806968990`, `1182007124`, `380024150`, `982577787`.
 
@@ -65,6 +65,8 @@ Likely files. `manuscript.tex`.
 Context. The methods text in Word includes current phrasing for model framework, variable selection, threshold model setup, and model validation. Some comments require later statistical confirmation, but the accepted baseline prose should still be synced first.
 
 Done when. The LaTeX Methods section matches the accepted Word text where the wording is clearly current. Any unresolved statistical questions should be marked in the task board or left for Section 2.
+
+Completion note. Synced the accepted Word Methods baseline into `manuscript.tex`, including the site and monitoring prose, field equipment phrasing, image-analysis wording, model framework description, threshold model setup, model validation wording, and dynamic-window methods wording. Clarified the 52-model count from the existing appendix without changing the analysis. Left log likelihood checks, alternative threshold decisions, and the dynamic-window 76 versus 78 model-count consistency issue for Section 2 statistical review.
 
 ### EDIT-004. Sync Results prose as the baseline
 
