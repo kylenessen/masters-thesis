@@ -104,7 +104,7 @@ Begin only after Section 1 is merged. These tasks may require data, scripts, or 
 
 ### EDIT-006. Audit and explain the 52 model candidate set
 
-Status. Done, with one flagged item for Kyle.
+Status. Done. Kyle confirmed the dynamic-window count standardization to 76 (2026-06-10).
 
 Source comments. `473839288`, `1468403588`.
 
@@ -206,9 +206,9 @@ Done when. The figures are either combined into a two-panel figure with an updat
 
 ### EDIT-013. Add visible red 2 m/s threshold lines where captions claim they exist
 
-Status. Done, with one flagged item for Kyle.
+Status. Done. Kyle confirmed dropping the line (2026-06-10).
 
-Completion note. Found the root cause in the figure script (`generate_publication_figures.R`): `show_threshold_line = FALSE` with the comment "Francis wants it removed." The red 2 m/s line was deliberately removed from all wind figures, but three captions (the two scatterplots and the wind-by-sun interaction heatmap) and one Results sentence still described a red dashed line that is not present. Confirmed by eye that the interaction figure has no line. Resolved by aligning the captions and text to the figures as they currently stand: removed the red-line claims and rephrased the interaction sentence so it states the substantive point (no boundary or discontinuity at 2 m/s) without referencing a drawn line. FLAGGED FOR KYLE: this is a genuine co-author tension. Peter and Jay wanted to SEE the line; Francis removed it. I followed Francis (corresponding author, most recent decision). If you would rather honor the reviewers and show the line, it is a one-line change (`show_threshold_line = TRUE`) plus regeneration, and the captions would then be restored.
+Completion note. Found the root cause in the figure script (`generate_publication_figures.R`): `show_threshold_line = FALSE` with the comment "Francis wants it removed." The red 2 m/s line was deliberately removed from all wind figures, but three captions (the two scatterplots and the wind-by-sun interaction heatmap) and one Results sentence still described a red dashed line that is not present. Confirmed by eye that the interaction figure has no line. Resolved by aligning the captions and text to the figures as they currently stand: removed the red-line claims and rephrased the interaction sentence so it states the substantive point (no boundary or discontinuity at 2 m/s) without referencing a drawn line. This was a genuine co-author tension (Peter and Jay wanted to see the line; Francis removed it); Kyle confirmed keeping the line dropped, so the figures and captions are now consistent and no regeneration is needed.
 
 Source comments. `2021869295`, `1233138264`, `50837945`.
 
@@ -378,7 +378,7 @@ Context. The board was built from 49 open or unflagged comments. Some comments a
 
 Done when. Every source comment ID is marked done, blocked, or intentionally not changed with a short reason.
 
-Completion note. Confirmed all 49 comment IDs in the coverage list are assigned to tasks EDIT-001 through EDIT-023, and every one of those tasks is now marked Done. Two items were resolved by a documented decision rather than a literal change and are flagged for Kyle: the dynamic-window candidate count (EDIT-006), standardized to 76 rather than the strictly-evaluated 74; and the red 2 m/s threshold line (EDIT-013), where captions were aligned to the line-free figures following Francis, with the Peter and Jay alternative noted as a one-line reversible change. One reviewer suggestion was met by a clause rather than table columns (EDIT-007, the K and log-likelihood request). No comment ID was left unaddressed.
+Completion note. Confirmed all 49 comment IDs in the coverage list are assigned to tasks EDIT-001 through EDIT-023, and every one of those tasks is now marked Done. Two items were resolved by a decision rather than a literal change, and Kyle confirmed both on 2026-06-10: the dynamic-window candidate count (EDIT-006), standardized to 76 rather than the strictly-evaluated 74; and the red 2 m/s threshold line (EDIT-013), dropped from the figures with captions aligned accordingly. One reviewer suggestion was met by a clause rather than table columns (EDIT-007, the K and log-likelihood request). No comment ID was left unaddressed.
 
 ### EDIT-025. Final LaTeX and style audit
 
