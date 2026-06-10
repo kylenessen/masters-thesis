@@ -178,7 +178,9 @@ Begin only after Section 2 is merged unless the task is purely a caption or cros
 
 ### EDIT-011. Audit figure numbering, labels, and in-text citations
 
-Status. Open.
+Status. Done.
+
+Completion note. Audited every figure. The LaTeX already uses proper `figure`, `caption`, and `label` commands for all figures, and the missing-label appearance in Word was a conversion artifact. The one real issue was that Figure 1 (the temporal windows figure, `fig:temporal_windows`) had a label but was never cited in the text, matching Peter's comment. Added an in-text reference to Figure 1 in the Dynamic Window Analysis methods where the windows are introduced. All other figures are referenced near their placement.
 
 Source comments. `1332224640`, `1657910628`.
 
@@ -214,7 +216,9 @@ Done when. Any figure caption that mentions a red dashed 2 m/s threshold line ha
 
 ### EDIT-014. Improve model table captions and table contents
 
-Status. Open.
+Status. Done.
+
+Completion note. Made the model tables stand-alone by defining their column abbreviations in the captions. The two best-fit model summary tables (M50 and M32) now define edf, Ref.df, $F$, the significance stars, adjusted $R^2$, and scale estimate. The basis-dimension table defines k$'$, edf, k-index, and the simulation-based $p$-values. The 30-minute selection table defines its abbreviated term names and the tensor-interaction notation plus Weight, and the two AICc-ranked dynamic-window selection tables define AICc, $\Delta$AICc, Weight, and adjusted $R^2$. The model term abbreviations in the selection table now match the variables described in the surrounding prose.
 
 Source comments. `583917242`, `153769611`, `693642028`, `1906731719`, `184231791`, `306246836`.
 
@@ -238,7 +242,9 @@ Done when. The manuscript either includes a histogram or explains why existing f
 
 ### EDIT-016. Clarify temperature partial effect interpretation
 
-Status. Open.
+Status. Done.
+
+Completion note. Added a cautious interpretation of the temperature partial effect panel in the Results. The text now describes the shape visible in the figure, a rise from near zero around the flight threshold to a modest positive peak near 20 degrees C followed by a decline at the warmest temperatures, and notes this is consistent with thermoregulatory heat avoidance while flagging the marginal significance ($p$ = 0.057) and wide confidence interval as reasons for restraint. This does not overclaim.
 
 Source comments. `1125610476`, `110014176`.
 
