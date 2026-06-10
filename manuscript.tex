@@ -228,7 +228,7 @@ To examine more complex environmental interactions and conditional relationships
 Model selection via AIC identified the decisively best-fit model (M50), capturing 86\% of the total model weight (Table~\ref{tab:model_selection_30min}). The next best model (M23) showed substantially weaker support with $\Delta$AIC = 3.8 and only 13\% model weight.
 
 \begin{table}[H]
-\caption{Top 5 models ranked by AIC (30-minute window) of environmental predictors of $\Delta$BI.}
+\caption{Top 5 models ranked by AIC (30-minute window) of environmental predictors of $\Delta$BI. Terms are abbreviated as Prev.\ count (previous butterfly index), Temp.\ (average temperature), Sun (butterflies in direct sun), and Time (time since sunrise); ti(Wind, Sun) denotes a tensor-product interaction smooth between maximum wind gust and butterflies in direct sun. $\Delta$AIC is the difference in AIC from the best model, and Weight is the Akaike weight (relative model support, summing to 1 across the full candidate set).}
 \label{tab:model_selection_30min}
 \centering
 \small
@@ -250,7 +250,7 @@ M52 & Temp., Time, ti(Wind, Sun) & 8092.72 & 18.69 & 0.00 \\
 The best-fit model (M50) from the 30-minute wind disruption analysis predicted $\Delta$BI as a function of: (1) the previous 30-minute observation's BI, (2) average 30-minute temperature, (3) time of day (minutes since sunrise), and (4) a tensor interaction between maximum wind gust speed and the number of butterflies in direct sunlight. Statistical analysis of this responsive change model revealed significant effects for three of the four predictors (Table~\ref{tab:m50_summary}). The previous butterfly index ($F$ = 12.50, $p < 0.001$), time of day ($F$ = 9.85, $p < 0.001$), and the wind-sunlight interaction ($F$ = 4.67, $p < 0.001$) all showed strong statistical significance. Temperature effects approached but did not reach conventional significance thresholds ($F$ = 3.19, $p$ = 0.057). The model only explained 6.4\% of the variance in $\Delta$BI (adjusted $R^{2}$ = 0.064, $n$ = 1894).
 
 \begin{table}[H]
-\caption{Summary of best-fit model (M50).}
+\caption{Summary of best-fit model (M50). edf, effective degrees of freedom (a measure of smooth-term complexity, where 1 indicates a linear effect); Ref.df, reference degrees of freedom used in the significance test; $F$, test statistic for each smooth term; significance is denoted ***$p < 0.001$. Adj.\ $R^{2}$ is the adjusted proportion of variance explained, and Scale est.\ is the estimated residual scale parameter.}
 \label{tab:m50_summary}
 \centering
 \small
@@ -300,7 +300,7 @@ Model diagnostic plots confirmed the adequacy of the GAMM specification (Figure~
 Basis dimension checks confirmed adequate smoothing parameter selection for all model terms (Table~\ref{tab:gam_basis_check}). All smooth functions showed k-index values near 1.0, indicating sufficient basis dimensions to capture the underlying functional forms. None of the smooth terms showed evidence of undersmoothing (all $p$-values $> 0.05$), with the possible exception of time within day which showed marginal evidence (k-index = 0.96, $p$ = 0.065). These diagnostics confirm that overall, chosen basis dimensions adequately represent the complexity of the relationships without overfitting.
 
 \begin{table}[H]
-\caption{Basis dimension adequacy checks for the best fit 30-minute wind disruption model.}
+\caption{Basis dimension adequacy checks for the best fit 30-minute wind disruption model. k$'$ is the basis dimension (the maximum possible edf) set for each smooth; edf is the realized effective degrees of freedom; k-index is the diagnostic ratio used to detect undersmoothing, where values near or above 1 indicate the basis dimension is adequate; the $p$-values are simulation based and test whether the basis dimension is too low. Low k-index values paired with small $p$-values would indicate undersmoothing.}
 \label{tab:gam_basis_check}
 \centering
 \small
@@ -363,7 +363,7 @@ Daily maximum BI per cluster ranged from 0 to 770 butterflies (mean = 134.7 $\pm
 Model selection via AICc identified the best-fit model (M32) as capturing 85\% of the total model weight (Table~\ref{tab:sunset_model_selection}). The next best model showed substantially weaker support with $\Delta$AICc = 5.6 and only 5\% model weight. The best-fit model predicted square-root transformed change in BI as a function of: (1) the previous day's maximum butterfly index, (2) window duration in hours, and (3) a tensor smooth interaction between maximum wind gust speed and cumulative butterflies in direct sunlight.
 
 \begin{table}[H]
-\caption{Top 5 models ranked by AICc (Next Day Window and site fidelity analysis).}
+\caption{Top 5 models ranked by AICc (Next Day Window and site fidelity analysis). AICc is the small-sample corrected Akaike Information Criterion used here because of the reduced sample size; $\Delta$AICc is the difference from the best model; Weight is the Akaike weight (relative model support).}
 \label{tab:sunset_model_selection}
 \centering
 \small
@@ -385,7 +385,7 @@ M30 & ti(Temp.\ at prev.\ max, Cum.\ sun) & 657.90 & 9.06 & 0.01 \\
 The Next Day Window/site fidelity model explained 39.7\% of the variance in maximum BI changes (adjusted $R^{2}$ = 0.397, $n$ = 96), representing a more than six-fold improvement in explanatory power compared to the 30-minute continuous (adjusted $R^{2}$ = 0.064) and threshold (adjusted $R^{2}$ = 0.061) analyses. Analysis revealed significant effects on $\Delta$BI for the previous day's maximum BI ($F$ = 24.88, $p < 0.001$) and the wind-sunlight interaction ($F$ = 4.10, $p < 0.001$). In addition, the partial effects of the previous day's maximum BI showed a significant negative linear relationship (Table~\ref{tab:sunset_model_summary}). Meaning that larger clusters experienced proportionally greater losses between days (as found in the 30-minute analysis). Window duration showed no significant relationship.
 
 \begin{table}[H]
-\caption{Summary of best-fit model for Next Day Window and fidelity analysis.}
+\caption{Summary of best-fit model for Next Day Window and fidelity analysis. edf, effective degrees of freedom (where 1 indicates a linear effect); Ref.df, reference degrees of freedom used in the significance test; $F$, test statistic for each term; significance is denoted ***$p < 0.001$. Adj.\ $R^{2}$ is the adjusted proportion of variance explained, and Scale est.\ is the estimated residual scale parameter.}
 \label{tab:sunset_model_summary}
 \centering
 \small
@@ -441,7 +441,7 @@ The quantile-quantile plot revealed approximately normal residual distribution w
 To assess the robustness of our Next Day Window and site fidelity findings, we conducted an analysis examining butterfly cluster changes over 24-hour periods rather than sunset-specific intervals. This analysis evaluated the same 76 candidate models using identical GAMM specifications with deployment random intercepts and AR(1) temporal correlation. Notably, model selection converged on the same structural form as the primary Next Day Window/site fidelity analysis. The decisive best-fit model (M31), incorporating a tensor smooth interaction between maximum wind gust and cumulative direct sun exposure, emerged with 51\% of the total model weight (Table~\ref{tab:24hr_model_selection}). Alternative models showed substantially weaker support, with the next best model achieving only 8\% weight and $\Delta$AICc = 3.6.
 
 \begin{table}[H]
-\caption{Top models from 24-hour robustness analysis.}
+\caption{Top models from 24-hour robustness analysis. AICc is the small-sample corrected Akaike Information Criterion; $\Delta$AICc is the difference from the best model; Weight is the Akaike weight (relative model support); adj.\ $R^{2}$ is the adjusted proportion of variance explained, reported for the best model.}
 \label{tab:24hr_model_selection}
 \centering
 \small
