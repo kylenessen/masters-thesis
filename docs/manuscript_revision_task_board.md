@@ -266,7 +266,9 @@ Begin only after Sections 1 through 3 are merged. These tasks should harmonize i
 
 ### EDIT-017. Move interpretation out of Results where needed
 
-Status. Open.
+Status. Done.
+
+Completion note. The clearest interpretive overreach in the Results was the Next Day Window interaction passage that speculated monarchs redistribute within the grove between monitored and unmonitored areas. Trimmed that from the Results so the section reports the observed pattern (reversals at the same wind under different light) without interpreting it, and relocated the redistribution interpretation to the Discussion (Discerning Between Possible Hypotheses), where it is now stated once. The 30-minute and 24-hour interaction descriptions were left largely factual; the 24-hour robustness statement was retained as a methodological observation rather than interpretation.
 
 Source comments. `850189325`, `774033147`, `931591290`, `1837771308`, `184831444`.
 
@@ -278,7 +280,9 @@ Done when. Results paragraphs report findings without over-interpreting them. Di
 
 ### EDIT-018. Integrate thermoregulation references and framing
 
-Status. Open.
+Status. Done.
+
+Completion note. Verified that the three references Francis supplied (Munro et al. 2019, Tsai et al. 2020, Krishna et al. 2021) are present in `bibliography/Thesis.bib` and cited with `\cite{}` exactly where they support the argument: in the Introduction and in the Discussion passages on wing convective heat loss and solar heat gain. These were added during the EDIT-005 Discussion sync. No further change was needed.
 
 Source comments. `1435262033`, `916610491`, `209493019`.
 
@@ -290,7 +294,9 @@ Done when. The references are in BibTeX, cited in the manuscript where they supp
 
 ### EDIT-019. Make conservation language non-prescriptive
 
-Status. Open.
+Status. Done.
+
+Completion note. Softened the most prescriptive conservation statements. The recommendation that managers adopt the physiological and energetic facilitation framing is now phrased as a perspective managers may find useful and is explicitly labeled an evidence-informed direction rather than a prescription. The tree-preservation guidance is reframed from "prudent conservation favors" to describing tree preservation as a low-regret option under current uncertainty. The remaining canopy-management suggestions were already appropriately hedged.
 
 Source comments. `556409408`.
 
@@ -302,7 +308,9 @@ Done when. Conservation recommendations are framed as evidence-informed implicat
 
 ### EDIT-020. Balance management history around wind, light, and canopy management
 
-Status. Open.
+Status. Done.
+
+Completion note. Confirmed the Introduction already isolates wind as the only Microclimate Hypothesis parameter never directly tested while acknowledging the canopy and light work (Weiss canopy openness, Ibsen shading, Saniee light), so the intro balance was handled during EDIT-002. Added a sentence to the Discussion's canopy-management subsection noting that canopy and light management are not new to overwintering practice and have often been justified through a wind or microclimate lens, and that reframing them around light and thermal structure extends rather than replaces existing practice. This preserves the core claim that the specific 2 m/s wind threshold lacked direct testing.
 
 Source comments. `1861464571`, `622324121`.
 
@@ -314,7 +322,9 @@ Done when. The Introduction and Discussion acknowledge prior canopy and light wo
 
 ### EDIT-021. Clarify or remove vague claims about limited suitable sites
 
-Status. Open.
+Status. Done.
+
+Completion note. Reworked the claim that the 2 m/s threshold suggested suitable sites were limited. It is now tied to a concrete, cited example (the Althouse and Meade wind-buffer prescription already described in the conservation section) and softened to say the threshold may have contributed to a more restrictive view of which sites qualify as suitable, rather than asserting sites were limited. This grounds the statement in a specific source and avoids overstatement.
 
 Source comments. `542124272`.
 
@@ -326,7 +336,9 @@ Done when. The claim is supported with a specific citation or softened to avoid 
 
 ### EDIT-022. Tighten limitations around wind dislodgement, density, wetness, and freezing
 
-Status. Open.
+Status. Done.
+
+Completion note. Tightened the dislodgement limitation. Replaced the informal phrasing ("branches were swinging wildly") with a precise description ("under conditions that visibly moved branches") and reframed the speculative claim so it states that dislodgement, if it occurs, may require wind combined with near-freezing temperatures rather than wind alone, explicitly noting that our study did not include freezing conditions and so could not test this. The surrounding density, wetness, and freezing material remains specific and well cited (Alonso-Mejia, Anderson).
 
 Source comments. `279432750`, `195942775`.
 
@@ -338,7 +350,9 @@ Done when. The limitation is specific, supported, and does not speculate beyond 
 
 ### EDIT-023. Review low variance explained language
 
-Status. Open.
+Status. Done.
+
+Completion note. The existing limitations text already framed the low adjusted R-squared values appropriately by pairing them with the power analysis and the point that the hypothesis predicts substantial, not subtle, effects. Added one explicit sentence stating that low explanatory power at short timescales is expected when much of the moment-to-moment variation is driven by unmeasured factors and does not weaken the test of the wind hypothesis. This directly answers the reviewers' reaction without overclaiming or weakening the result.
 
 Source comments. `1470233068`, `542381207`.
 
