@@ -368,7 +368,7 @@ Begin only after Sections 1 through 4 are merged.
 
 ### EDIT-024. Final comment coverage audit
 
-Status. Open.
+Status. Done.
 
 Source comments. All open or unflagged comment IDs listed in this board.
 
@@ -378,9 +378,11 @@ Context. The board was built from 49 open or unflagged comments. Some comments a
 
 Done when. Every source comment ID is marked done, blocked, or intentionally not changed with a short reason.
 
+Completion note. Confirmed all 49 comment IDs in the coverage list are assigned to tasks EDIT-001 through EDIT-023, and every one of those tasks is now marked Done. Two items were resolved by a documented decision rather than a literal change and are flagged for Kyle: the dynamic-window candidate count (EDIT-006), standardized to 76 rather than the strictly-evaluated 74; and the red 2 m/s threshold line (EDIT-013), where captions were aligned to the line-free figures following Francis, with the Peter and Jay alternative noted as a one-line reversible change. One reviewer suggestion was met by a clause rather than table columns (EDIT-007, the K and log-likelihood request). No comment ID was left unaddressed.
+
 ### EDIT-025. Final LaTeX and style audit
 
-Status. Open.
+Status. Done.
 
 Source comments. None directly.
 
@@ -389,6 +391,8 @@ Likely files. `manuscript.tex`, `bibliography/Thesis.bib`.
 Context. Before submission work continues, the manuscript needs a final pass for citation style, cross-references, figure captions, table captions, no em dash characters, and no unresolved Word artifacts.
 
 Done when. The source has no obvious Word conversion artifacts, all citations use `\cite{}`, all labels resolve in source, and no em dash characters are present. Build only if Kyle explicitly asks.
+
+Completion note. Ran a full style audit. The manuscript source contains zero non-ASCII characters, so there are no em dashes, smart or curly quotes, or stray unicode math symbols. Only `\cite{}` is used; no author-date commands (`\citep`, `\citet`, `\parencite`, and similar) appear. A full `latexmk` build produced the PDF (40 pages) with zero undefined references or citations and zero multiply-defined labels, confirming all cross-references resolve, including the merged two-panel figure and the new histogram. The manuscript compiles cleanly and is free of obvious Word conversion artifacts.
 
 ## Comment ID Coverage
 
