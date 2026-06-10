@@ -104,7 +104,7 @@ Begin only after Section 1 is merged. These tasks may require data, scripts, or 
 
 ### EDIT-006. Audit and explain the 52 model candidate set
 
-Status. Open.
+Status. Done, with one flagged item for Kyle.
 
 Source comments. `473839288`, `1468403588`.
 
@@ -114,9 +114,13 @@ Context. Jay was confused by the candidate model count. Francis asked Kyle to co
 
 Done when. The candidate set count is verified against the analysis source. The manuscript explains the model set in a way that is clear to a reader. If the count or structure is wrong, correct the manuscript and note what changed.
 
+Completion note. Verified the 30-minute candidate set against the source in `masters-analysis` (`analysis/monarch_gam_report_30min.R`). The count of 52 is correct and the manuscript explanation at the Model Framework subsection already states the structure clearly: 24 models with the lag term, 24 without, plus 4 tensor-interaction models. No manuscript change was needed for the 30-minute set. FLAGGED FOR KYLE: the dynamic-window candidate count is inconsistent in both the source and the manuscript. The Methods say 78 per window type, the Next Day Window appendix says 78, but the 24-hour results and appendix say 76. In the analysis code both windows actually generate models M1 through M72 plus two parity models the code labels M77 and M78 (a M73 to M76 numbering gap), and the converged 24-hour set is exactly M1 to M72 (72 models). The printed "Total: 76 models" miscounts. The honest evaluated count is 74 candidates per window. This was left unchanged pending Kyle's decision on whether to renumber to a clean count or regenerate the appendix tables from corrected scripts.
+
 ### EDIT-007. Add or assess `K` and log likelihood in model selection tables
 
-Status. Open.
+Status. Done.
+
+Completion note. Added the clause Francis agreed to in the Model Validation subsection: when competing models fall within 2 AIC units but differ in parameter count, the log-likelihood and the differing term's contribution are examined to confirm a meaningful rather than marginal gain. Applied this directly in the Threshold Wind Disruption results, where T50 (with the threshold-by-sun interaction) sits within 0.63 AIC of a no-wind model, so the added wind parameters yield only a marginal log-likelihood gain. Did not add `K` and log-likelihood columns to all four model selection tables, because those values are only partially present in the exported tables (the 30-minute and 24-hour CSVs carry `df`, but the threshold and Next Day Window exports do not), and populating some tables but not others would be inconsistent. The substantive concern Jay and Francis raised is met by the clause and the threshold note. Full table columns remain an optional later addition if Kyle wants to regenerate the exports with `logLik` and `df` for every table.
 
 Source comments. `2018412757`, `380024150`, `982577787`, `306246836`.
 
@@ -128,7 +132,9 @@ Done when. The relevant model tables and text either include `K` and log likelih
 
 ### EDIT-008. Decide how threshold models should be compared
 
-Status. Open.
+Status. Done.
+
+Completion note. Confirmed from the source that the continuous and threshold candidate sets share an identical model structure, response variable, and data, so their AIC values are directly comparable, and that only the 2 m/s threshold was tested in code (no 4 or 8 m/s alternatives). Added Methods text stating that AIC values are comparable across the two sets, that the 2 m/s value was chosen because it is the hypothesis's specific proposed threshold rather than an arbitrary cut point, and that additional ad hoc thresholds were not imposed because the continuous wind smooth already allows the data to express a response at any wind speed. The text no longer implies more than the existing comparison supports.
 
 Source comments. `1806968990`, `1182007124`, `486357702`, `1861267912`.
 
@@ -140,7 +146,9 @@ Done when. The manuscript clearly states what comparison was made and why. If no
 
 ### EDIT-009. Decide whether best-fit model p-values belong in an information theoretic analysis
 
-Status. Open.
+Status. Done.
+
+Completion note. Kept the information-theoretic framework as primary and clarified its relationship to the reported p-values rather than making a silent paradigm change, consistent with Francis's point that the models assess whether wind is a useful predictor rather than estimate all parameters. Added Methods text stating that AIC-based model selection is the primary inferential tool and that the p-values reported for smooth terms are complementary descriptive evidence of association, not a separate null-hypothesis-testing framework layered onto the AIC comparison. No move to model-averaged estimates was made.
 
 Source comments. `67036694`, `2097415894`.
 
@@ -152,7 +160,9 @@ Done when. Kyle and the agent choose a consistent reporting framework. The manus
 
 ### EDIT-010. Clarify the role of the simple linear regression bridge
 
-Status. Open.
+Status. Done.
+
+Completion note. Added a sentence to the Model Framework subsection stating that the simple linear regression is an initial heuristic addressing the wind-only formulation of the hypothesis as managers conceive it, and that the GAMM framework is the formal analysis. Reinforced the same framing in the Results so the regression reads as a bridge that motivates, but does not substitute for, the multi-model analysis. Confirmed against the source (`monarch_gam_report_30min.R`) that the regression is computed as a heuristic and the GAMM is the primary framework.
 
 Source comments. `298285836`, `249936144`.
 
