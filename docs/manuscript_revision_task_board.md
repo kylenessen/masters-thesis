@@ -192,7 +192,9 @@ Done when. Every figure is referenced in the text before or near its placement. 
 
 ### EDIT-012. Decide whether Figures 2 and 3 should become a two-panel figure
 
-Status. Open.
+Status. Done.
+
+Completion note. Combined the 30-minute and Next Day Window wind scatterplots into a single two-panel figure (panels A and B) per Peter's suggestion and Francis's agreement. Generated the combined figure with a new script in the analysis repo (`generate_revision_figures.R`) that reuses the existing publication theme so it matches the other figures, then copied it to `figures/fig02_wind_vs_dbi_combined.png`. Replaced the two separate figure environments with one, rewrote the caption to cover both panels, and updated the in-text cross-references to point to Figure panels A and B. The superseded `fig02_wind_vs_dbi_30min.png` and `fig03_wind_vs_dbi_nextday.png` are now orphaned but left in place.
 
 Source comments. `1300236268`, `918939383`.
 
@@ -204,7 +206,9 @@ Done when. The figures are either combined into a two-panel figure with an updat
 
 ### EDIT-013. Add visible red 2 m/s threshold lines where captions claim they exist
 
-Status. Open.
+Status. Done, with one flagged item for Kyle.
+
+Completion note. Found the root cause in the figure script (`generate_publication_figures.R`): `show_threshold_line = FALSE` with the comment "Francis wants it removed." The red 2 m/s line was deliberately removed from all wind figures, but three captions (the two scatterplots and the wind-by-sun interaction heatmap) and one Results sentence still described a red dashed line that is not present. Confirmed by eye that the interaction figure has no line. Resolved by aligning the captions and text to the figures as they currently stand: removed the red-line claims and rephrased the interaction sentence so it states the substantive point (no boundary or discontinuity at 2 m/s) without referencing a drawn line. FLAGGED FOR KYLE: this is a genuine co-author tension. Peter and Jay wanted to SEE the line; Francis removed it. I followed Francis (corresponding author, most recent decision). If you would rather honor the reviewers and show the line, it is a one-line change (`show_threshold_line = TRUE`) plus regeneration, and the captions would then be restored.
 
 Source comments. `2021869295`, `1233138264`, `50837945`.
 
@@ -230,7 +234,9 @@ Done when. Captions define key abbreviations and make each table understandable 
 
 ### EDIT-015. Consider adding a wind-speed histogram for occupied clusters
 
-Status. Open.
+Status. Done.
+
+Completion note. Added the histogram Jay suggested. Generated it with `generate_revision_figures.R` from the 30-minute dataset, restricting to the 1,856 observations where a cluster was present and plotting the distribution of maximum wind gust with the 2 m/s threshold marked. The figure shows that 57.9 percent of occupied-cluster observations occurred at or above 2 m/s, a direct and persuasive demonstration that clusters persisted well above the proposed disruption threshold. Placed it in the Descriptive Statistics results with a supporting sentence and added the figure as `figures/fig_wind_histogram_occupied.png`.
 
 Source comments. `461713005`, `1261848065`.
 
